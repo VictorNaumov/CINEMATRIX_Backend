@@ -16,7 +16,7 @@ namespace CINEMATRIX.Data.Services.Extensions
             return source.OrderByDescending(ToLambda<T>(propertyName));
         }
 
-        private static Expression<Func<T,object>> ToLambda<T>(string propertyName)
+        private static Expression<Func<T, object>> ToLambda<T>(string propertyName)
         {
             var parameter = Expression.Parameter(typeof(T));
             var property = Expression.Property(parameter, propertyName);
@@ -25,7 +25,7 @@ namespace CINEMATRIX.Data.Services.Extensions
             return Expression.Lambda<Func<T, object>>(propAsObject, parameter);
         }
 
-        public static IQueryable<T> Page<T> (this IQueryable<T> source, int pageSize, int page)
+        public static IQueryable<T> Page<T>(this IQueryable<T> source, int pageSize, int page)
         {
             return source.Skip(page * pageSize).Take(pageSize);
         }
