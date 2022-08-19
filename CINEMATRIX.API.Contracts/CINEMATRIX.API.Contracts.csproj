@@ -4,10 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Outgoing\" />
-    <Folder Include="IncomingOutgoing\" />
-    <Folder Include="Incoming\" />
-  </ItemGroup>
-
 </Project>
