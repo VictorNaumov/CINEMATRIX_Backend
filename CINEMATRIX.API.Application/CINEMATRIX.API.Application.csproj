@@ -10,4 +10,16 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Validation\" />
+    <Folder Include="Queries\" />
+    <Folder Include="Commands\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CINEMATRIX.API.Contracts\CINEMATRIX.API.Contracts.csproj" />
+    <ProjectReference Include="..\CINEMATRIX.Data.Domain\CINEMATRIX.Data.Domain.csproj" />
+    <ProjectReference Include="..\CINEMATRIX.Data.Services\CINEMATRIX.Data.Services.csproj" />
+  </ItemGroup>
+
 </Project>

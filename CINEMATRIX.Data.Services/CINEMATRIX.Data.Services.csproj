@@ -10,4 +10,9 @@
     <PackageReference Include="Scrutor" Version="3.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CINEMATRIX.API.Contracts\CINEMATRIX.API.Contracts.csproj" />
+    <ProjectReference Include="..\CINEMATRIX.Data.EF.SQL\CINEMATRIX.Data.EF.SQL.csproj" />
+  </ItemGroup>
+
 </Project>

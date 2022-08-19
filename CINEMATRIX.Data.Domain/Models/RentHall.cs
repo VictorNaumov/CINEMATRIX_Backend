@@ -2,7 +2,7 @@
 
 namespace CINEMATRIX.Data.Domain.Models
 {
-    internal class RentHall : KeyedEntityBase
+    public class RentHall : KeyedEntityBase
     {
         public long HallId { get; set; }
         public Hall Hall { get; set; }

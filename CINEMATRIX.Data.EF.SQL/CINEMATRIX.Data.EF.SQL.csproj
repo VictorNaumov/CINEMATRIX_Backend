@@ -9,4 +9,13 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.9" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="MappingConfiguration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CINEMATRIX.Data.Domain\CINEMATRIX.Data.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

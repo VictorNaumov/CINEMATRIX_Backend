@@ -16,5 +16,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CINEMATRIX.API.Application\CINEMATRIX.API.Application.csproj" />
+    <ProjectReference Include="..\CINEMATRIX.API.Resources\CINEMATRIX.API.Resources.csproj" />
+    <ProjectReference Include="..\CINEMATRIX.Data.EF.SQL\CINEMATRIX.Data.EF.SQL.csproj" />
+  </ItemGroup>
+
 
 </Project>
