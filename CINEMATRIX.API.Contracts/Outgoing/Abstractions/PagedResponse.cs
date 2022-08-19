@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CINEMATRIX.API.Contracts.Outgoing.Abstractions
 {
@@ -15,7 +16,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing.Abstractions
         /// <summary>
         ///     Gets or sets a single page of found items matching the search query.
         /// </summary>
-        public TFoundItem[] Items { get; set; }
+        public IEnumerable<TFoundItem> Items { get; set; }
 
         /// <summary>
         ///     Gets or sets the total count of all items matching the search query.

@@ -24,12 +24,10 @@ namespace CINEMATRIX.Data.Services
 
     public class UserService : BaseService<User>, IUserService
     {
-        private readonly ApplicationDbContext _dbContext;
         private readonly IConfiguration _configuration;
 
         public UserService(ApplicationDbContext dbContext, IConfiguration configuration) : base(dbContext)
         {
-            _dbContext = dbContext;
             _configuration = configuration;
         }
 

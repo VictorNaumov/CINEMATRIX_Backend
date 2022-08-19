@@ -1,6 +1,6 @@
 ﻿namespace CINEMATRIX.API.Contracts.Outgoing
 {
-    public class FoodDTO
+    public class FoundFoodDTO
     {
         public long Id { get; set; }
         public string Name { get; set; }
