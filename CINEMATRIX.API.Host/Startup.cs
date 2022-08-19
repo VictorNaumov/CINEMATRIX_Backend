@@ -28,7 +28,7 @@ namespace CINEMATRIX
             services.AddControllers();
             services.ConfigureCors();
             services.ConfigureJWT(Configuration);
-            services.AddDbContext<ApplicationDbContext>(options => 
+            services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
             services.AddApplicationDbContext();
             services.ConfigureSwaggerVersioning();
@@ -45,6 +45,7 @@ namespace CINEMATRIX
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
             app.UseSwaggerUI(options =>
             {
                 foreach (var description in provider.ApiVersionDescriptions)

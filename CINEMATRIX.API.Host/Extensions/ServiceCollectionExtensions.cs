@@ -12,7 +12,7 @@ using System.Text;
 
 namespace CINEMATRIX.API.Host.Extensions
 {
-    public static class ServiceCollectionExtansions
+    public static class ServiceCollectionExtensions
     {
         public static void ConfigureSwaggerVersioning(this IServiceCollection services)
         {
@@ -81,7 +81,7 @@ namespace CINEMATRIX.API.Host.Extensions
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                options.IncludeXmlComments(xmlPath);
+                //options.IncludeXmlComments(xmlPath);
 
                 options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {

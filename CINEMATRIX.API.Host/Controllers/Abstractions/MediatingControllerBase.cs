@@ -1,11 +1,10 @@
-﻿using System;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
-using CINEMATRIX.API.Resources;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
 
 namespace CINEMATRIX.API.Host.Controllers.Abstractions
 {
@@ -45,18 +44,18 @@ namespace CINEMATRIX.API.Host.Controllers.Abstractions
 
             if (!ModelState.IsValid)
             {
-                return BadRequest(Resources.InvalidDataProvided);
+                //return BadRequest(Resources.InvalidDataProvided);
             }
 
             TResult response = await mediator.Send(query, cancellationToken);
 
             if (response == null)
             {
-                var actualNotFoundMessage = string.IsNullOrWhiteSpace(notFoundMessage)
-                                                ? string.Format(Resources.ResourceNotFound)
-                                                : notFoundMessage;
+                //var actualNotFoundMessage = string.IsNullOrWhiteSpace(notFoundMessage)
+                //? string.Format(Resources.ResourceNotFound)
+                //: notFoundMessage;
 
-                return NotFound(actualNotFoundMessage);
+                //return NotFound(actualNotFoundMessage);
             }
 
             return Ok(response);
@@ -78,13 +77,13 @@ namespace CINEMATRIX.API.Host.Controllers.Abstractions
 
             if (!ModelState.IsValid)
             {
-                return BadRequest(Resources.InvalidDataProvided);
+                //return BadRequest(Resources.InvalidDataProvided);
             }
 
             TResult response = await mediator.Send(command, cancellationToken);
             if (response == null)
             {
-                throw new Exception(Resources.ErrorProcessingRequest);
+                //throw new Exception(Resources.ErrorProcessingRequest);
             }
 
             return Ok(response);
