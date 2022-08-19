@@ -16,9 +16,9 @@ namespace CINEMATRIX.API.Host.Controllers
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/auth")]
     [ApiController]
-    public class AdminController : MediatingControllerBase
+    public class AuthController : MediatingControllerBase
     {
-        public AdminController(IMediator mediator) : base(mediator)
+        public AuthController(IMediator mediator) : base(mediator)
         { }
 
         [HttpPost("login")]
