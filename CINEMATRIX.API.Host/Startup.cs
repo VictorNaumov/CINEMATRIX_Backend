@@ -1,3 +1,4 @@
+using AutoMapper;
 using CINEMATRIX.API.Application;
 using CINEMATRIX.API.Host.Extensions;
 using CINEMATRIX.API.Host.Swagger;
@@ -35,7 +36,7 @@ namespace CINEMATRIX
             services.ConfigureSwaggerVersioning();
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
-
+            services.ConfigureAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

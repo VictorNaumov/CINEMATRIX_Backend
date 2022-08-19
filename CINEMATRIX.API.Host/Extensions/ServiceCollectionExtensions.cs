@@ -110,5 +110,8 @@ namespace CINEMATRIX.API.Host.Extensions
                     }
                 });
             });
+
+        public static void ConfigureAutoMapper(this IServiceCollection services) =>
+           services.AddAutoMapper(typeof(Startup));
     }
 }
