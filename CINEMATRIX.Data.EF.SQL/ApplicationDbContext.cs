@@ -8,7 +8,6 @@ namespace CINEMATRIX.Data.EF.SQL
     {
         public DbSet<Food> Foods { get; set; }
         public DbSet<Hall> Halls { get; set; }
-        public DbSet<Phone> Phones { get; set; }
         public DbSet<Poster> Posters { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Seat> Seats { get; set; }
