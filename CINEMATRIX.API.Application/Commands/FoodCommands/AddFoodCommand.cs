@@ -23,7 +23,6 @@ namespace CINEMATRIX.API.Application.Commands.FoodCommands
         {
             _foodService = foodService;
             _mapper = mapper;
-
         }
 
         public async Task<long> Handle(AddFoodCommand request, CancellationToken cancellationToken)
