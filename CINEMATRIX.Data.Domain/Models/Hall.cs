@@ -11,5 +11,6 @@ namespace CINEMATRIX.Data.Domain.Models
         public string Screen { get; set; }
         public string ScreenResolution { get; set; }
         public ICollection<Seat> Seats { get; set; }
+        public ICollection<Session> Sessions { get; set; }
     }
 }
