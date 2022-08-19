@@ -1,3 +1,4 @@
+using CINEMATRIX.API.Application;
 using CINEMATRIX.API.Host.Extensions;
 using CINEMATRIX.API.Host.Swagger;
 using CINEMATRIX.Data.EF.SQL;
@@ -30,7 +31,7 @@ namespace CINEMATRIX
             services.ConfigureJWT(Configuration);
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
-            services.AddApplicationDbContext();
+            services.AddApplication();
             services.ConfigureSwaggerVersioning();
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
