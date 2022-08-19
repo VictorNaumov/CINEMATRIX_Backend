@@ -27,7 +27,7 @@ namespace CINEMATRIX.API.Application.Commands.AuthCommands
         {
             var isExist = await _userService.ExistAsync(request.Entity);
 
-            if (!isExist)
+            if (isExist)
             {
                 return false;
             }
