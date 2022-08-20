@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Incoming\SearchConditions\FoodSearchCondition.cs~RF223b3e.TMP" />
+  </ItemGroup>
+
 </Project>

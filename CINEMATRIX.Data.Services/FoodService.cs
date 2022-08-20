@@ -52,28 +52,19 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<Food> query = _dbContext.Foods;
 
-            if (searchCondition.Name.Any())
+            foreach (var name in searchCondition.Name)
             {
-                foreach (var name in searchCondition.Name)
-                {
-                    query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name));
-                }
+                query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name));
             }
 
-            if (searchCondition.Description.Any())
+            foreach (var description in searchCondition.Description)
             {
-                foreach (var description in searchCondition.Description)
-                {
-                    query = query.Where(x => x.Description != null && x.Description.ToUpper().Contains(description));
-                }
+                query = query.Where(x => x.Description != null && x.Description.ToUpper().Contains(description));
             }
 
-            if (searchCondition.Price.Any())
+            foreach (var price in searchCondition.Price)
             {
-                foreach (var price in searchCondition.Price)
-                {
-                    query = query.Where(x => x.Price == price);
-                }
+                query = query.Where(x => x.Price == price);
             }
 
             return query;

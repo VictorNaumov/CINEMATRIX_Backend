@@ -52,20 +52,14 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<SeatType> query = _dbContext.SeatTypes;
 
-            if (searchCondition.Name.Any())
+            foreach (var name in searchCondition.Name)
             {
-                foreach (var name in searchCondition.Name)
-                {
-                    query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name));
-                }
+                query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name));
             }
 
-            if (searchCondition.Price.Any())
+            foreach (var price in searchCondition.Price)
             {
-                foreach (var price in searchCondition.Price)
-                {
-                    query = query.Where(x => x.Price == price);
-                }
+                query = query.Where(x => x.Price == price);
             }
 
             return query;
