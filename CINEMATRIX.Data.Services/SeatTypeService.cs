@@ -57,10 +57,7 @@ namespace CINEMATRIX.Data.Services
                 query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name));
             }
 
-            foreach (var price in searchCondition.Price)
-            {
-                query = query.Where(x => x.Price == price);
-            }
+            query = query.Where(x => searchCondition.StartPrice <= x.Price && x.Price <= searchCondition.FinishPrice);
 
             return query;
         }
