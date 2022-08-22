@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
 using CINEMATRIX.API.Application.Queries.Abstractions;
+using CINEMATRIX.API.Application.Queries.Extensions;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.Services;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,12 +32,12 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
         public async Task<PagedResponse<FoundHallDTO>> Handle(SearchHallQuery request, CancellationToken cancellationToken)
         {
             var searchCondition = request.SearchCondition;
-            searchCondition.Name = GetFilterValues(request.SearchCondition.Name);
-            searchCondition.Description = GetFilterValues(request.SearchCondition.Description);
-            searchCondition.SoundSystem = GetFilterValues(request.SearchCondition.SoundSystem);
-            searchCondition.Projector = GetFilterValues(request.SearchCondition.Projector);
-            searchCondition.Screen = GetFilterValues(request.SearchCondition.Screen);
-            searchCondition.ScreenResolution = GetFilterValues(request.SearchCondition.ScreenResolution);
+            searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
+            searchCondition.Description = request.SearchCondition.Description.GetFilterValues();
+            searchCondition.SoundSystem = request.SearchCondition.SoundSystem.GetFilterValues();
+            searchCondition.Projector = request.SearchCondition.Projector.GetFilterValues();
+            searchCondition.Screen = request.SearchCondition.Screen.GetFilterValues();
+            searchCondition.ScreenResolution = request.SearchCondition.ScreenResolution.GetFilterValues();
 
             var sortProperty = GetSortProperty(searchCondition.SortProperty);
 
@@ -51,12 +50,6 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
                 Items = mappedHall,
                 TotalCount = totalCount
             };
-        }
-        private string[] GetFilterValues(ICollection<string> values)
-        {
-            return values == null
-                ? Array.Empty<string>()
-                : values.Select(v => v.ToUpper().Trim()).Distinct().ToArray();
         }
 
         protected string GetSortProperty(string propertyName)

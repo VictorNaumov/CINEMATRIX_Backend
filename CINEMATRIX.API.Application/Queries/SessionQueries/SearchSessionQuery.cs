@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
 using CINEMATRIX.API.Application.Queries.Abstractions;
+using CINEMATRIX.API.Application.Queries.Extensions;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.Services;
 using MediatR;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -33,7 +32,7 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
         public async Task<PagedResponse<FoundSessionDTO>> Handle(SearchSessionQuery request, CancellationToken cancellationToken)
         {
             var searchCondition = request.SearchCondition;
-            searchCondition.MovieName = GetFilterValues(request.SearchCondition.MovieName);
+            searchCondition.MovieName = request.SearchCondition.MovieName.GetFilterValues();
 
             var sortProperty = GetSortProperty(searchCondition.SortProperty);
 
@@ -46,12 +45,6 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
                 Items = mappedSession,
                 TotalCount = totalCount
             };
-        }
-        private string[] GetFilterValues(ICollection<string> values)
-        {
-            return values == null
-                ? Array.Empty<string>()
-                : values.Select(v => v.ToUpper().Trim()).Distinct().ToArray();
         }
 
         protected string GetSortProperty(string propertyName)
