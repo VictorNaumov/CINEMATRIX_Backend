@@ -23,7 +23,10 @@ namespace CINEMATRIX.Data.EF.SQL
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
             modelBuilder.Entity<Session>().HasMany(x => x.Tickets).WithOne(y => y.Session).OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Ticket>().HasIndex(c=> new { c.SessionId, c.SeatId }).IsUnique();
         }
     }
 }
