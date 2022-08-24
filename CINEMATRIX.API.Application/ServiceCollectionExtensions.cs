@@ -1,4 +1,5 @@
 ﻿using CINEMATRIX.API.Application.Validation;
+using CINEMATRIX.API.Application.Validation.Abstractions;
 using CINEMATRIX.Data.Services.Extensions;
 using FluentValidation;
 using MediatR;

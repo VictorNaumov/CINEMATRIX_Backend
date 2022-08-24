@@ -8,4 +8,8 @@
     <None Remove="Incoming\SearchConditions\FoodSearchCondition.cs~RF223b3e.TMP" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CINEMATRIX.API.Resources\CINEMATRIX.API.Resources.csproj" />
+  </ItemGroup>
+
 </Project>

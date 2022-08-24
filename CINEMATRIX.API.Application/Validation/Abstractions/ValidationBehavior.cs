@@ -6,7 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using ValidationException = FluentValidation.ValidationException;
 
-namespace CINEMATRIX.API.Application.Validation
+namespace CINEMATRIX.API.Application.Validation.Abstractions
 {
     public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
