@@ -13,7 +13,7 @@ namespace CINEMATRIX.Data.EF.SQL
         public DbSet<Seat> Seats { get; set; }
         public DbSet<SeatType> SeatTypes { get; set; }
         public DbSet<Session> Sessions { get; set; }
-        public DbSet<PersonalData> PersonalData { get; set; }
+        public DbSet<Profile> Profile { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<User> Users { get; set; }
 

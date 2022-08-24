@@ -1,6 +1,6 @@
-﻿namespace CINEMATRIX.API.Contracts.IncomingOutgoing
+﻿namespace CINEMATRIX.Data.Domain.Models
 {
-    public class PersonalDataDTO
+    public class Profile : KeyedEntityBase
     {
         public string Name { get; set; }
         public string SecondName { get; set; }

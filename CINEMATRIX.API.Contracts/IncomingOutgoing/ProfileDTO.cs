@@ -1,10 +1,12 @@
-﻿namespace CINEMATRIX.Data.Domain.Models
+﻿using System;
+
+namespace CINEMATRIX.API.Contracts.IncomingOutgoing
 {
-    public class PersonalData : KeyedEntityBase
+    public class ProfileDTO
     {
         public string Name { get; set; }
         public string SecondName { get; set; }
-        public string DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
     }
 }

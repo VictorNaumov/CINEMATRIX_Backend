@@ -232,65 +232,47 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A library name required..
+        ///   Looks up a localized string similar to An profile date must be in range from &apos;{0}&apos; to &apos;{1}&apos;.
         /// </summary>
-        public static string LibraryNameRequired {
+        public static string ProfileDateOfBirthMustBeInRange {
             get {
-                return ResourceManager.GetString("LibraryNameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The library with id &apos;{0}&apos; was not found..
-        /// </summary>
-        public static string LibraryNotFound {
-            get {
-                return ResourceManager.GetString("LibraryNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A library telephone required..
-        /// </summary>
-        public static string LibraryTelephoneRequired {
-            get {
-                return ResourceManager.GetString("LibraryTelephoneRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An profile date of birth required.
-        /// </summary>
-        public static string PersonalDataDateOfBirthRequired {
-            get {
-                return ResourceManager.GetString("PersonalDataDateOfBirthRequired", resourceCulture);
+                return ResourceManager.GetString("ProfileDateOfBirthMustBeInRange", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to An profile name required.
         /// </summary>
-        public static string PersonalDataNameRequired {
+        public static string ProfileNameRequired {
             get {
-                return ResourceManager.GetString("PersonalDataNameRequired", resourceCulture);
+                return ResourceManager.GetString("ProfileNameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The profuke with id &apos;{0}&apos; was not found..
+        /// </summary>
+        public static string ProfileNotFound {
+            get {
+                return ResourceManager.GetString("ProfileNotFound", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to An profile phone number required.
         /// </summary>
-        public static string PersonalDataPhoneNumberRequired {
+        public static string ProfilePhoneNumberRequired {
             get {
-                return ResourceManager.GetString("PersonalDataPhoneNumberRequired", resourceCulture);
+                return ResourceManager.GetString("ProfilePhoneNumberRequired", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to An profile second name required.
         /// </summary>
-        public static string PersonalDataSecondNameRequired {
+        public static string ProfileSecondNameRequired {
             get {
-                return ResourceManager.GetString("PersonalDataSecondNameRequired", resourceCulture);
+                return ResourceManager.GetString("ProfileSecondNameRequired", resourceCulture);
             }
         }
         

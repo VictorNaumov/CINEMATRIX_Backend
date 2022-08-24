@@ -30,6 +30,11 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
             RuleFor(cmd => cmd.Entity.Price)
                 .Must(NotBeLessThanNull)
                 .WithMessage(Resources.Resources.FoodPriceCanNotBeLessThanNull);
+
+            RuleFor(cmd => cmd.Entity.Price)
+                .Must(NotBeLessThanNull)
+                .WithMessage(query => string.Format(Resources.Resources.ValueRequired, nameof(query.Id)));
+
         }
 
         private bool NotBeNullOrWhitespace(string value) 

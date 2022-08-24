@@ -7,29 +7,29 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Commands.PersonalDataCommands
+namespace CINEMATRIX.API.Application.Commands.ProfileCommands
 {
-    public class AddPersonalDataCommand : CommandBase<long, PersonalDataDTO>
+    public class AddProfileCommand : CommandBase<long, ProfileDTO>
     {
-        public AddPersonalDataCommand(PersonalDataDTO personalData) : base(personalData) { }
+        public AddProfileCommand(ProfileDTO profile) : base(profile) { }
     }
 
-    public class AddPersonalDataCommandHandler : IRequestHandler<AddPersonalDataCommand, long>
+    public class AddProfileCommandHandler : IRequestHandler<AddProfileCommand, long>
     {
-        private readonly IPersonalDataService _personalDataService;
+        private readonly IProfileService _profileService;
         private readonly IMapper _mapper;
 
-        public AddPersonalDataCommandHandler(IPersonalDataService personalDataService, IMapper mapper)
+        public AddProfileCommandHandler(IProfileService profileService, IMapper mapper)
         {
-            _personalDataService = personalDataService;
+            _profileService = profileService;
             _mapper = mapper;
         }
 
-        public async Task<long> Handle(AddPersonalDataCommand request, CancellationToken cancellationToken)
+        public async Task<long> Handle(AddProfileCommand request, CancellationToken cancellationToken)
         {
-            var personalData = _mapper.Map<PersonalData>(request.Entity);
+            var profile = _mapper.Map<Data.Domain.Models.Profile>(request.Entity);
 
-            var insertedProduct = await _personalDataService.InsertAsync(personalData);
+            var insertedProduct = await _profileService.InsertAsync(profile);
 
             return insertedProduct.Id;
         }

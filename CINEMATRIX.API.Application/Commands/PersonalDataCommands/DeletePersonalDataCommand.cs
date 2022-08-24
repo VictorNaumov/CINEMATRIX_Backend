@@ -3,30 +3,30 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Commands.PersonalDataCommands
+namespace CINEMATRIX.API.Application.Commands.ProfileCommands
 {
-    public class DeletePersonalDataCommand : IRequest
+    public class DeleteProfileCommand : IRequest
     {
         public long Id { get; }
 
-        public DeletePersonalDataCommand(long id)
+        public DeleteProfileCommand(long id)
         {
             Id = id;
         }
     }
 
-    public class DeletePersonalDataCommandHandler : IRequestHandler<DeletePersonalDataCommand>
+    public class DeleteProfileCommandHandler : IRequestHandler<DeleteProfileCommand>
     {
-        private readonly IPersonalDataService _personalDataService;
+        private readonly IProfileService _profileService;
 
-        public DeletePersonalDataCommandHandler(IPersonalDataService personalDataService)
+        public DeleteProfileCommandHandler(IProfileService profileService)
         {
-            _personalDataService = personalDataService;
+            _profileService = profileService;
         }
 
-        public async Task<Unit> Handle(DeletePersonalDataCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(DeleteProfileCommand request, CancellationToken cancellationToken)
         {
-            await _personalDataService.DeleteAsync(request.Id, cancellationToken);
+            await _profileService.DeleteAsync(request.Id, cancellationToken);
 
             return Unit.Value;
         }

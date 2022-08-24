@@ -8,38 +8,38 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Commands.PersonalDataCommands
+namespace CINEMATRIX.API.Application.Commands.ProfileCommands
 {
-    public class UpdatePersonalDataCommand : CommandBase<Response, PersonalDataDTO>
+    public class UpdateProfileCommand : CommandBase<Response, ProfileDTO>
     {
-        public UpdatePersonalDataCommand(long id, PersonalDataDTO update) : base(id, update) { }
+        public UpdateProfileCommand(long id, ProfileDTO update) : base(id, update) { }
     }
 
-    public class UpdatePersonalDataCommandHandler : IRequestHandler<UpdatePersonalDataCommand, Response>
+    public class UpdateProfileCommandHandler : IRequestHandler<UpdateProfileCommand, Response>
     {
-        private readonly IPersonalDataService _personalDataService;
+        private readonly IProfileService _profileService;
         private readonly IMapper _mapper;
 
-        public UpdatePersonalDataCommandHandler(IPersonalDataService personalDataService, IMapper mapper)
+        public UpdateProfileCommandHandler(IProfileService profileService, IMapper mapper)
         {
-            _personalDataService = personalDataService;
+            _profileService = profileService;
             _mapper = mapper;
         }
 
-        public async Task<Response> Handle(UpdatePersonalDataCommand request, CancellationToken cancellationToken)
+        public async Task<Response> Handle(UpdateProfileCommand request, CancellationToken cancellationToken)
         {
-            var personalData = await _personalDataService.GetAsync(request.Id, cancellationToken);
+            var profile = await _profileService.GetAsync(request.Id, cancellationToken);
 
-            if (personalData == null)
+            if (profile == null)
             {
                 return Response.Error;
             }
 
-            var personalDataToUpdate = _mapper.Map<PersonalData>(personalData);
+            var profileToUpdate = _mapper.Map<Data.Domain.Models.Profile>(profile);
 
-            var updatedPersonalData = await _personalDataService.UpdateAsync(personalDataToUpdate);
+            var updatedProfile = await _profileService.UpdateAsync(profileToUpdate);
 
-            if (updatedPersonalData == null)
+            if (updatedProfile == null)
             {
                 return Response.Error;
             }

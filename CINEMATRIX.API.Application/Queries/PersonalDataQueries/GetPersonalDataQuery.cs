@@ -5,41 +5,41 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Queries.PersonalDataQueries
+namespace CINEMATRIX.API.Application.Queries.ProfileQueries
 {
-    public class GetPersonalDataQuery : IRequest<PersonalDataDTO>
+    public class GetProfileQuery : IRequest<ProfileDTO>
     {
         public long Id { get; }
 
-        public GetPersonalDataQuery(long id)
+        public GetProfileQuery(long id)
         {
             Id = id;
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetPersonalDataQuery, PersonalDataDTO>
+    public class GetProductQueryHandler : IRequestHandler<GetProfileQuery, ProfileDTO>
     {
-        private readonly IPersonalDataService _personalDataService;
+        private readonly IProfileService _profileService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(IPersonalDataService personalDataService, IMapper mapper)
+        public GetProductQueryHandler(IProfileService profileService, IMapper mapper)
         {
-            _personalDataService = personalDataService;
+            _profileService = profileService;
             _mapper = mapper;
         }
 
-        public async Task<PersonalDataDTO> Handle(GetPersonalDataQuery request, CancellationToken cancellationToken)
+        public async Task<ProfileDTO> Handle(GetProfileQuery request, CancellationToken cancellationToken)
         {
-            var personalData = await _personalDataService.GetAsync(request.Id, cancellationToken);
+            var profile = await _profileService.GetAsync(request.Id, cancellationToken);
 
-            if (personalData == null)
+            if (profile == null)
             {
                 return null;
             }
 
-            var mappedPersonalData = _mapper.Map<PersonalDataDTO>(personalData);
+            var mappedProfile = _mapper.Map<ProfileDTO>(profile);
 
-            return mappedPersonalData;
+            return mappedProfile;
         }
     }
 }
