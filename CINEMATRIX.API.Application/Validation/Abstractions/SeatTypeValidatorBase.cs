@@ -21,11 +21,11 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
             RuleFor(cmd => cmd.Entity.Name)
                 .Must(ValidationUtility.InNotNullOrWhitespace)
-                .WithMessage(Resources.Resources.SeatTypeNameRequired);
+                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Name)));
 
             RuleFor(cmd => cmd.Entity.Price)
                 .Must(ValidationUtility.IsPositiveNumber)
-                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Id)));
+                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Price)));
         }
     }
 }

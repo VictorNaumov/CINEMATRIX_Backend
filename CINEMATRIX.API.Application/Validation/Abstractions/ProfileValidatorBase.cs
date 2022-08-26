@@ -22,15 +22,16 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
             RuleFor(cmd => cmd.Entity.Name)
                 .Must(ValidationUtility.InNotNullOrWhitespace)
-                .WithMessage(Resources.Resources.ProfileNameRequired);
+                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Name)));
 
             RuleFor(cmd => cmd.Entity.SecondName)
                 .Must(ValidationUtility.InNotNullOrWhitespace)
-                .WithMessage(Resources.Resources.ProfileSecondNameRequired);
+                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.SecondName)));
+
 
             RuleFor(cmd => cmd.Entity.PhoneNumber)
                 .Must(ValidationUtility.InNotNullOrWhitespace)
-                .WithMessage(Resources.Resources.ProfilePhoneNumberRequired);
+                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.PhoneNumber)));
 
             RuleFor(cmd => cmd.Entity.DateOfBirth)
                 .Must(ValidationUtility.IsValidDateTime)

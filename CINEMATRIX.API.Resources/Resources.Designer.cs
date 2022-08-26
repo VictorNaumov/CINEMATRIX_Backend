@@ -61,87 +61,6 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to An author patronymic required.
-        /// </summary>
-        public static string AuthorPatronymicRequired {
-            get {
-                return ResourceManager.GetString("AuthorPatronymicRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An author surname required.
-        /// </summary>
-        public static string AuthorSurnameRequired {
-            get {
-                return ResourceManager.GetString("AuthorSurnameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A book amount pages not be less than null..
-        /// </summary>
-        public static string BookAmountPageNotBeLessThanNull {
-            get {
-                return ResourceManager.GetString("BookAmountPageNotBeLessThanNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A book fund amount not be less than null..
-        /// </summary>
-        public static string BookFundAmountNotBeLessThanNull {
-            get {
-                return ResourceManager.GetString("BookFundAmountNotBeLessThanNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The book fund with id &apos;{0}&apos; was not found..
-        /// </summary>
-        public static string BookFundNotFound {
-            get {
-                return ResourceManager.GetString("BookFundNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A book ISBN required..
-        /// </summary>
-        public static string BookISBNRequired {
-            get {
-                return ResourceManager.GetString("BookISBNRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to The book with id &apos;{0}&apos; was not found..
-        /// </summary>
-        public static string BookNotFound {
-            get {
-                return ResourceManager.GetString("BookNotFound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A book title required..
-        /// </summary>
-        public static string BookTitleRequired {
-            get {
-                return ResourceManager.GetString("BookTitleRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to A book year not be less than null..
-        /// </summary>
-        public static string BookYearNotBeLessThanNull {
-            get {
-                return ResourceManager.GetString("BookYearNotBeLessThanNull", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to An error occurred while processing your request..
         /// </summary>
         public static string ErrorProcessingRequest {
@@ -205,6 +124,15 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The hall with id &apos;{0}&apos; was not found..
+        /// </summary>
+        public static string HallNotFound {
+            get {
+                return ResourceManager.GetString("HallNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Insufficient or invalid data was provided for this request..
         /// </summary>
         public static string InvalidDataProvided {
@@ -223,16 +151,7 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A library address required..
-        /// </summary>
-        public static string LibraryAddressRequired {
-            get {
-                return ResourceManager.GetString("LibraryAddressRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to An profile date must be in range from &apos;{0}&apos; to &apos;{1}&apos;.
+        ///   Looks up a localized string similar to An profile birth day must be in range from &apos;{0}&apos; to &apos;{1}&apos;.
         /// </summary>
         public static string ProfileDateOfBirthMustBeInRange {
             get {
@@ -250,7 +169,7 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The profuke with id &apos;{0}&apos; was not found..
+        ///   Looks up a localized string similar to The profile with id &apos;{0}&apos; was not found..
         /// </summary>
         public static string ProfileNotFound {
             get {
@@ -318,6 +237,33 @@ namespace CINEMATRIX.API.Resources {
         public static string SeatTypeNotFound {
             get {
                 return ResourceManager.GetString("SeatTypeNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An session date time must be in range from &apos;{0}&apos; to &apos;{1}&apos;.
+        /// </summary>
+        public static string SessionDateTimeMustBeInRange {
+            get {
+                return ResourceManager.GetString("SessionDateTimeMustBeInRange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The session with id &apos;{0}&apos; was not found..
+        /// </summary>
+        public static string SessionNotFound {
+            get {
+                return ResourceManager.GetString("SessionNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The ticket with id &apos;{0}&apos; was not found..
+        /// </summary>
+        public static string TicketNotFound {
+            get {
+                return ResourceManager.GetString("TicketNotFound", resourceCulture);
             }
         }
         
