@@ -5,10 +5,10 @@ using FluentValidation;
 
 namespace CINEMATRIX.API.Application.Validation.Abstractions
 {
-    public class FoodValidatorBase<TCommand, TResponse> : AbstractValidator<TCommand>
-        where TCommand : CommandBase<TResponse, FoodDTO>
+    public class SeatTypeValidatorBase<TCommand, TResponse> : AbstractValidator<TCommand>
+        where TCommand : CommandBase<TResponse, SeatTypeDTO>
     {
-        public FoodValidatorBase()
+        public SeatTypeValidatorBase()
         {
             CreateRules();
         }
@@ -21,17 +21,11 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
             RuleFor(cmd => cmd.Entity.Name)
                 .Must(ValidationUtility.InNotNullOrWhitespace)
-                .WithMessage(Resources.Resources.FoodNameRequired);
-
-            RuleFor(cmd => cmd.Entity.Description)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
-                .WithMessage(Resources.Resources.FoodDescriptionRequired);
+                .WithMessage(Resources.Resources.SeatTypeNameRequired);
 
             RuleFor(cmd => cmd.Entity.Price)
                 .Must(ValidationUtility.IsPositiveNumber)
-                .WithMessage(Resources.Resources.FoodPriceCanNotBeLessThanNull);
-
-
+                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Id)));
         }
     }
 }

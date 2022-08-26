@@ -1,4 +1,4 @@
-﻿using CINEMATRIX.API.Application.Commands.ProfileCommands;
+﻿using CINEMATRIX.API.Application.Commands.SeatTypeCommands;
 using CINEMATRIX.API.Application.Validation.Abstractions;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.Data.Services;
@@ -6,15 +6,15 @@ using FluentValidation;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Validation.Profile
+namespace CINEMATRIX.API.Application.Validation.SeatType
 {
-    public class UpdateProfileValidator : ProfileValidatorBase<UpdateProfileCommand, Response>
+    public class UpdateSeatTypeValidator : SeatTypeValidatorBase<UpdateSeatTypeCommand, Response>
     {
-        private readonly IProfileService _profileService;
+        private readonly ISeatTypeService _seatTypeService;
 
-        public UpdateProfileValidator(IProfileService profileService) : base()
+        public UpdateSeatTypeValidator(ISeatTypeService seatTypeService) : base()
         {
-            _profileService = profileService;
+            _seatTypeService = seatTypeService;
 
             CreateRules();
         }
@@ -25,10 +25,10 @@ namespace CINEMATRIX.API.Application.Validation.Profile
                .NotNull()
                .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Id)))
                .MustAsync(Exist)
-               .WithMessage(cmd => string.Format(Resources.Resources.ProfileNotFound, cmd.Id));
+               .WithMessage(cmd => string.Format(Resources.Resources.SeatTypeNotFound, cmd.Id));
         }
 
         private async Task<bool> Exist(long id, CancellationToken cancellationToken)
-            => await _profileService.ExistsAsync(id, cancellationToken);
+            => await _seatTypeService.ExistsAsync(id, cancellationToken);
     }
 }

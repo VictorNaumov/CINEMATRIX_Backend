@@ -104,7 +104,7 @@ namespace CINEMATRIX.Data.Services
 
         private static string ToBinary(byte[] data)
         {
-            return string.Join(" ", data.Select(byt => Convert.ToString(byt, 2).PadLeft(8, '0')));
+            return string.Join(" ", data.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
         }
     }
 }

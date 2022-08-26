@@ -1,6 +1,6 @@
 ﻿using CINEMATRIX.API.Application.Commands.Abstractions;
+using CINEMATRIX.API.Application.Validation.Utilities;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
-using CINEMATRIX.Data.Services;
 using FluentValidation;
 using System;
 
@@ -21,32 +21,20 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity)));
 
             RuleFor(cmd => cmd.Entity.Name)
-                .Must(NotBeNullOrWhitespace)
+                .Must(ValidationUtility.InNotNullOrWhitespace)
                 .WithMessage(Resources.Resources.ProfileNameRequired);
 
             RuleFor(cmd => cmd.Entity.SecondName)
-                .Must(NotBeNullOrWhitespace)
+                .Must(ValidationUtility.InNotNullOrWhitespace)
                 .WithMessage(Resources.Resources.ProfileSecondNameRequired);
 
-            RuleFor(cmd => cmd.Entity.DateOfBirth)
-                .Must(IsValidDateTime)
-                .WithMessage(query => string.Format(Resources.Resources.ProfileDateOfBirthMustBeInRange, DateTime.Now.AddYears(-130), DateTime.Now.AddYears(5)));
-
             RuleFor(cmd => cmd.Entity.PhoneNumber)
-                .Must(NotBeNullOrWhitespace)
+                .Must(ValidationUtility.InNotNullOrWhitespace)
                 .WithMessage(Resources.Resources.ProfilePhoneNumberRequired);
-        }
 
-        private bool NotBeNullOrWhitespace(string value) 
-            => !string.IsNullOrWhiteSpace(value);
-        
-        private bool IsValidDateTime(DateTime value)
-        {
-            DateTime startDate = DateTime.Now.AddYears(-130);
-
-            DateTime endDate = DateTime.Now.AddYears(5);
-
-            return startDate < value && value < endDate;
+            RuleFor(cmd => cmd.Entity.DateOfBirth)
+                .Must(ValidationUtility.IsValidDateTime)
+                .WithMessage(query => string.Format(Resources.Resources.ProfileDateOfBirthMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.ToShortDateString()));
         }
     }
 }

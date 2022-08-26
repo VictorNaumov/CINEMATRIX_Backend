@@ -1,5 +1,4 @@
-﻿using CINEMATRIX.API.Application.Validation;
-using CINEMATRIX.API.Application.Validation.Abstractions;
+﻿using CINEMATRIX.API.Application.Validation.Abstractions;
 using CINEMATRIX.Data.Services.Extensions;
 using FluentValidation;
 using MediatR;
@@ -16,8 +15,8 @@ namespace CINEMATRIX.API.Application
         {
             services.AddMediatR(Assembly.GetExecutingAssembly());
 
-            services.AddValidators();
             services.AddApplicationServices();
+            services.AddValidators();
         }
 
         private static void AddValidators(this IServiceCollection services)

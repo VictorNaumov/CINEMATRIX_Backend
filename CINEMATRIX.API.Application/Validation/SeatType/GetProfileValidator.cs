@@ -1,18 +1,18 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Queries.ProfileQueries;
+using CINEMATRIX.API.Application.Queries.SeatTypeQueries;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
 
-namespace CINEMATRIX.API.Application.Validation.Profile
+namespace CINEMATRIX.API.Application.Validation.SeatType
 {
-    public class GetProfileValidator : AbstractValidator<GetProfileQuery>
+    public class GetSeatTypeValidator : AbstractValidator<GetSeatTypeQuery>
     {
-        private readonly IProfileService _profileService;
+        private readonly ISeatTypeService _seatTypeService;
 
-        public GetProfileValidator(IProfileService profileService)
+        public GetSeatTypeValidator(ISeatTypeService seatTypeService)
         {
-            _profileService = profileService;
+            _seatTypeService = seatTypeService;
 
             CreateRules();
         }
@@ -23,10 +23,10 @@ namespace CINEMATRIX.API.Application.Validation.Profile
                 .NotNull()
                 .WithMessage(query => string.Format(Resources.Resources.ValueRequired, nameof(query.Id)))
                 .MustAsync(Exist)
-                .WithMessage(Resources.Resources.ProfileNotFound);
+                .WithMessage(Resources.Resources.SeatTypeNotFound);
         }
 
         private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
-            => await _profileService.ExistsAsync(id, cancellationToken);
+            => await _seatTypeService.ExistsAsync(id, cancellationToken);
     }
 }

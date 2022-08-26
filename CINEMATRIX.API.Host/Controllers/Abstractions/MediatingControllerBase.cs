@@ -42,23 +42,31 @@ namespace CINEMATRIX.API.Host.Controllers.Abstractions
                 throw new ArgumentNullException(nameof(query));
             }
 
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(Resources.Resources.InvalidDataProvided);
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(Resources.Resources.InvalidDataProvided);
+                }
+
+                TResult response = await mediator.Send(query, cancellationToken);
+
+                if (response == null)
+                {
+                    var actualNotFoundMessage = string.IsNullOrWhiteSpace(notFoundMessage)
+                    ? string.Format(Resources.Resources.ResourceNotFound)
+                    : notFoundMessage;
+
+                    return NotFound(actualNotFoundMessage);
+                }
+
+                return Ok(response);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
             }
 
-            TResult response = await mediator.Send(query, cancellationToken);
-
-            if (response == null)
-            {
-                var actualNotFoundMessage = string.IsNullOrWhiteSpace(notFoundMessage)
-                ? string.Format(Resources.Resources.ResourceNotFound)
-                : notFoundMessage;
-
-                return NotFound(actualNotFoundMessage);
-            }
-
-            return Ok(response);
         }
 
         /// <summary>
@@ -75,18 +83,27 @@ namespace CINEMATRIX.API.Host.Controllers.Abstractions
                 throw new ArgumentNullException(nameof(command));
             }
 
-            if (!ModelState.IsValid)
+            try
             {
-                return BadRequest(Resources.Resources.InvalidDataProvided);
-            }
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(Resources.Resources.InvalidDataProvided);
+                }
 
-            TResult response = await mediator.Send(command, cancellationToken);
-            if (response == null)
+                TResult response = await mediator.Send(command, cancellationToken);
+
+                if (response == null)
+                {
+                    throw new Exception(Resources.Resources.ErrorProcessingRequest);
+                }
+
+                return Ok(response);
+
+            }
+            catch (Exception ex)
             {
-                throw new Exception(Resources.Resources.ErrorProcessingRequest);
+                return BadRequest(ex.Message);
             }
-
-            return Ok(response);
         }
     }
 }

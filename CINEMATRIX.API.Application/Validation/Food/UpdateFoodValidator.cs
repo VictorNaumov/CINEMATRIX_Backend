@@ -24,11 +24,9 @@ namespace CINEMATRIX.API.Application.Validation.Food
         {
             RuleFor(cmd => cmd.Id)
                .NotNull()
-               .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Id)));
-
-            RuleFor(cmd => cmd.Id)
-                .MustAsync(Exist)
-                .WithMessage(cmd => string.Format(Resources.Resources.FoodNotFound, cmd.Id));
+               .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Id)))
+               .MustAsync(Exist)
+               .WithMessage(cmd => string.Format(Resources.Resources.FoodNotFound, cmd.Id));
         }
 
         private async Task<bool> Exist(long id, CancellationToken cancellationToken)

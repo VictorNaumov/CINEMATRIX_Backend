@@ -198,6 +198,12 @@
   <data name="ResourceNotFound" xml:space="preserve">
     <value>The requested resource was not found.</value>
   </data>
+  <data name="SeatTypeNameRequired" xml:space="preserve">
+    <value>A seat type name required.</value>
+  </data>
+  <data name="SeatTypeNotFound" xml:space="preserve">
+    <value>The requested seat type not found.</value>
+  </data>
   <data name="ValueRequired" xml:space="preserve">
     <value>A '{0}' is required.</value>
   </data>

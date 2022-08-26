@@ -304,6 +304,24 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to A seat type name required..
+        /// </summary>
+        public static string SeatTypeNameRequired {
+            get {
+                return ResourceManager.GetString("SeatTypeNameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The requested seat type not found..
+        /// </summary>
+        public static string SeatTypeNotFound {
+            get {
+                return ResourceManager.GetString("SeatTypeNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A &apos;{0}&apos; is required..
         /// </summary>
         public static string ValueRequired {

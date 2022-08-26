@@ -1,4 +1,3 @@
-using AutoMapper;
 using CINEMATRIX.API.Application;
 using CINEMATRIX.API.Host.Extensions;
 using CINEMATRIX.API.Host.Swagger;

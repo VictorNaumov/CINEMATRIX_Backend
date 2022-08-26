@@ -1,19 +1,20 @@
 ﻿using FluentValidation;
 using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using ValidationException = FluentValidation.ValidationException;
 
 namespace CINEMATRIX.API.Application.Validation.Abstractions
 {
     public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
-        private readonly IEnumerable<IValidator<IRequest>> _validators;
+        private readonly IEnumerable<IValidator<TRequest>> _validators;
 
-        public ValidationBehavior(IEnumerable<IValidator<IRequest>> validators)
+        public ValidationBehavior(IEnumerable<IValidator<TRequest>> validators)
         {
+
             _validators = validators;
         }
 
@@ -28,7 +29,9 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
             if (failures.Count != 0)
             {
-                throw new ValidationException(failures);
+                var failuresMessages = string.Join("\n", failures.Select(v => v.ErrorMessage));
+
+                throw new Exception(failuresMessages);
             }
 
             return next();
