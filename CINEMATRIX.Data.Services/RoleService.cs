@@ -8,9 +8,6 @@ namespace CINEMATRIX.Data.Services
 
     public class RoleService : BaseService<Role>, IRoleService
     {
-        public RoleService(ApplicationDbContext dbContext) : base(dbContext)
-        {
-
-        }
+        public RoleService(ApplicationDbContext dbContext) : base(dbContext) { }
     }
 }

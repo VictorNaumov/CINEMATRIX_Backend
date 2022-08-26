@@ -42,6 +42,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
         {
             await _dbSet.AddAsync(newEntity);
             await _dbContext.SaveChangesAsync(); ;
+
             return newEntity;
         }
 
@@ -54,6 +55,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
 
             _dbContext.ChangeTracker.DetectChanges();
             await _dbContext.SaveChangesAsync();
+
             return newEntity;
         }
 
