@@ -8,7 +8,7 @@ namespace CINEMATRIX.API.Application.Validation.Hall
 {
     public class DeleteHallValidator : AbstractValidator<DeleteHallCommand>
     {
-        private IHallService _hallService;
+        private readonly IHallService _hallService;
 
         public DeleteHallValidator(IHallService hallService)
         {

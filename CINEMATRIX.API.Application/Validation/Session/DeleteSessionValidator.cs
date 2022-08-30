@@ -8,7 +8,7 @@ namespace CINEMATRIX.API.Application.Validation.Session
 {
     public class DeleteSessionValidator : AbstractValidator<DeleteSessionCommand>
     {
-        private ISessionService _sessionService;
+        private readonly ISessionService _sessionService;
 
         public DeleteSessionValidator(ISessionService sessionService)
         {

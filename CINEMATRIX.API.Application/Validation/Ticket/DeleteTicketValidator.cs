@@ -8,7 +8,7 @@ namespace CINEMATRIX.API.Application.Validation.Ticket
 {
     public class DeleteTicketValidator : AbstractValidator<DeleteTicketCommand>
     {
-        private ITicketService _ticketService;
+        private readonly ITicketService _ticketService;
 
         public DeleteTicketValidator(ITicketService ticketService)
         {

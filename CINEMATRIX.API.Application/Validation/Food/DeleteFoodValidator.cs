@@ -8,7 +8,7 @@ namespace CINEMATRIX.API.Application.Validation.Food
 {
     public class DeleteFoodValidator : AbstractValidator<DeleteFoodCommand>
     {
-        private IFoodService _foodService;
+        private readonly IFoodService _foodService;
 
         public DeleteFoodValidator(IFoodService foodService)
         {

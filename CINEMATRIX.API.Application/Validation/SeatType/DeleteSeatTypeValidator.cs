@@ -8,11 +8,11 @@ namespace CINEMATRIX.API.Application.Validation.SeatType
 {
     public class DeleteSeatTypeValidator : AbstractValidator<DeleteSeatTypeCommand>
     {
-        private ISeatTypeService _profileService;
+        private readonly ISeatTypeService _seatTypeService;
 
-        public DeleteSeatTypeValidator(ISeatTypeService profileService)
+        public DeleteSeatTypeValidator(ISeatTypeService seatTypeService)
         {
-            _profileService = profileService;
+            _seatTypeService = seatTypeService;
 
             CreateRules();
         }
@@ -25,6 +25,6 @@ namespace CINEMATRIX.API.Application.Validation.SeatType
         }
 
         private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
-            => await _profileService.ExistsAsync(id, cancellationToken);
+            => await _seatTypeService.ExistsAsync(id, cancellationToken);
     }
 }

@@ -223,6 +223,15 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The seat with id &apos;{0}&apos; was not found..
+        /// </summary>
+        public static string SeatNotFound {
+            get {
+                return ResourceManager.GetString("SeatNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A seat type name required..
         /// </summary>
         public static string SeatTypeNameRequired {

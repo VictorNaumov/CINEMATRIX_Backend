@@ -8,7 +8,7 @@ namespace CINEMATRIX.API.Application.Validation.Profile
 {
     public class DeleteProfileValidator : AbstractValidator<DeleteProfileCommand>
     {
-        private IProfileService _profileService;
+        private readonly IProfileService _profileService;
 
         public DeleteProfileValidator(IProfileService profileService)
         {

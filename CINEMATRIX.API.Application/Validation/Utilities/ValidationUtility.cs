@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CINEMATRIX.API.Application.Validation.Utilities
 {
@@ -13,6 +11,9 @@ namespace CINEMATRIX.API.Application.Validation.Utilities
             => value > 0;
 
         public static bool IsPositiveNumber(long value)
+            => value > 0;
+
+        public static bool IsPositiveNumber(int value)
             => value > 0;
 
         public static bool IsValidDateTime(DateTime value) =>

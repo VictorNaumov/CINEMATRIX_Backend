@@ -7,7 +7,6 @@ using CINEMATRIX.Data.Services;
 using FluentValidation;
 
 namespace CINEMATRIX.API.Application.Validation.Food
-
 {
     public class UpdateFoodValidator : FoodValidatorBase<UpdateFoodCommand, Response>
     {

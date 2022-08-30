@@ -2,6 +2,7 @@ using CINEMATRIX.API.Application;
 using CINEMATRIX.API.Host.Extensions;
 using CINEMATRIX.API.Host.Swagger;
 using CINEMATRIX.Data.EF.SQL;
+using CINEMATRIX.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -35,6 +36,7 @@ namespace CINEMATRIX
             services.ConfigureSwaggerVersioning();
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
+            services.AddScoped<IGenreService, GenreService>();
             services.ConfigureAutoMapper();
         }
 

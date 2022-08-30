@@ -42,7 +42,6 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 .WithMessage(cmd => string.Format(Resources.Resources.SessionDateTimeMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.AddYears(1).ToShortDateString()));
         }
 
-
         private async Task<bool> HallExist(long id, CancellationToken cancellationToken)
             => await _hallService.ExistsAsync(id, cancellationToken);
     }
