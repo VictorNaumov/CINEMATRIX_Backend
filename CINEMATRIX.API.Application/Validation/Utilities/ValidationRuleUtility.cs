@@ -2,7 +2,7 @@
 
 namespace CINEMATRIX.API.Application.Validation.Utilities
 {
-    public static class ValidationUtility
+    public static class ValidationRuleUtility
     {
         public static bool InNotNullOrWhitespace(string value)
             => !string.IsNullOrWhiteSpace(value);

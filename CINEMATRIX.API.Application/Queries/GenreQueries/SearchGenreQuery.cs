@@ -8,6 +8,7 @@ using CINEMATRIX.Data.Domain.Models.TMDB;
 using CINEMATRIX.Data.Services;
 using MediatR;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -37,13 +38,13 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
             var sortProperty = GetSortProperty(searchCondition.SortProperty);
 
             IEnumerable<Genre> foundGenres = await _genreService.FindAsync(searchCondition, sortProperty);
-            var mappedGenre = _mapper.Map<IEnumerable<FoundGenreDTO>>(foundGenres);
-            //var totalCount = await _genreService.CountAsync(searchCondition);
+            var mappedGenres = _mapper.Map<IEnumerable<FoundGenreDTO>>(foundGenres);
+            var totalCount = mappedGenres.Count();
 
             return new PagedResponse<FoundGenreDTO>
             {
-                Items = mappedGenre,
-                //TotalCount = totalCount
+                Items = mappedGenres,
+                TotalCount = totalCount
             };
         }
 

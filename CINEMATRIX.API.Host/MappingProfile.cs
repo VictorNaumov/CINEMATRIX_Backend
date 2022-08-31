@@ -22,6 +22,7 @@ namespace CINEMATRIX.API.Host
             CreateMap<ProfileDTO, Data.Domain.Models.Profile>();
 
             CreateMap<Genre, FoundGenreDTO>();
+            CreateMap<Genre, GenreDTO>();
         }
     }
 }

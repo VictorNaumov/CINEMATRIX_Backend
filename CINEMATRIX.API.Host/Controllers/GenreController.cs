@@ -31,14 +31,14 @@ namespace CINEMATRIX.API.Host.Controllers
             return await ExecuteQueryAsync(new SearchGenreQuery(searchCondition), cancellationToken: cancellationToken);
         }
 
-        //[HttpGet("{id}")]
-        //[AllowAnonymous]
-        //[SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundGenreDTO))]
-        //[SwaggerOperation(Summary = "Get the details of a hall", OperationId = "GetGenre")]
-        //public async Task<IActionResult> GetGenre([FromRoute] long id, CancellationToken cancellationToken = default)
-        //{
-        //      return await ExecuteQueryAsync(new GetGenreQuery(id), cancellationToken: cancellationToken);
-        //}
+        [HttpGet("{id}")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundGenreDTO))]
+        [SwaggerOperation(Summary = "Get the details of a genre", OperationId = "GetGenre")]
+        public async Task<IActionResult> GetGenre([FromRoute] long id, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetGenreQuery(id), cancellationToken: cancellationToken);
+        }
     }
 }
 

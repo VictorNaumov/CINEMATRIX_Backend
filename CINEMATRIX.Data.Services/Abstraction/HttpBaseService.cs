@@ -5,14 +5,14 @@ namespace CINEMATRIX.Data.Services.Abstraction
 {
     public interface IHttpBaseService
     {
-        Task<string> GetAsync(string url);
+        Task<string> GetByUrlAsync(string url);
     }
 
     public abstract class HttpBaseService : IHttpBaseService
     {
         const string ApiKey = "a557294acd576395e76cdcc2c957ac12";
         
-        public async Task<string> GetAsync(string url)
+        public async Task<string> GetByUrlAsync(string url)
         {
             url = string.Format(url, ApiKey);
 

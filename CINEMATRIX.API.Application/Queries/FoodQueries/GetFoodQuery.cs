@@ -17,12 +17,12 @@ namespace CINEMATRIX.API.Application.Queries.FoodQueries
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetFoodQuery, FoodDTO>
+    public class GetFoodQueryHandler : IRequestHandler<GetFoodQuery, FoodDTO>
     {
         private readonly IFoodService _foodService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(IFoodService foodService, IMapper mapper)
+        public GetFoodQueryHandler(IFoodService foodService, IMapper mapper)
         {
             _foodService = foodService;
             _mapper = mapper;
