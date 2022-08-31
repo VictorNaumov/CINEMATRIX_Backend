@@ -38,7 +38,7 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 .WithMessage(cmd => string.Format(Resources.Resources.HallNotFound, cmd.Entity.HallId));
 
             RuleFor(cmd => cmd.Entity.DateTime)
-                .Must(ValidationUtility.IsValidDateTime)
+                .Must(ValidationRuleUtility.IsValidDateTime)
                 .WithMessage(cmd => string.Format(Resources.Resources.SessionDateTimeMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.AddYears(1).ToShortDateString()));
         }
 

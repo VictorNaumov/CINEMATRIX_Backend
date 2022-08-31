@@ -14,15 +14,16 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
         public ValidationBehavior(IEnumerable<IValidator<TRequest>> validators)
         {
-
             _validators = validators;
         }
 
-        public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             var context = new ValidationContext<TRequest>(request);
-            var failures = _validators
-                .Select(v => v.Validate(context))
+
+            var tasks = await Task.WhenAll(_validators.Select(async v => await v.ValidateAsync(context)));
+
+            var failures = tasks
                 .SelectMany(result => result.Errors)
                 .Where(f => f != null)
                 .ToList();
@@ -34,7 +35,7 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 throw new Exception(failuresMessages);
             }
 
-            return next();
+            return await next();
         }
     }
 }

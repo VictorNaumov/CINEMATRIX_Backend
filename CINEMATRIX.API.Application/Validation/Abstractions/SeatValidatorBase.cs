@@ -29,11 +29,11 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity)));
 
             RuleFor(cmd => cmd.Entity.Row)
-                .Must(ValidationUtility.IsPositiveNumber)
+                .Must(ValidationRuleUtility.IsPositiveNumber)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Row)));
 
             RuleFor(cmd => cmd.Entity.Number)
-                .Must(ValidationUtility.IsPositiveNumber)
+                .Must(ValidationRuleUtility.IsPositiveNumber)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Number)));
 
             RuleFor(cmd => cmd.Entity.HallId)

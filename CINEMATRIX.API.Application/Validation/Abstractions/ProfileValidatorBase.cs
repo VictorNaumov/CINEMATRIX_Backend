@@ -21,20 +21,20 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity)));
 
             RuleFor(cmd => cmd.Entity.Name)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Name)));
 
             RuleFor(cmd => cmd.Entity.SecondName)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.SecondName)));
 
 
             RuleFor(cmd => cmd.Entity.PhoneNumber)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.PhoneNumber)));
 
             RuleFor(cmd => cmd.Entity.DateOfBirth)
-                .Must(ValidationUtility.IsValidDateTime)
+                .Must(ValidationRuleUtility.IsValidDateTime)
                 .WithMessage(query => string.Format(Resources.Resources.ProfileDateOfBirthMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.ToShortDateString()));
         }
     }

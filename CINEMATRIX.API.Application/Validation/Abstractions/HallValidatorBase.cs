@@ -21,27 +21,27 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity)));
 
             RuleFor(cmd => cmd.Entity.Name)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Name)));
 
             RuleFor(cmd => cmd.Entity.Description)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Description)));
 
             RuleFor(cmd => cmd.Entity.SoundSystem)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.SoundSystem)));
 
             RuleFor(cmd => cmd.Entity.Projector)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Projector)));
             
             RuleFor(cmd => cmd.Entity.Screen)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Screen)));
             
             RuleFor(cmd => cmd.Entity.ScreenResolution)
-                .Must(ValidationUtility.InNotNullOrWhitespace)
+                .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.ScreenResolution)));
         }
     }
