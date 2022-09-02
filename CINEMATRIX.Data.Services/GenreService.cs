@@ -27,9 +27,9 @@ namespace CINEMATRIX.Data.Services
 
             var genres = DeserializeResponse(apiResponse);
 
-            //genres = searchCondition.SortDirection != "desc"
-            //    ? genres.OrderBy(sortProperty)
-            //    : genres.OrderByDescending(sortProperty);
+            genres = searchCondition.SortDirection != "desc"
+                ? genres.OrderBy(sortProperty)
+                : genres.OrderByDescending(sortProperty);
 
             return genres;
         }
