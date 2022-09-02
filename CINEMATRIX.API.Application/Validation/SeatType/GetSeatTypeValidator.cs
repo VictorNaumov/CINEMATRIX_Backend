@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Queries.SeatTypeQueries;
+﻿using CINEMATRIX.API.Application.Queries.SeatTypeQueries;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Validation.SeatType
 {
@@ -26,7 +26,7 @@ namespace CINEMATRIX.API.Application.Validation.SeatType
                 .WithMessage(Resources.Resources.SeatTypeNotFound);
         }
 
-        private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
+        private async Task<bool> Exist(long id, CancellationToken cancellationToken)
             => await _seatTypeService.ExistsAsync(id, cancellationToken);
     }
 }

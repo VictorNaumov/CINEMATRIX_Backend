@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Commands.TicketCommands;
+﻿using CINEMATRIX.API.Application.Commands.TicketCommands;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Validation.Ticket
 {
@@ -24,7 +24,7 @@ namespace CINEMATRIX.API.Application.Validation.Ticket
                 .WithMessage(cmd => string.Format(Resources.Resources.TicketNotFound, cmd.Id));
         }
 
-        private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
+        private async Task<bool> Exist(long id, CancellationToken cancellationToken)
             => await _ticketService.ExistsAsync(id, cancellationToken);
     }
 }

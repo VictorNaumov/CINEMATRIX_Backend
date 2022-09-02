@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Commands.FoodCommands;
+﻿using CINEMATRIX.API.Application.Commands.FoodCommands;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Validation.Food
 {
@@ -24,7 +24,7 @@ namespace CINEMATRIX.API.Application.Validation.Food
                 .WithMessage(query => string.Format(Resources.Resources.FoodNotFound, query.Id));
         }
 
-        private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
+        private async Task<bool> Exist(long id, CancellationToken cancellationToken)
             => await _foodService.ExistsAsync(id, cancellationToken);
     }
 }

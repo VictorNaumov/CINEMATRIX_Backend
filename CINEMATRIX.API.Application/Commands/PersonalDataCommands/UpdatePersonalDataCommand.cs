@@ -2,7 +2,6 @@
 using CINEMATRIX.API.Application.Commands.Abstractions;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
-using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.Services;
 using MediatR;
 using System.Threading;

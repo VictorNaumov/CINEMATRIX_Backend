@@ -26,7 +26,7 @@ namespace CINEMATRIX.Data.EF.SQL
 
             modelBuilder.Entity<Session>().HasMany(x => x.Tickets).WithOne(y => y.Session).OnDelete(DeleteBehavior.NoAction);
 
-            modelBuilder.Entity<Ticket>().HasIndex(c=> new { c.SessionId, c.SeatId }).IsUnique();
+            modelBuilder.Entity<Ticket>().HasIndex(c => new { c.SessionId, c.SeatId }).IsUnique();
         }
     }
 }

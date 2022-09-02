@@ -3,7 +3,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Commands.TicketCommands  
+namespace CINEMATRIX.API.Application.Commands.TicketCommands
 {
     public class DeleteTicketCommand : IRequest
     {

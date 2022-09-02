@@ -1,7 +1,7 @@
 ﻿using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.API.Contracts.Outgoing;
+using CINEMATRIX.API.Contracts.Outgoing.TMDB;
 using CINEMATRIX.Data.Domain.Models;
-using CINEMATRIX.Data.Domain.Models.TMDB;
 
 namespace CINEMATRIX.API.Host
 {
@@ -21,8 +21,7 @@ namespace CINEMATRIX.API.Host
             CreateMap<Data.Domain.Models.Profile, FoundProfileDTO>();
             CreateMap<ProfileDTO, Data.Domain.Models.Profile>();
 
-            CreateMap<Genre, FoundGenreDTO>();
-            CreateMap<Genre, GenreDTO>();
+            CreateMap<FoundGenreDTO, GenreDTO>();
         }
     }
 }

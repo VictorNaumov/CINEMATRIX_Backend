@@ -12,7 +12,7 @@ namespace CINEMATRIX.API.Application.Validation.Ticket
     {
         private readonly ITicketService _ticketService;
 
-        public UpdateTicketValidator(ITicketService ticketService, ISessionService sessionService, ISeatService seatService) 
+        public UpdateTicketValidator(ITicketService ticketService, ISessionService sessionService, ISeatService seatService)
             : base(sessionService, seatService)
         {
             _ticketService = ticketService;

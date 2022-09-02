@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Commands.HallCommands;
+﻿using CINEMATRIX.API.Application.Commands.HallCommands;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Validation.Hall
 {
@@ -24,7 +24,7 @@ namespace CINEMATRIX.API.Application.Validation.Hall
                 .WithMessage(cmd => string.Format(Resources.Resources.HallNotFound, cmd.Id));
         }
 
-        private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
+        private async Task<bool> Exist(long id, CancellationToken cancellationToken)
             => await _hallService.ExistsAsync(id, cancellationToken);
     }
 }

@@ -3,7 +3,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Commands.SeatCommands  
+namespace CINEMATRIX.API.Application.Commands.SeatCommands
 {
     public class DeleteSeatCommand : IRequest
     {

@@ -1,10 +1,10 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Commands.FoodCommands;
+﻿using CINEMATRIX.API.Application.Commands.FoodCommands;
 using CINEMATRIX.API.Application.Validation.Abstractions;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Validation.Food
 {

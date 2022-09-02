@@ -6,7 +6,7 @@ namespace CINEMATRIX.API.Application.Validation.Seat
 {
     public class AddSeatValidator : SeatValidatorBase<AddSeatCommand, long>
     {
-        public AddSeatValidator(ISeatTypeService seatTypeService, IHallService hallService) 
+        public AddSeatValidator(ISeatTypeService seatTypeService, IHallService hallService)
             : base(seatTypeService, hallService) { }
     }
 }

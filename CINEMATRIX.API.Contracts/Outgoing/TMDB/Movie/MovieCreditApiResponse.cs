@@ -4,8 +4,8 @@ using System.Text;
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class MovieVideoApiResponse
+    public class MovieCreditApiResponse
     {
-        public List<FoundVideoDTO> genres { get; set; }
+        public List<FoundVideoDTO> Videos{ get; set; }
     }
 }

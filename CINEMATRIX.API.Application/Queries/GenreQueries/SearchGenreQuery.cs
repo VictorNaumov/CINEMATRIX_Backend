@@ -2,9 +2,8 @@
 using CINEMATRIX.API.Application.Queries.Abstractions;
 using CINEMATRIX.API.Application.Queries.Extensions;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
-using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
-using CINEMATRIX.Data.Domain.Models.TMDB;
+using CINEMATRIX.API.Contracts.Outgoing.TMDB;
 using CINEMATRIX.Data.Services;
 using MediatR;
 using System.Collections.Generic;
@@ -37,7 +36,7 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
 
             var sortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            IEnumerable<Genre> foundGenres = await _genreService.FindAsync(searchCondition, sortProperty);
+            IEnumerable<FoundGenreDTO> foundGenres = await _genreService.FindAsync(searchCondition, sortProperty);
             var mappedGenres = _mapper.Map<IEnumerable<FoundGenreDTO>>(foundGenres);
             var totalCount = mappedGenres.Count();
 
@@ -54,11 +53,11 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
             {
                 switch (propertyName.ToLowerInvariant())
                 {
-                    case "name": return nameof(Genre.Name);
+                    case "name": return nameof(FoundGenreDTO.Name);
                 }
             }
 
-            return nameof(Genre.Id);
+            return nameof(FoundGenreDTO.Id);
         }
     }
 }

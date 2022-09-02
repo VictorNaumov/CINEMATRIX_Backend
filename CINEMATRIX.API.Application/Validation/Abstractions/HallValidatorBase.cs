@@ -2,7 +2,6 @@
 using CINEMATRIX.API.Application.Validation.Utilities;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using FluentValidation;
-using System;
 
 namespace CINEMATRIX.API.Application.Validation.Abstractions
 {
@@ -35,11 +34,11 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
             RuleFor(cmd => cmd.Entity.Projector)
                 .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Projector)));
-            
+
             RuleFor(cmd => cmd.Entity.Screen)
                 .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.Screen)));
-            
+
             RuleFor(cmd => cmd.Entity.ScreenResolution)
                 .Must(ValidationRuleUtility.InNotNullOrWhitespace)
                 .WithMessage(cmd => string.Format(Resources.Resources.ValueRequired, nameof(cmd.Entity.ScreenResolution)));

@@ -1,8 +1,8 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
-using CINEMATRIX.API.Application.Commands.ProfileCommands;
+﻿using CINEMATRIX.API.Application.Commands.ProfileCommands;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Validation.Profile
 {
@@ -24,7 +24,7 @@ namespace CINEMATRIX.API.Application.Validation.Profile
                 .WithMessage(cmd => string.Format(Resources.Resources.ProfileNotFound, cmd.Id));
         }
 
-        private async Task<bool> Exist(long id, CancellationToken cancellationToken) 
+        private async Task<bool> Exist(long id, CancellationToken cancellationToken)
             => await _profileService.ExistsAsync(id, cancellationToken);
     }
 }
