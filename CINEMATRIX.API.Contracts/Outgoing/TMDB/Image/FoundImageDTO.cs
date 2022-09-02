@@ -1,9 +1,10 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace CINEMATRIX.Data.Domain.Models.TMDB
+namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class Image
+    public class FoundImageDTO
     {
+        public string Id { get; set; }
         [JsonPropertyName("aspect_ratio")]
         public double AspectRatio { get; set; }
         [JsonPropertyName("file_path")]

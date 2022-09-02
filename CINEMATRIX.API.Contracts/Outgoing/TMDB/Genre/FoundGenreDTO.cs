@@ -1,4 +1,4 @@
-﻿namespace CINEMATRIX.API.Contracts.Outgoing
+﻿namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
     public class FoundGenreDTO
     {

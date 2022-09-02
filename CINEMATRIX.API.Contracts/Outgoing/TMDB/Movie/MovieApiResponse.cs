@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using System.Text.Json.Serialization;
 
-namespace CINEMATRIX.Data.Domain.Models.TMDB
+namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class Movie
+    public class MovieApiResponse
     {
         public long Id { get; set; }
         public string Title { get; set; }
@@ -26,6 +28,9 @@ namespace CINEMATRIX.Data.Domain.Models.TMDB
         public double VoteAverage { get; set; }
         [JsonPropertyName("vote_count")]
         public int VoteCount { get; set; }
-        public List<Genre> Genres { get; set; }
+        public List<FoundGenreDTO> Genres { get; set; }
+
+        public MovieVideoApiResponse Videos { get; set; }
+        public MovieVideoApiResponse Images{ get; set; }
     }
 }
