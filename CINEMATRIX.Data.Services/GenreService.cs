@@ -18,12 +18,13 @@ namespace CINEMATRIX.Data.Services
 
     public class GenreService : HttpBaseService, IGenreService
     {
-        const string Url = "https://api.themoviedb.org/3/genre/movie/list?api_key={0}&language=en-US";
         public GenreService() { }
 
         public async Task<List<FoundGenreDTO>> FindAsync(GenreSearchCondition searchCondition, string sortProperty)
         {
-            var apiResponse = await GetByUrlAsync<GenreResponse>(Url);
+            string url = $"https://api.themoviedb.org/3/genre/movie/list?api_key={ApiKey}&language=en-US";
+
+            var apiResponse = await GetByUrlAsync<GenreResponse>(url);
 
             var genres = searchCondition.SortDirection != "desc"
                 ? apiResponse.Genres.OrderBy(sortProperty)
@@ -39,7 +40,9 @@ namespace CINEMATRIX.Data.Services
                 return null;
             }
 
-            var apiResponse = await GetByUrlAsync<GenreResponse>(Url, id.GetValueOrDefault());
+            string url = $"https://api.themoviedb.org/3/genre/movie/list?api_key={ApiKey}&language=en-US";
+
+            var apiResponse = await GetByUrlAsync<GenreResponse>(url);
 
             return apiResponse.Genres.FirstOrDefault(x => x.Id == id);
         }

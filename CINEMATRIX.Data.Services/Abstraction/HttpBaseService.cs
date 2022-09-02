@@ -6,19 +6,15 @@ namespace CINEMATRIX.Data.Services.Abstraction
 {
     public interface IHttpBaseService
     {
-        Task<T> GetByUrlAsync<T>(string url, long id) where T : class;
+        Task<T> GetByUrlAsync<T>(string url) where T : class;
     }
 
     public abstract class HttpBaseService : IHttpBaseService
     {
         protected readonly string ApiKey = "a557294acd576395e76cdcc2c957ac12";
 
-        public async Task<T> GetByUrlAsync<T>(string url, long id = -1) where T : class
+        public async Task<T> GetByUrlAsync<T>(string url) where T : class
         {
-            url = id != -1
-                ? string.Format(url, id, ApiKey)
-                : string.Format(url, ApiKey);
-
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(url))

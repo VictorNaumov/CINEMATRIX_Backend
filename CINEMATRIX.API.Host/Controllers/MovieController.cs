@@ -29,6 +29,15 @@ namespace CINEMATRIX.API.Host.Controllers
             return await ExecuteQueryAsync(new GetMovieQuery(id), cancellationToken: cancellationToken);
         }
 
+        [HttpPost("{id}/similar")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
+        [SwaggerOperation(Summary = "Get the similars a movies", OperationId = "GetSimilarMovies")]
+        public async Task<IActionResult> GetSimilarMovies([FromRoute] long id, [FromBody] MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetSimilarMoviesQuery(id, searchCondition), cancellationToken: cancellationToken);
+        }
+
         [HttpPost("topRated")]
         [AllowAnonymous]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
