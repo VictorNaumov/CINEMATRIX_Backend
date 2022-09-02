@@ -2,8 +2,6 @@
 using CINEMATRIX.API.Contracts.Outgoing.TMDB;
 using CINEMATRIX.Data.Services.Abstraction;
 using CINEMATRIX.Data.Services.Extensions;
-using Newtonsoft.Json;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -12,54 +10,46 @@ namespace CINEMATRIX.Data.Services
 {
     public interface IMovieService : IHttpBaseService
     {
-        Task<List<FoundMovieDTO>> FindAsync(MovieSearchCondition searchCondition, string sortProperty);
-        Task<FoundMovieDTO> GetAsync(long? id, CancellationToken cancellationToken);
+        Task<PagedMoviesResponse> GetTopRatedMoviesAsync(MovieSearchCondition searchCondition, string sortProperty);
+        Task<PagedMoviesResponse> GetNowPlayingMoviesAsync(MovieSearchCondition searchCondition, string sortProperty);
+        Task<MovieByIdResponse> GetMovieByIdAsync(long? id, CancellationToken cancellationToken);
     }
 
     public class MovieService : HttpBaseService, IMovieService
     {
-        const string Url = "https://api.themoviedb.org/3/movie/movie/list?api_key={0}&language=en-US";
         public MovieService() { }
 
-        public async Task<List<FoundMovieDTO>> FindAsync(MovieSearchCondition searchCondition, string sortProperty)
+        public async Task<PagedMoviesResponse> GetTopRatedMoviesAsync(MovieSearchCondition searchCondition, string sortProperty)
         {
-            string apiResponse = await GetByUrlAsync(Url);
+            string url = $"https://api.themoviedb.org/3/movie/top_rated?api_key={ApiKey}&page={searchCondition.Page + 1}";
 
-            var movies = DeserializeResponse(apiResponse);
+            var apiResponse = await GetByUrlAsync<PagedMoviesResponse>(url);
 
-            movies = searchCondition.SortDirection != "desc"
-                ? movies.OrderBy(sortProperty)
-                : movies.OrderByDescending(sortProperty);
+            apiResponse.Results = searchCondition.SortDirection != "desc"
+                ? apiResponse.Results.OrderBy(sortProperty)
+                : apiResponse.Results.OrderByDescending(sortProperty);
 
-            return movies;
+            return apiResponse;
         }
 
-        public async Task<FoundMovieDTO> GetAsync(long? id, CancellationToken cancellationToken = default)
+        public async Task<PagedMoviesResponse> GetNowPlayingMoviesAsync(MovieSearchCondition searchCondition, string sortProperty)
         {
-            string apiResponse = await GetByUrlAsync(Url);
+            string url = $"https://api.themoviedb.org/3/movie/now_playing?api_key={ApiKey}&language=en-US&page={searchCondition.Page + 1}";
 
-            var movies = DeserializeResponse(apiResponse);
+            var apiResponse = await GetByUrlAsync<PagedMoviesResponse>(url);
 
-            var requestedMovie = movies.FirstOrDefault(x => x.Id == id);
+            apiResponse.Results = searchCondition.SortDirection != "desc"
+                ? apiResponse.Results.OrderBy(sortProperty)
+                : apiResponse.Results.OrderByDescending(sortProperty);
 
-            return requestedMovie;
+            return apiResponse;
         }
 
-        private List<FoundMovieDTO> DeserializeResponse(string apiResponse)
+        public async Task<MovieByIdResponse> GetMovieByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
-            var movies = new List<FoundMovieDTO>();
+            string url = $"https://api.themoviedb.org/3/movie/{ApiKey}?api_key={id}&append_to_response=images,videos";
 
-            if (!string.IsNullOrWhiteSpace(apiResponse))
-            {
-                IDictionary<string, List<FoundMovieDTO>> responseDictionary = JsonConvert.DeserializeObject<IDictionary<string, List<FoundMovieDTO>>>(apiResponse);
-
-                if (responseDictionary != null && responseDictionary.ContainsKey("movies"))
-                {
-                    movies = responseDictionary["movies"];
-                }
-            }
-
-            return movies;
+            return await GetByUrlAsync<MovieByIdResponse>(url, id.GetValueOrDefault());
         }
     }
 }

@@ -18,8 +18,12 @@ namespace CINEMATRIX.Data.Services.Extensions
             services.Scan(scan => scan.FromAssembliesOf(currentAssembly)
                 .AddClasses(classes => classes.AssignableTo(typeof(IBaseService<>)))
                 .AsImplementedInterfaces()
-                .WithTransientLifetime()
-            );
+                .WithTransientLifetime());
+
+            services.Scan(scan => scan.FromAssembliesOf(currentAssembly)
+                .AddClasses(classes => classes.AssignableTo(typeof(IHttpBaseService)))
+                .AsImplementedInterfaces()
+                .WithTransientLifetime());
 
         }
     }

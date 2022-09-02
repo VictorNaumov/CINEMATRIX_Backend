@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class MovieVideoApiResponse
+    public class MovieVideoResponse
     {
         public List<FoundVideoDTO> Results { get; set; }
     }

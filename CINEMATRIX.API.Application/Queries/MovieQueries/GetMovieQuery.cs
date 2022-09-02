@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using CINEMATRIX.API.Contracts.Outgoing.TMDB;
+using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;
 using System.Threading;
@@ -17,29 +17,24 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
         }
     }
 
-    public class GetGenreQueryHandler : IRequestHandler<GetMovieQuery, FoundMovieDTO>
+    public class GetMovieQueryHandler : IRequestHandler<GetMovieQuery, FoundMovieDTO>
     {
-        private readonly IMovieService _genreService;
+        private readonly IMovieService _movieService;
         private readonly IMapper _mapper;
 
-        public GetGenreQueryHandler(IMovieService genreService, IMapper mapper)
+        public GetMovieQueryHandler(IMovieService movieService, IMapper mapper)
         {
-            _genreService = genreService;
+            _movieService = movieService;
             _mapper = mapper;
         }
 
         public async Task<FoundMovieDTO> Handle(GetMovieQuery request, CancellationToken cancellationToken)
         {
-            var genre = await _genreService.GetAsync(request.Id, cancellationToken);
+            var apiResponse = await _movieService.GetMovieByIdAsync(request.Id, cancellationToken);
+    
+            var movie = _mapper.Map<FoundMovieDTO>(apiResponse);
 
-            if (genre == null)
-            {
-                return null;
-            }
-
-            var mappedMovie = _mapper.Map<FoundMovieDTO>(genre);
-
-            return mappedMovie;
+            return movie;
         }
     }
 }

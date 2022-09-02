@@ -5,6 +5,6 @@ namespace CINEMATRIX.API.Contracts.Incoming.SearchConditions
 {
     public class MovieSearchCondition : PagedDTOBase
     {
-        public string[] Name { get; set; }
+        public string[] Title { get; set; }
     }
 }

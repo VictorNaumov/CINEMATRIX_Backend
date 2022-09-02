@@ -1,30 +1,50 @@
-﻿using System.Net.Http;
+﻿using Newtonsoft.Json;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace CINEMATRIX.Data.Services.Abstraction
 {
     public interface IHttpBaseService
     {
-        Task<string> GetByUrlAsync(string url);
+        Task<T> GetByUrlAsync<T>(string url, long id) where T : class;
     }
 
     public abstract class HttpBaseService : IHttpBaseService
     {
-        const string ApiKey = "a557294acd576395e76cdcc2c957ac12";
+        protected readonly string ApiKey = "a557294acd576395e76cdcc2c957ac12";
 
-        public async Task<string> GetByUrlAsync(string url)
+        public async Task<T> GetByUrlAsync<T>(string url, long id = -1) where T : class
         {
-            url = string.Format(url, ApiKey);
+            url = id != -1
+                ? string.Format(url, id, ApiKey)
+                : string.Format(url, ApiKey);
 
             using (var httpClient = new HttpClient())
             {
                 using (var response = await httpClient.GetAsync(url))
                 {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    if (response.IsSuccessStatusCode)
+                    {
+                        string apiResponse = await response.Content.ReadAsStringAsync();
 
-                    return apiResponse;
+                        var deserializedResponse = DeserializeResponse<T>(apiResponse);
+
+                        return deserializedResponse;
+                    }
+
+                    return null;
                 }
             }
+        }
+
+        private T DeserializeResponse<T>(string apiResponse) where T : class
+        {
+            if (!string.IsNullOrWhiteSpace(apiResponse))
+            {
+                return JsonConvert.DeserializeObject<T>(apiResponse);
+            }
+
+            return null;
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System;
 
-namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
+namespace CINEMATRIX.API.Contracts.Outgoing
 {
     public class FoundVideoDTO
     {
@@ -12,7 +12,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
         public int Size { get; set; }
         public string Type { get; set; }
         public bool Official { get; set; }
-        [JsonPropertyName("published_at")]
+        [JsonProperty("published_at")]
         public DateTime PublishedAt { get; set; }
     }
 }

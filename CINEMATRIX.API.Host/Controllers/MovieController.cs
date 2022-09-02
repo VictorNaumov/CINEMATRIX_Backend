@@ -1,7 +1,6 @@
 ﻿using CINEMATRIX.API.Application.Queries.MovieQueries;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
-using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
-using CINEMATRIX.API.Contracts.Outgoing.TMDB;
+using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Host.Controllers.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -21,16 +20,6 @@ namespace CINEMATRIX.API.Host.Controllers
     {
         public MovieController(IMediator mediator) : base(mediator) { }
 
-
-        //[HttpPost("search")]
-        //[AllowAnonymous]
-        //[SwaggerResponse(StatusCodes.Status200OK, Type = typeof(PagedResponse<FoundMovieDTO>))]
-        //[SwaggerOperation(Summary = "Search genres", OperationId = "SearchMovies")]
-        //public async Task<IActionResult> SearchMovies([FromBody] MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
-        //{
-        //    return await ExecuteQueryAsync(new SearchMovieQuery(searchCondition), cancellationToken: cancellationToken);
-        //}
-
         [HttpGet("{id}")]
         [AllowAnonymous]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
@@ -38,6 +27,24 @@ namespace CINEMATRIX.API.Host.Controllers
         public async Task<IActionResult> GetMovie([FromRoute] long id, CancellationToken cancellationToken = default)
         {
             return await ExecuteQueryAsync(new GetMovieQuery(id), cancellationToken: cancellationToken);
+        }
+
+        [HttpPost("topRated")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
+        [SwaggerOperation(Summary = "Get a top rated movies", OperationId = "GetTopRatedMovies")]
+        public async Task<IActionResult> GetTopRatedMovies([FromBody] MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetTopRatedMoviesQuery(searchCondition), cancellationToken: cancellationToken);
+        }
+
+        [HttpPost("nowPlaying")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
+        [SwaggerOperation(Summary = "Get a now playing movies", OperationId = "GetNowPlayingMovies")]
+        public async Task<IActionResult> GetNowPlayingMovies([FromBody] MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetNowPlayingMoviesQuery(searchCondition), cancellationToken: cancellationToken);
         }
     }
 }

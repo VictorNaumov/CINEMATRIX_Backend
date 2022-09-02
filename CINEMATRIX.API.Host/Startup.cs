@@ -36,7 +36,6 @@ namespace CINEMATRIX
             services.ConfigureSwaggerVersioning();
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
-            services.AddScoped<IGenreService, GenreService>();
             services.ConfigureAutoMapper();
         }
 

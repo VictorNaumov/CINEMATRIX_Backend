@@ -1,17 +1,17 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
-namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
+namespace CINEMATRIX.API.Contracts.Outgoing
 {
     public class FoundImageDTO
     {
         public string Id { get; set; }
-        [JsonPropertyName("aspect_ratio")]
+        [JsonProperty("aspect_ratio")]
         public double AspectRatio { get; set; }
-        [JsonPropertyName("file_path")]
+        [JsonProperty("file_path")]
         public string FilePath { get; set; }
-        [JsonPropertyName("vote_average")]
+        [JsonProperty("vote_average")]
         public double VoteAverage { get; set; }
-        [JsonPropertyName("vote_count")]
+        [JsonProperty("vote_count")]
         public double VoteCount { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }

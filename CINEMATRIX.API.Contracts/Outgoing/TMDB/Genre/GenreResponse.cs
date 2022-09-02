@@ -2,7 +2,7 @@
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class GenreApiResponse
+    public class GenreResponse
     {
         public List<FoundGenreDTO> Genres { get; set; }
     }

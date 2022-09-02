@@ -2,7 +2,7 @@
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class MovieImageApiResponse
+    public class MovieImageResponse
     {
         public List<FoundImageDTO> Backdrops { get; set; }
         public List<FoundImageDTO> Logos { get; set; }

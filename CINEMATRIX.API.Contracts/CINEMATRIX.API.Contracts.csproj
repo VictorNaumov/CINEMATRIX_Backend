@@ -9,7 +9,17 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\CINEMATRIX.API.Resources\CINEMATRIX.API.Resources.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Outgoing\TMDB\Image\" />
+    <Folder Include="Outgoing\TMDB\Person\" />
+    <Folder Include="Outgoing\TMDB\Video\" />
   </ItemGroup>
 
 </Project>

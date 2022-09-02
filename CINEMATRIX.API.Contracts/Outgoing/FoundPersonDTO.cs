@@ -1,7 +1,7 @@
-﻿using System;
-using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
+using System;
 
-namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
+namespace CINEMATRIX.API.Contracts.Outgoing
 {
     public class FoundPersonDTO
     {
@@ -14,7 +14,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
         public decimal Popularity { get; set; }
         public bool Adult { get; set; }
 
-        [JsonPropertyName("place_of_birth")]
+        [JsonProperty("place_of_birth")]
         public string PlaceOfBirth { get; set; }
     }
 }

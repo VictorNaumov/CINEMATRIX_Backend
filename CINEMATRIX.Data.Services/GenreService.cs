@@ -1,8 +1,8 @@
 ﻿using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
+using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.TMDB;
 using CINEMATRIX.Data.Services.Abstraction;
 using CINEMATRIX.Data.Services.Extensions;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -23,40 +23,25 @@ namespace CINEMATRIX.Data.Services
 
         public async Task<List<FoundGenreDTO>> FindAsync(GenreSearchCondition searchCondition, string sortProperty)
         {
-            string apiResponse = await GetByUrlAsync(Url);
+            var apiResponse = await GetByUrlAsync<GenreResponse>(Url);
 
-            var genres = DeserializeResponse(apiResponse);
-
-            genres = searchCondition.SortDirection != "desc"
-                ? genres.OrderBy(sortProperty)
-                : genres.OrderByDescending(sortProperty);
+            var genres = searchCondition.SortDirection != "desc"
+                ? apiResponse.Genres.OrderBy(sortProperty)
+                : apiResponse.Genres.OrderByDescending(sortProperty);
 
             return genres;
         }
 
         public async Task<FoundGenreDTO> GetAsync(long? id, CancellationToken cancellationToken = default)
         {
-            string apiResponse = await GetByUrlAsync(Url);
-
-            var genres = DeserializeResponse(apiResponse);
-
-            var requestedGenre = genres.FirstOrDefault(x => x.Id == id);
-
-            return requestedGenre;
-        }
-
-        private List<FoundGenreDTO> DeserializeResponse(string apiResponse)
-        {
-            var genres = new List<FoundGenreDTO>();
-
-            if (!string.IsNullOrWhiteSpace(apiResponse))
+            if (!id.HasValue)
             {
-                var genreApiResponse = JsonConvert.DeserializeObject<GenreApiResponse>(apiResponse);
-
-                genres = genreApiResponse.Genres;
+                return null;
             }
 
-            return genres;
+            var apiResponse = await GetByUrlAsync<GenreResponse>(Url, id.GetValueOrDefault());
+
+            return apiResponse.Genres.FirstOrDefault(x => x.Id == id);
         }
     }
 }

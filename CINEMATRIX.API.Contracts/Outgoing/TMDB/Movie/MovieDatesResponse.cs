@@ -4,8 +4,9 @@ using System.Text;
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class MovieCreditApiResponse
+    public class MovieDatesResponse
     {
-        public List<FoundVideoDTO> Videos{ get; set; }
+        public DateTime Minimum { get; set; }
+        public DateTime Maximum { get; set; }
     }
 }
