@@ -29,9 +29,9 @@ namespace CINEMATRIX.API.Application.Commands.SeatCommands
         {
             var seat = _mapper.Map<Seat>(request.Entity);
 
-            var insertedProduct = await _seatService.InsertAsync(seat);
+            var insertedSeat = await _seatService.InsertAsync(seat);
 
-            return insertedProduct.Id;
+            return insertedSeat.Id;
         }
     }
 }

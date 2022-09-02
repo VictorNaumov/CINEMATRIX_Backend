@@ -5,30 +5,30 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace CINEMATRIX.API.Application.Queries.GenreQueries
+namespace CINEMATRIX.API.Application.Queries.MovieQueries
 {
-    public class GetGenreQuery : IRequest<FoundGenreDTO>
+    public class GetMovieQuery : IRequest<FoundMovieDTO>
     {
         public long Id { get; }
 
-        public GetGenreQuery(long id)
+        public GetMovieQuery(long id)
         {
             Id = id;
         }
     }
 
-    public class GetGenreQueryHandler : IRequestHandler<GetGenreQuery, FoundGenreDTO>
+    public class GetGenreQueryHandler : IRequestHandler<GetMovieQuery, FoundMovieDTO>
     {
-        private readonly IGenreService _genreService;
+        private readonly IMovieService _genreService;
         private readonly IMapper _mapper;
 
-        public GetGenreQueryHandler(IGenreService genreService, IMapper mapper)
+        public GetGenreQueryHandler(IMovieService genreService, IMapper mapper)
         {
             _genreService = genreService;
             _mapper = mapper;
         }
 
-        public async Task<FoundGenreDTO> Handle(GetGenreQuery request, CancellationToken cancellationToken)
+        public async Task<FoundMovieDTO> Handle(GetMovieQuery request, CancellationToken cancellationToken)
         {
             var genre = await _genreService.GetAsync(request.Id, cancellationToken);
 
@@ -37,9 +37,9 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
                 return null;
             }
 
-            var mappedGenre = _mapper.Map<FoundGenreDTO>(genre);
+            var mappedMovie = _mapper.Map<FoundMovieDTO>(genre);
 
-            return mappedGenre;
+            return mappedMovie;
         }
     }
 }

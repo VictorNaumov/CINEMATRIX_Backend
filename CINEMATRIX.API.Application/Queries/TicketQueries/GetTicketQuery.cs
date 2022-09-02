@@ -17,12 +17,12 @@ namespace CINEMATRIX.API.Application.Queries.TicketQueries
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetTicketQuery, TicketDTO>
+    public class GetTicketQueryHandler : IRequestHandler<GetTicketQuery, TicketDTO>
     {
         private readonly ITicketService _ticketService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(ITicketService ticketService, IMapper mapper)
+        public GetTicketQueryHandler(ITicketService ticketService, IMapper mapper)
         {
             _ticketService = ticketService;
             _mapper = mapper;

@@ -29,9 +29,9 @@ namespace CINEMATRIX.API.Application.Commands.SessionCommands
         {
             var session = _mapper.Map<Session>(request.Entity);
 
-            var insertedProduct = await _sessionService.InsertAsync(session);
+            var insertedSession = await _sessionService.InsertAsync(session);
 
-            return insertedProduct.Id;
+            return insertedSession.Id;
         }
     }
 }

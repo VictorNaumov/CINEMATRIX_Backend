@@ -17,12 +17,12 @@ namespace CINEMATRIX.API.Application.Queries.ProfileQueries
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetProfileQuery, ProfileDTO>
+    public class GetProfileQueryHandler : IRequestHandler<GetProfileQuery, ProfileDTO>
     {
         private readonly IProfileService _profileService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(IProfileService profileService, IMapper mapper)
+        public GetProfileQueryHandler(IProfileService profileService, IMapper mapper)
         {
             _profileService = profileService;
             _mapper = mapper;

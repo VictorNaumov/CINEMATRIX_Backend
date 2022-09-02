@@ -17,12 +17,12 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetHallQuery, HallDTO>
+    public class GetHallQueryHandler : IRequestHandler<GetHallQuery, HallDTO>
     {
         private readonly IHallService _hallService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(IHallService hallService, IMapper mapper)
+        public GetHallQueryHandler(IHallService hallService, IMapper mapper)
         {
             _hallService = hallService;
             _mapper = mapper;

@@ -17,12 +17,12 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetSessionQuery, SessionDTO>
+    public class GetSessionQueryHandler : IRequestHandler<GetSessionQuery, SessionDTO>
     {
         private readonly ISessionService _sessionService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(ISessionService sessionService, IMapper mapper)
+        public GetSessionQueryHandler(ISessionService sessionService, IMapper mapper)
         {
             _sessionService = sessionService;
             _mapper = mapper;

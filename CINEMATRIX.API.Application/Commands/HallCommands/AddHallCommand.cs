@@ -29,9 +29,9 @@ namespace CINEMATRIX.API.Application.Commands.HallCommands
         {
             var hall = _mapper.Map<Hall>(request.Entity);
 
-            var insertedProduct = await _hallService.InsertAsync(hall);
+            var insertedFood = await _hallService.InsertAsync(hall);
 
-            return insertedProduct.Id;
+            return insertedFood.Id;
         }
     }
 }

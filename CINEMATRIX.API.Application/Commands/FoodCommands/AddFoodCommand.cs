@@ -29,9 +29,9 @@ namespace CINEMATRIX.API.Application.Commands.FoodCommands
         {
             var food = _mapper.Map<Food>(request.Entity);
 
-            var insertedProduct = await _foodService.InsertAsync(food);
+            var insertedFood = await _foodService.InsertAsync(food);
 
-            return insertedProduct.Id;
+            return insertedFood.Id;
         }
     }
 }

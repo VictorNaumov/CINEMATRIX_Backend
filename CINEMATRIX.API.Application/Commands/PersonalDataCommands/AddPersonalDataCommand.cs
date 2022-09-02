@@ -28,9 +28,9 @@ namespace CINEMATRIX.API.Application.Commands.ProfileCommands
         {
             var profile = _mapper.Map<Data.Domain.Models.Profile>(request.Entity);
 
-            var insertedProduct = await _profileService.InsertAsync(profile);
+            var insertedProfile = await _profileService.InsertAsync(profile);
 
-            return insertedProduct.Id;
+            return insertedProfile.Id;
         }
     }
 }

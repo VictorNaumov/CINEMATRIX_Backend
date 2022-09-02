@@ -29,9 +29,9 @@ namespace CINEMATRIX.API.Application.Commands.TicketCommands
         {
             var ticket = _mapper.Map<Ticket>(request.Entity);
 
-            var insertedProduct = await _ticketService.InsertAsync(ticket);
+            var insertedTicket = await _ticketService.InsertAsync(ticket);
 
-            return insertedProduct.Id;
+            return insertedTicket.Id;
         }
     }
 }

@@ -20,8 +20,6 @@ namespace CINEMATRIX.API.Host
             CreateMap<Data.Domain.Models.Profile, ProfileDTO>();
             CreateMap<Data.Domain.Models.Profile, FoundProfileDTO>();
             CreateMap<ProfileDTO, Data.Domain.Models.Profile>();
-
-            CreateMap<FoundGenreDTO, GenreDTO>();
         }
     }
 }

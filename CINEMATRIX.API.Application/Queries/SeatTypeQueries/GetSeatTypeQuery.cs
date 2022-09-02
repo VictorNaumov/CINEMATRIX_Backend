@@ -17,12 +17,12 @@ namespace CINEMATRIX.API.Application.Queries.SeatTypeQueries
         }
     }
 
-    public class GetProductQueryHandler : IRequestHandler<GetSeatTypeQuery, SeatTypeDTO>
+    public class GetSeatTypeQueryHandler : IRequestHandler<GetSeatTypeQuery, SeatTypeDTO>
     {
         private readonly ISeatTypeService _seatTypeService;
         private readonly IMapper _mapper;
 
-        public GetProductQueryHandler(ISeatTypeService seatTypeService, IMapper mapper)
+        public GetSeatTypeQueryHandler(ISeatTypeService seatTypeService, IMapper mapper)
         {
             _seatTypeService = seatTypeService;
             _mapper = mapper;
