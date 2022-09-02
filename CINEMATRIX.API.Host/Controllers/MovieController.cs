@@ -26,7 +26,7 @@ namespace CINEMATRIX.API.Host.Controllers
         [SwaggerOperation(Summary = "Get the details of a movie", OperationId = "GetMovie")]
         public async Task<IActionResult> GetMovie([FromRoute] long id, CancellationToken cancellationToken = default)
         {
-            return await ExecuteQueryAsync(new GetMovieQuery(id), cancellationToken: cancellationToken);
+            return await ExecuteQueryAsync(new GetMovieDetailsQuery(id), cancellationToken: cancellationToken);
         }
 
         [HttpPost("{id}/similar")]
@@ -54,6 +54,15 @@ namespace CINEMATRIX.API.Host.Controllers
         public async Task<IActionResult> GetNowPlayingMovies([FromBody] MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
         {
             return await ExecuteQueryAsync(new GetNowPlayingMoviesQuery(searchCondition), cancellationToken: cancellationToken);
+        }
+
+        [HttpPost("search")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
+        [SwaggerOperation(Summary = "Search movies", OperationId = "SearchMovies")]
+        public async Task<IActionResult> SearchMovies([FromBody] MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new SearchMoviesQuery(searchCondition), cancellationToken: cancellationToken);
         }
     }
 }

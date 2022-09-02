@@ -3,6 +3,8 @@ using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.API.Contracts.Outgoing.TMDB;
 using CINEMATRIX.Data.Domain.Models;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace CINEMATRIX.API.Host
 {
@@ -18,13 +20,14 @@ namespace CINEMATRIX.API.Host
             CreateMap<SeatType, FoundSeatTypeDTO>();
             CreateMap<SeatTypeDTO, SeatType>();
 
-            CreateMap<Data.Domain.Models.Profile, ProfileDTO>();
-            CreateMap<Data.Domain.Models.Profile, FoundProfileDTO>();
-            CreateMap<ProfileDTO, Data.Domain.Models.Profile>();
+            CreateMap<Profile, ProfileDTO>();
+            CreateMap<Profile, FoundProfileDTO>();
+            CreateMap<ProfileDTO, Profile>();
 
             CreateMap<MovieByIdResponse, FoundMovieDTO>()
                 .ForMember(dest => dest.Videos, opts => opts.MapFrom(src => src.Videos.Results))
-                .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Backdrops));
+                .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Backdrops))
+                .ForMember(dest => dest.Credits, opts => opts.MapFrom(src => src.Credits.Crew.Concat(src.Credits.Cast)));
 
             CreateMap<PagedMoviesResponse, PagedResponse<FoundMovieDTO>>()
                 .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Results))

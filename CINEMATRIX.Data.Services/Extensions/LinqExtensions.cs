@@ -31,6 +31,11 @@ namespace CINEMATRIX.Data.Services.Extensions
                                         .GetValue(o)).ToList();
         }
 
+        public static string ToQueryString(this string source)
+        {
+            return source.Replace(" ", "+");
+        }
+
         private static Expression<Func<T, object>> ToLambda<T>(string propertyName)
         {
             var parameter = Expression.Parameter(typeof(T));

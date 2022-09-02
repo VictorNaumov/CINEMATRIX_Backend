@@ -29,10 +29,9 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            var foundGenres = await _genreService.FindAsync(searchCondition, sortProperty);
+            var foundGenres = await _genreService.FindAsync(searchCondition, cancellationToken);
             var totalCount = foundGenres.Count();
 
             return new PagedResponse<FoundGenreDTO>

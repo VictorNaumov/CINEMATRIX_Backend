@@ -38,10 +38,9 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
             searchCondition.Projector = request.SearchCondition.Projector.GetFilterValues();
             searchCondition.Screen = request.SearchCondition.Screen.GetFilterValues();
             searchCondition.ScreenResolution = request.SearchCondition.ScreenResolution.GetFilterValues();
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            IReadOnlyCollection<Hall> foundHalls = await _hallService.FindAsync(searchCondition, sortProperty);
+            IReadOnlyCollection<Hall> foundHalls = await _hallService.FindAsync(searchCondition);
             var mappedHall = _mapper.Map<IEnumerable<FoundHallDTO>>(foundHalls);
             var totalCount = await _hallService.CountAsync(searchCondition);
 

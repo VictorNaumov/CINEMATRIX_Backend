@@ -33,10 +33,9 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.MovieName = request.SearchCondition.MovieName.GetFilterValues();
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            IReadOnlyCollection<Session> foundSessions = await _sessionService.FindAsync(searchCondition, sortProperty);
+            IReadOnlyCollection<Session> foundSessions = await _sessionService.FindAsync(searchCondition);
             var mappedSession = _mapper.Map<IEnumerable<FoundSessionDTO>>(foundSessions);
             var totalCount = await _sessionService.CountAsync(searchCondition);
 

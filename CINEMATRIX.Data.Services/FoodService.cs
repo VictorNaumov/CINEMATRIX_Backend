@@ -14,7 +14,7 @@ namespace CINEMATRIX.Data.Services
 {
     public interface IFoodService : IBaseService<Food>
     {
-        Task<IReadOnlyCollection<Food>> FindAsync(FoodSearchCondition searchCondition, string sortProperty);
+        Task<IReadOnlyCollection<Food>> FindAsync(FoodSearchCondition searchCondition);
         Task<long> CountAsync(FoodSearchCondition searchCondition);
         Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
     }
@@ -23,13 +23,13 @@ namespace CINEMATRIX.Data.Services
     {
         public FoodService(ApplicationDbContext dbContext) : base(dbContext) { }
 
-        public async Task<IReadOnlyCollection<Food>> FindAsync(FoodSearchCondition searchCondition, string sortProperty)
+        public async Task<IReadOnlyCollection<Food>> FindAsync(FoodSearchCondition searchCondition)
         {
             IQueryable<Food> query = BuildFindQuery(searchCondition);
 
             query = searchCondition.SortDirection != "desc"
-                ? query.OrderBy(sortProperty)
-                : query.OrderByDescending(sortProperty);
+                ? query.OrderBy(searchCondition.SortProperty)
+                : query.OrderByDescending(searchCondition.SortProperty);
 
             return await query.Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }

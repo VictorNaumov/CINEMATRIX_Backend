@@ -14,7 +14,7 @@ namespace CINEMATRIX.Data.Services
 {
     public interface ISeatService : IBaseService<Seat>
     {
-        Task<IReadOnlyCollection<Seat>> FindAsync(SeatSearchCondition searchCondition, string sortProperty);
+        Task<IReadOnlyCollection<Seat>> FindAsync(SeatSearchCondition searchCondition);
         Task<long> CountAsync(SeatSearchCondition searchCondition);
         Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
     }
@@ -23,13 +23,13 @@ namespace CINEMATRIX.Data.Services
     {
         public SeatService(ApplicationDbContext dbContext) : base(dbContext) { }
 
-        public async Task<IReadOnlyCollection<Seat>> FindAsync(SeatSearchCondition searchCondition, string sortProperty)
+        public async Task<IReadOnlyCollection<Seat>> FindAsync(SeatSearchCondition searchCondition)
         {
             IQueryable<Seat> query = BuildFindQuery(searchCondition);
 
             query = searchCondition.SortDirection != "desc"
-                ? query.OrderBy(sortProperty)
-                : query.OrderByDescending(sortProperty);
+                ? query.OrderBy(searchCondition.SortProperty)
+                : query.OrderByDescending(searchCondition.SortProperty);
 
             return await query.Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }

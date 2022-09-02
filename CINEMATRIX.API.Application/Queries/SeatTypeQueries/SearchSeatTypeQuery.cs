@@ -33,10 +33,9 @@ namespace CINEMATRIX.API.Application.Queries.SeatTypeQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            IReadOnlyCollection<SeatType> foundSeatTypes = await _seatTypeService.FindAsync(searchCondition, sortProperty);
+            IReadOnlyCollection<SeatType> foundSeatTypes = await _seatTypeService.FindAsync(searchCondition);
             var mappedSeatType = _mapper.Map<IEnumerable<FoundSeatTypeDTO>>(foundSeatTypes);
             var totalCount = await _seatTypeService.CountAsync(searchCondition);
 

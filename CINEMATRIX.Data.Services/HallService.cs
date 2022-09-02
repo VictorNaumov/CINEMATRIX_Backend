@@ -14,7 +14,7 @@ namespace CINEMATRIX.Data.Services
 {
     public interface IHallService : IBaseService<Hall>
     {
-        Task<IReadOnlyCollection<Hall>> FindAsync(HallSearchCondition searchCondition, string sortProperty);
+        Task<IReadOnlyCollection<Hall>> FindAsync(HallSearchCondition searchCondition);
         Task<long> CountAsync(HallSearchCondition searchCondition);
         Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
     }
@@ -23,13 +23,13 @@ namespace CINEMATRIX.Data.Services
     {
         public HallService(ApplicationDbContext dbContext) : base(dbContext) { }
 
-        public async Task<IReadOnlyCollection<Hall>> FindAsync(HallSearchCondition searchCondition, string sortProperty)
+        public async Task<IReadOnlyCollection<Hall>> FindAsync(HallSearchCondition searchCondition)
         {
             IQueryable<Hall> query = BuildFindQuery(searchCondition);
 
             query = searchCondition.SortDirection != "desc"
-                ? query.OrderBy(sortProperty)
-                : query.OrderByDescending(sortProperty);
+                ? query.OrderBy(searchCondition.SortProperty)
+                : query.OrderByDescending(searchCondition.SortProperty);
 
             return await query.Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }

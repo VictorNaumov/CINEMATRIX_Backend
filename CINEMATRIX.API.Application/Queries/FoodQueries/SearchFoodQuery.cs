@@ -34,10 +34,9 @@ namespace CINEMATRIX.API.Application.Queries.FoodQueries
             var searchCondition = request.SearchCondition;
             searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
             searchCondition.Description = request.SearchCondition.Description.GetFilterValues();
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            IReadOnlyCollection<Food> foundFoods = await _foodService.FindAsync(searchCondition, sortProperty);
+            IReadOnlyCollection<Food> foundFoods = await _foodService.FindAsync(searchCondition);
             var mappedFood = _mapper.Map<IEnumerable<FoundFoodDTO>>(foundFoods);
             var totalCount = await _foodService.CountAsync(searchCondition);
 

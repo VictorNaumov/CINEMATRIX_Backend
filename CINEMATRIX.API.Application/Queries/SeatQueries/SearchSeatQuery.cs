@@ -31,10 +31,9 @@ namespace CINEMATRIX.API.Application.Queries.SeatQueries
         public async Task<PagedResponse<FoundSeatDTO>> Handle(SearchSeatQuery request, CancellationToken cancellationToken)
         {
             var searchCondition = request.SearchCondition;
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            IReadOnlyCollection<Seat> foundSeats = await _seatService.FindAsync(searchCondition, sortProperty);
+            IReadOnlyCollection<Seat> foundSeats = await _seatService.FindAsync(searchCondition);
             var mappedSeat = _mapper.Map<IEnumerable<FoundSeatDTO>>(foundSeats);
             var totalCount = await _seatService.CountAsync(searchCondition);
 

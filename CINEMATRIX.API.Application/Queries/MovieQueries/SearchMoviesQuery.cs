@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using CINEMATRIX.API.Application.Queries.Abstractions;
-using CINEMATRIX.API.Application.Queries.Extensions;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
@@ -11,31 +10,30 @@ using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Queries.MovieQueries
 {
-    public class GetNowPlayingMoviesQuery : PagedSearchQuery<FoundMovieDTO, MovieSearchCondition>
+    public class SearchMoviesQuery : PagedSearchQuery<FoundMovieDTO, MovieSearchCondition>
     {
-        public GetNowPlayingMoviesQuery(MovieSearchCondition searchCondition) : base(searchCondition) { }
+        public SearchMoviesQuery(MovieSearchCondition searchCondition) : base(searchCondition) { }
     }
 
-    public class GetNowPlayingMoviesQueryHandler : IRequestHandler<GetNowPlayingMoviesQuery, PagedResponse<FoundMovieDTO>>
+    public class SearchMoviesQueryHandler : IRequestHandler<SearchMoviesQuery, PagedResponse<FoundMovieDTO>>
     {
         private readonly IMovieService _movieService;
         private readonly IMapper _mapper;
 
-        public GetNowPlayingMoviesQueryHandler(IMovieService movieService, IMapper mapper)
+        public SearchMoviesQueryHandler(IMovieService movieService, IMapper mapper)
         {
             _movieService = movieService;
             _mapper = mapper;
         }
 
-        public async Task<PagedResponse<FoundMovieDTO>> Handle(GetNowPlayingMoviesQuery request, CancellationToken cancellationToken)
+        public async Task<PagedResponse<FoundMovieDTO>> Handle(SearchMoviesQuery request, CancellationToken cancellationToken)
         {
             var searchCondition = request.SearchCondition;
-            searchCondition.Title = request.SearchCondition.Title.GetFilterValues();
             searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var movieNowPlayingApiResponse = await _movieService.GetNowPlayingMoviesAsync(searchCondition);
+            var movieTopRatedApiResponse = await _movieService.FindMoviesAsync(searchCondition, cancellationToken);
 
-            return _mapper.Map<PagedResponse<FoundMovieDTO>>(movieNowPlayingApiResponse);
+            return _mapper.Map<PagedResponse<FoundMovieDTO>>(movieTopRatedApiResponse);
         }
 
         protected string GetSortProperty(string propertyName)

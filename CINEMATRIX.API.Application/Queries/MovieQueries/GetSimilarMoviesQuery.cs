@@ -36,10 +36,9 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.Title = request.SearchCondition.Title.GetFilterValues();
+            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
 
-            var sortProperty = GetSortProperty(searchCondition.SortProperty);
-
-            var movieTopRatedApiResponse = await _movieService.GetSimilarMoviesByIdAsync(request.Id, request.SearchCondition, sortProperty);
+            var movieTopRatedApiResponse = await _movieService.GetSimilarMoviesByIdAsync(request.Id, request.SearchCondition, cancellationToken);
 
             return _mapper.Map<PagedResponse<FoundMovieDTO>>(movieTopRatedApiResponse);
         }

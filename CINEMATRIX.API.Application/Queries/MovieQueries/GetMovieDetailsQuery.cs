@@ -7,31 +7,31 @@ using System.Threading.Tasks;
 
 namespace CINEMATRIX.API.Application.Queries.MovieQueries
 {
-    public class GetMovieQuery : IRequest<FoundMovieDTO>
+    public class GetMovieDetailsQuery : IRequest<FoundMovieDTO>
     {
         public long Id { get; }
 
-        public GetMovieQuery(long id)
+        public GetMovieDetailsQuery(long id)
         {
             Id = id;
         }
     }
 
-    public class GetMovieQueryHandler : IRequestHandler<GetMovieQuery, FoundMovieDTO>
+    public class GetMovieDetailsQueryHandler : IRequestHandler<GetMovieDetailsQuery, FoundMovieDTO>
     {
         private readonly IMovieService _movieService;
         private readonly IMapper _mapper;
 
-        public GetMovieQueryHandler(IMovieService movieService, IMapper mapper)
+        public GetMovieDetailsQueryHandler(IMovieService movieService, IMapper mapper)
         {
             _movieService = movieService;
             _mapper = mapper;
         }
 
-        public async Task<FoundMovieDTO> Handle(GetMovieQuery request, CancellationToken cancellationToken)
+        public async Task<FoundMovieDTO> Handle(GetMovieDetailsQuery request, CancellationToken cancellationToken)
         {
             var apiResponse = await _movieService.GetMovieByIdAsync(request.Id, cancellationToken);
-    
+
             var movie = _mapper.Map<FoundMovieDTO>(apiResponse);
 
             return movie;

@@ -28,6 +28,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
         public int VoteCount { get; set; }
         public MovieVideoResponse Videos { get; set; }
         public MovieImageResponse Images { get; set; }
+        public MovieCreditResponse Credits { get; set; }
         public List<FoundGenreDTO> Genres { get; set; }
     }
 }
