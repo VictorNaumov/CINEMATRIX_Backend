@@ -30,7 +30,7 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
 
         public async Task<HallDTO> Handle(GetHallQuery request, CancellationToken cancellationToken)
         {
-            var hall = await _hallService.GetAsync(request.Id, cancellationToken);
+            var hall = await _hallService.GetByIdAsync(request.Id, cancellationToken);
 
             if (hall == null)
             {

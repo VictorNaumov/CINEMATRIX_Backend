@@ -2,9 +2,9 @@
 using System;
 using System.Collections.Generic;
 
-namespace CINEMATRIX.API.Contracts.Outgoing
+namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class FoundPersonDTO
+    public class PersonByIdResponse
     {
         public long Id { get; set; }
         public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing
 
         [JsonProperty("place_of_birth")]
         public string PlaceOfBirth { get; set; }
-        public List<FoundImageDTO> Images { get; set; }
-        public List<FoundPersonCreditDTO> Credits { get; set; }
+        public AppendImageResponse Images { get; set; }
+        public AppendPersonCreditResponse Credits { get; set; }
     }
 }

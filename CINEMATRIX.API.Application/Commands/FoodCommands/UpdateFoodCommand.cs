@@ -28,7 +28,7 @@ namespace CINEMATRIX.API.Application.Commands.FoodCommands
 
         public async Task<Response> Handle(UpdateFoodCommand request, CancellationToken cancellationToken)
         {
-            var food = await _foodService.GetAsync(request.Id, cancellationToken);
+            var food = await _foodService.GetByIdAsync(request.Id, cancellationToken);
 
             if (food == null)
             {

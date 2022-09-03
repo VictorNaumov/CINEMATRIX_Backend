@@ -29,6 +29,10 @@ namespace CINEMATRIX.API.Host
                 .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Backdrops))
                 .ForMember(dest => dest.Credits, opts => opts.MapFrom(src => src.Credits.Crew.Concat(src.Credits.Cast)));
 
+            CreateMap<PersonByIdResponse, FoundPersonDTO>()
+                .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Profiles))
+                .ForMember(dest => dest.Credits, opts => opts.MapFrom(src => src.Credits.Crew.Concat(src.Credits.Cast)));
+
             CreateMap<PagedMoviesResponse, PagedResponse<FoundMovieDTO>>()
                 .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Results))
                 .ForMember(dest => dest.TotalCount, opts => opts.MapFrom(src => src.TotalResults));

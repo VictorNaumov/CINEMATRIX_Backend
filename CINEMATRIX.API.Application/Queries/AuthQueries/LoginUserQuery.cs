@@ -33,7 +33,7 @@ namespace ComputerTechnicianBackend.API.Application.Queries.AuthQueries
                 return null;
             }
 
-            var role = await roleService.GetAsync(user.RoleId);
+            var role = await roleService.GetByIdAsync(user.RoleId);
 
             if (role == null)
             {

@@ -30,7 +30,7 @@ namespace CINEMATRIX.API.Application.Queries.TicketQueries
 
         public async Task<TicketDTO> Handle(GetTicketQuery request, CancellationToken cancellationToken)
         {
-            var ticket = await _ticketService.GetAsync(request.Id, cancellationToken);
+            var ticket = await _ticketService.GetByIdAsync(request.Id, cancellationToken);
 
             if (ticket == null)
             {

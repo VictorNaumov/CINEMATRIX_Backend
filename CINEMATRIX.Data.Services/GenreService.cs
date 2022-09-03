@@ -13,7 +13,7 @@ namespace CINEMATRIX.Data.Services
     public interface IGenreService : IHttpBaseService
     {
         Task<List<FoundGenreDTO>> FindAsync(GenreSearchCondition searchCondition, CancellationToken cancellationToken);
-        Task<FoundGenreDTO> GetAsync(long? id, CancellationToken cancellationToken);
+        Task<FoundGenreDTO> GetByIdAsync(long? id, CancellationToken cancellationToken);
     }
 
     public class GenreService : HttpBaseService, IGenreService
@@ -34,14 +34,8 @@ namespace CINEMATRIX.Data.Services
             return genres;
         }
 
-        public async Task<FoundGenreDTO> GetAsync(long? id, 
-            CancellationToken cancellationToken = default)
+        public async Task<FoundGenreDTO> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
-            if (!id.HasValue)
-            {
-                return null;
-            }
-
             string url = $"https://api.themoviedb.org/3/genre/movie/list?api_key={ApiKey}&language=en-US";
 
             var apiResponse = await GetByUrlAsync<GenreResponse>(url);

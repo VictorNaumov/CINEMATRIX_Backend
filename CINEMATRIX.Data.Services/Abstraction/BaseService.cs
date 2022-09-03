@@ -9,7 +9,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
 {
     public interface IBaseService<TEntity> where TEntity : KeyedEntityBase
     {
-        Task<TEntity> GetAsync(long? id, CancellationToken cancellationToken = default);
+        Task<TEntity> GetByIdAsync(long? id, CancellationToken cancellationToken = default);
         Task<IReadOnlyCollection<TEntity>> GetAsync(CancellationToken cancellationToken = default);
         Task<TEntity> InsertAsync(TEntity newEntity);
         Task<TEntity> UpdateAsync(TEntity newEntity);
@@ -28,7 +28,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
 
         }
 
-        public async Task<TEntity> GetAsync(long? id, CancellationToken cancellationToken = default)
+        public async Task<TEntity> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
             return await _dbSet.FindAsync(new object[] { id }, cancellationToken);
         }
@@ -61,7 +61,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
 
         public async Task DeleteAsync(long? id, CancellationToken cancellationToken = default)
         {
-            var entity = await GetAsync(id, cancellationToken);
+            var entity = await GetByIdAsync(id, cancellationToken);
             if (entity != null)
             {
                 _dbSet.Remove(entity);

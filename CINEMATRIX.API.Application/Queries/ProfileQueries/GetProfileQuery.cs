@@ -30,7 +30,7 @@ namespace CINEMATRIX.API.Application.Queries.ProfileQueries
 
         public async Task<ProfileDTO> Handle(GetProfileQuery request, CancellationToken cancellationToken)
         {
-            var profile = await _profileService.GetAsync(request.Id, cancellationToken);
+            var profile = await _profileService.GetByIdAsync(request.Id, cancellationToken);
 
             if (profile == null)
             {

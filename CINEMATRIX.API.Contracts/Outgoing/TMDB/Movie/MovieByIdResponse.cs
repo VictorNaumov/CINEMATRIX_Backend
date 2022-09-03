@@ -26,9 +26,9 @@ namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
         public double VoteAverage { get; set; }
         [JsonProperty("vote_count")]
         public int VoteCount { get; set; }
-        public MovieVideoResponse Videos { get; set; }
-        public MovieImageResponse Images { get; set; }
-        public MovieCreditResponse Credits { get; set; }
+        public AppendVideoResponse Videos { get; set; }
+        public AppendImageResponse Images { get; set; }
+        public AppendMovieCreditResponse Credits { get; set; }
         public List<FoundGenreDTO> Genres { get; set; }
     }
 }

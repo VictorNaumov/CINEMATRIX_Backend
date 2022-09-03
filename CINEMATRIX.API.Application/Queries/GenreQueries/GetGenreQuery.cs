@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CINEMATRIX.API.Contracts.Outgoing;
+﻿using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;
 using System.Threading;
@@ -28,7 +27,7 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
 
         public async Task<FoundGenreDTO> Handle(GetGenreQuery request, CancellationToken cancellationToken)
         {
-            return await _genreService.GetAsync(request.Id, cancellationToken);
+            return await _genreService.GetByIdAsync(request.Id, cancellationToken);
         }
     }
 }

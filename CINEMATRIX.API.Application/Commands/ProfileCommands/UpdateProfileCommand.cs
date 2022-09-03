@@ -27,7 +27,7 @@ namespace CINEMATRIX.API.Application.Commands.ProfileCommands
 
         public async Task<Response> Handle(UpdateProfileCommand request, CancellationToken cancellationToken)
         {
-            var profile = await _profileService.GetAsync(request.Id, cancellationToken);
+            var profile = await _profileService.GetByIdAsync(request.Id, cancellationToken);
 
             if (profile == null)
             {

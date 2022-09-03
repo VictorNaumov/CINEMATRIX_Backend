@@ -28,7 +28,7 @@ namespace CINEMATRIX.API.Application.Commands.SeatCommands
 
         public async Task<Response> Handle(UpdateSeatCommand request, CancellationToken cancellationToken)
         {
-            var seat = await _seatService.GetAsync(request.Id, cancellationToken);
+            var seat = await _seatService.GetByIdAsync(request.Id, cancellationToken);
 
             if (seat == null)
             {

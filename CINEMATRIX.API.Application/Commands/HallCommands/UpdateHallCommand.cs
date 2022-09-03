@@ -28,7 +28,7 @@ namespace CINEMATRIX.API.Application.Commands.HallCommands
 
         public async Task<Response> Handle(UpdateHallCommand request, CancellationToken cancellationToken)
         {
-            var hall = await _hallService.GetAsync(request.Id, cancellationToken);
+            var hall = await _hallService.GetByIdAsync(request.Id, cancellationToken);
 
             if (hall == null)
             {

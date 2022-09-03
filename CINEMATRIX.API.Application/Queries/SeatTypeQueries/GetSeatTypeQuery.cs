@@ -30,7 +30,7 @@ namespace CINEMATRIX.API.Application.Queries.SeatTypeQueries
 
         public async Task<SeatTypeDTO> Handle(GetSeatTypeQuery request, CancellationToken cancellationToken)
         {
-            var seatType = await _seatTypeService.GetAsync(request.Id, cancellationToken);
+            var seatType = await _seatTypeService.GetByIdAsync(request.Id, cancellationToken);
 
             if (seatType == null)
             {

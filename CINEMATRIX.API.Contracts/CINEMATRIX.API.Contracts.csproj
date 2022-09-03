@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Outgoing\TMDB\Image\" />
-    <Folder Include="Outgoing\TMDB\Person\" />
     <Folder Include="Outgoing\TMDB\Video\" />
   </ItemGroup>
 

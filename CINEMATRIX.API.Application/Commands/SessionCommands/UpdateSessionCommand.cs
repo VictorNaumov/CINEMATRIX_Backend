@@ -28,7 +28,7 @@ namespace CINEMATRIX.API.Application.Commands.SessionCommands
 
         public async Task<Response> Handle(UpdateSessionCommand request, CancellationToken cancellationToken)
         {
-            var session = await _sessionService.GetAsync(request.Id, cancellationToken);
+            var session = await _sessionService.GetByIdAsync(request.Id, cancellationToken);
 
             if (session == null)
             {

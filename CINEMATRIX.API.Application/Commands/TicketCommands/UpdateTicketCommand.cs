@@ -28,7 +28,7 @@ namespace CINEMATRIX.API.Application.Commands.TicketCommands
 
         public async Task<Response> Handle(UpdateTicketCommand request, CancellationToken cancellationToken)
         {
-            var ticket = await _ticketService.GetAsync(request.Id, cancellationToken);
+            var ticket = await _ticketService.GetByIdAsync(request.Id, cancellationToken);
 
             if (ticket == null)
             {
