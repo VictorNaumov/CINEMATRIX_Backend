@@ -33,7 +33,7 @@ namespace CINEMATRIX.API.Application.Queries.SeatTypeQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
-            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
+            searchCondition.SortProperty = typeof(FoundSeatTypeDTO).GetSortProperty(searchCondition.SortProperty);
 
             IReadOnlyCollection<SeatType> foundSeatTypes = await _seatTypeService.FindAsync(searchCondition);
             var mappedSeatType = _mapper.Map<IEnumerable<FoundSeatTypeDTO>>(foundSeatTypes);
@@ -44,20 +44,6 @@ namespace CINEMATRIX.API.Application.Queries.SeatTypeQueries
                 Items = mappedSeatType,
                 TotalCount = totalCount
             };
-        }
-
-        protected string GetSortProperty(string propertyName)
-        {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                switch (propertyName.ToLowerInvariant())
-                {
-                    case "name": return nameof(SeatType.Name);
-                    case "price": return nameof(SeatType.Price);
-                }
-            }
-
-            return nameof(SeatType.Id);
         }
     }
 }

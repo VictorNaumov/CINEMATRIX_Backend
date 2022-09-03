@@ -17,19 +17,19 @@ namespace CINEMATRIX.API.Host.Controllers
     [Route("api/v{version:apiVersion}/person")]
     [ApiController]
     //[Authorize]
-    public class PersonController : MediatingControllerBase
+    public class PersonСontroller : MediatingControllerBase
     {
-        public PersonController(IMediator mediator) : base(mediator) { }
+        public PersonСontroller(IMediator mediator) : base(mediator) { }
 
 
-        //[HttpPost("search")]
-        //[AllowAnonymous]
-        //[SwaggerResponse(StatusCodes.Status200OK, Type = typeof(PagedResponse<FoundPersonDTO>))]
-        //[SwaggerOperation(Summary = "Search persons", OperationId = "SearchPersons")]
-        //public async Task<IActionResult> SearchPersons([FromBody] PersonSearchCondition searchCondition, CancellationToken cancellationToken = default)
-        //{
-        //    return await ExecuteQueryAsync(new SearchPersonQuery(searchCondition), cancellationToken: cancellationToken);
-        //}
+        [HttpPost("popular")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(PagedResponse<FoundPersonDTO>))]
+        [SwaggerOperation(Summary = "Get popular people", OperationId = "GetPopularPeople")]
+        public async Task<IActionResult> GetPopularPeople([FromBody] PersonSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetPopularPeopleQuery(searchCondition), cancellationToken: cancellationToken);
+        }
 
         [HttpGet("{id}")]
         [AllowAnonymous]

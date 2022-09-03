@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CINEMATRIX.API.Application.Queries.Abstractions;
+using CINEMATRIX.API.Application.Queries.Extensions;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
@@ -31,7 +32,7 @@ namespace CINEMATRIX.API.Application.Queries.SeatQueries
         public async Task<PagedResponse<FoundSeatDTO>> Handle(SearchSeatQuery request, CancellationToken cancellationToken)
         {
             var searchCondition = request.SearchCondition;
-            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
+            searchCondition.SortProperty = typeof(FoundSeatDTO).GetSortProperty(searchCondition.SortProperty);
 
             IReadOnlyCollection<Seat> foundSeats = await _seatService.FindAsync(searchCondition);
             var mappedSeat = _mapper.Map<IEnumerable<FoundSeatDTO>>(foundSeats);
@@ -42,20 +43,6 @@ namespace CINEMATRIX.API.Application.Queries.SeatQueries
                 Items = mappedSeat,
                 TotalCount = totalCount
             };
-        }
-
-        protected string GetSortProperty(string propertyName)
-        {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                switch (propertyName.ToLowerInvariant())
-                {
-                    case "row": return nameof(Seat.Row);
-                    case "description": return nameof(Seat.Number);
-                }
-            }
-
-            return nameof(Seat.Id);
         }
     }
 }

@@ -31,35 +31,11 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.Title = request.SearchCondition.Title.GetFilterValues();
-            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
+            searchCondition.SortProperty = typeof(FoundMovieDTO).GetSortProperty(searchCondition.SortProperty);
 
             var movieNowPlayingApiResponse = await _movieService.GetNowPlayingMoviesAsync(searchCondition);
 
             return _mapper.Map<PagedResponse<FoundMovieDTO>>(movieNowPlayingApiResponse);
-        }
-
-        protected string GetSortProperty(string propertyName)
-        {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                switch (propertyName.ToLowerInvariant())
-                {
-                    case "title": return nameof(FoundMovieDTO.Title);
-                    case "overview": return nameof(FoundMovieDTO.Overview);
-                    case "budget": return nameof(FoundMovieDTO.Budget);
-                    case "originallanguage": return nameof(FoundMovieDTO.OriginalLanguage);
-                    case "originaltitle": return nameof(FoundMovieDTO.OriginalTitle);
-                    case "popularity": return nameof(FoundMovieDTO.Popularity);
-                    case "releasedate": return nameof(FoundMovieDTO.ReleaseDate);
-                    case "runtime": return nameof(FoundMovieDTO.Runtime);
-                    case "status": return nameof(FoundMovieDTO.Status);
-                    case "tagline": return nameof(FoundMovieDTO.Tagline);
-                    case "voteaverage": return nameof(FoundMovieDTO.VoteAverage);
-                    case "votecount": return nameof(FoundMovieDTO.VoteCount);
-                }
-            }
-
-            return nameof(FoundMovieDTO.Id);
         }
     }
 }

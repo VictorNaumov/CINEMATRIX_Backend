@@ -38,7 +38,7 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
             searchCondition.Projector = request.SearchCondition.Projector.GetFilterValues();
             searchCondition.Screen = request.SearchCondition.Screen.GetFilterValues();
             searchCondition.ScreenResolution = request.SearchCondition.ScreenResolution.GetFilterValues();
-            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
+            searchCondition.SortProperty = typeof(FoundHallDTO).GetSortProperty(searchCondition.SortProperty);
 
             IReadOnlyCollection<Hall> foundHalls = await _hallService.FindAsync(searchCondition);
             var mappedHall = _mapper.Map<IEnumerable<FoundHallDTO>>(foundHalls);
@@ -49,24 +49,6 @@ namespace CINEMATRIX.API.Application.Queries.HallQueries
                 Items = mappedHall,
                 TotalCount = totalCount
             };
-        }
-
-        protected string GetSortProperty(string propertyName)
-        {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                switch (propertyName.ToLowerInvariant())
-                {
-                    case "name": return nameof(Hall.Name);
-                    case "description": return nameof(Hall.Description);
-                    case "soundsystem": return nameof(Hall.SoundSystem);
-                    case "projector": return nameof(Hall.Projector);
-                    case "screen": return nameof(Hall.Screen);
-                    case "screenresolution": return nameof(Hall.ScreenResolution);
-                }
-            }
-
-            return nameof(Hall.Id);
         }
     }
 }

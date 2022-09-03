@@ -36,6 +36,10 @@ namespace CINEMATRIX.API.Host
             CreateMap<PagedMoviesResponse, PagedResponse<FoundMovieDTO>>()
                 .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Results))
                 .ForMember(dest => dest.TotalCount, opts => opts.MapFrom(src => src.TotalResults));
+
+            CreateMap<PagedPeopleResponse, PagedResponse<FoundPersonDTO>>()
+                .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Results))
+                .ForMember(dest => dest.TotalCount, opts => opts.MapFrom(src => src.TotalResults));
         }
     }
 }

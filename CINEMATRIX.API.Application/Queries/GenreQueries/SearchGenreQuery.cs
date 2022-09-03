@@ -29,7 +29,7 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
         {
             var searchCondition = request.SearchCondition;
             searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
-            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
+            searchCondition.SortProperty = typeof(FoundGenreDTO).GetSortProperty(searchCondition.SortProperty);
 
             var foundGenres = await _genreService.FindAsync(searchCondition, cancellationToken);
             var totalCount = foundGenres.Count();
@@ -39,19 +39,6 @@ namespace CINEMATRIX.API.Application.Queries.GenreQueries
                 Items = foundGenres,
                 TotalCount = totalCount
             };
-        }
-
-        protected string GetSortProperty(string propertyName)
-        {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                switch (propertyName.ToLowerInvariant())
-                {
-                    case "name": return nameof(FoundGenreDTO.Name);
-                }
-            }
-
-            return nameof(FoundGenreDTO.Id);
         }
     }
 }

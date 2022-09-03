@@ -34,7 +34,7 @@ namespace CINEMATRIX.API.Application.Queries.FoodQueries
             var searchCondition = request.SearchCondition;
             searchCondition.Name = request.SearchCondition.Name.GetFilterValues();
             searchCondition.Description = request.SearchCondition.Description.GetFilterValues();
-            searchCondition.SortProperty = GetSortProperty(searchCondition.SortProperty);
+            searchCondition.SortProperty = typeof(FoundFoodDTO).GetSortProperty(searchCondition.SortProperty);
 
             IReadOnlyCollection<Food> foundFoods = await _foodService.FindAsync(searchCondition);
             var mappedFood = _mapper.Map<IEnumerable<FoundFoodDTO>>(foundFoods);
@@ -45,21 +45,6 @@ namespace CINEMATRIX.API.Application.Queries.FoodQueries
                 Items = mappedFood,
                 TotalCount = totalCount
             };
-        }
-
-        protected string GetSortProperty(string propertyName)
-        {
-            if (!string.IsNullOrWhiteSpace(propertyName))
-            {
-                switch (propertyName.ToLowerInvariant())
-                {
-                    case "name": return nameof(Food.Name);
-                    case "description": return nameof(Food.Description);
-                    case "price": return nameof(Food.Price);
-                }
-            }
-
-            return nameof(Food.Id);
         }
     }
 }
