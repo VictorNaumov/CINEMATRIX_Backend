@@ -1,10 +1,13 @@
-﻿namespace CINEMATRIX.API.Contracts.Incoming.Abstractions
+﻿using System.ComponentModel;
+
+namespace CINEMATRIX.API.Contracts.Incoming.Abstractions
 {
     public class PageSettings
     {
         /// <summary>
         ///     Gets the number of items to retrieve.
         /// </summary>
+        [DefaultValue(20)]
         public int PageSize { get; set; }
 
         /// <summary>

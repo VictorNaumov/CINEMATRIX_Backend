@@ -39,7 +39,7 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
             RuleFor(cmd => cmd.Entity.DateTime)
                 .Must(ValidationRuleUtility.IsValidDateTime)
-                .WithMessage(cmd => string.Format(Resources.Resources.SessionDateTimeMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.AddYears(1).ToShortDateString()));
+                .WithMessage(cmd => string.Format(Resources.Resources.SessionDateTimeMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.AddYears(3).ToShortDateString()));
         }
 
         private async Task<bool> HallExist(long id, CancellationToken cancellationToken)

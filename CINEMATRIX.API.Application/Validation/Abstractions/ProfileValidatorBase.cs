@@ -35,7 +35,7 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
 
             RuleFor(cmd => cmd.Entity.DateOfBirth)
                 .Must(ValidationRuleUtility.IsValidDateTime)
-                .WithMessage(query => string.Format(Resources.Resources.ProfileDateOfBirthMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.ToShortDateString()));
+                .WithMessage(query => string.Format(Resources.Resources.ProfileDateOfBirthMustBeInRange, DateTime.Now.AddYears(-100).ToShortDateString(), DateTime.Now.AddYears(3).ToShortDateString()));
         }
     }
 }

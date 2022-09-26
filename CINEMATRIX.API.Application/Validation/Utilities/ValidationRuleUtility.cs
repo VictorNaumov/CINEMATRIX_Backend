@@ -17,6 +17,6 @@ namespace CINEMATRIX.API.Application.Validation.Utilities
             => value > 0;
 
         public static bool IsValidDateTime(DateTime value) =>
-         DateTime.Now.AddYears(-100).Date <= value && value <= DateTime.Now.Date.AddYears(1);
+         DateTime.Now.AddYears(-100).Date <= value && value <= DateTime.Now.Date.AddYears(3);
     }
 }

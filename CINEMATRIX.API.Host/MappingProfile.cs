@@ -16,9 +16,30 @@ namespace CINEMATRIX.API.Host
             CreateMap<Food, FoundFoodDTO>();
             CreateMap<FoodDTO, Food>();
 
+            CreateMap<Hall, HallDTO>();
+            CreateMap<Hall, FoundHallDTO>();
+            CreateMap<HallDTO, Hall>();
+
+            CreateMap<Profile, ProfileDTO>();
+            CreateMap<Profile, FoundProfileDTO>();
+            CreateMap<ProfileDTO, Profile>();
+
+            CreateMap<Seat, SeatDTO>();
+            CreateMap<Seat, FoundSeatDTO>();
+            CreateMap<SeatDTO, Seat>();
+
             CreateMap<SeatType, SeatTypeDTO>();
             CreateMap<SeatType, FoundSeatTypeDTO>();
             CreateMap<SeatTypeDTO, SeatType>();
+
+            CreateMap<Session, SessionDTO>();
+            CreateMap<Session, FoundSessionDTO>();
+            CreateMap<SessionDTO, Session>();
+
+            CreateMap<Ticket, TicketDTO>();
+            CreateMap<Ticket, FoundTicketDTO>();
+            CreateMap<TicketDTO, Ticket>();
+
 
             CreateMap<Profile, ProfileDTO>();
             CreateMap<Profile, FoundProfileDTO>();

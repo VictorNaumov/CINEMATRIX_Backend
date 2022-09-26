@@ -1,4 +1,5 @@
-﻿using CINEMATRIX.API.Application.Commands.Abstractions;
+﻿using AutoMapper;
+using CINEMATRIX.API.Application.Commands.Abstractions;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.Data.Domain.Enums;
 using CINEMATRIX.Data.Domain.Models;
@@ -18,10 +19,12 @@ namespace CINEMATRIX.API.Application.Commands.AuthCommands
     {
 
         private readonly IUserService _userService;
+        private readonly IMapper _mapper;
 
-        public RegisterUserCommandHandler(IUserService userService)
+        public RegisterUserCommandHandler(IUserService userService, IMapper mapper)
         {
             _userService = userService;
+            _mapper = mapper;
         }
         public async Task<bool> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
         {
@@ -33,7 +36,9 @@ namespace CINEMATRIX.API.Application.Commands.AuthCommands
             }
 
             var role = (long)RoleEnums.User;
-            var newUser = MapToUser(request.Entity, role);
+            var newUser = _mapper.Map<User>(request.Entity);
+            newUser.RoleId = role;
+
             var insertedUser = await _userService.InsertAsync(newUser);
 
             if (insertedUser == null)
@@ -42,17 +47,6 @@ namespace CINEMATRIX.API.Application.Commands.AuthCommands
             }
 
             return true;
-        }
-
-        private User MapToUser(UserDTO user, long roleId)
-        {
-            return new User
-            {
-                Email = user.Email,
-                UserName = user.UserName,
-                Password = user.Password,
-                RoleId = roleId
-            };
         }
     }
 }
