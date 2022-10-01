@@ -12,7 +12,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         [JsonProperty("vote_average")]
         public double VoteAverage { get; set; }
         [JsonProperty("vote_count")]
-        public double VoteCount { get; set; }
+        public int VoteCount { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
     }

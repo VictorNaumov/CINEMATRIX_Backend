@@ -35,7 +35,7 @@ namespace CINEMATRIX.API.Application.Commands.AuthCommands
                 return false;
             }
 
-            var role = (long)RoleEnums.User;
+            var role = (long)RoleEnum.User;
             var newUser = _mapper.Map<User>(request.Entity);
             newUser.RoleId = role;
 

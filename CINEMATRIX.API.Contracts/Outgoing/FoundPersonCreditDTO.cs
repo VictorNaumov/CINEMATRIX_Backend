@@ -26,9 +26,9 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         public bool Video{ get; set; }
 
         [JsonProperty("vote_average")]
-        public string VoteAverage { get; set; }
+        public double VoteAverage { get; set; }
         [JsonProperty("vote_count")]
-        public string VoteCount { get; set; }
+        public int VoteCount { get; set; }
         [JsonProperty("credit_id")]
         public string CreditId { get; set; }
         public string Department { get; set; }

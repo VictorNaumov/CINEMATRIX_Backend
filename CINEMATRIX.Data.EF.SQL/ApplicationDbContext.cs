@@ -9,12 +9,12 @@ namespace CINEMATRIX.Data.EF.SQL
         public DbSet<Food> Foods { get; set; }
         public DbSet<Hall> Halls { get; set; }
         public DbSet<Poster> Posters { get; set; }
-        public DbSet<Role> Roles { get; set; }
+        public DbSet<Profile> Profile { get; set; }
         public DbSet<Seat> Seats { get; set; }
         public DbSet<SeatType> SeatTypes { get; set; }
         public DbSet<Session> Sessions { get; set; }
-        public DbSet<Profile> Profile { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
