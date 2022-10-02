@@ -8,23 +8,24 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
     {
         public void Configure(EntityTypeBuilder<SeatType> builder)
         {
+            long id = 1;
             builder.HasData
             (
-                new SeatType()
+                new SeatType
                 {
-                    Id = 0,
+                    Id = id++,
                     Name = "Standart",
                     Price = 4
                 },
-                new SeatType()
+                new SeatType
                 {
-                    Id = 1,
+                    Id = id++,
                     Name = "Lux",
                     Price = 6
                 },
-                new SeatType()
+                new SeatType
                 {
-                    Id = 2,
+                    Id = id++,
                     Name = "Romantic",
                     Price = 8
                 }

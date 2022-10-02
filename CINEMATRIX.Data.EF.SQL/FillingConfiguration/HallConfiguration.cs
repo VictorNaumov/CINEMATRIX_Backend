@@ -8,11 +8,13 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
     {
         public void Configure(EntityTypeBuilder<Hall> builder)
         {
+            long id = 1;
+
             builder.HasData
             (
-                new Hall()
+                new Hall
                 {
-                    Id = 0,
+                    Id = id++,
                     Name = "LUX",
                     Description = "Comfortable recliner chairs with adjustable back tilt, leg support and individual tables for each chair.",
                     SoundSystem = "Dolby 7,1",
@@ -20,9 +22,9 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Screen = "8,7 x 3,9",
                     ScreenResolution = "4K",
                 },
-                new Hall()
+                new Hall
                 {
-                    Id = 1,
+                    Id = id++,
                     Name = "SWEET BOX",
                     Description = "Soft sofas for two. The atmosphere of privacy and comfort in individual boxes.",
                     SoundSystem = "Dolby 7,1",
@@ -30,9 +32,9 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Screen = "8,7 х 3,9",
                     ScreenResolution = "4K",
                 },
-                new Hall()
+                new Hall
                 {
-                    Id = 2,
+                    Id = id++,
                     Name = "SMALL HALL",
                     Description = "Standard seats. For two Sofa Love.",
                     SoundSystem = "Dolby 7,1",
@@ -40,9 +42,9 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Screen = "8,7 х 3,9",
                     ScreenResolution = "4K",
                 },
-                new Hall()
+                new Hall
                 {
-                    Id = 3,
+                    Id = id++,
                     Name = "BIG HALL",
                     Description = "Standard seats. For two Sofa Love.",
                     SoundSystem = "Dolby 7,1",
@@ -50,9 +52,9 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Screen = "13,3 x 5,7",
                     ScreenResolution = "4K",
                 },
-                new Hall()
+                new Hall
                 {
-                    Id = 4,
+                    Id = id++,
                     Name = "ATMOS",
                     Description = "Standard seats. For two Sofa Love.",
                     SoundSystem = "Dolby 7,1",

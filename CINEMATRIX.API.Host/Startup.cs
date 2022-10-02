@@ -31,7 +31,9 @@ namespace CINEMATRIX
             services.ConfigureCors();
             services.ConfigureJWT(Configuration);
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext")));
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext"));
+            });
             services.AddApplication();
             services.ConfigureSwaggerVersioning();
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();

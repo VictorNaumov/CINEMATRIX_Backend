@@ -2,10 +2,10 @@
 {
     public enum HallEnum
     {
-        LUX = 0,
-        SWEETBOX = 1,
-        SMALLHALL = 2,
-        BIGHALL = 3,
-        ATMOS = 4,
+        LUX = 1,
+        SWEETBOX = 2,
+        SMALLHALL = 3,
+        BIGHALL = 4,
+        ATMOS = 5,
     }
 }

@@ -1,4 +1,5 @@
 ﻿using CINEMATRIX.Data.Domain.Models;
+using CINEMATRIX.Data.EF.SQL.FillingConfiguration;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 

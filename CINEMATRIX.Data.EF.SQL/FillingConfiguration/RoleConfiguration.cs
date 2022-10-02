@@ -8,21 +8,23 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
     {
         public void Configure(EntityTypeBuilder<Role> builder)
         {
+            int id = 1;
+
             builder.HasData
             (
-                new Role()
+                new Role
                 {
-                    Id = 0,
+                    Id = id++,
                     Name = "Admin",
                 },
-                new Role()
+                new Role
                 {
-                    Id = 1,
+                    Id = id++,
                     Name = "Staff",
                 },
-                new Role()
+                new Role
                 {
-                    Id = 2,
+                    Id = id++,
                     Name = "User",
                 }
             );

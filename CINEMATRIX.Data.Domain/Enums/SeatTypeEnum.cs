@@ -2,8 +2,8 @@
 {
     public enum SeatTypeEnum
     {
-        Standart = 0,
-        Lux = 1,
-        Romantic = 2
+        Standart = 1,
+        Lux = 2,
+        Romantic = 3
     }
 }

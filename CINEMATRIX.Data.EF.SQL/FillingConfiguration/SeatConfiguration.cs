@@ -10,7 +10,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
     {
         public void Configure(EntityTypeBuilder<Seat> builder)
         {
-            long id = 0;
+            long id = 1;
 
             #region Add seat configuration for LUX hall
 
