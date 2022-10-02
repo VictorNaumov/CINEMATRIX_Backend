@@ -3,6 +3,7 @@ using CINEMATRIX.Data.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
 {
@@ -167,7 +168,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             resultSeats.AddRange(seatsForBigHall);
             resultSeats.AddRange(seatsForAtmosHall);
 
-            builder.HasData(resultSeats);
+            builder.HasData(resultSeats.Distinct());
         }
     }
 }
