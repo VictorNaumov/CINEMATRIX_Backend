@@ -52,11 +52,6 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<Session> query = _dbContext.Sessions;
 
-            foreach (var movieName in searchCondition.MovieName)
-            {
-                query = query.Where(x => x.MovieName != null && x.MovieName.Contains(movieName));
-            }
-
             query = query.Where(x => searchCondition.StartDateTime <= x.DateTime && x.DateTime <= searchCondition.EndDateTime);
 
             return query;

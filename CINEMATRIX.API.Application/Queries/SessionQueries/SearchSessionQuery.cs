@@ -32,7 +32,6 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
         public async Task<PagedResponse<FoundSessionDTO>> Handle(SearchSessionQuery request, CancellationToken cancellationToken)
         {
             var searchCondition = request.SearchCondition;
-            searchCondition.MovieName = request.SearchCondition.MovieName.GetFilterValues();
             searchCondition.SortProperty = typeof(FoundSessionDTO).GetSortProperty(searchCondition.SortProperty);
 
             IReadOnlyCollection<Session> foundSessions = await _sessionService.FindAsync(searchCondition);
