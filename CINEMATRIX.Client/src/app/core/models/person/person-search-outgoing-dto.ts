@@ -1,4 +1,4 @@
-export interface PersonSearchOutgoingDTO {
+export interface PersonSearchOutgoingDto {
   pageSize: number,
   page: number,
   sortDirection: string,

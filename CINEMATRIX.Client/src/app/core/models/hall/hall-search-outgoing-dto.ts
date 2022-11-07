@@ -1,4 +1,4 @@
-export interface HallSearchOutgoingDTO {
+export interface HallSearchOutgoingDto {
   pageSize: number,
   page: number,
   sortDirection: string,

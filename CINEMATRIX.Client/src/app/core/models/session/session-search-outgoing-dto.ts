@@ -1,10 +1,9 @@
-export interface SessionSearchOutgoingDTO {
+export interface SessionSearchOutgoingDto {
   pageSize: number,
   page: number,
   sortDirection: string,
   sortProperty: string,
-  name: string[],
-  description: string[],
-  startPrice: number,
-  finishPrice: number
+  isPublic: boolean,
+  startDateTime: Date,
+  endDateTime: Date
 }

@@ -1,6 +1,6 @@
 import { GenreFoundIncomingDto } from "./genre-found-incoming-dto";
 
-export interface GenreSearchIncomingDTO {
+export interface GenreSearchIncomingDto {
   items: GenreFoundIncomingDto[],
   totalCount: number
 }

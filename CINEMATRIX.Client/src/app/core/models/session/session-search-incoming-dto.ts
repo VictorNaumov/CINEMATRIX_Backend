@@ -1,6 +1,6 @@
 import { SessionFoundIncomingDto } from "./session-found-incoming-dto";
 
-export interface SessionSearchIncomingDTO {
+export interface SessionSearchIncomingDto {
   items: SessionFoundIncomingDto[],
   totalCount: number
 }

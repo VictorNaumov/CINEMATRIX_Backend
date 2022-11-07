@@ -1,3 +1,3 @@
-export interface ValidationResponseDTO {
+export interface ValidationResponseDto {
   token: string;
 }

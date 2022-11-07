@@ -13,10 +13,10 @@ export class NotificationService {
     public notification$ = new Subject<Notification>();
 
     textNotice(text: string) {
-        this.notification$.next({ type: 'text', text })
+      this.notification$.next({ type: 'text', text })
     }
 
     ErrorNotice(text: string) {
-        this.notification$.next({ type: 'error', text })
+      this.notification$.next({ type: 'error', text })
     }
 }

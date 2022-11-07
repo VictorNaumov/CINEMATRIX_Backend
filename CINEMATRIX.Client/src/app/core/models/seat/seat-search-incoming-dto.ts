@@ -1,6 +1,6 @@
 import { SeatFoundIncomingDto } from "./seat-found-incoming-dto";
 
-export interface SeatSearchIncomingDTO {
+export interface SeatSearchIncomingDto {
   items: SeatFoundIncomingDto[],
   totalCount: number
 }

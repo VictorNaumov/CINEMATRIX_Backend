@@ -1,4 +1,4 @@
-export interface AdminValidationDTO {
+export interface AdminValidationDto {
   email: string;
   password: string;
 }

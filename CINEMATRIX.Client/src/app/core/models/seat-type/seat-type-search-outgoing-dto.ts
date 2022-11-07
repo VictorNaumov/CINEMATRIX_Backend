@@ -1,4 +1,4 @@
-export interface SeatTypeSearchOutgoingDTO {
+export interface SeatTypeSearchOutgoingDto {
   pageSize: number,
   page: number,
   sortDirection: string,

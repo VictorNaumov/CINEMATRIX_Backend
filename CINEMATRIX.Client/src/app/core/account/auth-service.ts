@@ -70,7 +70,7 @@ export class AuthService {
           this.error$.next('Wrong password');
           break;
         case 'EMAIL_NOT_FOUND':
-          this.error$.next('Nonexistent email');
+          this.error$.next('Non existent email');
           break;
       }
       return throwError(error);

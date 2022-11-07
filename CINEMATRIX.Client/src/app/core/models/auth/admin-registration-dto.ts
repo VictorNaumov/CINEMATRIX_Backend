@@ -1,4 +1,4 @@
-export interface AdminRegistrationDTO {
+export interface AdminRegistrationDto {
   userName: string;
   password: string;
   email: string;

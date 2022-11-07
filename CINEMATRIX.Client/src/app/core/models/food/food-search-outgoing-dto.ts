@@ -1,4 +1,4 @@
-export interface FoodSearchOutgoingDTO {
+export interface FoodSearchOutgoingDto {
   pageSize: number,
   page: number,
   sortDirection: string,
