@@ -1,0 +1,14 @@
+.nav-panel-container {
+  left: 200px;
+  top: 100px;
+  position: fixed;
+  border: 1px solid dimgray;
+  float: left;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.nav-panel-menu {
+  padding: 10px;
+  display: inline-block
+}

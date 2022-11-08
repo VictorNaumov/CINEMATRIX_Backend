@@ -1,33 +1,31 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Notification, NotificationService } from 'src/app/core/services/notification-service';
+import { Notification, NotificationManager } from 'src/app/core/services/notification-manager';
 
 @Component({
   selector: 'app-notification',
   templateUrl: './notification.component.html',
   styleUrls: ['./notification.component.scss']
 })
-export  class NotificationComponent implements OnInit, OnDestroy {
+export class NotificationComponent implements OnInit, OnDestroy {
   public notices: Notification[] = [];
   aSub: Subscription;
-  delay = 10000;
+  delay = 5000;
 
-  constructor(private notificationService: NotificationService) { }
+  constructor(private notificationManager: NotificationManager) { }
 
   ngOnInit(): void {
-    this.aSub = this.notificationService.notification$.subscribe((notice: Notification) => {
+    this.aSub = this.notificationManager.notification$.subscribe((notice: Notification) => {
       this.notices.push(notice);
+
       const timeout = setTimeout(() => {
         clearTimeout(timeout);
         this.notices.splice(this.notices.indexOf(notice), 1);
       }, this.delay)
-
     })
-
   }
 
   ngOnDestroy(): void {
-    if (this.aSub)
-      this.aSub.unsubscribe();
+    if (this.aSub) this.aSub.unsubscribe();
   }
 }

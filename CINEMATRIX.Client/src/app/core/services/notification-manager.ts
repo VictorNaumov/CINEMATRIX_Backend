@@ -9,7 +9,7 @@ export interface Notification {
 }
 
 @Injectable({ providedIn: 'root' })
-export class NotificationService {
+export class NotificationManager {
     public notification$ = new Subject<Notification>();
 
     textNotice(text: string) {
