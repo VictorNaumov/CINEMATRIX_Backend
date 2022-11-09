@@ -9,6 +9,7 @@ import { AuthService } from './core/account/auth-service';
 import { AuthGuard } from './core/guards/auth.guard';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterseptor } from './core/account/auth-interseptor';
+import { MaterialModule } from './shared/material/material.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AuthInterseptor } from './core/account/auth-interseptor';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HeaderModule
+    HeaderModule,
+    MaterialModule
   ],
   providers: [
     AuthGuard,
