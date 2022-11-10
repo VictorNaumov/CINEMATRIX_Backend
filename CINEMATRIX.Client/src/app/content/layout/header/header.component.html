@@ -1,53 +1,48 @@
-aaa<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3 bg-white">
-  <div class="container">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/2048px-Angular_full_color_logo.svg.png"
-      width="64" style="border: 1px; border-style: solid; border-color: dimgray" class="rounded-circle logo"
-      alt="Home" />
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
+  <span>
+    <button mat-button routerLink="/">{{title}}</button>
+    <button mat-button routerLink="/"><mat-icon>home</mat-icon></button>
+    <button mat-button routerLink="/movies"><mat-icon> local_movies</mat-icon></button>
+  </span>
+  <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+    <button mat-button routerLink="/game">
+      <mat-icon>gamepad</mat-icon>
+      Play
     </button>
-    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-      <ul class="navbar-nav flex-grow-1">
-        <li class="nav-item active">
-          <a class="nav-link text-dark" [routerLink]="['home']" class="nav-link">
-            <h4>Home</h4>
-          </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link text-dark" [routerLink]="['reports']" class="nav-link">
-            <h4>Schedule</h4>
-          </a>
-        </li>
-        <span *ngIf="authService.isAuthenticated();">
-          <li class="nav-item active" *ngIf="authService.isAuthenticated();">
-            <a class="nav-link text-dark" [routerLink]="['management']" class="nav-link">
-              <h4>Management</h4>
-            </a>
-          </li>
-        </span>
-      </ul>
-    </div>
-    <div style="text-align: right">
-      <ul class="navbar-nav flex-grow-1" *ngIf="authService.isAuthenticated(); else login">
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="['home']">
-            <input type="button" (click)="logout()" value="Log out" class="btn btn-outline-dark"
-              style="border-radius: 0px;" />
-          </a>
-        </li>
-      </ul>
-    </div>
+    <button mat-button (click)="logout()">
+      <mat-icon>account_circle</mat-icon>
+      Profile
+    </button>
+    <button mat-button *ngIf="authService.isAuthenticated()" (click)="logout()">
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+    <button mat-button routerLink="/signin" *ngIf="!authService.isAuthenticated()">
+      <mat-icon>power_settings_new</mat-icon>
+      Login
+    </button>
   </div>
-</nav>
+  <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>
 
-<ng-template #login>
-  <ul class="navbar-nav flex-grow-1">
-    <li class="nav-item">
-      <a class="nav-link" [routerLink]="['signin']">
-        <input type="button" value="For Admin" class="btn btn-outline-dark" style="border-radius: 0px;" />
-      </a>
-    </li>
-  </ul>
-</ng-template>
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item routerLink="/">
+    <mat-icon>home</mat-icon>
+    Home
+  </button>
+  <button mat-menu-item routerLink="/game">
+    <mat-icon>gamepad</mat-icon>
+    Play
+  </button>
+  <button mat-menu-item routerLink="/login" *ngIf="!authService.isAuthenticated()">
+    <mat-icon>power_settings_new</mat-icon>
+    Login
+  </button>
+  <button mat-menu-item *ngIf="authService.isAuthenticated()" (click)="logout()">
+    <mat-icon>exit_to_app</mat-icon>
+    Logout
+  </button>
+</mat-menu>
+<router-outlet></router-outlet>

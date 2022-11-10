@@ -3,7 +3,7 @@ import { ImageDto } from "../extends/image-dto"
 import { MovieCreditsDto } from "../extends/movie-credits-dto"
 import { VideoDto } from "../extends/video-dto"
 
-export interface MovieIncomingDto {
+export interface MovieFoundIncomingDto {
   id: number,
   title: string,
   overview: string,

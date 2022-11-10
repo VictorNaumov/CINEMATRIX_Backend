@@ -8,16 +8,8 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { TripReportPageComponent } from './trip-report-page/trip-report-page.component';
-import { ManagementPageComponent } from './management-page/management-page.component';
-import { BusesComponent } from './management-page/buses/buses.component';
-import { RoutesComponent } from './management-page/routes/routes.component';
-import { BusStopsComponent } from './management-page/bus-stops/bus-stops.component';
-import { RouteBusStopsComponent } from './management-page/route-bus-stops/route-bus-stops.component';
-import { TripsComponent } from './management-page/trips/trips.component';
-import { NzCollapseModule } from 'ng-zorro-antd/collapse';
-import { NzModalModule } from 'ng-zorro-antd/modal';
-import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { MaterialModule } from 'src/app/shared/material/material.module';
+import { MoviesPageComponent } from './movies-page/movies-page.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +17,7 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
     SignInPageComponent,
     SignUpPageComponent,
     HomePageComponent,
-    TripReportPageComponent,
-    ManagementPageComponent,
-    BusesComponent,
-    RoutesComponent,
-    BusStopsComponent,
-    RouteBusStopsComponent,
-    TripsComponent
+    MoviesPageComponent
   ],
   imports: [
     CommonModule,
@@ -40,9 +26,7 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    NzCollapseModule,
-    NzModalModule,
-    NzNotificationModule
+    MaterialModule
     ],
   exports: [
     PagesComponent

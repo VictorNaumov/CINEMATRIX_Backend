@@ -7,7 +7,7 @@ import { NotificationComponent } from './shared/notification/notification.compon
 import { HeaderModule } from './content/layout/header/header.module';
 import { AuthService } from './core/account/auth-service';
 import { AuthGuard } from './core/guards/auth.guard';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterseptor } from './core/account/auth-interseptor';
 import { MaterialModule } from './shared/material/material.module';
 
@@ -21,7 +21,8 @@ import { MaterialModule } from './shared/material/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HeaderModule,
-    MaterialModule
+    MaterialModule,
+    HttpClientModule
   ],
   providers: [
     AuthGuard,

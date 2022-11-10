@@ -8,6 +8,8 @@ import { NotificationManager } from 'src/app/core/services/notification-manager'
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  title = "Cinematrix"
+
   constructor(
     public authService: AuthService,
     public notificationService: NotificationManager) { }

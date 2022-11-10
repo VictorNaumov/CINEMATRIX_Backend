@@ -1,9 +1,6 @@
-<app-header></app-header>
-<app-notification></app-notification>
-<div class="content">
-  <router-outlet> </router-outlet>
-</div>
-
-<button class="card card-small" (click)="addNotification()" tabindex="0">
-  <span>Add Dependency</span>
-</button>
+  <app-header></app-header>
+  <div class="header"></div>
+  <app-notification></app-notification>
+  <div class="content">
+    <router-outlet class="content"> </router-outlet>
+  </div>

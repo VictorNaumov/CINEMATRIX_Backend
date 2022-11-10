@@ -11,6 +11,8 @@ import { NotificationManager } from 'src/app/core/services/notification-manager'
   styleUrls: ['./sign-up-page.component.scss']
 })
 export class SignUpPageComponent implements OnInit {
+  user: AdminRegistrationDto;
+
   public form: FormGroup = new FormGroup({});
   public submitted: boolean = false;
   public message: string = '';
@@ -37,21 +39,20 @@ export class SignUpPageComponent implements OnInit {
     });
   }
 
-  public submit(): void {
+  public onSubmit(): void {
     if (this.form.invalid || this.form.value.password != this.form.value.confirmpassword){
       return;
     }
-    this.notificationManager.ErrorNotice("suck")
 
     this.submitted = true;
 
-    const user: AdminRegistrationDto = {
+    this.user = {
       userName: this.form.value.login,
       password: this.form.value.password,
       email: this.form.value.email,
     };
 
-    this.authService.signup(user, null).subscribe(() => {
+    this.authService.signup(this.user, null).subscribe(() => {
       this.form.reset();
       this.router.navigate(['/']);
       this.submitted = false;

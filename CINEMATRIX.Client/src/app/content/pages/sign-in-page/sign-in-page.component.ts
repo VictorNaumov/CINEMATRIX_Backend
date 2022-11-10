@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/account/auth-service';
-import { AdminValidationDTO } from 'src/app/core/models/admin/admin-validation-dto';
+import { AdminValidationDto } from 'src/app/core/models/auth/admin-validation-dto';
 
 @Component({
   templateUrl: './sign-in-page.component.html',
@@ -12,7 +12,8 @@ export class SignInPageComponent implements OnInit {
 
   public form: FormGroup = new FormGroup({});
   public submitted = false;
-  public message: string = '';
+  public message: string;
+  public user: AdminValidationDto;
 
   constructor(
     public authService: AuthService,
@@ -34,17 +35,17 @@ export class SignInPageComponent implements OnInit {
     });
   }
 
-  public submit(): void {
+  public onSubmit(): void {
     if (this.form.invalid) return;
 
     this.submitted = true;
 
-    const user: AdminValidationDTO = {
-      userName: this.form.value.login,
+    this.user = {
+      email: this.form.value.login,
       password: this.form.value.password
     };
 
-    this.authService.login(user).subscribe(() => {
+    this.authService.login(this.user).subscribe(() => {
       this.form.reset();
       this.router.navigate(['/']);
       this.submitted = false;
