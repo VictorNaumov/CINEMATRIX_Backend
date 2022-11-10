@@ -33,7 +33,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             var countOfSessions = days * ((lastSessionHour - firstSessionHour) / 2);
             var countOfSeats = hallSeatRanges.LastOrDefault().Value.Item2;
 
-            while (tickets.Count < 10000)
+            while (tickets.Count < 200)
             {
                 var sessionId = random.Next(1, countOfSessions + 1);
                 var hallId = sessionId > 5 ? sessionId % 5 : sessionId;
