@@ -44,12 +44,3 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
         }
     }
 }
-
-
-
-
-
-
-
-
-
