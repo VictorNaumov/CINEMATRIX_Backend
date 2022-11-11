@@ -1,12 +1,15 @@
 ﻿using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.EF.SQL.FillingConfiguration;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace CINEMATRIX.Data.EF.SQL
 {
     public class ApplicationDbContext : DbContext
     {
+        public DbSet<Cinema> Cinemas { get; set; }
         public DbSet<Food> Foods { get; set; }
         public DbSet<Hall> Halls { get; set; }
         public DbSet<Poster> Posters { get; set; }

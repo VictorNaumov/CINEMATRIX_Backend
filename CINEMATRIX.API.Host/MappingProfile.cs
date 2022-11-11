@@ -12,6 +12,10 @@ namespace CINEMATRIX.API.Host
     {
         public MappingProfile()
         {
+            CreateMap<Cinema, CinemaDTO>();
+            CreateMap<Cinema, FoundCinemaDTO>();
+            CreateMap<CinemaDTO, Cinema>();
+
             CreateMap<Food, FoodDTO>();
             CreateMap<Food, FoundFoodDTO>();
             CreateMap<FoodDTO, Food>();
