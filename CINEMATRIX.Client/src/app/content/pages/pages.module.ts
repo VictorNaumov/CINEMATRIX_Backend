@@ -17,7 +17,8 @@ import { MoviesPageComponent } from './movies-page/movies-page.component';
     SignInPageComponent,
     SignUpPageComponent,
     HomePageComponent,
-    MoviesPageComponent
+    MoviesPageComponent,
+
   ],
   imports: [
     CommonModule,

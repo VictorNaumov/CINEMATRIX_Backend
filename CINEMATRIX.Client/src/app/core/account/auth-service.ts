@@ -6,13 +6,14 @@ import { Router } from "@angular/router";
 import { connectionString } from "src/app/shared/constants/connection.constants";
 import { getUrl } from "src/app/shared/functions/getUrl";
 import { AdminValidationDto } from "../models/auth/admin-validation-dto";
-import { AdminRegistrationDto } from "../models/auth/admin-registration-dto";
+import { RegistrationDto } from "../models/auth/admin-registration-dto";
+import { ValidationResponseDto } from "../models/auth/validation-response-dto";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
   public error$: Subject<string> = new Subject<string>();
-  public pathBase: string = `${connectionString}/account/`;
+  public pathBase: string = `${connectionString}/auth/`;
 
   constructor(
     private http: HttpClient,
@@ -27,21 +28,25 @@ export class AuthService {
     return localStorage.getItem('token');
   }
   public login(user: AdminValidationDto): Observable<any> {
-    return this.http.post(`${this.pathBase}login`, user).pipe(
-      tap((result: any) => this.setToken(result)),
-      catchError(this.handleError.bind(this))
-    );
+    return this.http.post<ValidationResponseDto>(`${this.pathBase}login`, user)
+      .pipe(
+        tap((result: ValidationResponseDto) => this.setTokenAndRole(result)),
+        catchError(this.handleError.bind(this)
+        )
+      );
   }
 
-  public signup(user: AdminRegistrationDto, parameters: any): Observable<any> {
-    return this.http.post(getUrl(`${this.pathBase}`, parameters), user).pipe(
-      tap((result: any) => this.setToken(result)),
-      catchError(this.handleError.bind(this))
-    );
+  public signup(user: RegistrationDto): Observable<any> {
+    return this.http.post<ValidationResponseDto>(`${this.pathBase}register`, user)
+      .pipe(
+        tap((result: ValidationResponseDto) => this.setTokenAndRole(result)),
+        catchError(this.handleError.bind(this)
+        )
+      );
   }
 
   logout() {
-    this.setToken(null);
+    this.setTokenAndRole(null);
     this.router.navigate(['']);
   }
 
@@ -49,10 +54,13 @@ export class AuthService {
     return !!this.token;
   }
 
-  private setToken(token: string | null) {
-    if (token) {
+  private setTokenAndRole(data: ValidationResponseDto) {
+    debugger
+
+    if (data) {
       const expiresDate = new Date(new Date().getTime() + 60 * 60 * 1000);
-      localStorage.setItem('token', token);
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('role', data.role);
       localStorage.setItem('token-exp', expiresDate.toString());
     } else {
       localStorage.clear();

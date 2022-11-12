@@ -18,8 +18,12 @@
       Logout
     </button>
     <button mat-button routerLink="/signin" *ngIf="!authService.isAuthenticated()">
-      <mat-icon>power_settings_new</mat-icon>
-      Login
+      <mat-icon>face icon</mat-icon>
+      Sign in
+    </button>
+    <button mat-button routerLink="/signup" *ngIf="!authService.isAuthenticated()">
+      <mat-icon>create</mat-icon>
+      Sign up
     </button>
   </div>
   <button mat-button [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm>

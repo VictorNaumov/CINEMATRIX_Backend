@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CINEMATRIX.Data.EF.SQL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20221111080223_AddCinemaEntity")]
+    [Migration("20221111153035_AddCinemaEntity")]
     partial class AddCinemaEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -4421,7 +4421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -4429,7 +4429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -4437,7 +4437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -4445,7 +4445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4453,7 +4453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -4461,7 +4461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -4469,7 +4469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -4477,7 +4477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -4485,7 +4485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4493,7 +4493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -4501,7 +4501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -4509,7 +4509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -4525,7 +4525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -4533,7 +4533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -4541,7 +4541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -4549,7 +4549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -4557,7 +4557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -4565,7 +4565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -4573,7 +4573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -4581,7 +4581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -4589,7 +4589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -4597,7 +4597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -4605,7 +4605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -4613,7 +4613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -4621,7 +4621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -4629,7 +4629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -4637,7 +4637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -4645,7 +4645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -4653,7 +4653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4661,7 +4661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -4669,7 +4669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -4677,7 +4677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -4685,7 +4685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -4693,7 +4693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -4701,7 +4701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -4709,7 +4709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4717,7 +4717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -4725,7 +4725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -4733,7 +4733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 12, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -4741,7 +4741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -4749,7 +4749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -4757,7 +4757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -4765,7 +4765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -4773,7 +4773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -4781,7 +4781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -4789,7 +4789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -4797,7 +4797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -4805,7 +4805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -4813,7 +4813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -4821,7 +4821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -4829,7 +4829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -4837,7 +4837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -4845,7 +4845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -4853,7 +4853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -4861,7 +4861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -4869,7 +4869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -4877,7 +4877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -4885,7 +4885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -4893,7 +4893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4901,7 +4901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -4909,7 +4909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -4917,7 +4917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -4925,7 +4925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -4933,7 +4933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4941,7 +4941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -4949,7 +4949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -4957,7 +4957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -4965,7 +4965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4973,7 +4973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -4981,7 +4981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -4989,7 +4989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -4997,7 +4997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -5013,7 +5013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -5021,7 +5021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -5029,7 +5029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5037,7 +5037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5045,7 +5045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5053,7 +5053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 13, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -5061,7 +5061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -5069,7 +5069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5077,7 +5077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5085,7 +5085,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -5093,7 +5093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -5101,7 +5101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5109,7 +5109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -5117,7 +5117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5125,7 +5125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -5133,7 +5133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -5141,7 +5141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5149,7 +5149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5157,7 +5157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -5165,7 +5165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -5173,7 +5173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5181,7 +5181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5189,7 +5189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5197,7 +5197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5205,7 +5205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -5213,7 +5213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5221,7 +5221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -5237,7 +5237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -5245,7 +5245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -5253,7 +5253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5269,7 +5269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5277,7 +5277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5285,7 +5285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5293,7 +5293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -5301,7 +5301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -5309,7 +5309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -5317,7 +5317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -5325,7 +5325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5341,7 +5341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5349,7 +5349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -5357,7 +5357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -5365,7 +5365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -5373,7 +5373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 14, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5381,7 +5381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -5389,7 +5389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5397,7 +5397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -5405,7 +5405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -5413,7 +5413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5421,7 +5421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -5429,7 +5429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5437,7 +5437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -5445,7 +5445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -5453,7 +5453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5461,7 +5461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5469,7 +5469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5477,7 +5477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5485,7 +5485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -5493,7 +5493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5501,7 +5501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5509,7 +5509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -5517,7 +5517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5525,7 +5525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5533,7 +5533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5541,7 +5541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5549,7 +5549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5557,7 +5557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -5565,7 +5565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5573,7 +5573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5581,7 +5581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -5589,7 +5589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -5597,7 +5597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -5605,7 +5605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5613,7 +5613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5621,7 +5621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -5629,7 +5629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5637,7 +5637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5645,7 +5645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5653,7 +5653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -5661,7 +5661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -5669,7 +5669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5677,7 +5677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5685,7 +5685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -5693,7 +5693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 15, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -5701,7 +5701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -5709,7 +5709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5717,7 +5717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -5725,7 +5725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5733,7 +5733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -5741,7 +5741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -5749,7 +5749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -5757,7 +5757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5765,7 +5765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5773,7 +5773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5781,7 +5781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -5797,7 +5797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5805,7 +5805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5813,7 +5813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5821,7 +5821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -5829,7 +5829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -5837,7 +5837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5845,7 +5845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5853,7 +5853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -5861,7 +5861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5869,7 +5869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5877,7 +5877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5885,7 +5885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5893,7 +5893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -5901,7 +5901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -5909,7 +5909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -5917,7 +5917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -5925,7 +5925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -5933,7 +5933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -5941,7 +5941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -5949,7 +5949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -5957,7 +5957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -5965,7 +5965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -5973,7 +5973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -5981,7 +5981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -5989,7 +5989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -5997,7 +5997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6005,7 +6005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6013,7 +6013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 16, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6021,7 +6021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6029,7 +6029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6037,7 +6037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6045,7 +6045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6061,7 +6061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6069,7 +6069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6077,7 +6077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6085,7 +6085,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6093,7 +6093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -6101,7 +6101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6109,7 +6109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -6117,7 +6117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6125,7 +6125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6133,7 +6133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6141,7 +6141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6149,7 +6149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6165,7 +6165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6173,7 +6173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6181,7 +6181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6189,7 +6189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -6197,7 +6197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6205,7 +6205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6229,7 +6229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6237,7 +6237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -6245,7 +6245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6253,7 +6253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6261,7 +6261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -6269,7 +6269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -6277,7 +6277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -6285,7 +6285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6301,7 +6301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -6309,7 +6309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -6317,7 +6317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -6325,7 +6325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6333,7 +6333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 17, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6341,7 +6341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6349,7 +6349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6357,7 +6357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6365,7 +6365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -6373,7 +6373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6381,7 +6381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6389,7 +6389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6397,7 +6397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6405,7 +6405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -6413,7 +6413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -6421,7 +6421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6429,7 +6429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6437,7 +6437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6445,7 +6445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -6453,7 +6453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6461,7 +6461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -6469,7 +6469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -6477,7 +6477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6485,7 +6485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6501,7 +6501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6509,7 +6509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6517,7 +6517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -6525,7 +6525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -6533,7 +6533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6541,7 +6541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -6549,7 +6549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6557,7 +6557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6565,7 +6565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6573,7 +6573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6581,7 +6581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6589,7 +6589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6597,7 +6597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6605,7 +6605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6613,7 +6613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6621,7 +6621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6629,7 +6629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -6637,7 +6637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6653,7 +6653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 18, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -6661,7 +6661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -6669,7 +6669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -6677,7 +6677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6685,7 +6685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6693,7 +6693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -6701,7 +6701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6709,7 +6709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -6717,7 +6717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6725,7 +6725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -6733,7 +6733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6741,7 +6741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6749,7 +6749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6757,7 +6757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6765,7 +6765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6773,7 +6773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6781,7 +6781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6789,7 +6789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -6797,7 +6797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -6805,7 +6805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6813,7 +6813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6821,7 +6821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6829,7 +6829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6837,7 +6837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -6845,7 +6845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -6853,7 +6853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6861,7 +6861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6869,7 +6869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6877,7 +6877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -6885,7 +6885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -6893,7 +6893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -6901,7 +6901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6909,7 +6909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -6917,7 +6917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -6925,7 +6925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -6933,7 +6933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -6941,7 +6941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -6949,7 +6949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6957,7 +6957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6965,7 +6965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -6973,7 +6973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 19, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -6981,7 +6981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -6989,7 +6989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -6997,7 +6997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7005,7 +7005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -7013,7 +7013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -7021,7 +7021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -7029,7 +7029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7037,7 +7037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7045,7 +7045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -7053,7 +7053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7061,7 +7061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -7069,7 +7069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7077,7 +7077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -7109,7 +7109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7125,7 +7125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -7133,7 +7133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -7141,7 +7141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7149,7 +7149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -7157,7 +7157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -7165,7 +7165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -7173,7 +7173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -7181,7 +7181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7189,7 +7189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -7197,7 +7197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7205,7 +7205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7213,7 +7213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -7221,7 +7221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -7229,7 +7229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7237,7 +7237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7245,7 +7245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -7253,7 +7253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -7261,7 +7261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7269,7 +7269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7277,7 +7277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7285,7 +7285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7293,7 +7293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 20, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7301,7 +7301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7309,7 +7309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7317,7 +7317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -7325,7 +7325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7333,7 +7333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7341,7 +7341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -7349,7 +7349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7357,7 +7357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -7365,7 +7365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -7373,7 +7373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7381,7 +7381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7389,7 +7389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -7397,7 +7397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -7405,7 +7405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7413,7 +7413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7421,7 +7421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7429,7 +7429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -7437,7 +7437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -7445,7 +7445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7453,7 +7453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -7461,7 +7461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -7469,7 +7469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7477,7 +7477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7485,7 +7485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -7493,7 +7493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7501,7 +7501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7509,7 +7509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -7517,7 +7517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -7525,7 +7525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -7533,7 +7533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7541,7 +7541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -7549,7 +7549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7557,7 +7557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -7565,7 +7565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7573,7 +7573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -7581,7 +7581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7589,7 +7589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -7597,7 +7597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7605,7 +7605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7613,7 +7613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 21, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7621,7 +7621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7629,7 +7629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -7637,7 +7637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -7645,7 +7645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -7653,7 +7653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -7661,7 +7661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7669,7 +7669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7677,7 +7677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -7685,7 +7685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -7693,7 +7693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -7701,7 +7701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7709,7 +7709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -7717,7 +7717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -7725,7 +7725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7733,7 +7733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7741,7 +7741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -7749,7 +7749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -7757,7 +7757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7765,7 +7765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -7773,7 +7773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -7781,7 +7781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -7789,7 +7789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7797,7 +7797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -7805,7 +7805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7813,7 +7813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7821,7 +7821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -7829,7 +7829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7837,7 +7837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -7845,7 +7845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -7853,7 +7853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7861,7 +7861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7869,7 +7869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7877,7 +7877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -7885,7 +7885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -7893,7 +7893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -7901,7 +7901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -7917,7 +7917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -7925,7 +7925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -7933,7 +7933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 22, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -7941,7 +7941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -7949,7 +7949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -7957,7 +7957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -7965,7 +7965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -7973,7 +7973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -7981,7 +7981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -7989,7 +7989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -7997,7 +7997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -8005,7 +8005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8013,7 +8013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8021,7 +8021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -8029,7 +8029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -8037,7 +8037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8045,7 +8045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8053,7 +8053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8061,7 +8061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8069,7 +8069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -8077,7 +8077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8093,7 +8093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -8101,7 +8101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -8109,7 +8109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -8117,7 +8117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -8125,7 +8125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -8133,7 +8133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -8141,7 +8141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -8149,7 +8149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8157,7 +8157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8165,7 +8165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -8173,7 +8173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8181,7 +8181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8189,7 +8189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -8197,7 +8197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -8213,7 +8213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8221,7 +8221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8229,7 +8229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8237,7 +8237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8245,7 +8245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8253,7 +8253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 23, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -8261,7 +8261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -8269,7 +8269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8277,7 +8277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -8285,7 +8285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8293,7 +8293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8301,7 +8301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8309,7 +8309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -8317,7 +8317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8325,7 +8325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -8333,7 +8333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8341,7 +8341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8349,7 +8349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -8357,7 +8357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -8365,7 +8365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8373,7 +8373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8381,7 +8381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8389,7 +8389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8397,7 +8397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -8405,7 +8405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8413,7 +8413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -8421,7 +8421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -8429,7 +8429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8437,7 +8437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -8445,7 +8445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -8453,7 +8453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -8461,7 +8461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -8469,7 +8469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -8477,7 +8477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -8485,7 +8485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8493,7 +8493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8517,7 +8517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -8525,7 +8525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8533,7 +8533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8549,7 +8549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -8557,7 +8557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -8565,7 +8565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 24, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -8581,7 +8581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -8589,7 +8589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -8597,7 +8597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -8605,7 +8605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8613,7 +8613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -8621,7 +8621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8629,7 +8629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8637,7 +8637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8645,7 +8645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8653,7 +8653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -8661,7 +8661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -8669,7 +8669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -8677,7 +8677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -8685,7 +8685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -8701,7 +8701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8709,7 +8709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -8717,7 +8717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8725,7 +8725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8733,7 +8733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8741,7 +8741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -8749,7 +8749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -8757,7 +8757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8765,7 +8765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -8773,7 +8773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8781,7 +8781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8789,7 +8789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -8797,7 +8797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8805,7 +8805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8813,7 +8813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8821,7 +8821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -8829,7 +8829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8837,7 +8837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -8845,7 +8845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -8853,7 +8853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -8861,7 +8861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8869,7 +8869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8877,7 +8877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -8885,7 +8885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8893,7 +8893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 25, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8901,7 +8901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -8909,7 +8909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8917,7 +8917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -8925,7 +8925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8933,7 +8933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8941,7 +8941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -8949,7 +8949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -8957,7 +8957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -8965,7 +8965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -8973,7 +8973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -8981,7 +8981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -8997,7 +8997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9005,7 +9005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -9013,7 +9013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9021,7 +9021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9029,7 +9029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -9037,7 +9037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9045,7 +9045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9053,7 +9053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9061,7 +9061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -9069,7 +9069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -9077,7 +9077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -9085,7 +9085,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9093,7 +9093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -9101,7 +9101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9109,7 +9109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9117,7 +9117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9125,7 +9125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9133,7 +9133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9141,7 +9141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9149,7 +9149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9157,7 +9157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9165,7 +9165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -9173,7 +9173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -9181,7 +9181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -9189,7 +9189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -9197,7 +9197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9205,7 +9205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9213,7 +9213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9221,7 +9221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -9229,7 +9229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -9237,7 +9237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9245,7 +9245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9253,7 +9253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -9261,7 +9261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -9285,7 +9285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -9293,7 +9293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9301,7 +9301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9309,7 +9309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9317,7 +9317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -9325,7 +9325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9341,7 +9341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -9349,7 +9349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9357,7 +9357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9365,7 +9365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -9373,7 +9373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -9381,7 +9381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9389,7 +9389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9397,7 +9397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9405,7 +9405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -9413,7 +9413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -9421,7 +9421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -9429,7 +9429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9437,7 +9437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9445,7 +9445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -9461,7 +9461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9469,7 +9469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -9477,7 +9477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -9485,7 +9485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9493,7 +9493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9501,7 +9501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -9509,7 +9509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9517,7 +9517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -9525,7 +9525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -9533,7 +9533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -9541,7 +9541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -9549,7 +9549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9557,7 +9557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9565,7 +9565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -9573,7 +9573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9581,7 +9581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9597,7 +9597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9605,7 +9605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9613,7 +9613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9621,7 +9621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9629,7 +9629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9637,7 +9637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9645,7 +9645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9653,7 +9653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -9661,7 +9661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -9669,7 +9669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9677,7 +9677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -9693,7 +9693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9701,7 +9701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9709,7 +9709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -9717,7 +9717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9725,7 +9725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9733,7 +9733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9741,7 +9741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9749,7 +9749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -9757,7 +9757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -9765,7 +9765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -9773,7 +9773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -9781,7 +9781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -9789,7 +9789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9797,7 +9797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9805,7 +9805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -9813,7 +9813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -9829,7 +9829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -9837,7 +9837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9845,7 +9845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -9853,7 +9853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 28, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -9861,7 +9861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9869,7 +9869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -9877,7 +9877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -9885,7 +9885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -9893,7 +9893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -9901,7 +9901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -9909,7 +9909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -9917,7 +9917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -9925,7 +9925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -9933,7 +9933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -9941,7 +9941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9949,7 +9949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9957,7 +9957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -9965,7 +9965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -9973,7 +9973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -9981,7 +9981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -9989,7 +9989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -9997,7 +9997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10005,7 +10005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10013,7 +10013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -10021,7 +10021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -10029,7 +10029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10037,7 +10037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10045,7 +10045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10053,7 +10053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10061,7 +10061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10069,7 +10069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10077,7 +10077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -10085,7 +10085,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -10093,7 +10093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -10101,7 +10101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10109,7 +10109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10117,7 +10117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10125,7 +10125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10133,7 +10133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -10141,7 +10141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -10149,7 +10149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -10157,7 +10157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -10165,7 +10165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -10173,7 +10173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10181,7 +10181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10189,7 +10189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -10197,7 +10197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -10205,7 +10205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10213,7 +10213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -10221,7 +10221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10229,7 +10229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10237,7 +10237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10245,7 +10245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10253,7 +10253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -10261,7 +10261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -10269,7 +10269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10285,7 +10285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10293,7 +10293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10301,7 +10301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10317,7 +10317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10325,7 +10325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -10333,7 +10333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10341,7 +10341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10349,7 +10349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10357,7 +10357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10373,7 +10373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -10381,7 +10381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -10389,7 +10389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10397,7 +10397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10405,7 +10405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10413,7 +10413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -10421,7 +10421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -10429,7 +10429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -10445,7 +10445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -10453,7 +10453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10461,7 +10461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -10469,7 +10469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -10477,7 +10477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10485,7 +10485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10493,7 +10493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 11, 30, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10509,7 +10509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -10517,7 +10517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10525,7 +10525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10533,7 +10533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -10541,7 +10541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10549,7 +10549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -10557,7 +10557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -10565,7 +10565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10573,7 +10573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -10581,7 +10581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -10589,7 +10589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10597,7 +10597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10613,7 +10613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10621,7 +10621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -10629,7 +10629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -10637,7 +10637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -10645,7 +10645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -10653,7 +10653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10669,7 +10669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -10677,7 +10677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10685,7 +10685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10693,7 +10693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10701,7 +10701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10709,7 +10709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10717,7 +10717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10725,7 +10725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10733,7 +10733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10741,7 +10741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10749,7 +10749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10757,7 +10757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10765,7 +10765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -10773,7 +10773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10781,7 +10781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10789,7 +10789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -10797,7 +10797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -10805,7 +10805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10813,7 +10813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -10821,7 +10821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10829,7 +10829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10837,7 +10837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10845,7 +10845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -10853,7 +10853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -10861,7 +10861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10869,7 +10869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -10877,7 +10877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -10885,7 +10885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -10893,7 +10893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -10901,7 +10901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10909,7 +10909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -10917,7 +10917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10925,7 +10925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -10933,7 +10933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10941,7 +10941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -10949,7 +10949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -10957,7 +10957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -10965,7 +10965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -10973,7 +10973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -10981,7 +10981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -10989,7 +10989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -10997,7 +10997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11005,7 +11005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -11013,7 +11013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11021,7 +11021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -11037,7 +11037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -11045,7 +11045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11053,7 +11053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -11069,7 +11069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11077,7 +11077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -11085,7 +11085,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -11093,7 +11093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11101,7 +11101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -11109,7 +11109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -11117,7 +11117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -11125,7 +11125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11133,7 +11133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11141,7 +11141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11149,7 +11149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11157,7 +11157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11165,7 +11165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -11173,7 +11173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -11181,7 +11181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11189,7 +11189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11197,7 +11197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11205,7 +11205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11213,7 +11213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -11221,7 +11221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -11229,7 +11229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11237,7 +11237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -11245,7 +11245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11253,7 +11253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11261,7 +11261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -11269,7 +11269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11277,7 +11277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -11285,7 +11285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11293,7 +11293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11301,7 +11301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11309,7 +11309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11317,7 +11317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -11325,7 +11325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -11333,7 +11333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -11341,7 +11341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -11349,7 +11349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11357,7 +11357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -11365,7 +11365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11373,7 +11373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -11381,7 +11381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11389,7 +11389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -11397,7 +11397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11405,7 +11405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -11421,7 +11421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11429,7 +11429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11437,7 +11437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -11445,7 +11445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11453,7 +11453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 3, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11461,7 +11461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -11469,7 +11469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11477,7 +11477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11485,7 +11485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -11493,7 +11493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -11501,7 +11501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -11509,7 +11509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -11517,7 +11517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11525,7 +11525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -11533,7 +11533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -11541,7 +11541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -11557,7 +11557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11565,7 +11565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -11573,7 +11573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11589,7 +11589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -11605,7 +11605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -11613,7 +11613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -11621,7 +11621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -11629,7 +11629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11637,7 +11637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -11645,7 +11645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11653,7 +11653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11661,7 +11661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -11669,7 +11669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -11677,7 +11677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -11685,7 +11685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -11693,7 +11693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -11701,7 +11701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -11709,7 +11709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11717,7 +11717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11725,7 +11725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -11733,7 +11733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -11741,7 +11741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -11749,7 +11749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11757,7 +11757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -11765,7 +11765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11773,7 +11773,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11781,7 +11781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11789,7 +11789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11797,7 +11797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11805,7 +11805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11813,7 +11813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11821,7 +11821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11829,7 +11829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -11837,7 +11837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11845,7 +11845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11853,7 +11853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -11861,7 +11861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11869,7 +11869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -11877,7 +11877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -11885,7 +11885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11893,7 +11893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -11901,7 +11901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -11909,7 +11909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -11917,7 +11917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11925,7 +11925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -11933,7 +11933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -11941,7 +11941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -11949,7 +11949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -11957,7 +11957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -11965,7 +11965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -11973,7 +11973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -11981,7 +11981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -11989,7 +11989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -11997,7 +11997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -12005,7 +12005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -12013,7 +12013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12021,7 +12021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -12029,7 +12029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12037,7 +12037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -12045,7 +12045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -12053,7 +12053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12061,7 +12061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12069,7 +12069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -12077,7 +12077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12085,7 +12085,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -12093,7 +12093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 5, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -12101,7 +12101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -12109,7 +12109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12117,7 +12117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -12125,7 +12125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12133,7 +12133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12141,7 +12141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -12149,7 +12149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12157,7 +12157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -12165,7 +12165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12173,7 +12173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12181,7 +12181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12189,7 +12189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -12197,7 +12197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12205,7 +12205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12213,7 +12213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -12221,7 +12221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -12229,7 +12229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12237,7 +12237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -12245,7 +12245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12253,7 +12253,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12261,7 +12261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12269,7 +12269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12277,7 +12277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12285,7 +12285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12293,7 +12293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12301,7 +12301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -12309,7 +12309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12317,7 +12317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -12325,7 +12325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12333,7 +12333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12341,7 +12341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12349,7 +12349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12357,7 +12357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12365,7 +12365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -12381,7 +12381,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12389,7 +12389,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -12397,7 +12397,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12405,7 +12405,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12413,7 +12413,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -12421,7 +12421,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -12429,7 +12429,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12437,7 +12437,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12445,7 +12445,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -12453,7 +12453,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -12461,7 +12461,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -12469,7 +12469,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12477,7 +12477,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12485,7 +12485,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12493,7 +12493,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12501,7 +12501,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12509,7 +12509,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12517,7 +12517,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12525,7 +12525,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -12533,7 +12533,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -12541,7 +12541,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12549,7 +12549,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12557,7 +12557,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12565,7 +12565,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12573,7 +12573,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12581,7 +12581,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -12589,7 +12589,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -12597,7 +12597,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -12605,7 +12605,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -12613,7 +12613,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12621,7 +12621,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12629,7 +12629,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12637,7 +12637,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12645,7 +12645,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12653,7 +12653,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12661,7 +12661,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12669,7 +12669,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12677,7 +12677,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12685,7 +12685,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12693,7 +12693,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12701,7 +12701,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12709,7 +12709,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12717,7 +12717,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -12725,7 +12725,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12733,7 +12733,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 7, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -12741,7 +12741,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12749,7 +12749,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12757,7 +12757,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -12765,7 +12765,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12781,7 +12781,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12789,7 +12789,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12797,7 +12797,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12805,7 +12805,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -12813,7 +12813,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12821,7 +12821,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -12829,7 +12829,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -12837,7 +12837,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12845,7 +12845,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12853,7 +12853,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -12861,7 +12861,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -12869,7 +12869,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -12877,7 +12877,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12885,7 +12885,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12893,7 +12893,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -12901,7 +12901,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12909,7 +12909,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -12917,7 +12917,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -12925,7 +12925,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12933,7 +12933,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12941,7 +12941,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -12949,7 +12949,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 639933L
                         },
                         new
                         {
@@ -12957,7 +12957,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -12965,7 +12965,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -12973,7 +12973,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 634649L
                         },
                         new
                         {
@@ -12981,7 +12981,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -12989,7 +12989,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -12997,7 +12997,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -13005,7 +13005,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -13013,7 +13013,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -13021,7 +13021,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
@@ -13029,7 +13029,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -13037,7 +13037,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -13045,7 +13045,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -13053,7 +13053,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -13061,7 +13061,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -13069,7 +13069,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -13077,7 +13077,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -13093,7 +13093,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -13101,7 +13101,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -13109,7 +13109,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -13117,7 +13117,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -13125,7 +13125,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 610150L
                         },
                         new
                         {
@@ -13133,7 +13133,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 576925L
                         },
                         new
                         {
@@ -13141,7 +13141,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -13149,7 +13149,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -13157,7 +13157,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 882598L
                         },
                         new
                         {
@@ -13165,7 +13165,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 19995L
                         },
                         new
                         {
@@ -13173,7 +13173,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -13181,7 +13181,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 961484L
                         },
                         new
                         {
@@ -13189,7 +13189,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -13197,7 +13197,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 539681L
                         },
                         new
                         {
@@ -13205,7 +13205,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -13213,7 +13213,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -13221,7 +13221,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -13229,7 +13229,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 999205L
                         },
                         new
                         {
@@ -13237,7 +13237,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -13245,7 +13245,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -13261,7 +13261,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 921360L
                         },
                         new
                         {
@@ -13269,7 +13269,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -13277,7 +13277,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -13285,7 +13285,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 762504L
                         },
                         new
                         {
@@ -13293,7 +13293,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 718930L
                         },
                         new
                         {
@@ -13301,7 +13301,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760161L
                         },
                         new
                         {
@@ -13309,7 +13309,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 916605L
                         },
                         new
                         {
@@ -13317,7 +13317,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 985939L
                         },
                         new
                         {
@@ -13325,7 +13325,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -13333,7 +13333,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -13341,7 +13341,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 756999L
                         },
                         new
                         {
@@ -13349,7 +13349,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 744276L
                         },
                         new
                         {
@@ -13357,7 +13357,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 760741L
                         },
                         new
                         {
@@ -13365,7 +13365,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 877957L
                         },
                         new
                         {
@@ -13373,7 +13373,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                             DateTime = new DateTime(2022, 12, 9, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 639933L
                         });
                 });
 
@@ -13403,1802 +13403,1802 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 1L,
-                            SeatId = 402L,
-                            SessionId = 190L
+                            SeatId = 17L,
+                            SessionId = 151L
                         },
                         new
                         {
                             Id = 2L,
-                            SeatId = 403L,
-                            SessionId = 190L
+                            SeatId = 18L,
+                            SessionId = 151L
                         },
                         new
                         {
                             Id = 3L,
-                            SeatId = 87L,
-                            SessionId = 128L
+                            SeatId = 339L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 4L,
-                            SeatId = 88L,
-                            SessionId = 128L
+                            SeatId = 210L,
+                            SessionId = 34L
                         },
                         new
                         {
                             Id = 5L,
-                            SeatId = 180L,
-                            SessionId = 129L
+                            SeatId = 211L,
+                            SessionId = 34L
                         },
                         new
                         {
                             Id = 6L,
-                            SeatId = 181L,
-                            SessionId = 129L
+                            SeatId = 31L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 7L,
-                            SeatId = 124L,
-                            SessionId = 103L
+                            SeatId = 32L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 8L,
-                            SeatId = 7L,
-                            SessionId = 11L
+                            SeatId = 33L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 9L,
-                            SeatId = 370L,
-                            SessionId = 140L
+                            SeatId = 184L,
+                            SessionId = 144L
                         },
                         new
                         {
                             Id = 10L,
-                            SeatId = 371L,
-                            SessionId = 140L
+                            SeatId = 185L,
+                            SessionId = 144L
                         },
                         new
                         {
                             Id = 11L,
-                            SeatId = 372L,
-                            SessionId = 140L
+                            SeatId = 6L,
+                            SessionId = 1L
                         },
                         new
                         {
                             Id = 12L,
-                            SeatId = 429L,
-                            SessionId = 150L
+                            SeatId = 7L,
+                            SessionId = 1L
                         },
                         new
                         {
                             Id = 13L,
-                            SeatId = 430L,
-                            SessionId = 150L
+                            SeatId = 47L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 14L,
-                            SeatId = 207L,
-                            SessionId = 189L
+                            SeatId = 48L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 15L,
-                            SeatId = 208L,
-                            SessionId = 189L
+                            SeatId = 460L,
+                            SessionId = 130L
                         },
                         new
                         {
                             Id = 16L,
-                            SeatId = 69L,
-                            SessionId = 173L
+                            SeatId = 461L,
+                            SessionId = 130L
                         },
                         new
                         {
                             Id = 17L,
-                            SeatId = 70L,
-                            SessionId = 173L
+                            SeatId = 37L,
+                            SessionId = 87L
                         },
                         new
                         {
                             Id = 18L,
-                            SeatId = 294L,
-                            SessionId = 49L
+                            SeatId = 38L,
+                            SessionId = 87L
                         },
                         new
                         {
                             Id = 19L,
-                            SeatId = 295L,
-                            SessionId = 49L
+                            SeatId = 49L,
+                            SessionId = 112L
                         },
                         new
                         {
                             Id = 20L,
-                            SeatId = 7L,
-                            SessionId = 16L
+                            SeatId = 50L,
+                            SessionId = 112L
                         },
                         new
                         {
                             Id = 21L,
-                            SeatId = 359L,
-                            SessionId = 190L
+                            SeatId = 51L,
+                            SessionId = 112L
                         },
                         new
                         {
                             Id = 22L,
-                            SeatId = 360L,
-                            SessionId = 190L
+                            SeatId = 12L,
+                            SessionId = 106L
                         },
                         new
                         {
                             Id = 23L,
-                            SeatId = 2L,
-                            SessionId = 191L
+                            SeatId = 13L,
+                            SessionId = 106L
                         },
                         new
                         {
                             Id = 24L,
-                            SeatId = 3L,
-                            SessionId = 191L
+                            SeatId = 350L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 25L,
-                            SeatId = 374L,
-                            SessionId = 65L
+                            SeatId = 351L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 26L,
-                            SeatId = 375L,
-                            SessionId = 65L
+                            SeatId = 35L,
+                            SessionId = 152L
                         },
                         new
                         {
                             Id = 27L,
-                            SeatId = 466L,
-                            SessionId = 100L
+                            SeatId = 36L,
+                            SessionId = 152L
                         },
                         new
                         {
                             Id = 28L,
-                            SeatId = 467L,
-                            SessionId = 100L
+                            SeatId = 309L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 29L,
-                            SeatId = 468L,
-                            SessionId = 100L
+                            SeatId = 310L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 30L,
-                            SeatId = 1L,
-                            SessionId = 41L
+                            SeatId = 51L,
+                            SessionId = 2L
                         },
                         new
                         {
                             Id = 31L,
-                            SeatId = 2L,
-                            SessionId = 41L
+                            SeatId = 52L,
+                            SessionId = 2L
                         },
                         new
                         {
                             Id = 32L,
-                            SeatId = 3L,
-                            SessionId = 41L
+                            SeatId = 53L,
+                            SessionId = 2L
                         },
                         new
                         {
                             Id = 33L,
-                            SeatId = 4L,
-                            SessionId = 41L
+                            SeatId = 29L,
+                            SessionId = 131L
                         },
                         new
                         {
                             Id = 34L,
-                            SeatId = 160L,
-                            SessionId = 104L
+                            SeatId = 336L,
+                            SessionId = 160L
                         },
                         new
                         {
                             Id = 35L,
-                            SeatId = 161L,
-                            SessionId = 104L
+                            SeatId = 33L,
+                            SessionId = 12L
                         },
                         new
                         {
                             Id = 36L,
-                            SeatId = 91L,
-                            SessionId = 3L
+                            SeatId = 34L,
+                            SessionId = 12L
                         },
                         new
                         {
                             Id = 37L,
-                            SeatId = 92L,
-                            SessionId = 3L
+                            SeatId = 69L,
+                            SessionId = 33L
                         },
                         new
                         {
                             Id = 38L,
-                            SeatId = 118L,
-                            SessionId = 83L
+                            SeatId = 70L,
+                            SessionId = 33L
                         },
                         new
                         {
                             Id = 39L,
-                            SeatId = 119L,
-                            SessionId = 83L
+                            SeatId = 377L,
+                            SessionId = 100L
                         },
                         new
                         {
                             Id = 40L,
-                            SeatId = 120L,
-                            SessionId = 83L
+                            SeatId = 378L,
+                            SessionId = 100L
                         },
                         new
                         {
                             Id = 41L,
-                            SeatId = 223L,
-                            SessionId = 64L
+                            SeatId = 379L,
+                            SessionId = 100L
                         },
                         new
                         {
                             Id = 42L,
-                            SeatId = 224L,
-                            SessionId = 64L
-                        },
-                        new
-                        {
-                            Id = 43L,
-                            SeatId = 153L,
-                            SessionId = 74L
-                        },
-                        new
-                        {
-                            Id = 44L,
-                            SeatId = 154L,
-                            SessionId = 74L
-                        },
-                        new
-                        {
-                            Id = 45L,
-                            SeatId = 155L,
-                            SessionId = 74L
-                        },
-                        new
-                        {
-                            Id = 46L,
-                            SeatId = 88L,
-                            SessionId = 193L
-                        },
-                        new
-                        {
-                            Id = 47L,
-                            SeatId = 89L,
-                            SessionId = 193L
-                        },
-                        new
-                        {
-                            Id = 48L,
-                            SeatId = 90L,
-                            SessionId = 193L
-                        },
-                        new
-                        {
-                            Id = 49L,
-                            SeatId = 65L,
-                            SessionId = 113L
-                        },
-                        new
-                        {
-                            Id = 50L,
-                            SeatId = 66L,
-                            SessionId = 113L
-                        },
-                        new
-                        {
-                            Id = 51L,
-                            SeatId = 30L,
-                            SessionId = 87L
-                        },
-                        new
-                        {
-                            Id = 52L,
-                            SeatId = 31L,
-                            SessionId = 87L
-                        },
-                        new
-                        {
-                            Id = 53L,
-                            SeatId = 32L,
-                            SessionId = 87L
-                        },
-                        new
-                        {
-                            Id = 54L,
-                            SeatId = 15L,
-                            SessionId = 146L
-                        },
-                        new
-                        {
-                            Id = 55L,
-                            SeatId = 37L,
-                            SessionId = 172L
-                        },
-                        new
-                        {
-                            Id = 56L,
-                            SeatId = 38L,
-                            SessionId = 172L
-                        },
-                        new
-                        {
-                            Id = 57L,
-                            SeatId = 74L,
-                            SessionId = 68L
-                        },
-                        new
-                        {
-                            Id = 58L,
-                            SeatId = 75L,
-                            SessionId = 68L
-                        },
-                        new
-                        {
-                            Id = 59L,
-                            SeatId = 438L,
-                            SessionId = 110L
-                        },
-                        new
-                        {
-                            Id = 60L,
-                            SeatId = 201L,
-                            SessionId = 114L
-                        },
-                        new
-                        {
-                            Id = 61L,
-                            SeatId = 202L,
-                            SessionId = 114L
-                        },
-                        new
-                        {
-                            Id = 62L,
-                            SeatId = 245L,
-                            SessionId = 69L
-                        },
-                        new
-                        {
-                            Id = 63L,
-                            SeatId = 330L,
-                            SessionId = 175L
-                        },
-                        new
-                        {
-                            Id = 64L,
-                            SeatId = 331L,
-                            SessionId = 175L
-                        },
-                        new
-                        {
-                            Id = 65L,
-                            SeatId = 332L,
-                            SessionId = 175L
-                        },
-                        new
-                        {
-                            Id = 66L,
-                            SeatId = 167L,
+                            SeatId = 145L,
                             SessionId = 49L
                         },
                         new
                         {
+                            Id = 43L,
+                            SeatId = 146L,
+                            SessionId = 49L
+                        },
+                        new
+                        {
+                            Id = 44L,
+                            SeatId = 58L,
+                            SessionId = 47L
+                        },
+                        new
+                        {
+                            Id = 45L,
+                            SeatId = 59L,
+                            SessionId = 47L
+                        },
+                        new
+                        {
+                            Id = 46L,
+                            SeatId = 431L,
+                            SessionId = 40L
+                        },
+                        new
+                        {
+                            Id = 47L,
+                            SeatId = 388L,
+                            SessionId = 30L
+                        },
+                        new
+                        {
+                            Id = 48L,
+                            SeatId = 220L,
+                            SessionId = 174L
+                        },
+                        new
+                        {
+                            Id = 49L,
+                            SeatId = 221L,
+                            SessionId = 174L
+                        },
+                        new
+                        {
+                            Id = 50L,
+                            SeatId = 222L,
+                            SessionId = 174L
+                        },
+                        new
+                        {
+                            Id = 51L,
+                            SeatId = 85L,
+                            SessionId = 123L
+                        },
+                        new
+                        {
+                            Id = 52L,
+                            SeatId = 309L,
+                            SessionId = 15L
+                        },
+                        new
+                        {
+                            Id = 53L,
+                            SeatId = 310L,
+                            SessionId = 15L
+                        },
+                        new
+                        {
+                            Id = 54L,
+                            SeatId = 41L,
+                            SessionId = 97L
+                        },
+                        new
+                        {
+                            Id = 55L,
+                            SeatId = 42L,
+                            SessionId = 97L
+                        },
+                        new
+                        {
+                            Id = 56L,
+                            SeatId = 43L,
+                            SessionId = 97L
+                        },
+                        new
+                        {
+                            Id = 57L,
+                            SeatId = 44L,
+                            SessionId = 97L
+                        },
+                        new
+                        {
+                            Id = 58L,
+                            SeatId = 69L,
+                            SessionId = 103L
+                        },
+                        new
+                        {
+                            Id = 59L,
+                            SeatId = 70L,
+                            SessionId = 103L
+                        },
+                        new
+                        {
+                            Id = 60L,
+                            SeatId = 71L,
+                            SessionId = 103L
+                        },
+                        new
+                        {
+                            Id = 61L,
+                            SeatId = 60L,
+                            SessionId = 82L
+                        },
+                        new
+                        {
+                            Id = 62L,
+                            SeatId = 377L,
+                            SessionId = 45L
+                        },
+                        new
+                        {
+                            Id = 63L,
+                            SeatId = 1L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 64L,
+                            SeatId = 2L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 65L,
+                            SeatId = 3L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 66L,
+                            SeatId = 4L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
                             Id = 67L,
-                            SeatId = 21L,
-                            SessionId = 6L
+                            SeatId = 147L,
+                            SessionId = 114L
                         },
                         new
                         {
                             Id = 68L,
-                            SeatId = 253L,
-                            SessionId = 164L
-                        },
-                        new
-                        {
-                            Id = 69L,
-                            SeatId = 254L,
-                            SessionId = 164L
-                        },
-                        new
-                        {
-                            Id = 70L,
-                            SeatId = 255L,
-                            SessionId = 164L
-                        },
-                        new
-                        {
-                            Id = 71L,
-                            SeatId = 18L,
-                            SessionId = 136L
-                        },
-                        new
-                        {
-                            Id = 72L,
-                            SeatId = 341L,
-                            SessionId = 190L
-                        },
-                        new
-                        {
-                            Id = 73L,
-                            SeatId = 124L,
-                            SessionId = 153L
-                        },
-                        new
-                        {
-                            Id = 74L,
-                            SeatId = 125L,
-                            SessionId = 153L
-                        },
-                        new
-                        {
-                            Id = 75L,
-                            SeatId = 149L,
-                            SessionId = 109L
-                        },
-                        new
-                        {
-                            Id = 76L,
-                            SeatId = 150L,
-                            SessionId = 109L
-                        },
-                        new
-                        {
-                            Id = 77L,
-                            SeatId = 418L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 78L,
-                            SeatId = 419L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 79L,
-                            SeatId = 420L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 80L,
-                            SeatId = 138L,
-                            SessionId = 143L
-                        },
-                        new
-                        {
-                            Id = 81L,
-                            SeatId = 139L,
-                            SessionId = 143L
-                        },
-                        new
-                        {
-                            Id = 82L,
-                            SeatId = 39L,
-                            SessionId = 117L
-                        },
-                        new
-                        {
-                            Id = 83L,
-                            SeatId = 30L,
-                            SessionId = 127L
-                        },
-                        new
-                        {
-                            Id = 84L,
-                            SeatId = 31L,
-                            SessionId = 127L
-                        },
-                        new
-                        {
-                            Id = 85L,
-                            SeatId = 300L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 86L,
-                            SeatId = 301L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 87L,
-                            SeatId = 371L,
-                            SessionId = 130L
-                        },
-                        new
-                        {
-                            Id = 88L,
-                            SeatId = 372L,
-                            SessionId = 130L
-                        },
-                        new
-                        {
-                            Id = 89L,
-                            SeatId = 373L,
-                            SessionId = 130L
-                        },
-                        new
-                        {
-                            Id = 90L,
-                            SeatId = 8L,
-                            SessionId = 106L
-                        },
-                        new
-                        {
-                            Id = 91L,
-                            SeatId = 9L,
-                            SessionId = 106L
-                        },
-                        new
-                        {
-                            Id = 92L,
-                            SeatId = 67L,
-                            SessionId = 153L
-                        },
-                        new
-                        {
-                            Id = 93L,
-                            SeatId = 68L,
-                            SessionId = 153L
-                        },
-                        new
-                        {
-                            Id = 94L,
-                            SeatId = 21L,
-                            SessionId = 66L
-                        },
-                        new
-                        {
-                            Id = 95L,
-                            SeatId = 81L,
-                            SessionId = 118L
-                        },
-                        new
-                        {
-                            Id = 96L,
-                            SeatId = 82L,
-                            SessionId = 118L
-                        },
-                        new
-                        {
-                            Id = 97L,
-                            SeatId = 83L,
-                            SessionId = 118L
-                        },
-                        new
-                        {
-                            Id = 98L,
-                            SeatId = 132L,
-                            SessionId = 158L
-                        },
-                        new
-                        {
-                            Id = 99L,
-                            SeatId = 133L,
-                            SessionId = 158L
-                        },
-                        new
-                        {
-                            Id = 100L,
-                            SeatId = 134L,
-                            SessionId = 158L
-                        },
-                        new
-                        {
-                            Id = 101L,
-                            SeatId = 285L,
-                            SessionId = 59L
-                        },
-                        new
-                        {
-                            Id = 102L,
-                            SeatId = 286L,
-                            SessionId = 59L
-                        },
-                        new
-                        {
-                            Id = 103L,
-                            SeatId = 270L,
-                            SessionId = 44L
-                        },
-                        new
-                        {
-                            Id = 104L,
-                            SeatId = 271L,
-                            SessionId = 44L
-                        },
-                        new
-                        {
-                            Id = 105L,
-                            SeatId = 73L,
-                            SessionId = 63L
-                        },
-                        new
-                        {
-                            Id = 106L,
-                            SeatId = 74L,
-                            SessionId = 63L
-                        },
-                        new
-                        {
-                            Id = 107L,
-                            SeatId = 117L,
-                            SessionId = 103L
-                        },
-                        new
-                        {
-                            Id = 108L,
-                            SeatId = 118L,
-                            SessionId = 103L
-                        },
-                        new
-                        {
-                            Id = 109L,
-                            SeatId = 48L,
-                            SessionId = 92L
-                        },
-                        new
-                        {
-                            Id = 110L,
-                            SeatId = 49L,
-                            SessionId = 92L
-                        },
-                        new
-                        {
-                            Id = 111L,
-                            SeatId = 398L,
-                            SessionId = 120L
-                        },
-                        new
-                        {
-                            Id = 112L,
-                            SeatId = 399L,
-                            SessionId = 120L
-                        },
-                        new
-                        {
-                            Id = 113L,
-                            SeatId = 400L,
-                            SessionId = 120L
-                        },
-                        new
-                        {
-                            Id = 114L,
-                            SeatId = 297L,
-                            SessionId = 104L
-                        },
-                        new
-                        {
-                            Id = 115L,
-                            SeatId = 298L,
-                            SessionId = 104L
-                        },
-                        new
-                        {
-                            Id = 116L,
-                            SeatId = 43L,
-                            SessionId = 122L
-                        },
-                        new
-                        {
-                            Id = 117L,
-                            SeatId = 44L,
-                            SessionId = 122L
-                        },
-                        new
-                        {
-                            Id = 118L,
-                            SeatId = 405L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 119L,
-                            SeatId = 406L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 120L,
-                            SeatId = 407L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 121L,
-                            SeatId = 7L,
-                            SessionId = 96L
-                        },
-                        new
-                        {
-                            Id = 122L,
-                            SeatId = 8L,
-                            SessionId = 96L
-                        },
-                        new
-                        {
-                            Id = 123L,
-                            SeatId = 66L,
-                            SessionId = 18L
-                        },
-                        new
-                        {
-                            Id = 124L,
-                            SeatId = 67L,
-                            SessionId = 18L
-                        },
-                        new
-                        {
-                            Id = 125L,
-                            SeatId = 68L,
-                            SessionId = 18L
-                        },
-                        new
-                        {
-                            Id = 126L,
-                            SeatId = 220L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 127L,
-                            SeatId = 221L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 128L,
-                            SeatId = 13L,
-                            SessionId = 26L
-                        },
-                        new
-                        {
-                            Id = 129L,
-                            SeatId = 14L,
-                            SessionId = 26L
-                        },
-                        new
-                        {
-                            Id = 130L,
-                            SeatId = 15L,
-                            SessionId = 26L
-                        },
-                        new
-                        {
-                            Id = 131L,
-                            SeatId = 26L,
-                            SessionId = 161L
-                        },
-                        new
-                        {
-                            Id = 132L,
-                            SeatId = 27L,
-                            SessionId = 161L
-                        },
-                        new
-                        {
-                            Id = 133L,
-                            SeatId = 3L,
-                            SessionId = 171L
-                        },
-                        new
-                        {
-                            Id = 134L,
-                            SeatId = 4L,
-                            SessionId = 171L
-                        },
-                        new
-                        {
-                            Id = 135L,
-                            SeatId = 5L,
-                            SessionId = 171L
-                        },
-                        new
-                        {
-                            Id = 136L,
-                            SeatId = 39L,
-                            SessionId = 32L
-                        },
-                        new
-                        {
-                            Id = 137L,
-                            SeatId = 40L,
-                            SessionId = 32L
-                        },
-                        new
-                        {
-                            Id = 138L,
-                            SeatId = 373L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 139L,
-                            SeatId = 133L,
-                            SessionId = 68L
-                        },
-                        new
-                        {
-                            Id = 140L,
-                            SeatId = 134L,
-                            SessionId = 68L
-                        },
-                        new
-                        {
-                            Id = 141L,
-                            SeatId = 55L,
-                            SessionId = 137L
-                        },
-                        new
-                        {
-                            Id = 142L,
-                            SeatId = 56L,
-                            SessionId = 137L
-                        },
-                        new
-                        {
-                            Id = 143L,
-                            SeatId = 57L,
-                            SessionId = 137L
-                        },
-                        new
-                        {
-                            Id = 144L,
-                            SeatId = 15L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 145L,
-                            SeatId = 16L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 146L,
-                            SeatId = 17L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 147L,
-                            SeatId = 92L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 148L,
-                            SeatId = 93L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 149L,
-                            SeatId = 67L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 150L,
-                            SeatId = 68L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 151L,
-                            SeatId = 308L,
-                            SessionId = 150L
-                        },
-                        new
-                        {
-                            Id = 152L,
-                            SeatId = 309L,
-                            SessionId = 150L
-                        },
-                        new
-                        {
-                            Id = 153L,
-                            SeatId = 281L,
-                            SessionId = 144L
-                        },
-                        new
-                        {
-                            Id = 154L,
-                            SeatId = 282L,
-                            SessionId = 144L
-                        },
-                        new
-                        {
-                            Id = 155L,
-                            SeatId = 464L,
-                            SessionId = 90L
-                        },
-                        new
-                        {
-                            Id = 156L,
-                            SeatId = 465L,
-                            SessionId = 90L
-                        },
-                        new
-                        {
-                            Id = 157L,
-                            SeatId = 466L,
-                            SessionId = 90L
-                        },
-                        new
-                        {
-                            Id = 158L,
-                            SeatId = 150L,
-                            SessionId = 134L
-                        },
-                        new
-                        {
-                            Id = 159L,
-                            SeatId = 108L,
-                            SessionId = 148L
-                        },
-                        new
-                        {
-                            Id = 160L,
-                            SeatId = 109L,
-                            SessionId = 148L
-                        },
-                        new
-                        {
-                            Id = 161L,
-                            SeatId = 110L,
-                            SessionId = 148L
-                        },
-                        new
-                        {
-                            Id = 162L,
-                            SeatId = 182L,
-                            SessionId = 149L
-                        },
-                        new
-                        {
-                            Id = 163L,
-                            SeatId = 183L,
-                            SessionId = 149L
-                        },
-                        new
-                        {
-                            Id = 164L,
-                            SeatId = 124L,
-                            SessionId = 163L
-                        },
-                        new
-                        {
-                            Id = 165L,
-                            SeatId = 125L,
-                            SessionId = 163L
-                        },
-                        new
-                        {
-                            Id = 166L,
-                            SeatId = 57L,
-                            SessionId = 127L
-                        },
-                        new
-                        {
-                            Id = 167L,
-                            SeatId = 247L,
-                            SessionId = 64L
-                        },
-                        new
-                        {
-                            Id = 168L,
-                            SeatId = 248L,
-                            SessionId = 64L
-                        },
-                        new
-                        {
-                            Id = 169L,
-                            SeatId = 208L,
-                            SessionId = 159L
-                        },
-                        new
-                        {
-                            Id = 170L,
-                            SeatId = 209L,
-                            SessionId = 159L
-                        },
-                        new
-                        {
-                            Id = 171L,
-                            SeatId = 210L,
-                            SessionId = 159L
-                        },
-                        new
-                        {
-                            Id = 172L,
-                            SeatId = 193L,
-                            SessionId = 84L
-                        },
-                        new
-                        {
-                            Id = 173L,
-                            SeatId = 194L,
-                            SessionId = 84L
-                        },
-                        new
-                        {
-                            Id = 174L,
-                            SeatId = 195L,
-                            SessionId = 84L
-                        },
-                        new
-                        {
-                            Id = 175L,
-                            SeatId = 196L,
-                            SessionId = 84L
-                        },
-                        new
-                        {
-                            Id = 176L,
-                            SeatId = 168L,
-                            SessionId = 59L
-                        },
-                        new
-                        {
-                            Id = 177L,
-                            SeatId = 169L,
-                            SessionId = 59L
-                        },
-                        new
-                        {
-                            Id = 178L,
-                            SeatId = 170L,
-                            SessionId = 59L
-                        },
-                        new
-                        {
-                            Id = 179L,
-                            SeatId = 124L,
-                            SessionId = 118L
-                        },
-                        new
-                        {
-                            Id = 180L,
-                            SeatId = 125L,
-                            SessionId = 118L
-                        },
-                        new
-                        {
-                            Id = 181L,
-                            SeatId = 341L,
-                            SessionId = 145L
-                        },
-                        new
-                        {
-                            Id = 182L,
-                            SeatId = 342L,
-                            SessionId = 145L
-                        },
-                        new
-                        {
-                            Id = 183L,
-                            SeatId = 343L,
-                            SessionId = 145L
-                        },
-                        new
-                        {
-                            Id = 184L,
-                            SeatId = 29L,
-                            SessionId = 111L
-                        },
-                        new
-                        {
-                            Id = 185L,
-                            SeatId = 261L,
-                            SessionId = 144L
-                        },
-                        new
-                        {
-                            Id = 186L,
-                            SeatId = 262L,
-                            SessionId = 144L
-                        },
-                        new
-                        {
-                            Id = 187L,
-                            SeatId = 263L,
-                            SessionId = 144L
-                        },
-                        new
-                        {
-                            Id = 188L,
-                            SeatId = 59L,
-                            SessionId = 112L
-                        },
-                        new
-                        {
-                            Id = 189L,
-                            SeatId = 60L,
-                            SessionId = 112L
-                        },
-                        new
-                        {
-                            Id = 190L,
-                            SeatId = 70L,
-                            SessionId = 138L
-                        },
-                        new
-                        {
-                            Id = 191L,
-                            SeatId = 71L,
-                            SessionId = 138L
-                        },
-                        new
-                        {
-                            Id = 192L,
-                            SeatId = 143L,
-                            SessionId = 138L
-                        },
-                        new
-                        {
-                            Id = 193L,
-                            SeatId = 144L,
-                            SessionId = 138L
-                        },
-                        new
-                        {
-                            Id = 194L,
-                            SeatId = 28L,
-                            SessionId = 86L
-                        },
-                        new
-                        {
-                            Id = 195L,
-                            SeatId = 29L,
-                            SessionId = 86L
-                        },
-                        new
-                        {
-                            Id = 196L,
                             SeatId = 33L,
                             SessionId = 77L
                         },
                         new
                         {
-                            Id = 197L,
+                            Id = 69L,
                             SeatId = 34L,
                             SessionId = 77L
                         },
                         new
                         {
-                            Id = 198L,
-                            SeatId = 251L,
-                            SessionId = 109L
+                            Id = 70L,
+                            SeatId = 47L,
+                            SessionId = 102L
                         },
                         new
                         {
-                            Id = 199L,
-                            SeatId = 252L,
-                            SessionId = 109L
+                            Id = 71L,
+                            SeatId = 48L,
+                            SessionId = 102L
                         },
                         new
                         {
-                            Id = 200L,
-                            SeatId = 253L,
-                            SessionId = 109L
-                        },
-                        new
-                        {
-                            Id = 201L,
-                            SeatId = 70L,
-                            SessionId = 123L
-                        },
-                        new
-                        {
-                            Id = 202L,
-                            SeatId = 28L,
-                            SessionId = 6L
-                        },
-                        new
-                        {
-                            Id = 203L,
-                            SeatId = 29L,
-                            SessionId = 6L
-                        },
-                        new
-                        {
-                            Id = 204L,
-                            SeatId = 327L,
-                            SessionId = 35L
-                        },
-                        new
-                        {
-                            Id = 205L,
-                            SeatId = 328L,
-                            SessionId = 35L
-                        },
-                        new
-                        {
-                            Id = 206L,
-                            SeatId = 457L,
-                            SessionId = 35L
-                        },
-                        new
-                        {
-                            Id = 207L,
-                            SeatId = 458L,
-                            SessionId = 35L
-                        },
-                        new
-                        {
-                            Id = 208L,
-                            SeatId = 4L,
-                            SessionId = 111L
-                        },
-                        new
-                        {
-                            Id = 209L,
-                            SeatId = 99L,
-                            SessionId = 128L
-                        },
-                        new
-                        {
-                            Id = 210L,
-                            SeatId = 100L,
-                            SessionId = 128L
-                        },
-                        new
-                        {
-                            Id = 211L,
-                            SeatId = 409L,
-                            SessionId = 140L
-                        },
-                        new
-                        {
-                            Id = 212L,
-                            SeatId = 410L,
-                            SessionId = 140L
-                        },
-                        new
-                        {
-                            Id = 213L,
-                            SeatId = 119L,
-                            SessionId = 48L
-                        },
-                        new
-                        {
-                            Id = 214L,
-                            SeatId = 120L,
-                            SessionId = 48L
-                        },
-                        new
-                        {
-                            Id = 215L,
-                            SeatId = 101L,
-                            SessionId = 33L
-                        },
-                        new
-                        {
-                            Id = 216L,
-                            SeatId = 102L,
-                            SessionId = 33L
-                        },
-                        new
-                        {
-                            Id = 217L,
-                            SeatId = 103L,
-                            SessionId = 33L
-                        },
-                        new
-                        {
-                            Id = 218L,
-                            SeatId = 53L,
-                            SessionId = 92L
-                        },
-                        new
-                        {
-                            Id = 219L,
-                            SeatId = 54L,
-                            SessionId = 92L
-                        },
-                        new
-                        {
-                            Id = 220L,
-                            SeatId = 312L,
-                            SessionId = 165L
-                        },
-                        new
-                        {
-                            Id = 221L,
-                            SeatId = 313L,
-                            SessionId = 165L
-                        },
-                        new
-                        {
-                            Id = 222L,
-                            SeatId = 314L,
-                            SessionId = 165L
-                        },
-                        new
-                        {
-                            Id = 223L,
-                            SeatId = 26L,
-                            SessionId = 131L
-                        },
-                        new
-                        {
-                            Id = 224L,
-                            SeatId = 27L,
-                            SessionId = 131L
-                        },
-                        new
-                        {
-                            Id = 225L,
-                            SeatId = 28L,
-                            SessionId = 131L
-                        },
-                        new
-                        {
-                            Id = 226L,
-                            SeatId = 16L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 227L,
-                            SeatId = 17L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 228L,
-                            SeatId = 18L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 229L,
-                            SeatId = 40L,
-                            SessionId = 37L
-                        },
-                        new
-                        {
-                            Id = 230L,
-                            SeatId = 41L,
-                            SessionId = 37L
-                        },
-                        new
-                        {
-                            Id = 231L,
-                            SeatId = 42L,
-                            SessionId = 37L
-                        },
-                        new
-                        {
-                            Id = 232L,
-                            SeatId = 281L,
-                            SessionId = 39L
-                        },
-                        new
-                        {
-                            Id = 233L,
-                            SeatId = 9L,
-                            SessionId = 196L
-                        },
-                        new
-                        {
-                            Id = 234L,
+                            Id = 72L,
                             SeatId = 10L,
-                            SessionId = 196L
+                            SessionId = 141L
                         },
                         new
                         {
-                            Id = 235L,
+                            Id = 73L,
                             SeatId = 11L,
-                            SessionId = 196L
+                            SessionId = 141L
                         },
                         new
                         {
-                            Id = 236L,
-                            SeatId = 19L,
-                            SessionId = 146L
+                            Id = 74L,
+                            SeatId = 35L,
+                            SessionId = 142L
                         },
                         new
                         {
-                            Id = 237L,
-                            SeatId = 20L,
-                            SessionId = 146L
+                            Id = 75L,
+                            SeatId = 36L,
+                            SessionId = 142L
                         },
                         new
                         {
-                            Id = 238L,
-                            SeatId = 45L,
-                            SessionId = 102L
-                        },
-                        new
-                        {
-                            Id = 239L,
-                            SeatId = 46L,
-                            SessionId = 102L
-                        },
-                        new
-                        {
-                            Id = 240L,
-                            SeatId = 274L,
-                            SessionId = 144L
-                        },
-                        new
-                        {
-                            Id = 241L,
-                            SeatId = 384L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 242L,
-                            SeatId = 385L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 243L,
-                            SeatId = 286L,
-                            SessionId = 159L
-                        },
-                        new
-                        {
-                            Id = 244L,
-                            SeatId = 287L,
-                            SessionId = 159L
-                        },
-                        new
-                        {
-                            Id = 245L,
-                            SeatId = 288L,
-                            SessionId = 159L
-                        },
-                        new
-                        {
-                            Id = 246L,
-                            SeatId = 14L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 247L,
-                            SeatId = 15L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 248L,
+                            Id = 76L,
                             SeatId = 37L,
-                            SessionId = 62L
+                            SessionId = 142L
                         },
                         new
                         {
-                            Id = 249L,
-                            SeatId = 326L,
-                            SessionId = 80L
+                            Id = 77L,
+                            SeatId = 16L,
+                            SessionId = 76L
                         },
                         new
                         {
-                            Id = 250L,
-                            SeatId = 327L,
-                            SessionId = 80L
+                            Id = 78L,
+                            SeatId = 17L,
+                            SessionId = 76L
                         },
                         new
                         {
-                            Id = 251L,
-                            SeatId = 435L,
-                            SessionId = 145L
+                            Id = 79L,
+                            SeatId = 33L,
+                            SessionId = 32L
                         },
                         new
                         {
-                            Id = 252L,
-                            SeatId = 436L,
-                            SessionId = 145L
+                            Id = 80L,
+                            SeatId = 429L,
+                            SessionId = 5L
                         },
                         new
                         {
-                            Id = 253L,
-                            SeatId = 437L,
-                            SessionId = 145L
+                            Id = 81L,
+                            SeatId = 430L,
+                            SessionId = 5L
                         },
                         new
                         {
-                            Id = 254L,
+                            Id = 82L,
+                            SeatId = 401L,
+                            SessionId = 25L
+                        },
+                        new
+                        {
+                            Id = 83L,
+                            SeatId = 402L,
+                            SessionId = 25L
+                        },
+                        new
+                        {
+                            Id = 84L,
+                            SeatId = 11L,
+                            SessionId = 16L
+                        },
+                        new
+                        {
+                            Id = 85L,
+                            SeatId = 12L,
+                            SessionId = 16L
+                        },
+                        new
+                        {
+                            Id = 86L,
+                            SeatId = 274L,
+                            SessionId = 179L
+                        },
+                        new
+                        {
+                            Id = 87L,
+                            SeatId = 275L,
+                            SessionId = 179L
+                        },
+                        new
+                        {
+                            Id = 88L,
+                            SeatId = 118L,
+                            SessionId = 133L
+                        },
+                        new
+                        {
+                            Id = 89L,
+                            SeatId = 119L,
+                            SessionId = 133L
+                        },
+                        new
+                        {
+                            Id = 90L,
+                            SeatId = 154L,
+                            SessionId = 114L
+                        },
+                        new
+                        {
+                            Id = 91L,
+                            SeatId = 155L,
+                            SessionId = 114L
+                        },
+                        new
+                        {
+                            Id = 92L,
+                            SeatId = 156L,
+                            SessionId = 114L
+                        },
+                        new
+                        {
+                            Id = 93L,
+                            SeatId = 227L,
+                            SessionId = 134L
+                        },
+                        new
+                        {
+                            Id = 94L,
+                            SeatId = 228L,
+                            SessionId = 134L
+                        },
+                        new
+                        {
+                            Id = 95L,
+                            SeatId = 25L,
+                            SessionId = 36L
+                        },
+                        new
+                        {
+                            Id = 96L,
+                            SeatId = 26L,
+                            SessionId = 36L
+                        },
+                        new
+                        {
+                            Id = 97L,
+                            SeatId = 36L,
+                            SessionId = 187L
+                        },
+                        new
+                        {
+                            Id = 98L,
+                            SeatId = 340L,
+                            SessionId = 70L
+                        },
+                        new
+                        {
+                            Id = 99L,
+                            SeatId = 341L,
+                            SessionId = 70L
+                        },
+                        new
+                        {
+                            Id = 100L,
+                            SeatId = 312L,
+                            SessionId = 65L
+                        },
+                        new
+                        {
+                            Id = 101L,
+                            SeatId = 88L,
+                            SessionId = 188L
+                        },
+                        new
+                        {
+                            Id = 102L,
+                            SeatId = 89L,
+                            SessionId = 188L
+                        },
+                        new
+                        {
+                            Id = 103L,
+                            SeatId = 90L,
+                            SessionId = 188L
+                        },
+                        new
+                        {
+                            Id = 104L,
+                            SeatId = 38L,
+                            SessionId = 147L
+                        },
+                        new
+                        {
+                            Id = 105L,
+                            SeatId = 39L,
+                            SessionId = 147L
+                        },
+                        new
+                        {
+                            Id = 106L,
                             SeatId = 58L,
-                            SessionId = 157L
+                            SessionId = 112L
                         },
                         new
                         {
-                            Id = 255L,
-                            SeatId = 59L,
-                            SessionId = 157L
+                            Id = 107L,
+                            SeatId = 300L,
+                            SessionId = 124L
                         },
                         new
                         {
-                            Id = 256L,
-                            SeatId = 60L,
-                            SessionId = 157L
+                            Id = 108L,
+                            SeatId = 301L,
+                            SessionId = 124L
                         },
                         new
                         {
-                            Id = 257L,
-                            SeatId = 443L,
-                            SessionId = 130L
+                            Id = 109L,
+                            SeatId = 42L,
+                            SessionId = 42L
                         },
                         new
                         {
-                            Id = 258L,
-                            SeatId = 444L,
-                            SessionId = 130L
+                            Id = 110L,
+                            SeatId = 43L,
+                            SessionId = 42L
                         },
                         new
                         {
-                            Id = 259L,
+                            Id = 111L,
+                            SeatId = 11L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 112L,
+                            SeatId = 12L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 113L,
+                            SeatId = 16L,
+                            SessionId = 191L
+                        },
+                        new
+                        {
+                            Id = 114L,
+                            SeatId = 17L,
+                            SessionId = 191L
+                        },
+                        new
+                        {
+                            Id = 115L,
                             SeatId = 18L,
-                            SessionId = 161L
+                            SessionId = 191L
                         },
                         new
                         {
-                            Id = 260L,
-                            SeatId = 19L,
-                            SessionId = 161L
+                            Id = 116L,
+                            SeatId = 395L,
+                            SessionId = 55L
                         },
                         new
                         {
-                            Id = 261L,
-                            SeatId = 20L,
-                            SessionId = 161L
+                            Id = 117L,
+                            SeatId = 396L,
+                            SessionId = 55L
                         },
                         new
                         {
-                            Id = 262L,
-                            SeatId = 75L,
+                            Id = 118L,
+                            SeatId = 78L,
+                            SessionId = 188L
+                        },
+                        new
+                        {
+                            Id = 119L,
+                            SeatId = 79L,
+                            SessionId = 188L
+                        },
+                        new
+                        {
+                            Id = 120L,
+                            SeatId = 409L,
+                            SessionId = 20L
+                        },
+                        new
+                        {
+                            Id = 121L,
+                            SeatId = 410L,
+                            SessionId = 20L
+                        },
+                        new
+                        {
+                            Id = 122L,
+                            SeatId = 130L,
                             SessionId = 88L
                         },
                         new
                         {
+                            Id = 123L,
+                            SeatId = 116L,
+                            SessionId = 193L
+                        },
+                        new
+                        {
+                            Id = 124L,
+                            SeatId = 117L,
+                            SessionId = 193L
+                        },
+                        new
+                        {
+                            Id = 125L,
+                            SeatId = 118L,
+                            SessionId = 193L
+                        },
+                        new
+                        {
+                            Id = 126L,
+                            SeatId = 7L,
+                            SessionId = 131L
+                        },
+                        new
+                        {
+                            Id = 127L,
+                            SeatId = 8L,
+                            SessionId = 131L
+                        },
+                        new
+                        {
+                            Id = 128L,
+                            SeatId = 9L,
+                            SessionId = 131L
+                        },
+                        new
+                        {
+                            Id = 129L,
+                            SeatId = 232L,
+                            SessionId = 194L
+                        },
+                        new
+                        {
+                            Id = 130L,
+                            SeatId = 233L,
+                            SessionId = 194L
+                        },
+                        new
+                        {
+                            Id = 131L,
+                            SeatId = 472L,
+                            SessionId = 115L
+                        },
+                        new
+                        {
+                            Id = 132L,
+                            SeatId = 473L,
+                            SessionId = 115L
+                        },
+                        new
+                        {
+                            Id = 133L,
+                            SeatId = 474L,
+                            SessionId = 115L
+                        },
+                        new
+                        {
+                            Id = 134L,
+                            SeatId = 475L,
+                            SessionId = 115L
+                        },
+                        new
+                        {
+                            Id = 135L,
+                            SeatId = 285L,
+                            SessionId = 149L
+                        },
+                        new
+                        {
+                            Id = 136L,
+                            SeatId = 286L,
+                            SessionId = 149L
+                        },
+                        new
+                        {
+                            Id = 137L,
+                            SeatId = 305L,
+                            SessionId = 144L
+                        },
+                        new
+                        {
+                            Id = 138L,
+                            SeatId = 306L,
+                            SessionId = 144L
+                        },
+                        new
+                        {
+                            Id = 139L,
+                            SeatId = 128L,
+                            SessionId = 148L
+                        },
+                        new
+                        {
+                            Id = 140L,
+                            SeatId = 129L,
+                            SessionId = 148L
+                        },
+                        new
+                        {
+                            Id = 141L,
+                            SeatId = 54L,
+                            SessionId = 157L
+                        },
+                        new
+                        {
+                            Id = 142L,
+                            SeatId = 55L,
+                            SessionId = 157L
+                        },
+                        new
+                        {
+                            Id = 143L,
+                            SeatId = 145L,
+                            SessionId = 159L
+                        },
+                        new
+                        {
+                            Id = 144L,
+                            SeatId = 121L,
+                            SessionId = 33L
+                        },
+                        new
+                        {
+                            Id = 145L,
+                            SeatId = 122L,
+                            SessionId = 33L
+                        },
+                        new
+                        {
+                            Id = 146L,
+                            SeatId = 172L,
+                            SessionId = 94L
+                        },
+                        new
+                        {
+                            Id = 147L,
+                            SeatId = 173L,
+                            SessionId = 94L
+                        },
+                        new
+                        {
+                            Id = 148L,
+                            SeatId = 174L,
+                            SessionId = 94L
+                        },
+                        new
+                        {
+                            Id = 149L,
+                            SeatId = 39L,
+                            SessionId = 2L
+                        },
+                        new
+                        {
+                            Id = 150L,
+                            SeatId = 50L,
+                            SessionId = 107L
+                        },
+                        new
+                        {
+                            Id = 151L,
+                            SeatId = 51L,
+                            SessionId = 107L
+                        },
+                        new
+                        {
+                            Id = 152L,
+                            SeatId = 43L,
+                            SessionId = 112L
+                        },
+                        new
+                        {
+                            Id = 153L,
+                            SeatId = 44L,
+                            SessionId = 112L
+                        },
+                        new
+                        {
+                            Id = 154L,
+                            SeatId = 333L,
+                            SessionId = 50L
+                        },
+                        new
+                        {
+                            Id = 155L,
+                            SeatId = 334L,
+                            SessionId = 50L
+                        },
+                        new
+                        {
+                            Id = 156L,
+                            SeatId = 52L,
+                            SessionId = 17L
+                        },
+                        new
+                        {
+                            Id = 157L,
+                            SeatId = 53L,
+                            SessionId = 17L
+                        },
+                        new
+                        {
+                            Id = 158L,
+                            SeatId = 4L,
+                            SessionId = 116L
+                        },
+                        new
+                        {
+                            Id = 159L,
+                            SeatId = 5L,
+                            SessionId = 116L
+                        },
+                        new
+                        {
+                            Id = 160L,
+                            SeatId = 68L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
+                            Id = 161L,
+                            SeatId = 69L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
+                            Id = 162L,
+                            SeatId = 41L,
+                            SessionId = 122L
+                        },
+                        new
+                        {
+                            Id = 163L,
+                            SeatId = 42L,
+                            SessionId = 122L
+                        },
+                        new
+                        {
+                            Id = 164L,
+                            SeatId = 3L,
+                            SessionId = 181L
+                        },
+                        new
+                        {
+                            Id = 165L,
+                            SeatId = 4L,
+                            SessionId = 181L
+                        },
+                        new
+                        {
+                            Id = 166L,
+                            SeatId = 186L,
+                            SessionId = 74L
+                        },
+                        new
+                        {
+                            Id = 167L,
+                            SeatId = 187L,
+                            SessionId = 74L
+                        },
+                        new
+                        {
+                            Id = 168L,
+                            SeatId = 188L,
+                            SessionId = 74L
+                        },
+                        new
+                        {
+                            Id = 169L,
+                            SeatId = 76L,
+                            SessionId = 128L
+                        },
+                        new
+                        {
+                            Id = 170L,
+                            SeatId = 77L,
+                            SessionId = 128L
+                        },
+                        new
+                        {
+                            Id = 171L,
+                            SeatId = 303L,
+                            SessionId = 124L
+                        },
+                        new
+                        {
+                            Id = 172L,
+                            SeatId = 304L,
+                            SessionId = 124L
+                        },
+                        new
+                        {
+                            Id = 173L,
+                            SeatId = 14L,
+                            SessionId = 151L
+                        },
+                        new
+                        {
+                            Id = 174L,
+                            SeatId = 15L,
+                            SessionId = 151L
+                        },
+                        new
+                        {
+                            Id = 175L,
+                            SeatId = 170L,
+                            SessionId = 139L
+                        },
+                        new
+                        {
+                            Id = 176L,
+                            SeatId = 171L,
+                            SessionId = 139L
+                        },
+                        new
+                        {
+                            Id = 177L,
+                            SeatId = 172L,
+                            SessionId = 139L
+                        },
+                        new
+                        {
+                            Id = 178L,
+                            SeatId = 69L,
+                            SessionId = 78L
+                        },
+                        new
+                        {
+                            Id = 179L,
+                            SeatId = 70L,
+                            SessionId = 78L
+                        },
+                        new
+                        {
+                            Id = 180L,
+                            SeatId = 122L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 181L,
+                            SeatId = 123L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 182L,
+                            SeatId = 277L,
+                            SessionId = 69L
+                        },
+                        new
+                        {
+                            Id = 183L,
+                            SeatId = 278L,
+                            SessionId = 69L
+                        },
+                        new
+                        {
+                            Id = 184L,
+                            SeatId = 89L,
+                            SessionId = 128L
+                        },
+                        new
+                        {
+                            Id = 185L,
+                            SeatId = 40L,
+                            SessionId = 132L
+                        },
+                        new
+                        {
+                            Id = 186L,
+                            SeatId = 41L,
+                            SessionId = 132L
+                        },
+                        new
+                        {
+                            Id = 187L,
+                            SeatId = 42L,
+                            SessionId = 132L
+                        },
+                        new
+                        {
+                            Id = 188L,
+                            SeatId = 5L,
+                            SessionId = 191L
+                        },
+                        new
+                        {
+                            Id = 189L,
+                            SeatId = 6L,
+                            SessionId = 191L
+                        },
+                        new
+                        {
+                            Id = 190L,
+                            SeatId = 111L,
+                            SessionId = 138L
+                        },
+                        new
+                        {
+                            Id = 191L,
+                            SeatId = 306L,
+                            SessionId = 154L
+                        },
+                        new
+                        {
+                            Id = 192L,
+                            SeatId = 416L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 193L,
+                            SeatId = 417L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 194L,
+                            SeatId = 21L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 195L,
+                            SeatId = 22L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 196L,
+                            SeatId = 23L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 197L,
+                            SeatId = 24L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 198L,
+                            SeatId = 14L,
+                            SessionId = 36L
+                        },
+                        new
+                        {
+                            Id = 199L,
+                            SeatId = 32L,
+                            SessionId = 17L
+                        },
+                        new
+                        {
+                            Id = 200L,
+                            SeatId = 33L,
+                            SessionId = 17L
+                        },
+                        new
+                        {
+                            Id = 201L,
+                            SeatId = 34L,
+                            SessionId = 17L
+                        },
+                        new
+                        {
+                            Id = 202L,
+                            SeatId = 35L,
+                            SessionId = 17L
+                        },
+                        new
+                        {
+                            Id = 203L,
+                            SeatId = 36L,
+                            SessionId = 67L
+                        },
+                        new
+                        {
+                            Id = 204L,
+                            SeatId = 37L,
+                            SessionId = 67L
+                        },
+                        new
+                        {
+                            Id = 205L,
+                            SeatId = 55L,
+                            SessionId = 102L
+                        },
+                        new
+                        {
+                            Id = 206L,
+                            SeatId = 56L,
+                            SessionId = 102L
+                        },
+                        new
+                        {
+                            Id = 207L,
+                            SeatId = 17L,
+                            SessionId = 136L
+                        },
+                        new
+                        {
+                            Id = 208L,
+                            SeatId = 18L,
+                            SessionId = 136L
+                        },
+                        new
+                        {
+                            Id = 209L,
+                            SeatId = 3L,
+                            SessionId = 176L
+                        },
+                        new
+                        {
+                            Id = 210L,
+                            SeatId = 4L,
+                            SessionId = 176L
+                        },
+                        new
+                        {
+                            Id = 211L,
+                            SeatId = 323L,
+                            SessionId = 145L
+                        },
+                        new
+                        {
+                            Id = 212L,
+                            SeatId = 324L,
+                            SessionId = 145L
+                        },
+                        new
+                        {
+                            Id = 213L,
+                            SeatId = 325L,
+                            SessionId = 145L
+                        },
+                        new
+                        {
+                            Id = 214L,
+                            SeatId = 304L,
+                            SessionId = 149L
+                        },
+                        new
+                        {
+                            Id = 215L,
+                            SeatId = 305L,
+                            SessionId = 149L
+                        },
+                        new
+                        {
+                            Id = 216L,
+                            SeatId = 306L,
+                            SessionId = 149L
+                        },
+                        new
+                        {
+                            Id = 217L,
+                            SeatId = 56L,
+                            SessionId = 62L
+                        },
+                        new
+                        {
+                            Id = 218L,
+                            SeatId = 57L,
+                            SessionId = 62L
+                        },
+                        new
+                        {
+                            Id = 219L,
+                            SeatId = 46L,
+                            SessionId = 152L
+                        },
+                        new
+                        {
+                            Id = 220L,
+                            SeatId = 47L,
+                            SessionId = 152L
+                        },
+                        new
+                        {
+                            Id = 221L,
+                            SeatId = 410L,
+                            SessionId = 135L
+                        },
+                        new
+                        {
+                            Id = 222L,
+                            SeatId = 411L,
+                            SessionId = 135L
+                        },
+                        new
+                        {
+                            Id = 223L,
+                            SeatId = 183L,
+                            SessionId = 24L
+                        },
+                        new
+                        {
+                            Id = 224L,
+                            SeatId = 184L,
+                            SessionId = 24L
+                        },
+                        new
+                        {
+                            Id = 225L,
+                            SeatId = 185L,
+                            SessionId = 24L
+                        },
+                        new
+                        {
+                            Id = 226L,
+                            SeatId = 314L,
+                            SessionId = 110L
+                        },
+                        new
+                        {
+                            Id = 227L,
+                            SeatId = 315L,
+                            SessionId = 110L
+                        },
+                        new
+                        {
+                            Id = 228L,
+                            SeatId = 316L,
+                            SessionId = 110L
+                        },
+                        new
+                        {
+                            Id = 229L,
+                            SeatId = 418L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 230L,
+                            SeatId = 419L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 231L,
+                            SeatId = 34L,
+                            SessionId = 112L
+                        },
+                        new
+                        {
+                            Id = 232L,
+                            SeatId = 145L,
+                            SessionId = 4L
+                        },
+                        new
+                        {
+                            Id = 233L,
+                            SeatId = 146L,
+                            SessionId = 4L
+                        },
+                        new
+                        {
+                            Id = 234L,
+                            SeatId = 147L,
+                            SessionId = 4L
+                        },
+                        new
+                        {
+                            Id = 235L,
+                            SeatId = 140L,
+                            SessionId = 193L
+                        },
+                        new
+                        {
+                            Id = 236L,
+                            SeatId = 141L,
+                            SessionId = 193L
+                        },
+                        new
+                        {
+                            Id = 237L,
+                            SeatId = 90L,
+                            SessionId = 3L
+                        },
+                        new
+                        {
+                            Id = 238L,
+                            SeatId = 91L,
+                            SessionId = 3L
+                        },
+                        new
+                        {
+                            Id = 239L,
+                            SeatId = 4L,
+                            SessionId = 76L
+                        },
+                        new
+                        {
+                            Id = 240L,
+                            SeatId = 279L,
+                            SessionId = 59L
+                        },
+                        new
+                        {
+                            Id = 241L,
+                            SeatId = 280L,
+                            SessionId = 59L
+                        },
+                        new
+                        {
+                            Id = 242L,
+                            SeatId = 281L,
+                            SessionId = 59L
+                        },
+                        new
+                        {
+                            Id = 243L,
+                            SeatId = 161L,
+                            SessionId = 129L
+                        },
+                        new
+                        {
+                            Id = 244L,
+                            SeatId = 162L,
+                            SessionId = 129L
+                        },
+                        new
+                        {
+                            Id = 245L,
+                            SeatId = 26L,
+                            SessionId = 86L
+                        },
+                        new
+                        {
+                            Id = 246L,
+                            SeatId = 27L,
+                            SessionId = 86L
+                        },
+                        new
+                        {
+                            Id = 247L,
+                            SeatId = 28L,
+                            SessionId = 86L
+                        },
+                        new
+                        {
+                            Id = 248L,
+                            SeatId = 243L,
+                            SessionId = 79L
+                        },
+                        new
+                        {
+                            Id = 249L,
+                            SeatId = 244L,
+                            SessionId = 79L
+                        },
+                        new
+                        {
+                            Id = 250L,
+                            SeatId = 245L,
+                            SessionId = 79L
+                        },
+                        new
+                        {
+                            Id = 251L,
+                            SeatId = 54L,
+                            SessionId = 167L
+                        },
+                        new
+                        {
+                            Id = 252L,
+                            SeatId = 55L,
+                            SessionId = 167L
+                        },
+                        new
+                        {
+                            Id = 253L,
+                            SeatId = 233L,
+                            SessionId = 134L
+                        },
+                        new
+                        {
+                            Id = 254L,
+                            SeatId = 234L,
+                            SessionId = 134L
+                        },
+                        new
+                        {
+                            Id = 255L,
+                            SeatId = 235L,
+                            SessionId = 134L
+                        },
+                        new
+                        {
+                            Id = 256L,
+                            SeatId = 139L,
+                            SessionId = 168L
+                        },
+                        new
+                        {
+                            Id = 257L,
+                            SeatId = 140L,
+                            SessionId = 168L
+                        },
+                        new
+                        {
+                            Id = 258L,
+                            SeatId = 141L,
+                            SessionId = 168L
+                        },
+                        new
+                        {
+                            Id = 259L,
+                            SeatId = 137L,
+                            SessionId = 53L
+                        },
+                        new
+                        {
+                            Id = 260L,
+                            SeatId = 138L,
+                            SessionId = 53L
+                        },
+                        new
+                        {
+                            Id = 261L,
+                            SeatId = 392L,
+                            SessionId = 150L
+                        },
+                        new
+                        {
+                            Id = 262L,
+                            SeatId = 393L,
+                            SessionId = 150L
+                        },
+                        new
+                        {
                             Id = 263L,
-                            SeatId = 250L,
-                            SessionId = 174L
+                            SeatId = 69L,
+                            SessionId = 188L
                         },
                         new
                         {
                             Id = 264L,
-                            SeatId = 251L,
-                            SessionId = 174L
+                            SeatId = 70L,
+                            SessionId = 188L
                         },
                         new
                         {
                             Id = 265L,
-                            SeatId = 130L,
-                            SessionId = 183L
+                            SeatId = 389L,
+                            SessionId = 130L
                         },
                         new
                         {
                             Id = 266L,
-                            SeatId = 131L,
-                            SessionId = 183L
+                            SeatId = 2L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 267L,
-                            SeatId = 21L,
-                            SessionId = 131L
+                            SeatId = 22L,
+                            SessionId = 196L
                         },
                         new
                         {
                             Id = 268L,
-                            SeatId = 22L,
-                            SessionId = 131L
+                            SeatId = 23L,
+                            SessionId = 196L
                         },
                         new
                         {
                             Id = 269L,
-                            SeatId = 40L,
-                            SessionId = 22L
+                            SeatId = 24L,
+                            SessionId = 196L
                         },
                         new
                         {
                             Id = 270L,
-                            SeatId = 41L,
-                            SessionId = 22L
+                            SeatId = 434L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 271L,
-                            SeatId = 2L,
-                            SessionId = 141L
+                            SeatId = 435L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 272L,
-                            SeatId = 3L,
-                            SessionId = 141L
+                            SeatId = 436L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 273L,
-                            SeatId = 267L,
-                            SessionId = 14L
+                            SeatId = 129L,
+                            SessionId = 23L
                         },
                         new
                         {
                             Id = 274L,
-                            SeatId = 268L,
-                            SessionId = 14L
+                            SeatId = 130L,
+                            SessionId = 23L
                         },
                         new
                         {
                             Id = 275L,
-                            SeatId = 269L,
-                            SessionId = 14L
+                            SeatId = 131L,
+                            SessionId = 23L
                         },
                         new
                         {
                             Id = 276L,
-                            SeatId = 205L,
-                            SessionId = 189L
+                            SeatId = 132L,
+                            SessionId = 23L
                         },
                         new
                         {
                             Id = 277L,
-                            SeatId = 206L,
-                            SessionId = 189L
+                            SeatId = 29L,
+                            SessionId = 191L
                         },
                         new
                         {
                             Id = 278L,
-                            SeatId = 310L,
-                            SessionId = 90L
+                            SeatId = 114L,
+                            SessionId = 93L
                         },
                         new
                         {
                             Id = 279L,
-                            SeatId = 311L,
-                            SessionId = 90L
+                            SeatId = 413L,
+                            SessionId = 45L
                         },
                         new
                         {
                             Id = 280L,
-                            SeatId = 301L,
-                            SessionId = 189L
+                            SeatId = 414L,
+                            SessionId = 45L
                         },
                         new
                         {
                             Id = 281L,
-                            SeatId = 302L,
-                            SessionId = 189L
+                            SeatId = 48L,
+                            SessionId = 122L
                         },
                         new
                         {
                             Id = 282L,
-                            SeatId = 303L,
-                            SessionId = 189L
+                            SeatId = 37L,
+                            SessionId = 32L
                         },
                         new
                         {
                             Id = 283L,
-                            SeatId = 304L,
-                            SessionId = 189L
+                            SeatId = 38L,
+                            SessionId = 32L
                         },
                         new
                         {
                             Id = 284L,
-                            SeatId = 36L,
-                            SessionId = 172L
+                            SeatId = 298L,
+                            SessionId = 164L
                         },
                         new
                         {
                             Id = 285L,
-                            SeatId = 129L,
-                            SessionId = 108L
+                            SeatId = 299L,
+                            SessionId = 164L
                         },
                         new
                         {
                             Id = 286L,
-                            SeatId = 130L,
-                            SessionId = 108L
+                            SeatId = 243L,
+                            SessionId = 39L
                         },
                         new
                         {
                             Id = 287L,
-                            SeatId = 157L,
-                            SessionId = 24L
+                            SeatId = 244L,
+                            SessionId = 39L
                         },
                         new
                         {
                             Id = 288L,
-                            SeatId = 158L,
-                            SessionId = 24L
+                            SeatId = 245L,
+                            SessionId = 39L
                         },
                         new
                         {
                             Id = 289L,
-                            SeatId = 219L,
-                            SessionId = 119L
+                            SeatId = 63L,
+                            SessionId = 188L
                         },
                         new
                         {
                             Id = 290L,
-                            SeatId = 158L,
-                            SessionId = 9L
+                            SeatId = 64L,
+                            SessionId = 188L
                         },
                         new
                         {
                             Id = 291L,
-                            SeatId = 159L,
-                            SessionId = 9L
+                            SeatId = 65L,
+                            SessionId = 188L
                         },
                         new
                         {
                             Id = 292L,
-                            SeatId = 473L,
-                            SessionId = 125L
+                            SeatId = 32L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 293L,
-                            SeatId = 474L,
-                            SessionId = 125L
+                            SeatId = 33L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 294L,
-                            SeatId = 58L,
-                            SessionId = 162L
+                            SeatId = 34L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 295L,
-                            SeatId = 59L,
-                            SessionId = 162L
+                            SeatId = 157L,
+                            SessionId = 144L
                         },
                         new
                         {
                             Id = 296L,
-                            SeatId = 236L,
-                            SessionId = 9L
+                            SeatId = 158L,
+                            SessionId = 144L
                         },
                         new
                         {
                             Id = 297L,
-                            SeatId = 237L,
-                            SessionId = 9L
+                            SeatId = 16L,
+                            SessionId = 36L
                         },
                         new
                         {
                             Id = 298L,
-                            SeatId = 205L,
-                            SessionId = 179L
+                            SeatId = 17L,
+                            SessionId = 36L
                         },
                         new
                         {
                             Id = 299L,
-                            SeatId = 206L,
-                            SessionId = 179L
+                            SeatId = 38L,
+                            SessionId = 77L
                         },
                         new
                         {
                             Id = 300L,
-                            SeatId = 60L,
-                            SessionId = 102L
+                            SeatId = 39L,
+                            SessionId = 77L
                         });
                 });
 
@@ -15215,7 +15215,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("ProfileId")
+                    b.Property<long?>("ProfileId")
                         .HasColumnType("bigint");
 
                     b.Property<long>("RoleId")
@@ -15315,9 +15315,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                 {
                     b.HasOne("CINEMATRIX.Data.Domain.Models.Profile", "Profile")
                         .WithMany()
-                        .HasForeignKey("ProfileId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProfileId");
 
                     b.HasOne("CINEMATRIX.Data.Domain.Models.Role", "Role")
                         .WithMany()

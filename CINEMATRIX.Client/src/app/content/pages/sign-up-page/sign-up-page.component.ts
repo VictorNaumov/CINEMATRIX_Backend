@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/account/auth-service';
-import { AdminRegistrationDto } from 'src/app/core/models/auth/admin-registration-dto';
+import { RegistrationDto as RegistrationDto } from 'src/app/core/models/auth/admin-registration-dto';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
 
 @Component({
@@ -11,11 +11,13 @@ import { NotificationManager } from 'src/app/core/services/notification-manager'
   styleUrls: ['./sign-up-page.component.scss']
 })
 export class SignUpPageComponent implements OnInit {
-  user: AdminRegistrationDto;
-
-  public form: FormGroup = new FormGroup({});
   public submitted: boolean = false;
   public message: string = '';
+
+  public userName: string;
+  public email: string;
+  public confirmPassword: string;
+  public password: string;
 
   constructor(public authService: AuthService,
     private router: Router,
@@ -29,31 +31,27 @@ export class SignUpPageComponent implements OnInit {
       else if (params.authFailed)
         this.message = 'Session ended. Enter data again.';
     });
-
-    this.form = new FormGroup({
-      login: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      email: new FormControl('', [Validators.required, Validators.email]),
-      confirmpassword: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-      secretKey: new FormControl('', [Validators.required, Validators.minLength(6)])
-    });
   }
 
   public onSubmit(): void {
-    if (this.form.invalid || this.form.value.password != this.form.value.confirmpassword){
+
+    debugger
+
+    if (this.password != this.confirmPassword) {
       return;
     }
 
     this.submitted = true;
 
-    this.user = {
-      userName: this.form.value.login,
-      password: this.form.value.password,
-      email: this.form.value.email,
+    let user: RegistrationDto = {
+      userName: this.userName,
+      password: this.password,
+      email: this.email,
+      roleId: 3,
     };
 
-    this.authService.signup(this.user, null).subscribe(() => {
-      this.form.reset();
+
+    this.authService.signup(user).subscribe(() => {
       this.router.navigate(['/']);
       this.submitted = false;
     }, () => {

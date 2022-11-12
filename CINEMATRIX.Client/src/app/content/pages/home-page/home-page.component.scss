@@ -1,18 +1,20 @@
-.bus-image{
-  z-index: 1000;
-  position: fixed;
-  left: 700px;
-  top: 150px;
-  width: 800px;
+.card-wrapper {
+  display: flex;
+  max-width: 100%;
 }
 
-.home-content{
-  margin: 0px 0px 0px 200px;
-  width: 600px;
-}
+mat-card {
+  flex: 1 0 14%;
+  margin: 10px;
+  width: 400px;
+  height: 500px;
 
-.home-button{
-  position: relative;
-  left: 40%;
-  transform: translate(-50%, 0);
+  .overflow {
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .poster-image {
+    margin-left: 10px;
+  }
 }

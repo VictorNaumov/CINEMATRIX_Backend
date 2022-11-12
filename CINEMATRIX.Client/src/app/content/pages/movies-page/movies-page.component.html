@@ -2,10 +2,14 @@
 
   <mat-card class="movie-card" *ngFor="let movie of movies.items">
     <mat-card-header>
-      <img class="poster-image" mat-card-image src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="Film poster" />
     </mat-card-header>
-    <mat-card-title> {{ movie.title }} </mat-card-title>
+    <mat-card-title>
+      <img class="poster-image" mat-card-image [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2' + movie.posterPath" alt="Film poster" />
+
+    </mat-card-title>
     <mat-card-content>
+
+      <p class="title"> {{ movie.title }} </p>
       <p class="overview"> {{ movie.overview }} </p>
     </mat-card-content>
 

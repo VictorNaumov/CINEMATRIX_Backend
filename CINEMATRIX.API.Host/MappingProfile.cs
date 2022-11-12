@@ -49,6 +49,10 @@ namespace CINEMATRIX.API.Host
             CreateMap<Profile, FoundProfileDTO>();
             CreateMap<ProfileDTO, Profile>();
 
+            CreateMap<User, UserDTO>();
+            CreateMap<User, FoundUserDTO>();
+            CreateMap<UserDTO, User>();
+
             CreateMap<MovieByIdResponse, FoundMovieDTO>()
                 .ForMember(dest => dest.Videos, opts => opts.MapFrom(src => src.Videos.Results))
                 .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Backdrops))

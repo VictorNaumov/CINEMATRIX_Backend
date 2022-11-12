@@ -9,11 +9,15 @@ import { AdminValidationDto } from 'src/app/core/models/auth/admin-validation-dt
   styleUrls: ['./sign-in-page.component.scss']
 })
 export class SignInPageComponent implements OnInit {
+  public expression: RegExp = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+(\.[-!#$%&'*+/0-9=?A-Z^_`a-z{|}~]+)*@[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?(\.[A-Za-z0-9]([A-Za-z0-9-]{0,61}[A-Za-z0-9])?)*$/;
 
-  public form: FormGroup = new FormGroup({});
+  public emailValid = true;
+
   public submitted = false;
   public message: string;
-  public user: AdminValidationDto;
+
+  public email = '';
+  public password = '';
 
   constructor(
     public authService: AuthService,
@@ -21,37 +25,32 @@ export class SignInPageComponent implements OnInit {
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe( (params: Params) => {
+    this.route.queryParams.subscribe((params: Params) => {
       if (params.loginAgain) {
         this.message = 'Please, enter data';
       } else if (params.authFailed) {
         this.message = 'Session ended. Enter data again.';
       }
     });
-
-    this.form = new FormGroup({
-      login: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)])
-    });
   }
 
   public onSubmit(): void {
-    if (this.form.invalid) return;
+    this.emailValid = this.expression.test(this.email);
+
+    if (!this.emailValid) return;
 
     this.submitted = true;
 
-    this.user = {
-      email: this.form.value.login,
-      password: this.form.value.password
+    let user: AdminValidationDto = {
+      email: this.email,
+      password: this.password
     };
 
-    this.authService.login(this.user).subscribe(() => {
-      this.form.reset();
+    this.authService.login(user).subscribe(() => {
       this.router.navigate(['/']);
       this.submitted = false;
     }, () => {
       this.submitted = false;
     });
   }
-
 }

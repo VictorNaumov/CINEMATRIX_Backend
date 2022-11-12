@@ -32,14 +32,16 @@ export class MoviesPageComponent implements OnInit {
       "searchString": ""
     }
 
-    this.movieService.GetNowPlayingMovies(parameters).subscribe((data: MovieSearchIncomingDto)=> {
+    this.movieService.GetNowPlayingMovies(parameters).subscribe((data: MovieSearchIncomingDto) => {
       this.movies = data;
+
+      console.log(data);
 
       this.isLoading = false;
     });
   }
 
-  writeNotification(text:string){
+  writeNotification(text: string) {
     this.notification.textNotice(text);
   }
 }

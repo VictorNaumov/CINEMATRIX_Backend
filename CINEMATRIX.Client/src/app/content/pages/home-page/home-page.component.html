@@ -1,9 +1,17 @@
-<div>
-  <div class="home-content">
-    <h1 class>High-quality transportation, quickly and efficiently!</h1>
-    <button mat-flat-button class="btn btn-dark home-button" style="border-radius: 0; "
-      [routerLink]="['movies']">Movies</button>
-  </div>
+<div class="card-wrapper">
+
+  <mat-card class="movie-card" *ngFor="let movie of movies.items">
+    <mat-card-header>
+      <img class="poster-image" mat-card-image src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/62HCnUTziyWcpDaBO2i1DX17ljH.jpg" alt="Film poster" />
+    </mat-card-header>
+    <mat-card-title> {{ movie.title }} </mat-card-title>
+    <mat-card-content>
+      <p class="overview"> {{ movie.overview }} </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Details</button>
+      <button mat-raised-button color="accent">SHARE</button>
+    </mat-card-actions>
+  </mat-card>
 </div>
-
-
