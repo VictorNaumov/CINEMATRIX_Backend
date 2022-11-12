@@ -1,0 +1,35 @@
+<div class="details-wrapper"  *ngIf="movie$ | async as movie; else loading">
+
+  <div>
+    <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/' + movie.images[0].filePath"
+      alt="Film poster" />
+  </div>
+
+  <div class="movie-info">
+    <p class="movie-title"> {{movie.title}}</p>
+    <p class="movie-tagline"> {{movie.tagline}}</p>
+
+    <p class="subtitle"> THE CAST</p>
+
+    <div class="movie-cast">
+      <img *ngFor="let cast of mainCasts" class="movie-cast-image" #tooltip="matTooltip" [matTooltip]="cast.name"
+        [matTooltipPosition]="'below'" [src]="'https://image.tmdb.org/t/p/w300_and_h300_bestv2/' + cast.profilePath"
+        mat-ra alt="Film poster" />
+    </div>
+
+    <p class="subtitle"> SYNOPSIS</p>
+    <p class="movie-overview"> {{movie.overview}}</p>
+    <p class="movie-budget"> {{movie.budget == 0 ? "Unknown" : movie.budget}} $</p>
+    <p class="movie-voteaverage"> {{movie.voteAverage}}</p>
+
+    <p class="subtitle"> VIDEO & PICTURE</p>
+    <div class="movie-media">
+    </div>
+
+    <app-movie-detail-slider [movie]="movie"></app-movie-detail-slider>
+  </div>
+</div>
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

@@ -28,7 +28,7 @@ export class MovieService {
     return this.http.post<MovieSearchIncomingDto>(`${this.pathBase}/nowPlaying`, searchParameters);
   }
 
-  public SearchMovies(searchParameters: MovieSearchOutgoingDto): Observable<MovieFoundIncomingDto> {
-    return this.http.put<MovieFoundIncomingDto>(`${this.pathBase}/search`, searchParameters);
+  public SearchMovies(searchParameters: MovieSearchOutgoingDto): Observable<MovieSearchIncomingDto> {
+    return this.http.post<MovieSearchIncomingDto>(`${this.pathBase}/search`, searchParameters);
   }
 }

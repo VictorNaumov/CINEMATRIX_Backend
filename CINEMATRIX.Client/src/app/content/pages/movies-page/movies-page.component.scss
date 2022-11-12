@@ -1,24 +1,36 @@
-.card-wrapper {
-  display: flex;
-  max-width: 100%;
-}
+.page-drawer {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height:calc(100% - 60px);
 
-.overflow {
-  white-space: nowrap;
-  overflow: hidden;
-  background: #fc0;
-  padding: 5px;
-  text-overflow: ellipsis;
-}
+  .card-wrapper {
+    width: 100%;
 
-mat-card {
-  align-items: center;
-  justify-content: center;
-  flex: 0 0 10%;
-  margin: 10px;
+    .sidenav {
+      .search-input {
+        margin: 10px;
+      }
+    }
 
-  .title{
-    font-size: 18px;
-    font-weight: bold;
+    mat-card {
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+      width: 21%;
+
+      justify-content: space-between;
+
+      .overview {
+        height: 150px;
+        overflow: hidden;
+        padding: 5px;
+        text-overflow: ellipsis;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
   }
 }

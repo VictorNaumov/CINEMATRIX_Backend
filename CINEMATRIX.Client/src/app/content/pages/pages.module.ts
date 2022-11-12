@@ -10,15 +10,21 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { MoviesPageComponent } from './movies-page/movies-page.component';
+import { MovieDetailPageComponent } from './movie-detail-page/movie-detail-page.component';
+import { StarRatingModule } from 'angular-star-rating';
+import { MovieDetailSliderComponent } from './movie-detail-page/movie-detail-slider/movie-detail-slider.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
     PagesComponent,
-    SignInPageComponent,
     SignUpPageComponent,
+    SignInPageComponent,
     HomePageComponent,
     MoviesPageComponent,
-
+    MovieDetailPageComponent,
+    MovieDetailSliderComponent,
+    AboutPageComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +33,8 @@ import { MoviesPageComponent } from './movies-page/movies-page.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    StarRatingModule.forRoot()
     ],
   exports: [
     PagesComponent

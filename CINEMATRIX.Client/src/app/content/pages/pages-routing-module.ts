@@ -7,6 +7,9 @@ import { SignInPageComponent } from "./sign-in-page/sign-in-page.component";
 import { HomePageComponent } from "./home-page/home-page.component";
 import { SignUpPageComponent } from "./sign-up-page/sign-up-page.component";
 import { MoviesPageComponent } from "./movies-page/movies-page.component";
+import { MovieDetailPageComponent } from "./movie-detail-page/movie-detail-page.component";
+import { AboutPageComponent } from "./about-page/about-page.component";
+import { SessionsPageComponent } from "./sessions-page/sessions-page.component";
 
 const routes: Routes = [
   {
@@ -17,14 +20,17 @@ const routes: Routes = [
       { path: "signin", component: SignInPageComponent },
       { path: "signup", component: SignUpPageComponent },
       { path: "movies", component: MoviesPageComponent },
+      { path: "about", component: AboutPageComponent },
+      { path: "sessions", component: SessionsPageComponent },
+      { path: "details/:movieId", component: MovieDetailPageComponent },
     ]
   },
   { path: "**", redirectTo: "", pathMatch: "full" }
 ];
 
 @NgModule({
-    imports: [RouterModule.forChild(routes), CommonModule],
-    exports: [RouterModule],
-    providers: [AuthGuard]
+  imports: [RouterModule.forChild(routes), CommonModule],
+  exports: [RouterModule],
+  providers: [AuthGuard]
 })
 export class PagesRoutingModule { }

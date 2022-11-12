@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/account/auth-service';
 import { RegistrationDto as RegistrationDto } from 'src/app/core/models/auth/admin-registration-dto';
@@ -34,9 +33,6 @@ export class SignUpPageComponent implements OnInit {
   }
 
   public onSubmit(): void {
-
-    debugger
-
     if (this.password != this.confirmPassword) {
       return;
     }

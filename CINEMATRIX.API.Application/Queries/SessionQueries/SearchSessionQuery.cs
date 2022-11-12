@@ -21,11 +21,13 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
     public class SearchSessionQueryHandler : IRequestHandler<SearchSessionQuery, PagedResponse<FoundSessionDTO>>
     {
         private readonly ISessionService _sessionService;
+        private readonly IMovieService _movieService;
         private readonly IMapper _mapper;
 
-        public SearchSessionQueryHandler(ISessionService sessionService, IMapper mapper)
+        public SearchSessionQueryHandler(ISessionService sessionService, IMovieService movieService, IMapper mapper)
         {
             _sessionService = sessionService;
+            _movieService = movieService;
             _mapper = mapper;
         }
 
@@ -37,6 +39,12 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
             IReadOnlyCollection<Session> foundSessions = await _sessionService.FindAsync(searchCondition);
             var mappedSession = _mapper.Map<IEnumerable<FoundSessionDTO>>(foundSessions);
             var totalCount = await _sessionService.CountAsync(searchCondition);
+
+            foreach (var session in mappedSession)
+            {
+                var movie = await _movieService.GetByIdAsync(session.MovieId, cancellationToken);
+                session.Movie = _mapper.Map<FoundMovieDTO>(movie);
+            }
 
             return new PagedResponse<FoundSessionDTO>
             {

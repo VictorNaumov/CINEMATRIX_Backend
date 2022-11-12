@@ -31,7 +31,10 @@ namespace CINEMATRIX.Data.Services
                 ? query.OrderBy(searchCondition.SortProperty)
                 : query.OrderByDescending(searchCondition.SortProperty);
 
-            return await query.Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
+            return await query
+                .Include(s => s.Hall)
+                .Include(s => s.Tickets)
+                .Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }
 
         public async Task<long> CountAsync(SessionSearchCondition searchCondition)
