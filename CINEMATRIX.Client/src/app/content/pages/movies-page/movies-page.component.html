@@ -22,7 +22,7 @@
 
   <div class="card-wrapper" *ngIf="movies$ | async as movies; else loading">
     <mat-card class="movie-card" *ngFor="let movie of movies.items">
-      <img mat-card-image [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2' + movie.posterPath"
+      <img mat-card-image [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2' + movie.posterPath"
         alt="Film poster" />
       <mat-card-content>
         <p class="title"> {{ movie.title }} </p>

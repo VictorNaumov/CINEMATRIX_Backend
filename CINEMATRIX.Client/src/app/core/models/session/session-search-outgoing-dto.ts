@@ -6,4 +6,7 @@ export interface SessionSearchOutgoingDto {
   isPublic: boolean,
   startDateTime: Date,
   endDateTime: Date
+  hallIds: number[],
+  seatTypeIds: number[],
+  timeSessions: number[],
 }

@@ -10,11 +10,15 @@ import { AuthGuard } from './core/guards/auth.guard';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterseptor } from './core/account/auth-interseptor';
 import { MaterialModule } from './shared/material/material.module';
+import { BuyTicketDialog } from './content/dialogs/buy-ticket-dialog/buy-ticket-dialog.component';
+import { SmallHallSeatsComponent } from './content/dialogs/buy-ticket-dialog/seat-hall/small-hall-seats.component/small-hall-seats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotificationComponent
+    NotificationComponent,
+    BuyTicketDialog,
+    SmallHallSeatsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { SeatFoundIncomingDto } from "../seat/seat-found-incoming-dto"
+
 export interface HallDto {
   name: string,
   description: string,
@@ -5,4 +7,5 @@ export interface HallDto {
   projector: string,
   screen: string,
   screenResolution: string
+  seats: SeatFoundIncomingDto[]
 }

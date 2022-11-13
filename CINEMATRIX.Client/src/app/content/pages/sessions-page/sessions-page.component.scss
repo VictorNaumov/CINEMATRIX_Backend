@@ -1,0 +1,127 @@
+.sessions-wrapper {
+  .promo-wrapper {
+    .promo-poster {
+      height: 750px;
+    }
+
+    .movie-info {
+      position: absolute;
+      height: 750px;
+      width: 100%;
+      color: white;
+
+      .movie-title {
+        position: absolute;
+        text-shadow: 2px 2px black;
+        font-size: 36px;
+        font-weight: bold;
+        top: 30%;
+        left: 20%;
+      }
+
+      .movie-tagline {
+        width: 40%;
+        position: absolute;
+        text-shadow: 2px 2px black;
+        font-size: 14px;
+        font-weight: lighter;
+        top: 35%;
+        left: 20%;
+      }
+
+      .buy-ticket-button {
+        position: absolute;
+        top: 65%;
+        left: 46.5%;
+      }
+    }
+  }
+
+  .schedule-title {
+    margin: 30px 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+  }
+
+  .filters-wrapper {
+
+    .filter-date {
+
+      .date-toggle {
+        text-align: center;
+        vertical-align: middle;
+
+        .date-toggle-day {
+          font-size: 22;
+          font-weight: bold;
+        }
+
+        .date-toggle-month {
+          font-size: 18;
+          font-weight: lighter;
+        }
+      }
+    }
+
+    .filter-controls {
+      display: flex;
+
+      .time-session {
+        display: inline-block;
+      }
+
+      .cost-session {
+        display: inline-block;
+      }
+
+      .hall-session {
+        display: inline-block;
+      }
+    }
+  }
+
+  .list-wrapper {
+    mat-card {
+      display: inline-block;
+      align-items: center;
+      justify-content: center;
+      margin: 40px;
+      width: 40%;
+      -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+      transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+
+      .film-poster {
+        margin: 5px;
+        width: 60%;
+      }
+
+      .overview {
+        height: 150px;
+        overflow: hidden;
+        padding: 5px;
+        text-overflow: ellipsis;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .tagline {
+        font-size: 14px;
+        font-weight: lighter;
+      }
+    }
+
+    mat-card:hover {
+      transform: scale(1.05, 1.05);
+    }
+
+    /* Fade in the pseudo-element with the bigger shadow */
+    mat-card:hover::after {
+      opacity: 1;
+    }
+
+  }
+}

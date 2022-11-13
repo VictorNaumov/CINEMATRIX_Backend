@@ -1,4 +1,5 @@
 ﻿using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
+using CINEMATRIX.Data.Domain.Enums;
 using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.EF.SQL;
 using CINEMATRIX.Data.Services.Abstraction;
@@ -33,6 +34,8 @@ namespace CINEMATRIX.Data.Services
 
             return await query
                 .Include(s => s.Hall)
+                    .ThenInclude(h => h.Seats)
+                        .ThenInclude(s => s.SeatType)
                 .Include(s => s.Tickets)
                 .Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }
@@ -55,9 +58,41 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<Session> query = _dbContext.Sessions;
 
-            query = query.Where(x => searchCondition.StartDateTime <= x.DateTime && x.DateTime <= searchCondition.EndDateTime);
+            query = query.Where(x => searchCondition.StartDateTime.Date <= x.DateTime.Date && x.DateTime.Date <= searchCondition.EndDateTime.Date);
+
+            if (searchCondition.HallIds.Length > 0)
+            {
+                query = query.Where(x => searchCondition.HallIds.Contains(x.HallId));
+            }
+
+            //if (searchCondition.TimeSessions.Length > 0)
+            //{
+            //    query = FilterBySessionTime(query, searchCondition);
+            //}
 
             return query;
         }
+
+        //private IQueryable<Session> FilterBySessionTime(IQueryable<Session> query, SessionSearchCondition searchCondition)
+        //{
+        //var timeSessionEnums = searchCondition.TimeSessions.Select(x => (TimeSessionEnum)x);
+
+        //foreach (var timeSessionEnum in timeSessionEnums)
+        //{
+        //    switch (timeSessionEnum)
+        //    {
+        //        case TimeSessionEnum.Morning: { 
+        //                query = query.Where()
+        //                break; }
+        //        case TimeSessionEnum.Daytime: {
+        //                break; }
+        //        case TimeSessionEnum.Evening: { 
+        //                break; }
+        //        case TimeSessionEnum.Night: { 
+        //                break; }
+        //    }
+        //}
+        //}
+
     }
 }

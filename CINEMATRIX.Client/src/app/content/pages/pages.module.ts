@@ -14,6 +14,9 @@ import { MovieDetailPageComponent } from './movie-detail-page/movie-detail-page.
 import { StarRatingModule } from 'angular-star-rating';
 import { MovieDetailSliderComponent } from './movie-detail-page/movie-detail-slider/movie-detail-slider.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { SessionsPageComponent } from './sessions-page/sessions-page.component';
+import { GenresPipe } from 'src/app/shared/pipes/genres.pipe';
+import { RuntimePipe } from 'src/app/shared/pipes/runtime.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { AboutPageComponent } from './about-page/about-page.component';
     MoviesPageComponent,
     MovieDetailPageComponent,
     MovieDetailSliderComponent,
-    AboutPageComponent
+    AboutPageComponent,
+    SessionsPageComponent,
+    GenresPipe,
+    RuntimePipe
   ],
   imports: [
     CommonModule,
@@ -35,7 +41,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
     RouterModule,
     MaterialModule,
     StarRatingModule.forRoot()
-    ],
+  ],
   exports: [
     PagesComponent
   ],

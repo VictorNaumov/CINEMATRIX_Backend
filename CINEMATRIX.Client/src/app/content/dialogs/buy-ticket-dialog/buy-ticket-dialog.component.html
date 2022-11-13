@@ -1,0 +1,22 @@
+<div mat-dialog-header>
+  <h2 mat-dialog-title>{{session.movie.title}}. {{session.dateTime | date: "medium"}}</h2>
+  <p class="movie-overview" mat-dialog-title>{{session.movie.overview}}</p>
+</div>
+
+<div mat-dialog-content>
+
+  <div [ngSwitch]="session.hallId">
+    <ng-template ngSwitchCase="1"></ng-template>
+    <ng-template ngSwitchCase="2"></ng-template>
+    <ng-template ngSwitchCase="3">
+      <app-small-hall-seats [session]="session"></app-small-hall-seats>
+    </ng-template>
+    <ng-template ngSwitchCase="4"></ng-template>
+    <ng-template ngSwitchCase="5"></ng-template>
+  </div>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button cdkFocusInitial>Ok</button>
+</div>

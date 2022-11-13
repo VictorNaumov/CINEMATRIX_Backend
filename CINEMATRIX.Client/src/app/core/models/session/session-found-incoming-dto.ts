@@ -5,7 +5,11 @@ import { SessionDto } from "./session-dto";
 
 export interface SessionFoundIncomingDto extends SessionDto {
   id: number,
+  isPublic: boolean,
+  hallId: number,
   hall: HallFoundIncomingDto,
+  movieId: number,
   movie: MovieFoundIncomingDto,
+  dateTime: Date,
   tickets: TicketFoundIncomingDto[]
 }

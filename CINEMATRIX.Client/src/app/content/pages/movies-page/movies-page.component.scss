@@ -17,8 +17,8 @@
       justify-content: center;
       margin: 10px;
       width: 21%;
-
-      justify-content: space-between;
+      -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+      transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
 
       .overview {
         height: 150px;
@@ -31,6 +31,15 @@
         font-size: 18px;
         font-weight: bold;
       }
+    }
+
+    mat-card:hover {
+      transform: scale(1.05, 1.05);
+    }
+
+    /* Fade in the pseudo-element with the bigger shadow */
+    mat-card:hover::after {
+      opacity: 1;
     }
   }
 }

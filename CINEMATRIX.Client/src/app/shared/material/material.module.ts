@@ -18,6 +18,7 @@ import {
   MatInputModule,
   MatListModule,
   MatMenuModule,
+  MatNativeDateModule,
   MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
@@ -95,6 +96,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ]
 })
 export class MaterialModule {}

@@ -8,6 +8,7 @@ using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.Services;
 using MediatR;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -37,14 +38,21 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
             searchCondition.SortProperty = typeof(FoundSessionDTO).GetSortProperty(searchCondition.SortProperty);
 
             IReadOnlyCollection<Session> foundSessions = await _sessionService.FindAsync(searchCondition);
-            var mappedSession = _mapper.Map<IEnumerable<FoundSessionDTO>>(foundSessions);
+            var mappedSession = _mapper.Map<IEnumerable<FoundSessionDTO>>(foundSessions).ToList();
             var totalCount = await _sessionService.CountAsync(searchCondition);
 
-            foreach (var session in mappedSession)
+
+            for (var i = 0; i < 3; i++)
             {
-                var movie = await _movieService.GetByIdAsync(session.MovieId, cancellationToken);
-                session.Movie = _mapper.Map<FoundMovieDTO>(movie);
+                var movie = await _movieService.GetByIdAsync(mappedSession[i].MovieId, cancellationToken);
+                mappedSession[i].Movie = _mapper.Map<FoundMovieDTO>(movie);
             }
+
+            //foreach (var session in mappedSession)
+            //{
+            //    var movie = await _movieService.GetByIdAsync(session.MovieId, cancellationToken);
+            //    session.Movie = _mapper.Map<FoundMovieDTO>(movie);
+            //}
 
             return new PagedResponse<FoundSessionDTO>
             {
