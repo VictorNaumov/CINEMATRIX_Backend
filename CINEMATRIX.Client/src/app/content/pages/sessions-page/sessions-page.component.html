@@ -6,7 +6,7 @@
       <button class="buy-ticket-button" mat-raised-button (click)="openBuyTicketDialog(promoSession)"> Buy ticket
       </button>
     </div>
-    <img class="promo-poster" [src]="'https://image.tmdb.org/t/p/original/' + promoSession.movie.images[0].filePath"
+    <img class="promo-poster" [src]="'https://image.tmdb.org/t/p/original/' + promoSession.movie.backdropPath"
       style="width:100%">
   </div>
 
@@ -93,7 +93,7 @@
             <p class="budget"> Budget: {{ session.movie.budget == 0 ? "Unknown" : session.movie.budget }}$ </p>
           </mat-card-subtitle>
           <img class="film-poster" mat-card-image
-            [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2' + session.movie.images[0].filePath"
+            [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2' + session.movie.backdropPath"
             alt="Film poster" />
         </mat-card-title-group>
         <mat-card-content>
@@ -104,7 +104,7 @@
 
         <mat-card-actions>
           <button mat-button routerLink="/details/{{session.movie.id}}">More</button>
-          <button mat-button>Buy ticket</button>
+          <button mat-button (click)="openBuyTicketDialog(session)">Buy ticket</button>
         </mat-card-actions>
       </ng-container>
     </mat-card>
@@ -112,5 +112,5 @@
 </div>
 
 <ng-template #loading>
-  <mat-spinner></mat-spinner>
+  <mat-progress-bar mode="query"></mat-progress-bar>
 </ng-template>

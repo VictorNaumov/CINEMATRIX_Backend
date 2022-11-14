@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CINEMATRIX.Data.Domain.Models
 {
@@ -8,5 +9,6 @@ namespace CINEMATRIX.Data.Domain.Models
         public string SecondName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
+        public ICollection<Ticket> Tickets { get; set; }
     }
 }

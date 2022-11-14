@@ -1,17 +1,20 @@
-  :root {
-    --columns-count: 13;
-    /* кол-во столбцов */
-    --row-height: 20px;
-    /* высота строчки в столбце */
-    --rows-count: 10;
-    /* кол-во строчек */
+  .small-hall-seats-wrapper {
+    display: flex;
   }
 
   .hall-seats-wrapper {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
-    width: 70%;
+    width: 65%;
     justify-content: center;
+  }
+
+  .row-number {
+    font-size: 22px;
+    font-weight: 500;
+    height: 55px;
+    width: 30px;
   }
 
   .seat {
@@ -19,16 +22,20 @@
     height: 50px;
     border: 1px solid #000;
     margin: 3px;
-    background-color: white;
     text-align: center;
+    background-color: white;
+    border-radius: 10px 10px 30px 30px;
   }
 
   .seat-taken {
     background-color: yellow;
   }
 
-
   .seat-selected {
-    background-color: gray;
+    background-color: indigo;
+    color: white;
   }
 
+  .seat-romantic {
+    width: 100px;
+  }

@@ -19,6 +19,7 @@ namespace CINEMATRIX.Data.Services
         Task<PagedMoviesResponse> GetNowPlayingMoviesAsync(MovieSearchCondition searchCondition,
             CancellationToken cancellationToken = default);
         Task<PagedMoviesResponse> FindMoviesAsync(MovieSearchCondition searchCondition, CancellationToken cancellationToken = default);
+        Task<MovieByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken);
         Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken);
     }
 
@@ -61,9 +62,16 @@ namespace CINEMATRIX.Data.Services
             return apiResponse;
         }
 
-        public async Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
+        public async Task<MovieByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{id}?api_key={ApiKey}&append_to_response=images,videos,credits";
+
+            return await GetByUrlAsync<MovieByIdResponse>(url);
+        }
+
+        public async Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
+        {
+            var url = _baseUrl + $"movie/{id}?api_key={ApiKey}";
 
             return await GetByUrlAsync<MovieByIdResponse>(url);
         }

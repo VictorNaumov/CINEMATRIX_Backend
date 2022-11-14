@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CINEMATRIX.API.Contracts.Outgoing
 {
@@ -9,5 +10,6 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         public string SecondName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
+        public List<FoundTicketDTO> Tickets { get; set; }
     }
 }

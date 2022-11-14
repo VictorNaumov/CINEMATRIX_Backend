@@ -10,6 +10,8 @@ namespace CINEMATRIX.Data.Domain.Models
         public string Projector { get; set; }
         public string Screen { get; set; }
         public string ScreenResolution { get; set; }
+        public long CinemaId { get; set; }
+        public Cinema Cinema { get; set; }
         public ICollection<Seat> Seats { get; set; }
         public ICollection<Session> Sessions { get; set; }
     }

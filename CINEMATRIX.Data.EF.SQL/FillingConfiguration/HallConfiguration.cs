@@ -21,6 +21,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Projector = "Sony",
                     Screen = "8,7 x 3,9",
                     ScreenResolution = "4K",
+                    CinemaId = 1
                 },
                 new Hall
                 {
@@ -31,6 +32,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Projector = "Sony",
                     Screen = "8,7 х 3,9",
                     ScreenResolution = "4K",
+                    CinemaId = 1
                 },
                 new Hall
                 {
@@ -41,6 +43,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Projector = "Sony",
                     Screen = "8,7 х 3,9",
                     ScreenResolution = "4K",
+                    CinemaId = 1
                 },
                 new Hall
                 {
@@ -51,6 +54,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Projector = "Sony",
                     Screen = "13,3 x 5,7",
                     ScreenResolution = "4K",
+                    CinemaId = 1
                 },
                 new Hall
                 {
@@ -61,6 +65,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Projector = "Sony",
                     Screen = "13,3 x 5,7",
                     ScreenResolution = "4K",
+                    CinemaId = 1
                 }
             );
         }

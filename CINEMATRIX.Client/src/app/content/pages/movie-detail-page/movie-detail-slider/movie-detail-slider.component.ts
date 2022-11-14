@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Sanitizer } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Sanitizer } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { MovieFoundIncomingDto } from 'src/app/core/models/movie/movie-found-incoming-dto';
@@ -10,8 +10,8 @@ import { NotificationManager } from 'src/app/core/services/notification-manager'
   templateUrl: './movie-detail-slider.component.html',
   styleUrls: ['./movie-detail-slider.component.scss']
 })
-export class MovieDetailSliderComponent implements OnInit {
-  slideIndex = 1;
+export class MovieDetailSliderComponent implements OnInit, OnChanges {
+  slideIndex:number;
 
   mediaOfMovie: any[] = [];
 
@@ -29,6 +29,10 @@ export class MovieDetailSliderComponent implements OnInit {
     this.currentSlide(1);
   }
 
+  ngOnChanges(): void {
+    this.currentSlide(1);
+  }
+
   plusSlides(n: number) {
     this.showSlides(this.slideIndex += n);
   }
@@ -42,7 +46,7 @@ export class MovieDetailSliderComponent implements OnInit {
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
 
-    if(!slides.length) return;
+    if (!slides.length) return;
 
 
     if (n > slides.length) {

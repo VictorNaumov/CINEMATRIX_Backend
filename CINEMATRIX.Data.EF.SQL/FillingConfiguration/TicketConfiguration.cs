@@ -53,6 +53,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                                 Id = id++,
                                 SessionId = sessionId,
                                 SeatId = seatId + i,
+                                ProfileId = random.Next(1, 4)
                             }
                         );
                     }

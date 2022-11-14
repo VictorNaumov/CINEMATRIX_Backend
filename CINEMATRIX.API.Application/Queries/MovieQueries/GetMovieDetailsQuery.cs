@@ -30,7 +30,7 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
 
         public async Task<FoundMovieDTO> Handle(GetMovieDetailsQuery request, CancellationToken cancellationToken)
         {
-            var apiResponse = await _movieService.GetByIdAsync(request.Id, cancellationToken);
+            var apiResponse = await _movieService.GetByIdWithRelationsAsync(request.Id, cancellationToken);
 
             var movie = _mapper.Map<FoundMovieDTO>(apiResponse);
 

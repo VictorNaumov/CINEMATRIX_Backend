@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/account/auth-service';
+import { RoleEnum } from 'src/app/core/enums/enums';
 import { RegistrationDto as RegistrationDto } from 'src/app/core/models/auth/admin-registration-dto';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
 
@@ -43,7 +44,7 @@ export class SignUpPageComponent implements OnInit {
       userName: this.userName,
       password: this.password,
       email: this.email,
-      roleId: 3,
+      roleId: RoleEnum.User,
     };
 
 

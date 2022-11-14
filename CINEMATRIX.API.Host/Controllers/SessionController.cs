@@ -27,6 +27,7 @@ namespace CINEMATRIX.API.Host.Controllers
         [AllowAnonymous]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(PagedResponse<FoundSessionDTO>))]
         [SwaggerOperation(Summary = "Search sessions", OperationId = "SearchSessions")]
+        [ResponseCache(CacheProfileName = "Caching")]
         public async Task<IActionResult> SearchSessions([FromBody] SessionSearchCondition searchCondition, CancellationToken cancellationToken = default)
         {
             return await ExecuteQueryAsync(new SearchSessionQuery(searchCondition), cancellationToken: cancellationToken);
@@ -60,6 +61,7 @@ namespace CINEMATRIX.API.Host.Controllers
         [AllowAnonymous]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(SessionDTO))]
         [SwaggerOperation(Summary = "Get the details of a session", OperationId = "GetSession")]
+        [ResponseCache(CacheProfileName = "Caching")]
         public async Task<IActionResult> GetSession([FromRoute] long id, CancellationToken cancellationToken = default)
         {
             return await ExecuteQueryAsync(new GetSessionQuery(id), cancellationToken: cancellationToken);

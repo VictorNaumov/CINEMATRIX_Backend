@@ -1,7 +1,7 @@
 <div class="details-wrapper"  *ngIf="movie$ | async as movie; else loading">
 
   <div>
-    <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w300_and_h450_bestv2/' + movie.images[0].filePath"
+    <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.backdropPath"
       alt="Film poster" />
   </div>
 
@@ -14,7 +14,7 @@
 
     <div class="movie-cast">
       <img *ngFor="let cast of mainCasts" class="movie-cast-image" #tooltip="matTooltip" [matTooltip]="cast.name"
-        [matTooltipPosition]="'below'" [src]="'https://image.tmdb.org/t/p/w300_and_h300_bestv2/' + cast.profilePath"
+        [matTooltipPosition]="'below'" [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2/' + cast.profilePath"
         mat-ra alt="Film poster" />
     </div>
 

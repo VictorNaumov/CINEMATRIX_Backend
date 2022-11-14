@@ -1,5 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { MatDialogRef, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
+import { AuthService } from 'src/app/core/account/auth-service';
+import { SeatFoundIncomingDto } from 'src/app/core/models/seat/seat-found-incoming-dto';
 import { SessionFoundIncomingDto } from 'src/app/core/models/session/session-found-incoming-dto';
 
 export interface BuyTicketDialogData {
@@ -13,14 +15,16 @@ export interface BuyTicketDialogData {
 })
 export class BuyTicketDialog implements OnInit {
   session: SessionFoundIncomingDto;
+  selectedSeats: SeatFoundIncomingDto[] = [];
+  sumPrice: number = 0;
 
   constructor(
+    @Inject(MAT_DIALOG_DATA) public data: BuyTicketDialogData,
     public dialogRef: MatDialogRef<BuyTicketDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: BuyTicketDialogData
+    public snackBar: MatSnackBar,
+    public authService: AuthService
   ) {
     this.session = data.session;
-    console.log((this.session));
-
   }
 
   ngOnInit(): void {
@@ -28,5 +32,25 @@ export class BuyTicketDialog implements OnInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+
+  onOkClick(): void {
+    if (!this.authService.isAuthenticated()) {
+      this.snackBar.open("You need authorize for book seat.", "Close");
+      return;
+    }
+
+    this.dialogRef.close(this.selectedSeats);
+  }
+
+
+  setSelectedSeats(selectedSeats: SeatFoundIncomingDto[]): void {
+    this.selectedSeats = selectedSeats;
+    this.sumPrice = this.selectedSeats.length
+      ? this.selectedSeats
+        .map(x => x.seatType.price)
+        .reduce((sum, current) => sum + current)
+      : 0;
   }
 }

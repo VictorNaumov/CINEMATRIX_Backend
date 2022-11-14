@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { SeatFoundIncomingDto } from 'src/app/core/models/seat/seat-found-incoming-dto';
 import { SessionFoundIncomingDto } from 'src/app/core/models/session/session-found-incoming-dto';
 import { TicketFoundIncomingDto } from 'src/app/core/models/ticket/ticket-found-incoming-dto';
 
@@ -18,25 +19,15 @@ export interface SeatTableData {
   styleUrls: ['./small-hall-seats.component.scss']
 })
 export class SmallHallSeatsComponent implements OnInit {
-
   @Input() session: SessionFoundIncomingDto;
-  tickets: TicketFoundIncomingDto[];
-
   seats: SeatTableData[] = [];
 
-  displayedColumns: number[] = [];
+  @Output() selectedSeatsEvent = new EventEmitter<SeatFoundIncomingDto[]>();
 
-  constructor() {
-  }
+  constructor() { }
 
   ngOnInit(): void {
-    this.tickets = this.session.tickets;
-
-    this.displayedColumns = [...new Set(this.seats.map(seat => seat.number))];
-
-   this.initSeatTableData();
-
-   console.log('this.seats', this.seats);
+    this.initSeatTableData();
   }
 
   initSeatTableData() {
@@ -51,6 +42,16 @@ export class SmallHallSeatsComponent implements OnInit {
         "isSelected": false
       })
     });
+  }
+
+  toggleSeats(seat: SeatTableData) {
+    if (seat.isTaken) return;
+    seat.isSelected = !seat.isSelected;
+
+    let selectedSeatIds = this.seats.filter(c => c.isSelected).map(x => x.id);
+    let selectedSeats = this.session.hall.seats.filter(s => selectedSeatIds.some(id => id == s.id));
+
+    this.selectedSeatsEvent.emit(selectedSeats);
   }
 }
 

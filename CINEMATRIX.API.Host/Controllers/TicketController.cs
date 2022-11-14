@@ -16,7 +16,7 @@ namespace CINEMATRIX.API.Host.Controllers
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/ticket")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class TicketController : MediatingControllerBase
     {
         public TicketController(IMediator mediator) : base(mediator) { }
@@ -26,7 +26,7 @@ namespace CINEMATRIX.API.Host.Controllers
         [SwaggerOperation(Summary = "Add a new ticket", OperationId = "AddTicket")]
         public async Task<IActionResult> AddTicket([FromBody] TicketDTO ticket, CancellationToken cancellationToken = default)
         {
-            return await ExecuteCommandAsync(new AddTicketCommand(ticket), cancellationToken: cancellationToken);
+            return await ExecuteCommandAsync(new AddTicketCommand(ticket, User.Identity.Name), cancellationToken: cancellationToken);
         }
 
         [HttpDelete("{id}")]

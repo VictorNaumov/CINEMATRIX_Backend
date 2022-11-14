@@ -17,6 +17,8 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         public double Popularity { get; set; }
         [JsonProperty("poster_path")]
         public string PosterPath { get; set; }
+        [JsonProperty("backdrop_path")]
+        public string BackdropPath { get; set; }
         [JsonProperty("release_date")]
         public string ReleaseDate { get; set; }
         public int Runtime { get; set; }

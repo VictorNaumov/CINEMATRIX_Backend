@@ -37,7 +37,7 @@ export class MovieDetailPageComponent implements OnInit {
       this.mainCasts = movie.credits
         .filter(c => c.profilePath && c.order)
         .sort((a: MovieCreditsDto, b: MovieCreditsDto) => +a.order - +b.order)
-        .slice(0, 12);
+        .slice(0, 14);
     });
   }
 }

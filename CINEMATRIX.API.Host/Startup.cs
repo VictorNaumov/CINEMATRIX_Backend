@@ -39,6 +39,9 @@ namespace CINEMATRIX
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
             services.ConfigureAutoMapper();
+            services.AddMemoryCache();
+            services.ConfigureCacheProfiles();
+            services.AddResponseCompression(options => options.EnableForHttps = true);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -59,6 +62,8 @@ namespace CINEMATRIX
 
             app.UseHttpsRedirection();
 
+            app.UseResponseCompression();
+
             app.UseStaticFiles();
             app.UseCors("CorsPolicy");
 
@@ -71,6 +76,7 @@ namespace CINEMATRIX
 
             app.UseAuthentication();
             app.UseAuthorization();
+
 
             app.UseEndpoints(endpoints =>
             {

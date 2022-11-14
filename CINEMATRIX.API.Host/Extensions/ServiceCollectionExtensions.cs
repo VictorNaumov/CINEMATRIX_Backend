@@ -1,5 +1,6 @@
 ﻿using CINEMATRIX.API.Host.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
@@ -113,5 +114,22 @@ namespace CINEMATRIX.API.Host.Extensions
 
         public static void ConfigureAutoMapper(this IServiceCollection services) =>
            services.AddAutoMapper(typeof(Startup));
+
+        public static void ConfigureCacheProfiles(this IServiceCollection services) =>
+            services.AddControllersWithViews(options =>
+            {
+                options.CacheProfiles.Add("Caching",
+                    new CacheProfile()
+                    {
+                        Location = ResponseCacheLocation.Client,
+                        Duration = 600
+                    });
+                options.CacheProfiles.Add("NoCaching",
+                    new CacheProfile()
+                    {
+                        Location = ResponseCacheLocation.None,
+                        NoStore = true
+                    });
+            });
     }
 }

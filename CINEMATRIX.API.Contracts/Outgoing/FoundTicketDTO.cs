@@ -5,5 +5,7 @@
         public long Id { get; set; }
         public long SessionId { get; set; }
         public long SeatId { get; set; }
+        public long ProfileId { get; set; }
+        public FoundProfileDTO Profile { get; set; }
     }
 }
