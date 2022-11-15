@@ -9,6 +9,7 @@ namespace CINEMATRIX.Data.Domain.Models
         public string SecondName { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string PhoneNumber { get; set; }
+        public string ImageUrl { get; set; }
         public ICollection<Ticket> Tickets { get; set; }
     }
 }

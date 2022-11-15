@@ -4,10 +4,10 @@ import { Observable, Subject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { Router } from "@angular/router";
 import { connectionString } from "src/app/shared/constants/connection.constants";
-import { getUrl } from "src/app/shared/functions/getUrl";
-import { AdminValidationDto } from "../models/auth/admin-validation-dto";
-import { RegistrationDto } from "../models/auth/admin-registration-dto";
+import { AdminValidationDto } from "../models/auth/user-validation-dto";
+import { RegistrationDto } from "../models/auth/user-registration-dto";
 import { ValidationResponseDto } from "../models/auth/validation-response-dto";
+import { UserFoundIncomingDto } from "../models/auth/user-found-incoming-dto";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -27,6 +27,7 @@ export class AuthService {
     }
     return localStorage.getItem('token');
   }
+
   public login(user: AdminValidationDto): Observable<any> {
     return this.http.post<ValidationResponseDto>(`${this.pathBase}login`, user)
       .pipe(
@@ -34,6 +35,10 @@ export class AuthService {
         catchError(this.handleError.bind(this)
         )
       );
+  }
+
+  public whoami(): Observable<any> {
+    return this.http.get<UserFoundIncomingDto>(`${this.pathBase}whoami`)
   }
 
   public signup(user: RegistrationDto): Observable<any> {
@@ -55,8 +60,6 @@ export class AuthService {
   }
 
   private setTokenAndRole(data: ValidationResponseDto) {
-    debugger
-
     if (data) {
       const expiresDate = new Date(new Date().getTime() + 60 * 60 * 1000);
       localStorage.setItem('token', data.token);

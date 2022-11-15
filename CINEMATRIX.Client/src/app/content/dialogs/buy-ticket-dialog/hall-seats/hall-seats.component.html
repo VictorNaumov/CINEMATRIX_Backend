@@ -1,0 +1,35 @@
+<div class="wrapper">
+
+  <mat-grid-list class="hall-seats-wrapper" [cols]="columnsCount" rowHeight="1:1">
+    <img class="screen" src="https://starcinema.by/media/img/halls/screen.svg" />
+
+    <mat-grid-tile *ngFor="let seat of seats" [colspan]="seat.seatTypeName=='Romantic' ? 2 : 1">
+      <button class="seat" [ngClass]="{
+        'seat-taken': seat.isTaken,
+        'seat-selected': seat.isSelected
+      }" #tooltip="matTooltip" [matTooltip]="seat.seatTypeName + ', ' + seat.seatTypePrice + '$'"
+        [matTooltipPosition]="'above'" (click)="toggleSeats(seat)">
+        {{seat.row}} - {{seat.number}}
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div class="examples">
+
+    <mat-list>
+      <mat-list-item>
+        <button style="width: 50px; height: 50px;" class="seat "></button>
+        <span>Free</span>
+      </mat-list-item>
+      <mat-list-item>
+        <button style="width: 50px; height: 50px;" class="seat seat-taken"></button>
+        <span>Taken</span>
+      </mat-list-item>
+      <mat-list-item>
+        <button style="width: 50px; height: 50px;" class="seat seat-selected"></button>
+        <span>Selected</span>
+      </mat-list-item>
+    </mat-list>
+  </div>
+
+</div>

@@ -19,7 +19,7 @@ namespace CINEMATRIX.Data.Services
     {
         Task<bool> ExistAsync(UserDTO userDTO);
         Task<User> LoginAsync(LoginDTO loginDTO);
-        Task<User> GetByUsername(string username);
+        Task<User> GetByUserNameAsync(string userName);
         string CreateToken(User user, string role);
     }
 
@@ -54,9 +54,11 @@ namespace CINEMATRIX.Data.Services
             return user;
         }
 
-        public async Task<User> GetByUsername(string username)
+        public async Task<User> GetByUserNameAsync(string userName)
         {
-            return await _dbContext.Users.FirstOrDefaultAsync(entity => entity.UserName == username);
+            return await _dbContext.Users
+                .Include(x => x.Profile)
+                .FirstOrDefaultAsync(entity => entity.UserName == userName);
         }
 
         public string CreateToken(User user, string role)

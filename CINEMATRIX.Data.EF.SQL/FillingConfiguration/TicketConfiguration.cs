@@ -20,20 +20,20 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
 
             Dictionary<HallEnum, (int, int)> hallSeatRanges = new Dictionary<HallEnum, (int, int)>()
             {
-                { HallEnum.LUX, (1, 29) },
-                { HallEnum.SWEETBOX, (30, 60) },
-                { HallEnum.SMALLHALL, (61, 144) },
-                { HallEnum.BIGHALL, (145, 306) },
-                { HallEnum.ATMOS, (307, 480) }
+                { HallEnum.LUX, (1, 40) },
+                { HallEnum.SWEETBOX, (41, 70) },
+                { HallEnum.SMALLHALL, (71, 148) },
+                { HallEnum.BIGHALL, (149, 329) },
+                { HallEnum.ATMOS, (330, 472) }
             };
 
-            var days = 28;
+            var days = 14;
             var firstSessionHour = 8;
             var lastSessionHour = 22;
             var countOfSessions = days * ((lastSessionHour - firstSessionHour) / 2);
             var countOfSeats = hallSeatRanges.LastOrDefault().Value.Item2;
 
-            while (tickets.Count < 300)
+            while (tickets.Count < 600)
             {
                 var sessionId = random.Next(1, countOfSessions + 1);
                 var hallId = sessionId > 5 ? sessionId % 5 : sessionId;
@@ -66,7 +66,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
         int GetCountTogether()
         {
             //max 101 because Random.Next return values included MinValue
-            //but not MaxValue (1% - 100%)
+            //but not MaxValue(1 % -100 %)
             int value = new Random().Next(1, 101);
 
             if (1 <= value && value <= 15) return 1;

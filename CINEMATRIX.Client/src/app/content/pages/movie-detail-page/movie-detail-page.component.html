@@ -1,4 +1,4 @@
-<div class="details-wrapper"  *ngIf="movie$ | async as movie; else loading">
+<div class="details-wrapper" *ngIf="movie$ | async as movie; else loading">
 
   <div>
     <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.backdropPath"
@@ -25,9 +25,8 @@
 
     <p class="subtitle"> VIDEO & PICTURE</p>
     <div class="movie-media">
+      <app-movie-detail-slider [movie]="movie"></app-movie-detail-slider>
     </div>
-
-    <app-movie-detail-slider [movie]="movie"></app-movie-detail-slider>
   </div>
 </div>
 

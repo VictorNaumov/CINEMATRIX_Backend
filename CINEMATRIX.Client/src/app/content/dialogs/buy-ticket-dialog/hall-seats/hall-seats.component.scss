@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+
+  .hall-seats-wrapper {
+    width: 70%;
+
+    .screen {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+
+  .seat {
+    padding: 3px;
+    width: 90%;
+    height: 90%;
+    border: 1px solid #000;
+    margin: 3px;
+    text-align: center;
+    font-size: smaller;
+    border-radius: 10px 10px 20px 20px;
+  }
+
+  .seat-taken {
+    background-color: yellow;
+  }
+
+  .seat-selected {
+    background-color: indigo !important;
+    color: white;
+  }
+
+  mat-list {
+    margin-top: 95px;
+
+    mat-list-item {
+      margin-top: 10px;
+    }
+  }
+}

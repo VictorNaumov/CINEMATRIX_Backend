@@ -4,12 +4,12 @@
     <!-- Full-width images with number and caption text -->
     <div class="mySlides fade" *ngFor="let media of mediaOfMovie; index as i">
 
-      <ng-container *ngIf="media.filePath; else elseTemplate">
+      <ng-container *ngIf="media.filePath; else video">
         <div class="numbertext">{{slideIndex}} / {{mediaOfMovie.length}}</div>
         <img [src]="'https://image.tmdb.org/t/p/original/' + media.filePath" style="width:100%">
         <div class="text">{{movie.title}}</div>
       </ng-container>
-      <ng-template #elseTemplate>
+      <ng-template #video>
         <div class="video-container">
           <iframe [src]="videoURL(i)" frameborder="0" allowfullscreen></iframe>
         </div>

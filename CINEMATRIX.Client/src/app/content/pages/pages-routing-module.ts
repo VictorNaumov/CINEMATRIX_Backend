@@ -10,6 +10,7 @@ import { MoviesPageComponent } from "./movies-page/movies-page.component";
 import { MovieDetailPageComponent } from "./movie-detail-page/movie-detail-page.component";
 import { AboutPageComponent } from "./about-page/about-page.component";
 import { SessionsPageComponent } from "./sessions-page/sessions-page.component";
+import { ProfilePageComponent } from "./profile-page/profile-page.component";
 
 const routes: Routes = [
   {
@@ -22,6 +23,7 @@ const routes: Routes = [
       { path: "movies", component: MoviesPageComponent },
       { path: "about", component: AboutPageComponent },
       { path: "sessions", component: SessionsPageComponent },
+      { path: "profile", component: ProfilePageComponent },
       { path: "details/:movieId", component: MovieDetailPageComponent },
     ]
   },

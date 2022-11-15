@@ -13,23 +13,34 @@
   <h1 class="schedule-title">SCHEDULE OF SESSIONS</h1>
 
   <div class="filters-wrapper">
-    <div class="filter-date">
-      <mat-button-toggle-group>
-        <mat-button-toggle class="date-toggle" (click)="setSelectedDate(null)">All</mat-button-toggle>
-        <mat-button-toggle *ngFor="let date of weekDates" (click)="setSelectedDate(date)">
-          <div class="date-toggle">
-            <p class="date-toggle-day">{{date | date:'d' }}</p>
-            <p class="date-toggle-">{{date | date:'LLLL, EEEE' }}</p>
-          </div>
-        </mat-button-toggle>
-      </mat-button-toggle-group>
 
-      <mat-form-field>
-        <mat-label>Choose a date</mat-label>
-        <input (ngModel)="selectedDate" (change)="setSelectedDate(selectedDate)" matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+
+
+
+
+    <div class="filter-date">
+
+
+      <mat-grid-list [cols]="7" rowHeight="2:1">
+        <mat-grid-tile *ngFor="let date of weekDates">
+          <button mat-button [ngClass]="{'selected-date': date == selectedDate}" (click)="setSelectedDate(date)">
+            <div class="date-toggle">
+              <p class="date-toggle-day">{{date | date:'d' }}</p>
+              <p class="date-toggle-">{{date | date:'LLLL, EEEE' }}</p>
+            </div>
+          </button>
+        </mat-grid-tile>
+        <!-- <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Choose a date</mat-label>
+            <input (ngModel)="selectedDate" (change)="setSelectedDate(selectedDate)" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </mat-grid-tile> -->
+      </mat-grid-list>
+
+
     </div>
 
     <mat-accordion>
@@ -93,8 +104,7 @@
             <p class="budget"> Budget: {{ session.movie.budget == 0 ? "Unknown" : session.movie.budget }}$ </p>
           </mat-card-subtitle>
           <img class="film-poster" mat-card-image
-            [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2' + session.movie.backdropPath"
-            alt="Film poster" />
+            [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2' + session.movie.backdropPath" alt="Film poster" />
         </mat-card-title-group>
         <mat-card-content>
           <div class="overview">

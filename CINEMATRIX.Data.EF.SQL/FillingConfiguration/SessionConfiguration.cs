@@ -21,7 +21,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
 
             var random = new Random();
 
-            for (int day = 1; day <= 28; day++)
+            for (int day = -1; day <= 14; day++)
             {
                 for (int hour = 8; hour <= 22; hour += 2)
                 {

@@ -14,9 +14,10 @@ import { MovieDetailPageComponent } from './movie-detail-page/movie-detail-page.
 import { StarRatingModule } from 'angular-star-rating';
 import { MovieDetailSliderComponent } from './movie-detail-page/movie-detail-slider/movie-detail-slider.component';
 import { AboutPageComponent } from './about-page/about-page.component';
-import { SessionsPageComponent } from './sessions-page/sessions-page.component';
 import { GenresPipe } from 'src/app/shared/pipes/genres.pipe';
 import { RuntimePipe } from 'src/app/shared/pipes/runtime.pipe';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { SessionsPageComponent } from './sessions-page/sessions-page.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { RuntimePipe } from 'src/app/shared/pipes/runtime.pipe';
     MovieDetailSliderComponent,
     AboutPageComponent,
     SessionsPageComponent,
+    ProfilePageComponent,
     GenresPipe,
     RuntimePipe
   ],

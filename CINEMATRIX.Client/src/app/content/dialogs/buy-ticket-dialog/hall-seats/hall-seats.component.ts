@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { SeatFoundIncomingDto } from 'src/app/core/models/seat/seat-found-incoming-dto';
 import { SessionFoundIncomingDto } from 'src/app/core/models/session/session-found-incoming-dto';
-import { TicketFoundIncomingDto } from 'src/app/core/models/ticket/ticket-found-incoming-dto';
 
 export interface SeatTableData {
   id: number;
@@ -14,13 +13,15 @@ export interface SeatTableData {
 }
 
 @Component({
-  selector: 'app-small-hall-seats',
-  templateUrl: './small-hall-seats.component.html',
-  styleUrls: ['./small-hall-seats.component.scss']
+  selector: 'app-hall-seats',
+  templateUrl: './hall-seats.component.html',
+  styleUrls: ['./hall-seats.component.scss']
 })
-export class SmallHallSeatsComponent implements OnInit {
+export class HallSeatsComponent implements OnInit {
   @Input() session: SessionFoundIncomingDto;
   seats: SeatTableData[] = [];
+
+  public columnsCount: number;
 
   @Output() selectedSeatsEvent = new EventEmitter<SeatFoundIncomingDto[]>();
 
@@ -42,6 +43,11 @@ export class SmallHallSeatsComponent implements OnInit {
         "isSelected": false
       })
     });
+
+    this.columnsCount = Math.max(...this.seats.map(s => s.number))
+
+    console.log('this.columnsCount', this.columnsCount);
+
   }
 
   toggleSeats(seat: SeatTableData) {

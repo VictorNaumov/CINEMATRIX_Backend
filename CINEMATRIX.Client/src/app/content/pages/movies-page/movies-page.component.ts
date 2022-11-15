@@ -49,6 +49,8 @@ export class MoviesPageComponent implements OnInit {
     }
 
     this.movies$ = this.movieService.GetNowPlayingMovies(movieParam);
+
+    this.movies$.subscribe(x => console.log(x))
     this.genres$ = this.genreService.SearchGenre(genreParam);
   }
 

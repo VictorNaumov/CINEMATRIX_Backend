@@ -17,7 +17,7 @@ export interface MovieFoundIncomingDto {
   runtime: number,
   status: string,
   tagline: string,
-  backdropPath: string
+  backdropPath: string,
   video: boolean,
   voteAverage: number,
   voteCount: number,

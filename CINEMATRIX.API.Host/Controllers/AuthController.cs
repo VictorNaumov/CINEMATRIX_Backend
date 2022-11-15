@@ -30,6 +30,15 @@ namespace CINEMATRIX.API.Host.Controllers
             return await ExecuteQueryAsync(new LoginUserQuery(user), cancellationToken: cancellationToken);
         }
 
+        [HttpGet("whoami")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundUserDTO))]
+        [SwaggerOperation(Summary = "GetCurrentUser", OperationId = "GetCurrentUser")]
+        public async Task<IActionResult> GetCurrentUser(CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetCurrentUserQuery(User.Identity.Name), cancellationToken: cancellationToken);
+        }
+
         [HttpPost("register")]
         [AllowAnonymous]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(bool))]

@@ -69,7 +69,7 @@ export class SessionsPageComponent implements OnInit {
     }
 
     this.sessions$ = this.sessionService.SearchSession(sessionsParam);
-    this.sessions$.subscribe(x => this.promoSession = x.items[getRandomNumber(1, 20)]);
+    this.sessions$.subscribe(x => this.promoSession = x.items[2]);
 
     var hallsParam: HallSearchOutgoingDto = {
       "pageSize": 20,
@@ -106,6 +106,8 @@ export class SessionsPageComponent implements OnInit {
   }
 
   setSelectedDate(date: Date) {
+    if (this.selectedDate == date) return;
+
     this.selectedDate = date;
     this.updateSessions();
   }
@@ -133,6 +135,7 @@ export class SessionsPageComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe((selectedSeats: SeatFoundIncomingDto[]) => {
+      if (!selectedSeats || !selectedSeats.length) return;
 
       forkJoin(selectedSeats.map(seat => {
         let ticket: TicketDto = {

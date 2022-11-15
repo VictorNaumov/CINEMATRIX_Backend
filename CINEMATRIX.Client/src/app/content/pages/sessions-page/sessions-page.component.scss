@@ -62,6 +62,10 @@
           font-weight: lighter;
         }
       }
+
+      .selected-date {
+        box-shadow: 1px 1px 5px -1px black ;
+      }
     }
 
     .filter-controls {

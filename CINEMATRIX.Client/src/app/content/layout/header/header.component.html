@@ -5,7 +5,7 @@
     <button mat-button routerLink="/movies"><mat-icon> local_movies</mat-icon></button>
   </span>
   <div fxLayout="row" fxShow="false" fxShow.gt-sm>
-    <button mat-button routerLink="/profile">
+    <button mat-button routerLink="/profile" *ngIf="authService.isAuthenticated()">
       <mat-icon>account_circle</mat-icon>
       Profile
     </button>

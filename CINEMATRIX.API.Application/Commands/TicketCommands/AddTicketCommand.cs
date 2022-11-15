@@ -35,7 +35,7 @@ namespace CINEMATRIX.API.Application.Commands.TicketCommands
 
         public async Task<long> Handle(AddTicketCommand request, CancellationToken cancellationToken)
         {
-            var user = await _userService.GetByUsername(request.UserName);
+            var user = await _userService.GetByUserNameAsync(request.UserName);
             if (user == null)
             {
                 throw new System.Exception("User wasn't finded");

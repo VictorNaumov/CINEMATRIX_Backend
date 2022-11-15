@@ -17,12 +17,11 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
 
             var seatsForLuxHall = new List<Seat>();
 
-            var countRowsLuxHall = 4;
+            var countRowsLuxHall = 5;
             for (int r = 0; r < countRowsLuxHall; r++)
             {
-                var isLastRow = r == countRowsLuxHall - 1;
+                var countNumbersLuxHall = 8;
 
-                var countNumbersLuxHall = isLastRow ? 8 : 7;
                 for (int n = 0; n < countNumbersLuxHall; n++)
                 {
                     seatsForLuxHall.Add(
@@ -47,9 +46,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             var countRowsSweetBoxHall = 6;
             for (int r = 0; r < countRowsSweetBoxHall; r++)
             {
-                var isLastRow = r == countRowsSweetBoxHall - 1;
-
-                var countNumbersSweetBoxHall = isLastRow ? 6 : 5;
+                var countNumbersSweetBoxHall = 5;
                 for (int n = 0; n < countNumbersSweetBoxHall; n++)
                 {
                     seatsForSweetBoxHall.Add(
@@ -75,8 +72,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             for (int r = 0; r < countRowsSmallHall; r++)
             {
                 var isLastRow = r == countRowsSmallHall - 1;
-
-                var countNumbersSmallHall = isLastRow ? 6 : 13;
+                var countNumbersSmallHall = isLastRow ? 6 : 12;
                 var seatType = isLastRow ? SeatTypeEnum.Romantic : SeatTypeEnum.Standart;
                 for (int n = 0; n < countNumbersSmallHall; n++)
                 {
@@ -102,18 +98,14 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             var countRowsBigHall = 11;
             for (int r = 0; r < countRowsBigHall; r++)
             {
-                var isTwoPenultimate = r == countRowsBigHall - 2 || r == countRowsBigHall - 3;
-                var isLastRow = r == countRowsBigHall - 1;
+                var isTwoLastRow = r == countRowsBigHall - 1 || r == countRowsBigHall - 2;
 
-                var countNumbersBigHall = isLastRow ? 10 :
-                                          isTwoPenultimate ? 16 : 15;
+                var countNumbersBigHall = isTwoLastRow ? 9 : 18;
 
-                var seatType = isLastRow ? SeatTypeEnum.Romantic : SeatTypeEnum.Standart;
+                var seatType = isTwoLastRow ? SeatTypeEnum.Romantic : SeatTypeEnum.Standart;
 
                 for (int n = 0; n < countNumbersBigHall; n++)
                 {
-                    seatType = isTwoPenultimate && n == 0 ? SeatTypeEnum.Romantic : seatType;
-
                     seatsForBigHall.Add(
                         new Seat()
                         {
@@ -133,16 +125,25 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
 
             var seatsForAtmosHall = new List<Seat>();
 
-            var countRowsAtmos = 11;
+            var countRowsAtmos = 10;
             for (int r = 0; r < countRowsAtmos; r++)
             {
-                var isTwoPenultimate = r == countRowsAtmos - 2 || r == countRowsAtmos - 3;
-                var isLastRow = r == countRowsAtmos - 1;
+                var isTwoPenultimate = r == countRowsAtmos - 3 || r == countRowsAtmos - 4;
+                var isLastRow = r == countRowsAtmos - 1 || r == countRowsAtmos - 2;
 
-                var countNumbersAtmos = isLastRow ? 10 :
-                                        isTwoPenultimate ? 18 : 16;
+                var countNumbersAtmos = isLastRow ? 8 : 16;
 
-                var seatType = isLastRow ? SeatTypeEnum.Romantic : SeatTypeEnum.Standart;
+                var seatType = SeatTypeEnum.Standart;
+
+                if (isLastRow)
+                {
+                    seatType = SeatTypeEnum.Romantic;
+                }
+
+                if (isTwoPenultimate)
+                {
+                    seatType = SeatTypeEnum.Lux;
+                }
 
                 for (int n = 0; n < countNumbersAtmos; n++)
                 {

@@ -97,7 +97,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     MatTooltipModule,
     MatTreeModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatGridListModule
   ]
 })
 export class MaterialModule {}

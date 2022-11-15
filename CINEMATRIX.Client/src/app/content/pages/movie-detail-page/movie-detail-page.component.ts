@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { MovieCreditsDto } from 'src/app/core/models/extends/movie-credits-dto';
@@ -16,6 +16,19 @@ export class MovieDetailPageComponent implements OnInit {
   public movie$: Observable<MovieFoundIncomingDto> | undefined;
   public movie: MovieFoundIncomingDto;
   public mainCasts: MovieCreditsDto[];
+
+
+  @ViewChildren(MovieDetailSliderComponent)
+  public children: QueryList<MovieDetailSliderComponent>
+
+  private childSlider: MovieDetailSliderComponent
+
+  public ngAfterViewInit(): void {
+    this.children.changes.subscribe((comps: QueryList<MovieDetailSliderComponent>) => {
+      this.childSlider = comps.first;
+      this.childSlider.currentSlide(1);
+    });
+  }
 
   movieId: number | undefined;
 
@@ -38,6 +51,8 @@ export class MovieDetailPageComponent implements OnInit {
         .filter(c => c.profilePath && c.order)
         .sort((a: MovieCreditsDto, b: MovieCreditsDto) => +a.order - +b.order)
         .slice(0, 14);
+
+
     });
   }
 }

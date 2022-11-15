@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/account/auth-service';
-import { AdminValidationDto } from 'src/app/core/models/auth/admin-validation-dto';
+import { AdminValidationDto } from 'src/app/core/models/auth/user-validation-dto';
 
 @Component({
   templateUrl: './sign-in-page.component.html',

@@ -4,16 +4,7 @@
 </div>
 
 <div mat-dialog-content>
-
-  <div [ngSwitch]="session.hallId">
-    <ng-template ngSwitchCase="1"></ng-template>
-    <ng-template ngSwitchCase="2"></ng-template>
-    <ng-template ngSwitchCase="3">
-      <app-small-hall-seats [session]="session" (selectedSeatsEvent)="setSelectedSeats($event)"></app-small-hall-seats>
-    </ng-template>
-    <ng-template ngSwitchCase="4"></ng-template>
-    <ng-template ngSwitchCase="5"></ng-template>
-  </div>
+  <app-hall-seats [session]="session" (selectedSeatsEvent)="setSelectedSeats($event)"></app-hall-seats>
   <p class="ticket-price"> Ticket price: {{sumPrice}}$ </p>
   <p class="user-message"> Before the session, you need to contact the ticket office to pay for your seats.
     You can view the occupied seats in your profile. Thank you! </p>

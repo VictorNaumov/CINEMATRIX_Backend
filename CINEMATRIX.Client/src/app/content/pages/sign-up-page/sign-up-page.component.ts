@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { AuthService } from 'src/app/core/account/auth-service';
 import { RoleEnum } from 'src/app/core/enums/enums';
-import { RegistrationDto as RegistrationDto } from 'src/app/core/models/auth/admin-registration-dto';
+import { RegistrationDto as RegistrationDto } from 'src/app/core/models/auth/user-registration-dto';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
 
 @Component({
