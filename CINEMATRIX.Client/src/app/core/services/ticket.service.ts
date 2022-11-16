@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { connectionString } from "src/app/shared/constants/connection.constants";
 import { TicketDto } from "../models/ticket/ticket-dto";
+import { TicketFoundIncomingDto } from "../models/ticket/ticket-found-incoming-dto";
 
 @Injectable({ providedIn: 'root' })
 export class TicketService {
@@ -26,7 +27,11 @@ export class TicketService {
         return this.http.get<TicketDto>(`${this.pathBase}/${ticketId}`);
     }
 
-    public GetBySessionId(sessionId: number): Observable<TicketDto> {
-        return this.http.get<TicketDto>(`${this.pathBase}/getBySessionId/${sessionId}`);
+    public GetBySessionId(sessionId: number): Observable<TicketFoundIncomingDto[]> {
+        return this.http.get<TicketFoundIncomingDto[]>(`${this.pathBase}/getBySessionId/${sessionId}`);
+    }
+
+    public GetByProfileId(profileId: number): Observable<TicketFoundIncomingDto[]> {
+        return this.http.get<TicketFoundIncomingDto[]>(`${this.pathBase}/getByProfileId/${profileId}`);
     }
 }

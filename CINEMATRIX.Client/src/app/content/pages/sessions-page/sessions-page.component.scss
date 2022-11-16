@@ -6,7 +6,7 @@
 
     .movie-info {
       position: absolute;
-      height: 750px;
+      height: 800px;
       width: 100%;
       color: white;
 
@@ -46,6 +46,10 @@
 
   .filters-wrapper {
 
+    mat-panel-title {
+      text-align: center;
+    }
+
     .filter-date {
 
       .date-toggle {
@@ -56,75 +60,74 @@
           font-size: 22;
           font-weight: bold;
         }
-
-        .date-toggle-month {
-          font-size: 18;
-          font-weight: lighter;
-        }
       }
 
       .selected-date {
-        box-shadow: 1px 1px 5px -1px black ;
+        box-shadow: 1px 1px 5px -1px black;
       }
     }
 
-    .filter-controls {
-      display: flex;
+    .time-session {
+      display: inline-block;
+    }
 
-      .time-session {
-        display: inline-block;
-      }
+    .cost-session {
+      display: inline-block;
+    }
 
-      .cost-session {
-        display: inline-block;
-      }
+    .hall-session {
+      display: inline-block;
+    }
 
-      .hall-session {
-        display: inline-block;
-      }
+    .send-filter-button {
+      box-shadow: 1px 1px 5px -1px black;
     }
   }
 
   .list-wrapper {
-    mat-card {
-      display: inline-block;
-      align-items: center;
-      justify-content: center;
-      margin: 40px;
-      width: 40%;
-      -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
-      transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+    mat-grid-tile {
 
-      .film-poster {
-        margin: 5px;
-        width: 60%;
+      mat-card {
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        margin: 0px 20px;
+        width: 100%;
+        -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+        transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+
+        .film-poster {
+          box-shadow: 1px 1px 5px -1px black;
+          margin: 5px;
+          width: 60%;
+        }
+
+        .overview {
+          height: 150px;
+          overflow: hidden;
+          padding: 5px;
+          text-overflow: ellipsis;
+        }
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .tagline {
+          font-size: 14px;
+          font-weight: lighter;
+        }
       }
 
-      .overview {
-        height: 150px;
-        overflow: hidden;
-        padding: 5px;
-        text-overflow: ellipsis;
+      mat-card:hover {
+        transform: scale(1.05, 1.05);
       }
 
-      .title {
-        font-size: 18px;
-        font-weight: bold;
+      /* Fade in the pseudo-element with the bigger shadow */
+      mat-card:hover::after {
+        opacity: 1;
       }
-
-      .tagline {
-        font-size: 14px;
-        font-weight: lighter;
-      }
-    }
-
-    mat-card:hover {
-      transform: scale(1.05, 1.05);
-    }
-
-    /* Fade in the pseudo-element with the bigger shadow */
-    mat-card:hover::after {
-      opacity: 1;
     }
 
   }

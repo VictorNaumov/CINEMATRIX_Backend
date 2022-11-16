@@ -13,6 +13,7 @@ namespace CINEMATRIX.Data.Services
     {
         Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
         Task<IReadOnlyCollection<Ticket>> GetTicketsBySessionId(long sessionId, CancellationToken cancellationToken);
+        Task<IReadOnlyCollection<Ticket>> GetTicketsByProfileId(long profileId, CancellationToken cancellationToken);
     }
 
     public class TicketService : BaseService<Ticket>, ITicketService
@@ -27,6 +28,18 @@ namespace CINEMATRIX.Data.Services
         public async Task<IReadOnlyCollection<Ticket>> GetTicketsBySessionId(long sessionId, CancellationToken cancellationToken)
         {
             return await _dbContext.Tickets.Where(entity => entity.SessionId == sessionId).AsNoTracking().ToListAsync();
+        }
+
+        public async Task<IReadOnlyCollection<Ticket>> GetTicketsByProfileId(long profileId, CancellationToken cancellationToken)
+        {
+            return await _dbContext.Tickets
+                .Include(s => s.Session)
+                .ThenInclude(s => s.Hall)
+                .Include(s => s.Seat)
+                .ThenInclude(s => s.SeatType)
+                .Where(entity => entity.ProfileId == profileId)
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

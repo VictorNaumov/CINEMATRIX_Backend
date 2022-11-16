@@ -31,8 +31,16 @@
       </mat-card-actions>
     </mat-card>
   </div>
-
-  <ng-template #loading>
-    <mat-spinner></mat-spinner>
-  </ng-template>
 </mat-drawer-container>
+
+<ng-template #loading>
+  <ng-container *ngIf="!isError; else error">
+    <app-loading></app-loading>
+  </ng-container>
+</ng-template>
+
+<ng-template #error>
+  <ng-container>
+    <app-error></app-error>
+  </ng-container>
+</ng-template>

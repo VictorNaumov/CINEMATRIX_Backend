@@ -3,12 +3,17 @@
   <p class="movie-overview" mat-dialog-title>{{session.movie.overview}}</p>
 </div>
 
+<mat-divider></mat-divider>
+
 <div mat-dialog-content>
   <app-hall-seats [session]="session" (selectedSeatsEvent)="setSelectedSeats($event)"></app-hall-seats>
   <p class="ticket-price"> Ticket price: {{sumPrice}}$ </p>
   <p class="user-message"> Before the session, you need to contact the ticket office to pay for your seats.
     You can view the occupied seats in your profile. Thank you! </p>
 </div>
+
+<mat-divider></mat-divider>
+
 <div mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button cdkFocusInitial (click)="onOkClick()">Ok</button>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { forkJoin, Observable } from 'rxjs';
+import { MatSnackBar } from '@angular/material';
+import { forkJoin, Observable, Subscription } from 'rxjs';
 import { GenreSearchIncomingDto } from 'src/app/core/models/genre/genre-search-incoming-dto';
 import { GenreSearchOutgoingDto } from 'src/app/core/models/genre/genre-search-outgoing-dto';
 import { MovieSearchIncomingDto } from 'src/app/core/models/movie/movie-search-incoming-dto';
@@ -7,6 +8,7 @@ import { MovieSearchOutgoingDto } from 'src/app/core/models/movie/movie-search-o
 import { GenreService } from 'src/app/core/services/genre.service';
 import { MovieService } from 'src/app/core/services/movie.service';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
+import { errorMessage } from 'src/app/shared/constants/error.message.contants';
 
 @Component({
   selector: 'app-movies-page',
@@ -17,20 +19,20 @@ export class MoviesPageComponent implements OnInit {
   public movies$: Observable<MovieSearchIncomingDto> | undefined;
   public genres$: Observable<GenreSearchIncomingDto> | undefined;
 
-  public isLoading: boolean = true;
+  public isError: boolean = false;
 
   searchString: string = '';
 
   constructor(public notification: NotificationManager,
     public movieService: MovieService,
-    public genreService: GenreService) { }
+    public genreService: GenreService,
+    public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.sendQuery();
   }
 
   public sendQuery(): void {
-    this.isLoading = true;
     var movieParam: MovieSearchOutgoingDto = {
       "pageSize": 20,
       "page": 0,
@@ -49,9 +51,10 @@ export class MoviesPageComponent implements OnInit {
     }
 
     this.movies$ = this.movieService.GetNowPlayingMovies(movieParam);
+    this.checkError(this.movies$);
 
-    this.movies$.subscribe(x => console.log(x))
     this.genres$ = this.genreService.SearchGenre(genreParam);
+    this.checkError(this.genres$);
   }
 
   sendSearchQuery() {
@@ -69,9 +72,20 @@ export class MoviesPageComponent implements OnInit {
       ? this.movieService.SearchMovies(movieParam)
       : this.movieService.GetNowPlayingMovies(movieParam);
 
+    this.checkError(this.movies$);
   }
 
   writeNotification(text: string) {
     this.notification.textNotice(text);
+  }
+
+  checkError(sub: Observable<any>) {
+    sub.subscribe(
+      (_) => { },
+      error => {
+        this.isError = true;
+        console.log(error);
+        this.snackBar.open(errorMessage, "Close")
+      })
   }
 }

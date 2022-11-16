@@ -18,6 +18,7 @@ import { GenresPipe } from 'src/app/shared/pipes/genres.pipe';
 import { RuntimePipe } from 'src/app/shared/pipes/runtime.pipe';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { SessionsPageComponent } from './sessions-page/sessions-page.component';
+import { ErrorModule } from '../layout/error/error.module';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { SessionsPageComponent } from './sessions-page/sessions-page.component';
     ReactiveFormsModule,
     RouterModule,
     MaterialModule,
+    ErrorModule,
     StarRatingModule.forRoot()
   ],
   exports: [

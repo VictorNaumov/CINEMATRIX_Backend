@@ -32,11 +32,12 @@ namespace CINEMATRIX.Data.Services
                 ? query.OrderBy(searchCondition.SortProperty)
                 : query.OrderByDescending(searchCondition.SortProperty);
 
+
+
             return await query
                 .Include(s => s.Hall)
                     .ThenInclude(h => h.Seats)
                         .ThenInclude(s => s.SeatType)
-                .Include(s => s.Tickets)
                 .Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }
 
@@ -65,34 +66,59 @@ namespace CINEMATRIX.Data.Services
                 query = query.Where(x => searchCondition.HallIds.Contains(x.HallId));
             }
 
-            //if (searchCondition.TimeSessions.Length > 0)
-            //{
-            //    query = FilterBySessionTime(query, searchCondition);
-            //}
+            if (searchCondition.SeatTypeIds.Length > 0)
+            {
+                foreach (var seatTypeId in searchCondition.SeatTypeIds)
+                {
+                    query = query.Where(x => x.Hall.Seats.Any(s => s.SeatTypeId == seatTypeId));
+                }
+            }
+
+            if (searchCondition.TimeSessions.Length > 0)
+            {
+                query = FilterBySessionTime(query, searchCondition);
+            }
 
             return query;
         }
 
-        //private IQueryable<Session> FilterBySessionTime(IQueryable<Session> query, SessionSearchCondition searchCondition)
-        //{
-        //var timeSessionEnums = searchCondition.TimeSessions.Select(x => (TimeSessionEnum)x);
+        private IQueryable<Session> FilterBySessionTime(IQueryable<Session> query, SessionSearchCondition searchCondition)
+        {
+            var timeSessionEnums = searchCondition.TimeSessions.Select(x => (TimeSessionEnum)x);
+            var missingTimeSessionEnums = Enum.GetValues(typeof(TimeSessionEnum));
 
-        //foreach (var timeSessionEnum in timeSessionEnums)
-        //{
-        //    switch (timeSessionEnum)
-        //    {
-        //        case TimeSessionEnum.Morning: { 
-        //                query = query.Where()
-        //                break; }
-        //        case TimeSessionEnum.Daytime: {
-        //                break; }
-        //        case TimeSessionEnum.Evening: { 
-        //                break; }
-        //        case TimeSessionEnum.Night: { 
-        //                break; }
-        //    }
-        //}
-        //}
+            foreach (var timeSessionEnum in timeSessionEnums)
+            {
+                // Morning (8 - 10)
+                // Daytime (12 - 14)
+                // Evening (16 - 18)
+                // Night (20 - 22)
+                switch (timeSessionEnum)
+                {
+                    case TimeSessionEnum.Morning:
+                        {
+                            query = query.Where(s => s.DateTime.Hour == 8 || s.DateTime.Hour == 10);
+                            break;
+                        }
+                    case TimeSessionEnum.Daytime:
+                        {
+                            query = query.Where(s => s.DateTime.Hour == 12 || s.DateTime.Hour == 14);
+                            break;
+                        }
+                    case TimeSessionEnum.Evening:
+                        {
+                            query = query.Where(s => s.DateTime.Hour == 16 || s.DateTime.Hour == 18);
+                            break;
+                        }
+                    case TimeSessionEnum.Night:
+                        {
+                            query = query.Where(s => s.DateTime.Hour == 20 || s.DateTime.Hour == 22);
+                            break;
+                        }
+                }
+            }
 
+            return query;
+        }
     }
 }

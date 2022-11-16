@@ -10,12 +10,14 @@ import { SessionFoundIncomingDto } from 'src/app/core/models/session/session-fou
 import { SessionSearchIncomingDto } from 'src/app/core/models/session/session-search-incoming-dto';
 import { SessionSearchOutgoingDto } from 'src/app/core/models/session/session-search-outgoing-dto';
 import { TicketDto } from 'src/app/core/models/ticket/ticket-dto';
+import { TicketFoundIncomingDto } from 'src/app/core/models/ticket/ticket-found-incoming-dto';
 import { HallService } from 'src/app/core/services/hall.service';
 import { MovieService } from 'src/app/core/services/movie.service';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
 import { SeatTypeService } from 'src/app/core/services/seat-type.service';
 import { SessionService } from 'src/app/core/services/session.service';
 import { TicketService } from 'src/app/core/services/ticket.service';
+import { errorMessage } from 'src/app/shared/constants/error.message.contants';
 import { getRandomNumber } from 'src/app/shared/functions/getRandomNumber';
 import { BuyTicketDialog } from '../../dialogs/buy-ticket-dialog/buy-ticket-dialog.component';
 
@@ -29,10 +31,16 @@ export class SessionsPageComponent implements OnInit {
   public halls$: Observable<HallSearchIncomingDto> | undefined;
   public seatTypes$: Observable<SeatTypeSearchIncomingDto> | undefined;
 
+  public isError: boolean = false;
+
   public promoSession: SessionFoundIncomingDto;
 
   public weekDates: Date[] = [];
   public selectedDate: Date;
+
+  public selectedHalls: number[] = [];
+  public selectedSeats: number[] = [];
+  public selectedTime: number[] = [];
 
   constructor(public notification: NotificationManager,
     public movieService: MovieService,
@@ -49,27 +57,8 @@ export class SessionsPageComponent implements OnInit {
   }
 
   public sendQuery(): void {
-    let startDateTime: Date = new Date();
-    startDateTime.setFullYear(2001, 12, 10);
 
-    let endDateTime: Date = new Date();
-    endDateTime.setFullYear(2025, 12, 10);
-
-    var sessionsParam: SessionSearchOutgoingDto = {
-      "pageSize": 20,
-      "page": 0,
-      "sortDirection": "asc",
-      "sortProperty": "id",
-      "isPublic": true,
-      "startDateTime": startDateTime,
-      "endDateTime": endDateTime,
-      "hallIds": [],
-      "seatTypeIds": [],
-      "timeSessions": [],
-    }
-
-    this.sessions$ = this.sessionService.SearchSession(sessionsParam);
-    this.sessions$.subscribe(x => this.promoSession = x.items[2]);
+    this.sendSessionQuery();
 
     var hallsParam: HallSearchOutgoingDto = {
       "pageSize": 20,
@@ -83,7 +72,9 @@ export class SessionsPageComponent implements OnInit {
       "screen": [],
       "screenResolution": []
     }
+
     this.halls$ = this.hallService.SearchHall(hallsParam);
+    this.checkError(this.halls$);
 
     var seatTypesParam: SeatTypeSearchOutgoingDto = {
       "pageSize": 20,
@@ -96,6 +87,33 @@ export class SessionsPageComponent implements OnInit {
     }
 
     this.seatTypes$ = this.seatTypeService.SearchSeatType(seatTypesParam);
+    this.checkError(this.seatTypes$);
+  }
+
+  sendSessionQuery() {
+    let startDateTime: Date = new Date();
+    startDateTime.setFullYear(2001, 12, 10);
+
+    let endDateTime: Date = new Date();
+    endDateTime.setFullYear(2025, 12, 10);
+
+    var sessionsParam: SessionSearchOutgoingDto = {
+      "pageSize": 20,
+      "page": 0,
+      "sortDirection": "asc",
+      "sortProperty": "id",
+      "isPublic": true,
+      "startDateTime": this.selectedDate ? this.selectedDate : startDateTime,
+      "endDateTime": this.selectedDate ? this.selectedDate : endDateTime,
+      "hallIds": this.selectedHalls,
+      "seatTypeIds": this.selectedSeats,
+      "timeSessions": this.selectedTime,
+    }
+
+    this.sessions$ = this.sessionService.SearchSession(sessionsParam);
+    this.sessions$.subscribe(x => this.promoSession = x.items[5]);
+
+    this.checkError(this.sessions$);
   }
 
   initWeekDates() {
@@ -109,54 +127,57 @@ export class SessionsPageComponent implements OnInit {
     if (this.selectedDate == date) return;
 
     this.selectedDate = date;
-    this.updateSessions();
-  }
-
-  updateSessions() {
-    var sessionsParam: SessionSearchOutgoingDto = {
-      "pageSize": 20,
-      "page": 0,
-      "sortDirection": "asc",
-      "sortProperty": "id",
-      "isPublic": true,
-      "startDateTime": new Date(),
-      "endDateTime": new Date(),
-      "hallIds": [],
-      "seatTypeIds": [],
-      "timeSessions": [],
-    }
-
-    this.sessions$ = this.sessionService.SearchSession(sessionsParam);
+    this.sendSessionQuery();
   }
 
   openBuyTicketDialog(session: SessionFoundIncomingDto) {
-    const dialogRef = this.dialog.open(BuyTicketDialog, {
-      data: { session: session },
-    });
 
-    dialogRef.afterClosed().subscribe((selectedSeats: SeatFoundIncomingDto[]) => {
-      if (!selectedSeats || !selectedSeats.length) return;
+    this.ticketService.GetBySessionId(session.id).subscribe(
+      (tickets: TicketFoundIncomingDto[]) => {
+        session.tickets = tickets;
 
-      forkJoin(selectedSeats.map(seat => {
-        let ticket: TicketDto = {
-          "sessionId": session.id,
-          "seatId": seat.id
-        }
+        const dialogRef = this.dialog.open(BuyTicketDialog, {
+          data: { session: session },
+        });
 
-        return this.ticketService.CreateTicket(ticket);
-      }))
-        .subscribe(_ => {
+        dialogRef.afterClosed().subscribe((selectedSeats: SeatFoundIncomingDto[]) => {
+          if (!selectedSeats || !selectedSeats.length) return;
 
-          selectedSeats.forEach(seat => {
-            session.tickets.push({
-              "id": undefined,
+          forkJoin(selectedSeats.map(seat => {
+            let ticket: TicketDto = {
               "sessionId": session.id,
               "seatId": seat.id
-            });
-          });
+            }
 
-          this.snackBar.open("It's booked, thank you!.", "Close")
+            return this.ticketService.CreateTicket(ticket);
+          }))
+            .subscribe(_ => {
+
+              selectedSeats.forEach(seat => {
+                session.tickets.push({
+                  "id": undefined,
+                  "sessionId": session.id,
+                  "seatId": seat.id
+                });
+              });
+
+              this.snackBar.open("It's booked, thank you!.", "Close")
+            },
+              error => {
+                this.isError = true;
+                console.log(error);
+                this.snackBar.open(errorMessage, "Close")
+              });
         });
-    });
+      });
+  }
+
+  checkError(sub: Observable<any>): void {
+    sub.subscribe(
+      (_) => { console.log(_) },
+      error => {
+        this.isError = true;
+        this.snackBar.open(errorMessage, "Close")
+      })
   }
 }

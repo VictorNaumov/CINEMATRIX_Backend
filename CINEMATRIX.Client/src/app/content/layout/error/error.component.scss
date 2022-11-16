@@ -1,0 +1,28 @@
+.error-wrapper {
+  position: fixed;
+
+  .error-image {
+    margin-left: 23vw;
+    width: 50vw;
+  }
+
+  .error-message {
+    margin-left: 36vw;
+    font-size: 35px;
+  }
+
+  @media screen and (max-width: 900px) {
+
+    .error-message {
+      margin-left: 33vw;
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+
+    .error-message {
+      margin-left: 30vw;
+      font-size: 15px;
+    }
+  }
+}

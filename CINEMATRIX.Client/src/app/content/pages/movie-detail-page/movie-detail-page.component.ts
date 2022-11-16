@@ -1,10 +1,12 @@
-import { Component, OnDestroy, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { MatSnackBar } from '@angular/material';
 import { ActivatedRoute } from '@angular/router';
 import { Observable, switchMap } from 'rxjs';
 import { MovieCreditsDto } from 'src/app/core/models/extends/movie-credits-dto';
 import { MovieFoundIncomingDto } from 'src/app/core/models/movie/movie-found-incoming-dto';
 import { MovieService } from 'src/app/core/services/movie.service';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
+import { errorMessage } from 'src/app/shared/constants/error.message.contants';
 import { MovieDetailSliderComponent } from './movie-detail-slider/movie-detail-slider.component';
 
 @Component({
@@ -16,6 +18,8 @@ export class MovieDetailPageComponent implements OnInit {
   public movie$: Observable<MovieFoundIncomingDto> | undefined;
   public movie: MovieFoundIncomingDto;
   public mainCasts: MovieCreditsDto[];
+
+  public isError: boolean = false;
 
 
   @ViewChildren(MovieDetailSliderComponent)
@@ -34,7 +38,8 @@ export class MovieDetailPageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
     public notification: NotificationManager,
-    public movieService: MovieService) { }
+    public movieService: MovieService,
+    public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
     this.route.paramMap.pipe(switchMap(params => params.getAll('movieId')))
@@ -51,8 +56,19 @@ export class MovieDetailPageComponent implements OnInit {
         .filter(c => c.profilePath && c.order)
         .sort((a: MovieCreditsDto, b: MovieCreditsDto) => +a.order - +b.order)
         .slice(0, 14);
-
-
     });
+
+    this.checkError(this.movie$);
+  }
+
+
+  checkError(sub: Observable<any>): void {
+    sub.subscribe(
+      (_) => { },
+      error => {
+        this.isError = true;
+        console.log(error);
+        this.snackBar.open(errorMessage, "Close")
+      })
   }
 }

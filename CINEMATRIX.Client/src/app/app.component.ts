@@ -15,7 +15,5 @@ export class AppComponent {
   ngOnInit(): void { }
 
   addNotification() {
-    console.log("aa")
-    this.notificationService.textNotice("Hello");
   }
 }

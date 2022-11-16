@@ -32,14 +32,14 @@ namespace CINEMATRIX.API.Application.Queries.TicketQueries
 
         public async Task<List<FoundTicketDTO>> Handle(GetTicketsBySessionIdQuery request, CancellationToken cancellationToken)
         {
-            var ticket = await _ticketService.GetTicketsBySessionId(request.SessionId, cancellationToken);
+            var tickets = await _ticketService.GetTicketsBySessionId(request.SessionId, cancellationToken);
 
-            if (ticket == null)
+            if (tickets == null)
             {
                 return null;
             }
 
-            var mappedTickets = _mapper.Map<List<FoundTicketDTO>>(ticket);
+            var mappedTickets = _mapper.Map<List<FoundTicketDTO>>(tickets);
 
             return mappedTickets;
         }

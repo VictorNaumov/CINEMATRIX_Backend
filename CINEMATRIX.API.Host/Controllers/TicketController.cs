@@ -62,6 +62,15 @@ namespace CINEMATRIX.API.Host.Controllers
         {
             return await ExecuteQueryAsync(new GetTicketsBySessionIdQuery(sessionId), cancellationToken: cancellationToken);
         }
+
+        [HttpGet("getByProfileId/{profileId}")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundTicketDTO))]
+        [SwaggerOperation(Summary = "Get the a tickets by profile id", OperationId = "GetTicketsByProfileId")]
+        public async Task<IActionResult> GetTicketsByProfileId([FromRoute] long profileId, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new GetTicketsByProfileIdQuery(profileId), cancellationToken: cancellationToken);
+        }
     }
 }
 

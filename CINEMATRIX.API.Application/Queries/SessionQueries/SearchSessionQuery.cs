@@ -41,7 +41,7 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
             var mappedSession = _mapper.Map<IEnumerable<FoundSessionDTO>>(foundSessions).ToList();
             var totalCount = await _sessionService.CountAsync(searchCondition);
 
-            //for (int i = 0; i < 4; i++)
+            //for (int i = 0; i < 6; i++)
             //{
             //    var movie = await _movieService.GetByIdAsync(mappedSession[i].MovieId, cancellationToken);
             //    mappedSession[i].Movie = _mapper.Map<FoundMovieDTO>(movie);

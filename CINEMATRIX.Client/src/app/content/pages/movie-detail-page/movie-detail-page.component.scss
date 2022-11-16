@@ -4,6 +4,7 @@
   display: flex;
 
   .movie-poster {
+    box-shadow: 1px 1px 5px -1px black;
     margin: 30px;
     height: 80%;
   }
@@ -47,12 +48,6 @@
       font-weight: lighter;
     }
 
-    .movie-overview {
-    }
-
-    .movie-budget {}
-
-    .movie-voteaverage {}
   }
 
 }

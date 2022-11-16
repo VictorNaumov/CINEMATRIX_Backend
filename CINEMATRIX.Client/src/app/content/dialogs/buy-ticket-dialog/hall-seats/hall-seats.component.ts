@@ -33,6 +33,8 @@ export class HallSeatsComponent implements OnInit {
 
   initSeatTableData() {
     this.session.hall.seats.forEach(seat => {
+      console.log(this.session.tickets);
+
       this.seats.push({
         "id": seat.id,
         "row": seat.row,
@@ -46,8 +48,9 @@ export class HallSeatsComponent implements OnInit {
 
     this.columnsCount = Math.max(...this.seats.map(s => s.number))
 
-    console.log('this.columnsCount', this.columnsCount);
-
+    if(this.seats.every(s => s.seatTypeName == "Romantic")){
+      this.columnsCount *= 2;
+    }
   }
 
   toggleSeats(seat: SeatTableData) {

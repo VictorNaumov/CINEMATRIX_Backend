@@ -3,6 +3,8 @@ import { MatDialogRef, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 import { AuthService } from 'src/app/core/account/auth-service';
 import { SeatFoundIncomingDto } from 'src/app/core/models/seat/seat-found-incoming-dto';
 import { SessionFoundIncomingDto } from 'src/app/core/models/session/session-found-incoming-dto';
+import { TicketFoundIncomingDto } from 'src/app/core/models/ticket/ticket-found-incoming-dto';
+import { TicketService } from 'src/app/core/services/ticket.service';
 
 export interface BuyTicketDialogData {
   session: SessionFoundIncomingDto;
@@ -22,13 +24,13 @@ export class BuyTicketDialog implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: BuyTicketDialogData,
     public dialogRef: MatDialogRef<BuyTicketDialog>,
     public snackBar: MatSnackBar,
-    public authService: AuthService
+    public authService: AuthService,
+    public ticketService: TicketService
   ) {
     this.session = data.session;
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   onNoClick(): void {
     this.dialogRef.close();

@@ -20,8 +20,8 @@
 
     <p class="subtitle"> SYNOPSIS</p>
     <p class="movie-overview"> {{movie.overview}}</p>
-    <p class="movie-budget"> {{movie.budget == 0 ? "Unknown" : movie.budget}} $</p>
-    <p class="movie-voteaverage"> {{movie.voteAverage}}</p>
+    <p class="movie-budget"> Budget: {{movie.budget == 0 ? "Unknown" : movie.budget}} $</p>
+    <p class="movie-voteaverage"> Rate: {{movie.voteAverage}}</p>
 
     <p class="subtitle"> VIDEO & PICTURE</p>
     <div class="movie-media">
@@ -31,5 +31,13 @@
 </div>
 
 <ng-template #loading>
-  <mat-spinner></mat-spinner>
+  <ng-container *ngIf="!isError; else error">
+    <app-loading></app-loading>
+  </ng-container>
+</ng-template>
+
+<ng-template #error>
+  <ng-container>
+    <app-error></app-error>
+  </ng-container>
 </ng-template>
