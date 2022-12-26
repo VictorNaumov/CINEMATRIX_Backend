@@ -1,25 +1,30 @@
 .page-drawer {
   border: 1px solid rgba(0, 0, 0, 0.5);
-  height:calc(100% - 60px);
+  height: calc(100% - 60px);
 
-  .card-wrapper {
+  .sidepan-toggle{
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-input {
+    margin: 10px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
 
-    .sidenav {
-      .search-input {
-        margin: 10px;
-      }
-    }
-
-    mat-card {
-      display: inline-block;
+    .movie-card {
+      width: calc(22% - 10px);
+      margin: 5px;
       align-items: center;
       justify-content: center;
-      margin: 10px;
-      width: 21%;
       -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
       transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
-      box-shadow: 1px 1px 5px -1px black ;
+      box-shadow: 1px 1px 5px -1px black;
 
       .overview {
         height: 150px;
@@ -33,14 +38,13 @@
         font-weight: bold;
       }
     }
+  }
 
-    mat-card:hover {
-      transform: scale(1.05, 1.05);
-    }
+  .movie-card:hover {
+    transform: scale(1.05, 1.05);
+  }
 
-    /* Fade in the pseudo-element with the bigger shadow */
-    mat-card:hover::after {
-      opacity: 1;
-    }
+  .movie-card:hover::after {
+    opacity: 1;
   }
 }

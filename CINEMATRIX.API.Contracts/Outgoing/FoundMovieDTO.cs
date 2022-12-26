@@ -33,5 +33,6 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         public List<FoundVideoDTO> Videos { get; set; }
         public List<FoundImageDTO> Images { get; set; }
         public List<FoundMovieCreditDTO> Credits { get; set; }
+        public List<FoundMovieCommentDTO> MovieComments { get; set; }
     }
 }

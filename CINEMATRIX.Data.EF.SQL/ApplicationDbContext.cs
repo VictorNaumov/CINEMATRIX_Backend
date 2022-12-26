@@ -1,8 +1,5 @@
 ﻿using CINEMATRIX.Data.Domain.Models;
-using CINEMATRIX.Data.EF.SQL.FillingConfiguration;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
 
 namespace CINEMATRIX.Data.EF.SQL
@@ -20,6 +17,9 @@ namespace CINEMATRIX.Data.EF.SQL
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<EmailConfirmationToken> EmailConfirmationTokens { get; set; }
+        public DbSet<FAQ> FAQs { get; set; }
+        public DbSet<MovieComment> MovieComments { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }

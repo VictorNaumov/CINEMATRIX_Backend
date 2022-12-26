@@ -25,6 +25,11 @@ namespace CINEMATRIX.Data.Services.Extensions
                 .AsImplementedInterfaces()
                 .WithTransientLifetime());
 
+            services.Scan(scan => scan.FromAssembliesOf(currentAssembly)
+                .AddClasses(classes => classes.AssignableTo(typeof(IMailService)))
+                .AsImplementedInterfaces()
+                .WithTransientLifetime());
+
         }
     }
 }

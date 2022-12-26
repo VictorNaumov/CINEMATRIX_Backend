@@ -35,10 +35,12 @@ namespace CINEMATRIX
                 options.UseSqlServer(Configuration.GetConnectionString("ApplicationDbContext"));
             });
             services.AddApplication();
+            services.AddManagerAndClients();
             services.ConfigureSwaggerVersioning();
             services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
             services.AddSwaggerGen();
             services.ConfigureAutoMapper();
+            services.ConfigureMailSettings(Configuration);
             services.AddMemoryCache();
             services.ConfigureCacheProfiles();
             services.AddResponseCompression(options => options.EnableForHttps = true);

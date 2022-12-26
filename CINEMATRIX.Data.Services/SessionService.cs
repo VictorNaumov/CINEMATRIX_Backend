@@ -28,17 +28,9 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<Session> query = BuildFindQuery(searchCondition);
 
-            query = searchCondition.SortDirection != "desc"
-                ? query.OrderBy(searchCondition.SortProperty)
-                : query.OrderByDescending(searchCondition.SortProperty);
-
-
-
             return await query
-                .Include(s => s.Hall)
-                    .ThenInclude(h => h.Seats)
-                        .ThenInclude(s => s.SeatType)
-                .Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
+                .Page(searchCondition.PageSize, searchCondition.Page)
+                .ToListAsync();
         }
 
         public async Task<long> CountAsync(SessionSearchCondition searchCondition)
@@ -61,12 +53,17 @@ namespace CINEMATRIX.Data.Services
 
             query = query.Where(x => searchCondition.StartDateTime.Date <= x.DateTime.Date && x.DateTime.Date <= searchCondition.EndDateTime.Date);
 
-            if (searchCondition.HallIds.Length > 0)
+            if (searchCondition.HallIds.Any())
             {
                 query = query.Where(x => searchCondition.HallIds.Contains(x.HallId));
             }
 
-            if (searchCondition.SeatTypeIds.Length > 0)
+            if (searchCondition.MovieIds.Any())
+            {
+                query = query.Where(x => searchCondition.MovieIds.Contains(x.MovieId));
+            }
+
+            if (searchCondition.SeatTypeIds.Any())
             {
                 foreach (var seatTypeId in searchCondition.SeatTypeIds)
                 {
@@ -74,9 +71,31 @@ namespace CINEMATRIX.Data.Services
                 }
             }
 
-            if (searchCondition.TimeSessions.Length > 0)
+            if (searchCondition.TimeSessions.Any())
             {
                 query = FilterBySessionTime(query, searchCondition);
+            }
+
+            query = searchCondition.SortDirection != "desc"
+                ? query.OrderBy(searchCondition.SortProperty)
+                : query.OrderByDescending(searchCondition.SortProperty);
+
+            if (searchCondition.NeedLoadHall)
+            {
+                query = query.Include(s => s.Hall);
+            }
+
+            if (searchCondition.NeedLoadSeats)
+            {
+                query = query.Include(s => s.Hall)
+                    .ThenInclude(h => h.Seats);
+            }
+
+            if (searchCondition.NeedLoadSeatType)
+            {
+                query = query.Include(s => s.Hall)
+                    .ThenInclude(h => h.Seats)
+                    .ThenInclude(s => s.SeatType);
             }
 
             return query;

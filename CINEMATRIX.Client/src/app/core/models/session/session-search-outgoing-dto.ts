@@ -7,6 +7,7 @@ export interface SessionSearchOutgoingDto {
   startDateTime: Date,
   endDateTime: Date
   hallIds: number[],
+  movieIds: number[],
   seatTypeIds: number[],
   timeSessions: number[],
 }

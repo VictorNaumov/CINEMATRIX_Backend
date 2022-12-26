@@ -27,10 +27,6 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<Cinema> query = BuildFindQuery(searchCondition);
 
-            query = searchCondition.SortDirection != "desc"
-                ? query.OrderBy(searchCondition.SortProperty)
-                : query.OrderByDescending(searchCondition.SortProperty);
-
             return await query.Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }
 
@@ -56,6 +52,10 @@ namespace CINEMATRIX.Data.Services
             {
                 query = query.Where(x => x.Name != null && x.Name.ToUpper().Contains(name));
             }
+
+            query = searchCondition.SortDirection != "desc"
+                ? query.OrderBy(searchCondition.SortProperty)
+                : query.OrderByDescending(searchCondition.SortProperty);
 
             return query;
         }

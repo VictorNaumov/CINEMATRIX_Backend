@@ -6,7 +6,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ComputerTechnicianBackend.API.Application.Queries.AuthQueries
+namespace CINEMATRIX.API.Application.Queries.AuthQueries
 {
     public class LoginUserQuery : CommandBase<LoginUserDTO, LoginDTO>
     {

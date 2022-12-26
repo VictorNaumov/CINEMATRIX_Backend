@@ -6,7 +6,7 @@ using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace ComputerTechnicianBackend.API.Application.Queries.AuthQueries
+namespace CINEMATRIX.API.Application.Queries.AuthQueries
 {
     public class GetCurrentUserQuery : CommandBase<FoundUserDTO, string>
     {
@@ -20,13 +20,11 @@ namespace ComputerTechnicianBackend.API.Application.Queries.AuthQueries
     public class GetCurrentUserQueryHandler : IRequestHandler<GetCurrentUserQuery, FoundUserDTO>
     {
         private readonly IUserService _userService;
-        private readonly IRoleService _roleService;
         private readonly IMapper _mapper;
 
-        public GetCurrentUserQueryHandler(IUserService userService, IRoleService roleService, IMapper mapper)
+        public GetCurrentUserQueryHandler(IUserService userService, IMapper mapper)
         {
             _userService = userService;
-            _roleService = roleService;
             _mapper = mapper;
         }
 

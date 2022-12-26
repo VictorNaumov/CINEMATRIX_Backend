@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { forkJoin, Observable, Subscription } from 'rxjs';
 import { GenreSearchIncomingDto } from 'src/app/core/models/genre/genre-search-incoming-dto';
@@ -19,7 +19,10 @@ export class MoviesPageComponent implements OnInit {
   public movies$: Observable<MovieSearchIncomingDto> | undefined;
   public genres$: Observable<GenreSearchIncomingDto> | undefined;
 
+  @ViewChild('drawer') drawer: any;
+
   public isError: boolean = false;
+  public sidePanelOpen = true;
 
   searchString: string = '';
 
@@ -87,5 +90,10 @@ export class MoviesPageComponent implements OnInit {
         console.log(error);
         this.snackBar.open(errorMessage, "Close")
       })
+  }
+
+  toggleSidePanel(){
+    this.sidePanelOpen = !this.sidePanelOpen;
+    this.drawer.toggle();
   }
 }

@@ -1,7 +1,7 @@
 <mat-drawer-container class="page-drawer" matAutosize>
-  <button class="sidepan-toggle" mat-flat-button (click)="drawer.toggle()">
-    <mat-icon>more horiz icon</mat-icon>
-  </button>
+  <button class="sidepan-toggle" mat-icon-button (click)="toggleSidePanel()">
+    <mat-icon>{{ sidePanelOpen ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</mat-icon>
+</button>
 
   <mat-drawer #drawer class="sidenav" mode="side">
     <mat-form-field class="search-input">
@@ -15,7 +15,7 @@
 
   </mat-drawer>
 
-  <div class="card-wrapper" *ngIf="movies$ | async as movies; else loading">
+  <div class="card-container" *ngIf="movies$ | async as movies; else loading">
     <mat-card class="movie-card" *ngFor="let movie of movies.items">
       <img mat-card-image [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.posterPath"
         alt="Film poster" />

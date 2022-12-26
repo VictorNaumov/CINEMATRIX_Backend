@@ -19,7 +19,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
     public abstract class BaseService<TEntity> : IBaseService<TEntity> where TEntity : KeyedEntityBase
     {
         protected readonly ApplicationDbContext _dbContext;
-        private readonly DbSet<TEntity> _dbSet;
+        protected readonly DbSet<TEntity> _dbSet;
 
         public BaseService(ApplicationDbContext dbContext)
         {

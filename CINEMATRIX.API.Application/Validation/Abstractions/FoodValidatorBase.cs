@@ -30,8 +30,6 @@ namespace CINEMATRIX.API.Application.Validation.Abstractions
             RuleFor(cmd => cmd.Entity.Price)
                 .Must(ValidationRuleUtility.IsPositiveNumber)
                 .WithMessage(Resources.Resources.FoodPriceCanNotBeLessThanNull);
-
-
         }
     }
 }

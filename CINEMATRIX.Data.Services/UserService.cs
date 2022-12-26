@@ -20,21 +20,26 @@ namespace CINEMATRIX.Data.Services
         Task<bool> ExistAsync(UserDTO userDTO);
         Task<User> LoginAsync(LoginDTO loginDTO);
         Task<User> GetByUserNameAsync(string userName);
+        Task<bool> TrySendEmailAsync(User user, string subject, string message);
+        Task<bool> ConfirmEmailAsync(ConfirmEmailDTO confirmEmailDTO);
+        Task<bool> IsValidEmailConfirmationToken(ConfirmEmailDTO confirmEmailDTO);
         string CreateToken(User user, string role);
     }
 
     public class UserService : BaseService<User>, IUserService
     {
         private readonly IConfiguration _configuration;
+        private readonly IMailService _mailService;
 
-        public UserService(ApplicationDbContext dbContext, IConfiguration configuration) : base(dbContext)
+        public UserService(ApplicationDbContext dbContext, IConfiguration configuration, IMailService mailService) : base(dbContext)
         {
             _configuration = configuration;
+            _mailService = mailService;
         }
 
-        public async Task<bool> ExistAsync(UserDTO userDTO)
+        public async Task<bool> ExistAsync(UserDTO user)
         {
-            return await _dbContext.Users.AnyAsync(entity => entity.Email == userDTO.Email);
+            return await _dbContext.Users.AnyAsync(entity => entity.Email == user.Email);
         }
 
         public async Task<User> LoginAsync(LoginDTO loginDTO)
@@ -54,12 +59,59 @@ namespace CINEMATRIX.Data.Services
             return user;
         }
 
-        public async Task<User> GetByUserNameAsync(string userName)
+        public async Task<bool> TrySendEmailAsync(User user, string subject, string message)
         {
-            return await _dbContext.Users
+            try
+            {
+                var confirmationToken = await GenerateEmailConfirmationTokenAsync(user);
+                var callbackUrl = $@"https://localhost:5001/api/v1/auth/confirmEmail?userId={user.Id}&token={confirmationToken}";
+
+                var mailRequest = new MailRequest()
+                {
+                    ToEmail = user.Email,
+                    Subject = subject,
+                    Body = string.Format(message, callbackUrl),
+                };
+
+                await _mailService.SendEmailAsync(mailRequest);
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        public async Task<bool> ConfirmEmailAsync(ConfirmEmailDTO confirmEmailDTO)
+        {
+            var isValidToken = await IsValidEmailConfirmationToken(confirmEmailDTO);
+            if (isValidToken)
+            {
+                var user = await GetByIdAsync(confirmEmailDTO.UserId);
+
+                if (user != null)
+                {
+                    user.IsEmailConfirmed = true;
+                    await _dbContext.SaveChangesAsync();
+
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public async Task<bool> IsValidEmailConfirmationToken(ConfirmEmailDTO confirmEmailDTO)
+            => await _dbContext.EmailConfirmationTokens.AnyAsync(ect =>
+                        ect.Token == confirmEmailDTO.Token
+                        && ect.UserId == confirmEmailDTO.UserId
+                        && ect.ExpiresAt >= DateTime.Now);
+
+        public async Task<User> GetByUserNameAsync(string userName)
+            => await _dbContext.Users
                 .Include(x => x.Profile)
                 .FirstOrDefaultAsync(entity => entity.UserName == userName);
-        }
 
         public string CreateToken(User user, string role)
         {
@@ -102,17 +154,31 @@ namespace CINEMATRIX.Data.Services
                 expires: DateTime.Now.AddMinutes(Convert.ToDouble(jwtSettings.GetSection("minutesExpires").Value)),
                 signingCredentials: signingCredentials
             );
+
             return tokenOptions;
         }
 
         private static byte[] ConvertToByteArray(string str, Encoding encoding)
-        {
-            return encoding.GetBytes(str);
-        }
+            => encoding.GetBytes(str);
 
         private static string ToBinary(byte[] data)
+            => string.Join(" ", data.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
+
+        private async Task<string> GenerateEmailConfirmationTokenAsync(User user)
         {
-            return string.Join(" ", data.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
+            string token = Guid.NewGuid().ToString();
+
+            var tokenEntity = new EmailConfirmationToken
+            {
+                Token = token,
+                UserId = user.Id,
+                ExpiresAt = DateTime.UtcNow.AddDays(1)
+            };
+
+            _dbContext.EmailConfirmationTokens.Add(tokenEntity);
+            await _dbContext.SaveChangesAsync();
+
+            return token;
         }
     }
 }

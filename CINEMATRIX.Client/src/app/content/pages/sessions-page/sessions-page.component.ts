@@ -106,6 +106,7 @@ export class SessionsPageComponent implements OnInit {
       "startDateTime": this.selectedDate ? this.selectedDate : startDateTime,
       "endDateTime": this.selectedDate ? this.selectedDate : endDateTime,
       "hallIds": this.selectedHalls,
+      "movieIds": [],
       "seatTypeIds": this.selectedSeats,
       "timeSessions": this.selectedTime,
     }

@@ -12,46 +12,42 @@ namespace CINEMATRIX.API.Host
     {
         public MappingProfile()
         {
-            CreateMap<Cinema, CinemaDTO>();
+            CreateMap<Cinema, CinemaDTO>().ReverseMap();
             CreateMap<Cinema, FoundCinemaDTO>();
-            CreateMap<CinemaDTO, Cinema>();
 
-            CreateMap<Food, FoodDTO>();
+            CreateMap<Food, FoodDTO>().ReverseMap();
             CreateMap<Food, FoundFoodDTO>();
-            CreateMap<FoodDTO, Food>();
 
-            CreateMap<Hall, HallDTO>();
+            CreateMap<Hall, HallDTO>().ReverseMap();
             CreateMap<Hall, FoundHallDTO>();
-            CreateMap<HallDTO, Hall>();
 
-            CreateMap<Profile, ProfileDTO>();
+            CreateMap<Profile, ProfileDTO>().ReverseMap();
             CreateMap<Profile, FoundProfileDTO>();
-            CreateMap<ProfileDTO, Profile>();
 
-            CreateMap<Seat, SeatDTO>();
+            CreateMap<Seat, SeatDTO>().ReverseMap();
             CreateMap<Seat, FoundSeatDTO>();
-            CreateMap<SeatDTO, Seat>();
 
-            CreateMap<SeatType, SeatTypeDTO>();
+            CreateMap<SeatType, SeatTypeDTO>().ReverseMap();
             CreateMap<SeatType, FoundSeatTypeDTO>();
-            CreateMap<SeatTypeDTO, SeatType>();
 
-            CreateMap<Session, SessionDTO>();
+            CreateMap<Session, SessionDTO>().ReverseMap();
             CreateMap<Session, FoundSessionDTO>();
-            CreateMap<SessionDTO, Session>();
 
-            CreateMap<Ticket, TicketDTO>();
+            CreateMap<Ticket, TicketDTO>().ReverseMap();
             CreateMap<Ticket, FoundTicketDTO>();
-            CreateMap<TicketDTO, Ticket>();
 
+            CreateMap<FAQ, FAQDTO>().ReverseMap();
+            CreateMap<FAQ, FoundFAQDTO>();
 
             CreateMap<Profile, ProfileDTO>();
             CreateMap<Profile, FoundProfileDTO>();
             CreateMap<ProfileDTO, Profile>();
 
-            CreateMap<User, UserDTO>();
+            CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<User, FoundUserDTO>();
-            CreateMap<UserDTO, User>();
+
+            CreateMap<MovieComment, MovieCommentDTO>().ReverseMap();
+            CreateMap<MovieComment, FoundMovieCommentDTO>();
 
             CreateMap<MovieByIdResponse, FoundMovieDTO>()
                 .ForMember(dest => dest.Videos, opts => opts.MapFrom(src => src.Videos.Results))

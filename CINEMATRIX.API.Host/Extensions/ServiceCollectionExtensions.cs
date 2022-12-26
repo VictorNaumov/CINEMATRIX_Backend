@@ -1,4 +1,6 @@
 ﻿using CINEMATRIX.API.Host.Swagger;
+using CINEMATRIX.Data.Domain.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -10,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using System.Net.Mail;
 
 namespace CINEMATRIX.API.Host.Extensions
 {
@@ -115,6 +118,9 @@ namespace CINEMATRIX.API.Host.Extensions
         public static void ConfigureAutoMapper(this IServiceCollection services) =>
            services.AddAutoMapper(typeof(Startup));
 
+        public static void ConfigureMailSettings(this IServiceCollection services, IConfiguration configuration) =>
+            services.Configure<MailSettings>(configuration.GetSection("MailSettings"));
+
         public static void ConfigureCacheProfiles(this IServiceCollection services) =>
             services.AddControllersWithViews(options =>
             {
@@ -131,5 +137,8 @@ namespace CINEMATRIX.API.Host.Extensions
                         NoStore = true
                     });
             });
+
+        public static void AddManagerAndClients(this IServiceCollection services) =>
+            services.AddScoped<SmtpClient>();
     }
 }

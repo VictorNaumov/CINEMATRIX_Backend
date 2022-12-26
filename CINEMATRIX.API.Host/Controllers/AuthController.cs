@@ -2,7 +2,7 @@
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Host.Controllers.Abstractions;
-using ComputerTechnicianBackend.API.Application.Queries.AuthQueries;
+using CINEMATRIX.API.Application.Queries.AuthQueries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -41,11 +41,29 @@ namespace CINEMATRIX.API.Host.Controllers
 
         [HttpPost("register")]
         [AllowAnonymous]
-        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(bool))]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(LoginUserDTO))]
         [SwaggerOperation(Summary = "Register", OperationId = "Register")]
         public async Task<IActionResult> Register([FromBody] UserDTO user, CancellationToken cancellationToken = default)
         {
             return await ExecuteQueryAsync(new RegisterUserCommand(user), cancellationToken: cancellationToken);
+        }
+
+        [HttpPost("sendEmailConfirmation")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(bool))]
+        [SwaggerOperation(Summary = "SendEmailConfirmation", OperationId = "SendEmailConfirmation")]
+        public async Task<IActionResult> SendEmailConfirmation(CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new SendEmailConfirmationCommand(User.Identity.Name), cancellationToken: cancellationToken);
+        }
+
+        [HttpGet("confirmEmail")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(string))]
+        [SwaggerOperation(Summary = "ConfirmEmail", OperationId = "ConfirmEmail")]
+        public async Task<IActionResult> ConfirmEmail([FromQuery] long userId, [FromQuery] string token, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new ConfirmEmailQuery(new ConfirmEmailDTO() { UserId = userId, Token = token }), cancellationToken: cancellationToken);
         }
     }
 }

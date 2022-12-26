@@ -27,10 +27,6 @@ namespace CINEMATRIX.Data.Services
         {
             IQueryable<Seat> query = BuildFindQuery(searchCondition);
 
-            query = searchCondition.SortDirection != "desc"
-                ? query.OrderBy(searchCondition.SortProperty)
-                : query.OrderByDescending(searchCondition.SortProperty);
-
             return await query.Page(searchCondition.PageSize, searchCondition.Page).ToListAsync();
         }
 
@@ -54,6 +50,10 @@ namespace CINEMATRIX.Data.Services
 
             query = query.Where(x => searchCondition.Row.Contains(x.Row));
             query = query.Where(x => searchCondition.Number.Contains(x.Number));
+
+            query = searchCondition.SortDirection != "desc"
+                ? query.OrderBy(searchCondition.SortProperty)
+                : query.OrderByDescending(searchCondition.SortProperty);
 
             return query;
         }

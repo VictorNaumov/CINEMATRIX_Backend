@@ -2,6 +2,7 @@
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;
+using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -20,11 +21,13 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
     public class GetMovieDetailsQueryHandler : IRequestHandler<GetMovieDetailsQuery, FoundMovieDTO>
     {
         private readonly IMovieService _movieService;
+        private readonly IMovieCommentService _movieCommentService;
         private readonly IMapper _mapper;
 
-        public GetMovieDetailsQueryHandler(IMovieService movieService, IMapper mapper)
+        public GetMovieDetailsQueryHandler(IMovieService movieService, IMapper mapper, IMovieCommentService movieCommentService)
         {
             _movieService = movieService;
+            _movieCommentService = movieCommentService;
             _mapper = mapper;
         }
 
@@ -33,6 +36,9 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
             var apiResponse = await _movieService.GetByIdWithRelationsAsync(request.Id, cancellationToken);
 
             var movie = _mapper.Map<FoundMovieDTO>(apiResponse);
+            var movieComments = await _movieCommentService.GetByMovieIdAsync(request.Id, cancellationToken);
+            
+            movie.MovieComments = _mapper.Map<List<FoundMovieCommentDTO>>(movieComments);
 
             return movie;
         }
