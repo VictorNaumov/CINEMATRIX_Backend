@@ -1,6 +1,5 @@
 ﻿using CINEMATRIX.API.Application.Queries.AuthQueries;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
-using CINEMATRIX.Data.Domain.Models;
 using CINEMATRIX.Data.Services;
 using FluentValidation;
 

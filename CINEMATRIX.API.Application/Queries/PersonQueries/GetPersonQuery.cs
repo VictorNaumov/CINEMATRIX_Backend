@@ -2,7 +2,6 @@
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;
-using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 

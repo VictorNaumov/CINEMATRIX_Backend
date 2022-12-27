@@ -13,6 +13,10 @@
       <mat-icon>search</mat-icon>
       About us
     </button>
+    <button mat-button routerLink="/faq">
+      <mat-icon>search</mat-icon>
+      FAQ
+    </button>
     <button mat-button *ngIf="authService.isAuthenticated()" (click)="logout()">
       <mat-icon>exit_to_app</mat-icon>
       Logout

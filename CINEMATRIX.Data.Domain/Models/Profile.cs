@@ -11,5 +11,6 @@ namespace CINEMATRIX.Data.Domain.Models
         public string PhoneNumber { get; set; }
         public string ImageUrl { get; set; }
         public ICollection<Ticket> Tickets { get; set; }
+        public ICollection<MovieComment> MovieComments { get; set; }
     }
 }

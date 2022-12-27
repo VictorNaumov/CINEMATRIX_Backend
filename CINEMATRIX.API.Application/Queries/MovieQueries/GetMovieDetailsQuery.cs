@@ -37,7 +37,7 @@ namespace CINEMATRIX.API.Application.Queries.MovieQueries
 
             var movie = _mapper.Map<FoundMovieDTO>(apiResponse);
             var movieComments = await _movieCommentService.GetByMovieIdAsync(request.Id, cancellationToken);
-            
+
             movie.MovieComments = _mapper.Map<List<FoundMovieCommentDTO>>(movieComments);
 
             return movie;

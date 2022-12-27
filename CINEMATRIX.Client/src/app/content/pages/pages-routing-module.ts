@@ -11,6 +11,7 @@ import { MovieDetailPageComponent } from "./movie-detail-page/movie-detail-page.
 import { AboutPageComponent } from "./about-page/about-page.component";
 import { SessionsPageComponent } from "./sessions-page/sessions-page.component";
 import { ProfilePageComponent } from "./profile-page/profile-page.component";
+import { FAQPageComponent } from "./faq-page/faq-page.component";
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
     component: PagesComponent,
     children: [
       { path: "", component: HomePageComponent },
+      { path: "faq", component: FAQPageComponent },
       { path: "signin", component: SignInPageComponent },
       { path: "signup", component: SignUpPageComponent },
       { path: "movies", component: MoviesPageComponent },

@@ -48,11 +48,23 @@ namespace CINEMATRIX.API.Application.Queries.SessionQueries
             //    mappedSession[i].Movie = _mapper.Map<FoundMovieDTO>(movie);
             //}
 
+
+
             foreach (var session in mappedSession)
             {
                 var movie = await _movieService.GetByIdAsync(session.MovieId, cancellationToken);
                 session.Movie = _mapper.Map<FoundMovieDTO>(movie);
             }
+
+
+            //var movieIds = mappedSession.Select(x => x.MovieId).ToArray();
+            //var movies = await _movieService.GetByIdAsync(movieIds, cancellationToken);
+
+            //foreach (var session in mappedSession)
+            //{
+            //    var sessionMovie = movies.FirstOrDefault(m => m.Id == session.MovieId);
+            //    session.Movie = _mapper.Map<FoundMovieDTO>(sessionMovie);
+            //}
 
             return new PagedResponse<FoundSessionDTO>
             {

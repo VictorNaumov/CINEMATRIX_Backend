@@ -3,7 +3,6 @@ using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.API.Contracts.Outgoing.TMDB;
 using CINEMATRIX.Data.Domain.Models;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace CINEMATRIX.API.Host

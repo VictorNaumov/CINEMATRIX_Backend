@@ -20,7 +20,7 @@ namespace CINEMATRIX.Data.Services
     {
         public GenreService() { }
 
-        public async Task<List<FoundGenreDTO>> FindAsync(GenreSearchCondition searchCondition, 
+        public async Task<List<FoundGenreDTO>> FindAsync(GenreSearchCondition searchCondition,
             CancellationToken cancellationToken)
         {
             string url = $"https://api.themoviedb.org/3/genre/movie/list?api_key={ApiKey}&language=en-US";

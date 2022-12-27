@@ -1,8 +1,8 @@
 ﻿using CINEMATRIX.API.Application.Commands.AuthCommands;
+using CINEMATRIX.API.Application.Queries.AuthQueries;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.API.Host.Controllers.Abstractions;
-using CINEMATRIX.API.Application.Queries.AuthQueries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;

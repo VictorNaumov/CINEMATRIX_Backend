@@ -1,5 +1,4 @@
-﻿using CINEMATRIX.Data.Domain.Enums;
-using CINEMATRIX.Data.Domain.Models;
+﻿using CINEMATRIX.Data.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;

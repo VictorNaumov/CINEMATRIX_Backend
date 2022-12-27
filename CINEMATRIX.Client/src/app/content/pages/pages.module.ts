@@ -19,6 +19,7 @@ import { RuntimePipe } from 'src/app/shared/pipes/runtime.pipe';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { SessionsPageComponent } from './sessions-page/sessions-page.component';
 import { ErrorModule } from '../layout/error/error.module';
+import { FAQPageComponent } from './faq-page/faq-page.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { ErrorModule } from '../layout/error/error.module';
     AboutPageComponent,
     SessionsPageComponent,
     ProfilePageComponent,
+    FAQPageComponent,
     GenresPipe,
-    RuntimePipe
+    RuntimePipe,
   ],
   imports: [
     CommonModule,

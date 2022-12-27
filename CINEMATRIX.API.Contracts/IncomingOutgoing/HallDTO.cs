@@ -1,7 +1,4 @@
-﻿using CINEMATRIX.API.Contracts.Outgoing;
-using System.Collections.Generic;
-
-namespace CINEMATRIX.API.Contracts.IncomingOutgoing
+﻿namespace CINEMATRIX.API.Contracts.IncomingOutgoing
 {
     public class HallDTO
     {

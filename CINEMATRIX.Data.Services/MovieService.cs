@@ -19,7 +19,9 @@ namespace CINEMATRIX.Data.Services
         Task<PagedMoviesResponse> GetNowPlayingMoviesAsync(MovieSearchCondition searchCondition,
             CancellationToken cancellationToken = default);
         Task<PagedMoviesResponse> FindMoviesAsync(MovieSearchCondition searchCondition, CancellationToken cancellationToken = default);
+        Task<List<MovieByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default);
         Task<MovieByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken);
+        Task<List<MovieByIdResponse>> GetByIdsAsync(long[] id, CancellationToken cancellationToken);
         Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken);
     }
 
@@ -62,6 +64,13 @@ namespace CINEMATRIX.Data.Services
             return apiResponse;
         }
 
+        public async Task<List<MovieByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default)
+        {
+            var url = _baseUrl + $"movie/{string.Join(",", ids)}?api_key={ApiKey}&append_to_response=images,videos,credits";
+
+            return await GetByUrlAsync<List<MovieByIdResponse>>(url);
+        }
+
         public async Task<MovieByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{id}?api_key={ApiKey}&append_to_response=images,videos,credits";
@@ -69,6 +78,13 @@ namespace CINEMATRIX.Data.Services
             return await GetByUrlAsync<MovieByIdResponse>(url);
         }
 
+        public async Task<List<MovieByIdResponse>> GetByIdsAsync(long[] ids, CancellationToken cancellationToken = default)
+        {
+            var url = _baseUrl + $"movie/{string.Join(",", ids)}?api_key={ApiKey}";
+
+            return await GetByUrlAsync<List<MovieByIdResponse>>(url);
+        }
+        
         public async Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{id}?api_key={ApiKey}";

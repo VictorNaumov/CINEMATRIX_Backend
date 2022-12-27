@@ -9,10 +9,11 @@ namespace CINEMATRIX.API.Contracts.Incoming.SearchConditions
     {
         public long[] ParentCommentIds { get; set; }
         public long[] MovieIds { get; set; }
-        public long[] UserIds { get; set; }
+        public long[] ProfileIds { get; set; }
         public string[] Text { get; set; }
         public DateTime StartDateTime { get; set; } = DateTime.MinValue;
         public DateTime EndDateTime { get; set; } = DateTime.MaxValue;
         public bool IsDeleted { get; set; }
+        public bool NeedLoadDependencies { get; set; }
     }
 }

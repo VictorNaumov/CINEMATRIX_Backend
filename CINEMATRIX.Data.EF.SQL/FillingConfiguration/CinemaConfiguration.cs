@@ -18,7 +18,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                     Name = "Cinematrix",
                     Address = "Novopolotsk Pushkina street",
                     Email = "cinematrix@gmail.com",
-                    ContactNumber ="+37529281133"
+                    ContactNumber = "+37529281133"
                 }
             );
         }

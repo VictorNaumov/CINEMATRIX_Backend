@@ -16,7 +16,7 @@ namespace CINEMATRIX.Data.Services
     {
         Task<IReadOnlyCollection<MovieComment>> FindAsync(MovieCommentSearchCondition searchCondition);
         Task<IReadOnlyCollection<MovieComment>> GetByMovieIdAsync(long movieId, CancellationToken cancellationToken);
-        Task<IReadOnlyCollection<MovieComment>> GetByUserIdAsync(long userId, CancellationToken cancellationToken);
+        Task<IReadOnlyCollection<MovieComment>> GetByProfileIdAsync(long userId, CancellationToken cancellationToken);
         Task<long> CountAsync(MovieCommentSearchCondition searchCondition);
         Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
     }
@@ -34,12 +34,18 @@ namespace CINEMATRIX.Data.Services
 
         public async Task<IReadOnlyCollection<MovieComment>> GetByMovieIdAsync(long movieId, CancellationToken cancellationToken)
         {
-            return await _dbSet.Where(c => c.MovieId == movieId).ToListAsync();
+            return await _dbSet.Where(c => c.MovieId == movieId)
+                .Include(q => q.ParentComment)
+                .Include(q => q.Replies)
+                .ToListAsync();
         }
 
-        public async Task<IReadOnlyCollection<MovieComment>> GetByUserIdAsync(long userId, CancellationToken cancellationToken)
+        public async Task<IReadOnlyCollection<MovieComment>> GetByProfileIdAsync(long profileId, CancellationToken cancellationToken)
         {
-            return await _dbSet.Where(c => c.UserId == userId).ToListAsync();
+            return await _dbSet.Where(c => c.ProfileId == profileId)
+                .Include(q => q.ParentComment)
+                .Include(q => q.Replies)
+                .ToListAsync();
         }
 
         public async Task<long> CountAsync(MovieCommentSearchCondition searchCondition)
@@ -72,14 +78,20 @@ namespace CINEMATRIX.Data.Services
                 query = query.Where(x => searchCondition.MovieIds.Contains(x.MovieId));
             }
 
-            if (searchCondition.UserIds.Any())
+            if (searchCondition.ProfileIds.Any())
             {
-                query = query.Where(x => searchCondition.UserIds.Contains(x.UserId));
+                query = query.Where(x => searchCondition.ProfileIds.Contains(x.ProfileId));
             }
 
             foreach (var text in searchCondition.Text)
             {
                 query = query.Where(x => x.Text != null && x.Text.ToUpper().Contains(text));
+            }
+
+            if (searchCondition.NeedLoadDependencies)
+            {
+                query.Include(q => q.ParentComment)
+                    .Include(q => q.Replies);
             }
 
             query = searchCondition.SortDirection != "desc"

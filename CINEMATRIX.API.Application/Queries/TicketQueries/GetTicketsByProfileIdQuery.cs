@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;
@@ -39,7 +38,7 @@ namespace CINEMATRIX.API.Application.Queries.TicketQueries
                 return null;
             }
 
-            foreach(var ticket in tickets)
+            foreach (var ticket in tickets)
             {
                 ticket.Session.Tickets = null;
             }

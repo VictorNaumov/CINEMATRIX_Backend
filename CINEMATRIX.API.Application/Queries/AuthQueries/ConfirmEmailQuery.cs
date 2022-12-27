@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using CINEMATRIX.API.Application.Commands.Abstractions;
+﻿using CINEMATRIX.API.Application.Commands.Abstractions;
 using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;

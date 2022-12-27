@@ -23,7 +23,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         [JsonProperty("release_date")]
         public DateTime? ReleaseDate { get; set; }
         public string Title { get; set; }
-        public bool Video{ get; set; }
+        public bool Video { get; set; }
 
         [JsonProperty("vote_average")]
         public double VoteAverage { get; set; }

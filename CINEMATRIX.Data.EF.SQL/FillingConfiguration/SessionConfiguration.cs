@@ -26,7 +26,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                 for (int hour = 8; hour <= 22; hour += 2)
                 {
                     sessions.AddRange(
-                        new List<Session>() 
+                        new List<Session>()
                         {
                             new Session
                             {

@@ -109,6 +109,9 @@ export class SessionsPageComponent implements OnInit {
       "movieIds": [],
       "seatTypeIds": this.selectedSeats,
       "timeSessions": this.selectedTime,
+      "needLoadHall": true,
+      "needLoadSeats": true,
+      "needLoadSeatType": true
     }
 
     this.sessions$ = this.sessionService.SearchSession(sessionsParam);

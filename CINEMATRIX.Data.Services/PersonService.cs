@@ -33,7 +33,7 @@ namespace CINEMATRIX.Data.Services
         }
 
         public async Task<PersonByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
-        { 
+        {
             string url = $"https://api.themoviedb.org/3/person/{id}?api_key={ApiKey}&language=en-US&append_to_response=images,credits";
 
             return await GetByUrlAsync<PersonByIdResponse>(url);

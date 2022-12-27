@@ -177,6 +177,101 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.FavoriteMovie", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ProfileId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("FavoriteMovies");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            MovieId = 539681L,
+                            ProfileId = 1L,
+                            Rating = 5
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            MovieId = 576925L,
+                            ProfileId = 2L,
+                            Rating = 4
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            MovieId = 610150L,
+                            ProfileId = 1L,
+                            Rating = 3
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            MovieId = 634649L,
+                            ProfileId = 3L,
+                            Rating = 5
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            MovieId = 639933L,
+                            ProfileId = 1L,
+                            Rating = 4
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            MovieId = 718930L,
+                            ProfileId = 2L,
+                            Rating = 3
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            MovieId = 744276L,
+                            ProfileId = 3L,
+                            Rating = 4
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            MovieId = 756999L,
+                            ProfileId = 1L,
+                            Rating = 5
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            MovieId = 760161L,
+                            ProfileId = 2L,
+                            Rating = 4
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            MovieId = 760741L,
+                            ProfileId = 3L,
+                            Rating = 3
+                        });
+                });
+
             modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.Food", b =>
                 {
                     b.Property<long>("Id")
@@ -391,6 +486,181 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         });
                 });
 
+            modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.MovieComment", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("MovieId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("ParentCommentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("ProfileId")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentCommentId");
+
+                    b.HasIndex("ProfileId");
+
+                    b.ToTable("MovieComments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 83, DateTimeKind.Local).AddTicks(8586),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 1L,
+                            Text = "I absolutely loved this movie! The visual effects were stunning and the story was captivating."
+                        },
+                        new
+                        {
+                            Id = 2L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6274),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 2L,
+                            Text = "I agree, the special effects in this movie were groundbreaking. The plot was a bit predictable, but overall it was an enjoyable film."
+                        },
+                        new
+                        {
+                            Id = 3L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6306),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 2L,
+                            Text = "I was really disappointed in this movie. The plot was too predictable and the acting was subpar."
+                        },
+                        new
+                        {
+                            Id = 4L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6308),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 1L,
+                            Text = "I thought the plot was interesting and the acting was solid. Definitely worth a watch!"
+                        },
+                        new
+                        {
+                            Id = 5L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6310),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 2L,
+                            Text = "I was blown away by the visuals in this film. The story was a bit weak, but overall it was a great movie experience."
+                        },
+                        new
+                        {
+                            Id = 6L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6312),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 1L,
+                            Text = "This movie was amazing! The special effects were unbelievable."
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6313),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 2L,
+                            Text = "I thought the plot was a bit predictable, but the action scenes were great."
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6315),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 1L,
+                            Text = "I totally agree about the special effects, they were some of the best I've ever seen in a movie."
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6319),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ParentCommentId = 8L,
+                            ProfileId = 2L,
+                            Text = "I thought the plot was actually really interesting and kept me engaged throughout the movie."
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6320),
+                            IsDeleted = false,
+                            MovieId = 19995L,
+                            ProfileId = 1L,
+                            Text = "I wasn't a huge fan of the movie overall. It was okay, but not one of my favorites."
+                        },
+                        new
+                        {
+                            Id = 11L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6322),
+                            IsDeleted = false,
+                            MovieId = 526896L,
+                            ProfileId = 1L,
+                            Text = "This movie was really good! I really enjoyed the action and special effects."
+                        },
+                        new
+                        {
+                            Id = 12L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6324),
+                            IsDeleted = false,
+                            MovieId = 526896L,
+                            ProfileId = 2L,
+                            Text = "I thought the acting was a bit weak, but the plot was intriguing."
+                        },
+                        new
+                        {
+                            Id = 13L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6325),
+                            IsDeleted = false,
+                            MovieId = 526896L,
+                            ParentCommentId = 11L,
+                            ProfileId = 3L,
+                            Text = "I agree, the action scenes were definitely a highlight of the film."
+                        },
+                        new
+                        {
+                            Id = 14L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6327),
+                            IsDeleted = false,
+                            MovieId = 526896L,
+                            ParentCommentId = 14L,
+                            ProfileId = 2L,
+                            Text = "I disagree, I thought the acting was top notch and really brought the characters to life."
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            DateTime = new DateTime(2022, 12, 27, 0, 11, 48, 84, DateTimeKind.Local).AddTicks(6328),
+                            IsDeleted = false,
+                            MovieId = 526896L,
+                            ParentCommentId = 15L,
+                            ProfileId = 1L,
+                            Text = "I have to agree with the previous comment, the acting was definitely one of the strengths of this film."
+                        });
+                });
+
             modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.Poster", b =>
                 {
                     b.Property<long>("Id")
@@ -561,7 +831,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 1L,
-                            DateOfBirth = new DateTime(2002, 12, 26, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateOfBirth = new DateTime(2002, 12, 27, 0, 0, 0, 0, DateTimeKind.Local),
                             ImageUrl = "https://i.pinimg.com/564x/4c/50/87/4c50870fef410d14ff495ea1f532565a.jpg",
                             Name = "Admin",
                             PhoneNumber = "+375291111111",
@@ -570,7 +840,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 2L,
-                            DateOfBirth = new DateTime(2001, 12, 26, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateOfBirth = new DateTime(2001, 12, 27, 0, 0, 0, 0, DateTimeKind.Local),
                             ImageUrl = "https://i.pinimg.com/564x/4c/50/87/4c50870fef410d14ff495ea1f532565a.jpg",
                             Name = "Staff",
                             PhoneNumber = "+375291111112",
@@ -579,7 +849,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 3L,
-                            DateOfBirth = new DateTime(2000, 12, 26, 0, 0, 0, 0, DateTimeKind.Local),
+                            DateOfBirth = new DateTime(2000, 12, 27, 0, 0, 0, 0, DateTimeKind.Local),
                             ImageUrl = "https://i.pinimg.com/564x/4c/50/87/4c50870fef410d14ff495ea1f532565a.jpg",
                             Name = "User",
                             PhoneNumber = "+375291111113",
@@ -4492,103 +4762,103 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 1L,
-                            DateTime = new DateTime(2022, 12, 25, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 2L,
-                            DateTime = new DateTime(2022, 12, 25, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 3L,
-                            DateTime = new DateTime(2022, 12, 25, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 4L,
-                            DateTime = new DateTime(2022, 12, 25, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 5L,
-                            DateTime = new DateTime(2022, 12, 25, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 916605L
                         },
                         new
                         {
-                            Id = 6L,
-                            DateTime = new DateTime(2022, 12, 25, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 7L,
-                            DateTime = new DateTime(2022, 12, 25, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 8L,
-                            DateTime = new DateTime(2022, 12, 25, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 3L,
+                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 526896L
                         },
                         new
                         {
-                            Id = 9L,
-                            DateTime = new DateTime(2022, 12, 25, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 4L,
+                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
-                            Id = 10L,
-                            DateTime = new DateTime(2022, 12, 25, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 5L,
+                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 762504L
                         },
                         new
                         {
-                            Id = 11L,
-                            DateTime = new DateTime(2022, 12, 25, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 6L,
+                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 7L,
+                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 8L,
+                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 9L,
+                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 10L,
+                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 882598L
                         },
                         new
                         {
+                            Id = 11L,
+                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
                             Id = 12L,
-                            DateTime = new DateTime(2022, 12, 25, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760161L
                         },
                         new
                         {
                             Id = 13L,
-                            DateTime = new DateTime(2022, 12, 25, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 760161L
@@ -4596,423 +4866,423 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 14L,
-                            DateTime = new DateTime(2022, 12, 25, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 15L,
+                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 16L,
+                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 576925L
                         },
                         new
                         {
-                            Id = 15L,
-                            DateTime = new DateTime(2022, 12, 25, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 16L,
-                            DateTime = new DateTime(2022, 12, 25, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
                             Id = 17L,
-                            DateTime = new DateTime(2022, 12, 25, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 18L,
-                            DateTime = new DateTime(2022, 12, 25, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 762504L
                         },
                         new
                         {
                             Id = 19L,
-                            DateTime = new DateTime(2022, 12, 25, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 20L,
-                            DateTime = new DateTime(2022, 12, 25, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 21L,
-                            DateTime = new DateTime(2022, 12, 25, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 22L,
-                            DateTime = new DateTime(2022, 12, 25, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 23L,
-                            DateTime = new DateTime(2022, 12, 25, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 24L,
-                            DateTime = new DateTime(2022, 12, 25, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 999205L
                         },
                         new
                         {
-                            Id = 25L,
-                            DateTime = new DateTime(2022, 12, 25, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 20L,
+                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 21L,
+                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 22L,
+                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 23L,
+                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 24L,
+                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 25L,
+                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 26L,
+                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 27L,
+                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 28L,
+                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 29L,
+                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 30L,
+                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 31L,
+                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 32L,
+                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
-                            Id = 26L,
-                            DateTime = new DateTime(2022, 12, 25, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 27L,
-                            DateTime = new DateTime(2022, 12, 25, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 28L,
-                            DateTime = new DateTime(2022, 12, 25, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 29L,
-                            DateTime = new DateTime(2022, 12, 25, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 30L,
-                            DateTime = new DateTime(2022, 12, 25, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 31L,
-                            DateTime = new DateTime(2022, 12, 25, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 32L,
-                            DateTime = new DateTime(2022, 12, 25, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
                             Id = 33L,
-                            DateTime = new DateTime(2022, 12, 25, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 34L,
-                            DateTime = new DateTime(2022, 12, 25, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 756999L
                         },
                         new
                         {
                             Id = 35L,
-                            DateTime = new DateTime(2022, 12, 25, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 718930L
                         },
                         new
                         {
                             Id = 36L,
-                            DateTime = new DateTime(2022, 12, 25, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 37L,
-                            DateTime = new DateTime(2022, 12, 25, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 38L,
-                            DateTime = new DateTime(2022, 12, 25, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 39L,
-                            DateTime = new DateTime(2022, 12, 25, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 40L,
-                            DateTime = new DateTime(2022, 12, 25, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 41L,
-                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 42L,
-                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 43L,
-                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 44L,
-                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 45L,
-                            DateTime = new DateTime(2022, 12, 26, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 46L,
-                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 47L,
-                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 48L,
-                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 49L,
-                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 50L,
-                            DateTime = new DateTime(2022, 12, 26, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 51L,
-                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 52L,
-                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 53L,
-                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 54L,
-                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 55L,
-                            DateTime = new DateTime(2022, 12, 26, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 56L,
-                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 57L,
-                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 58L,
-                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 59L,
-                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 60L,
-                            DateTime = new DateTime(2022, 12, 26, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 61L,
-                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 62L,
-                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 63L,
-                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 64L,
-                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 65L,
-                            DateTime = new DateTime(2022, 12, 26, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 882598L
                         },
                         new
                         {
+                            Id = 41L,
+                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 42L,
+                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 43L,
+                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 44L,
+                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 45L,
+                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 46L,
+                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 47L,
+                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 48L,
+                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 49L,
+                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 50L,
+                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 51L,
+                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 52L,
+                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 53L,
+                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 54L,
+                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 55L,
+                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 56L,
+                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 57L,
+                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 58L,
+                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 59L,
+                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 60L,
+                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 61L,
+                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 62L,
+                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 63L,
+                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 64L,
+                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 65L,
+                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
                             Id = 66L,
-                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 882598L
@@ -5020,63 +5290,63 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 67L,
-                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 68L,
+                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 19995L
                         },
                         new
                         {
-                            Id = 68L,
-                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
                             Id = 69L,
-                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 70L,
-                            DateTime = new DateTime(2022, 12, 26, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 762504L
                         },
                         new
                         {
                             Id = 71L,
-                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 639933L
                         },
                         new
                         {
                             Id = 72L,
-                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 718930L
                         },
                         new
                         {
                             Id = 73L,
-                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 74L,
-                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 634649L
@@ -5084,31 +5354,31 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 75L,
-                            DateTime = new DateTime(2022, 12, 26, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 916605L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 76L,
-                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 77L,
-                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 78L,
-                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 756999L
@@ -5116,95 +5386,95 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 79L,
-                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 80L,
-                            DateTime = new DateTime(2022, 12, 26, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 81L,
-                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 526896L
                         },
                         new
                         {
-                            Id = 82L,
-                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
+                            Id = 80L,
+                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
-                            Id = 83L,
-                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
+                            Id = 81L,
+                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 744276L
                         },
                         new
                         {
-                            Id = 84L,
-                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 85L,
-                            DateTime = new DateTime(2022, 12, 27, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
+                            Id = 82L,
+                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 760161L
                         },
                         new
                         {
+                            Id = 83L,
+                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 84L,
+                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 85L,
+                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
                             Id = 86L,
-                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 718930L
                         },
                         new
                         {
                             Id = 87L,
-                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 88L,
-                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 744276L
                         },
                         new
                         {
                             Id = 89L,
-                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 90L,
-                            DateTime = new DateTime(2022, 12, 27, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 760161L
@@ -5212,399 +5482,399 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 91L,
-                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 92L,
+                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 93L,
+                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 94L,
+                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 95L,
+                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 92L,
-                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
+                            Id = 96L,
+                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 877957L
                         },
                         new
                         {
-                            Id = 93L,
-                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 97L,
+                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 98L,
+                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 762504L
                         },
                         new
                         {
-                            Id = 94L,
-                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 95L,
-                            DateTime = new DateTime(2022, 12, 27, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 96L,
-                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 97L,
-                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 98L,
-                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
                             Id = 99L,
-                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 100L,
-                            DateTime = new DateTime(2022, 12, 27, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 101L,
-                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 102L,
-                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 103L,
-                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 104L,
-                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 105L,
-                            DateTime = new DateTime(2022, 12, 27, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 634649L
                         },
                         new
                         {
-                            Id = 106L,
-                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 100L,
+                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 101L,
+                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 639933L
                         },
                         new
                         {
-                            Id = 107L,
-                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 102L,
+                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 882598L
                         },
                         new
                         {
-                            Id = 108L,
-                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 103L,
+                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 744276L
                         },
                         new
                         {
-                            Id = 109L,
-                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 104L,
+                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 105L,
+                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 921360L
                         },
                         new
                         {
-                            Id = 110L,
-                            DateTime = new DateTime(2022, 12, 27, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 111L,
-                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 106L,
+                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
-                            Id = 112L,
-                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 107L,
+                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 113L,
-                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 114L,
-                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 115L,
-                            DateTime = new DateTime(2022, 12, 27, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 116L,
-                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 117L,
-                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 118L,
-                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 119L,
-                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 120L,
-                            DateTime = new DateTime(2022, 12, 27, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 121L,
-                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 122L,
-                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 123L,
-                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 124L,
-                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 125L,
-                            DateTime = new DateTime(2022, 12, 28, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 126L,
-                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 127L,
-                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 128L,
-                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 129L,
-                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 130L,
-                            DateTime = new DateTime(2022, 12, 28, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
-                            Id = 131L,
-                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 108L,
+                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 109L,
+                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 110L,
+                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 111L,
+                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 112L,
+                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 113L,
+                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 114L,
+                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 115L,
+                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 116L,
+                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 117L,
+                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 118L,
+                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 119L,
+                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 120L,
+                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 121L,
+                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 122L,
+                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 123L,
+                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 124L,
+                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 125L,
+                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 126L,
+                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 127L,
+                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 128L,
+                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 129L,
+                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 130L,
+                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 131L,
+                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 132L,
-                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 133L,
-                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 134L,
+                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 135L,
+                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 136L,
+                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 137L,
+                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 138L,
+                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 718930L
                         },
                         new
                         {
-                            Id = 134L,
-                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 135L,
-                            DateTime = new DateTime(2022, 12, 28, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 136L,
-                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 137L,
-                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 138L,
-                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
                             Id = 139L,
-                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 140L,
-                            DateTime = new DateTime(2022, 12, 28, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 877957L
@@ -5612,103 +5882,103 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 141L,
-                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 142L,
-                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 143L,
-                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 526896L
                         },
                         new
                         {
                             Id = 144L,
-                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 145L,
-                            DateTime = new DateTime(2022, 12, 28, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 146L,
-                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 147L,
-                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 148L,
-                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 149L,
-                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 999205L
                         },
                         new
                         {
-                            Id = 150L,
-                            DateTime = new DateTime(2022, 12, 28, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 145L,
+                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 146L,
+                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 147L,
+                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 148L,
+                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 149L,
+                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 150L,
+                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 634649L
                         },
                         new
                         {
                             Id = 151L,
-                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 152L,
-                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 756999L
                         },
                         new
                         {
                             Id = 153L,
-                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 882598L
@@ -5716,39 +5986,39 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 154L,
-                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 155L,
-                            DateTime = new DateTime(2022, 12, 28, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 539681L
                         },
                         new
                         {
                             Id = 156L,
-                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 157L,
-                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 756999L
                         },
                         new
                         {
                             Id = 158L,
-                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 19995L
@@ -5756,63 +6026,63 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 159L,
-                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 160L,
+                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 999205L
                         },
                         new
                         {
-                            Id = 160L,
-                            DateTime = new DateTime(2022, 12, 28, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
+                            Id = 161L,
+                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 756999L
                         },
                         new
                         {
-                            Id = 161L,
-                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
+                            Id = 162L,
+                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 163L,
+                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 634649L
                         },
                         new
                         {
-                            Id = 162L,
-                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 163L,
-                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
                             Id = 164L,
-                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 165L,
-                            DateTime = new DateTime(2022, 12, 29, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 539681L
                         },
                         new
                         {
                             Id = 166L,
-                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 921360L
@@ -5820,55 +6090,55 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 167L,
-                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 639933L
                         },
                         new
                         {
                             Id = 168L,
-                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 169L,
+                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 170L,
+                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 171L,
+                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 172L,
+                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 718930L
                         },
                         new
                         {
-                            Id = 169L,
-                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 170L,
-                            DateTime = new DateTime(2022, 12, 29, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 171L,
-                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 172L,
-                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
                             Id = 173L,
-                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 882598L
@@ -5876,223 +6146,223 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 174L,
-                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 175L,
-                            DateTime = new DateTime(2022, 12, 29, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 176L,
-                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 177L,
-                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 756999L
                         },
                         new
                         {
                             Id = 178L,
-                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 179L,
-                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 180L,
-                            DateTime = new DateTime(2022, 12, 29, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 181L,
-                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 182L,
-                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 183L,
-                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 184L,
-                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 185L,
-                            DateTime = new DateTime(2022, 12, 29, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 186L,
-                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 187L,
-                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 188L,
-                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 189L,
-                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 190L,
-                            DateTime = new DateTime(2022, 12, 29, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 191L,
-                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 961484L
                         },
                         new
                         {
-                            Id = 192L,
-                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
+                            Id = 180L,
+                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 985939L
                         },
                         new
                         {
-                            Id = 193L,
-                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
+                            Id = 181L,
+                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 760741L
                         },
                         new
                         {
-                            Id = 194L,
-                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 195L,
-                            DateTime = new DateTime(2022, 12, 29, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 196L,
-                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 197L,
-                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 182L,
+                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 526896L
                         },
                         new
                         {
-                            Id = 198L,
-                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 183L,
+                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 199L,
-                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 184L,
+                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 185L,
+                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 186L,
+                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 187L,
+                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
-                            Id = 200L,
-                            DateTime = new DateTime(2022, 12, 29, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 188L,
+                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 189L,
+                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 190L,
+                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 921360L
                         },
                         new
                         {
+                            Id = 191L,
+                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 192L,
+                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 193L,
+                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 194L,
+                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 195L,
+                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 196L,
+                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 197L,
+                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 198L,
+                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 199L,
+                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 200L,
+                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
                             Id = 201L,
-                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 916605L
@@ -6100,7 +6370,7 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 202L,
-                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 539681L
@@ -6108,303 +6378,303 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 203L,
-                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 204L,
-                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 205L,
-                            DateTime = new DateTime(2022, 12, 30, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 206L,
-                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 207L,
-                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 208L,
-                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 209L,
-                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 210L,
-                            DateTime = new DateTime(2022, 12, 30, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 211L,
-                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 212L,
-                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 213L,
-                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 214L,
-                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 204L,
+                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 215L,
-                            DateTime = new DateTime(2022, 12, 30, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
-                            Id = 216L,
-                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
+                            Id = 205L,
+                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 756999L
                         },
                         new
                         {
-                            Id = 217L,
-                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 206L,
+                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 207L,
+                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 916605L
                         },
                         new
                         {
-                            Id = 218L,
-                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 208L,
+                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 219L,
-                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 220L,
-                            DateTime = new DateTime(2022, 12, 30, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 221L,
-                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
-                            Id = 222L,
-                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 223L,
-                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 224L,
-                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 225L,
-                            DateTime = new DateTime(2022, 12, 30, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 226L,
-                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 227L,
-                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 228L,
-                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 229L,
-                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 230L,
-                            DateTime = new DateTime(2022, 12, 30, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 231L,
-                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 232L,
-                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 233L,
-                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 234L,
-                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 235L,
-                            DateTime = new DateTime(2022, 12, 30, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 236L,
-                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 237L,
-                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 238L,
-                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 239L,
-                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 209L,
+                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
+                            Id = 210L,
+                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 211L,
+                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 212L,
+                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 213L,
+                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 214L,
+                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 215L,
+                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 216L,
+                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 217L,
+                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 218L,
+                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 219L,
+                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 220L,
+                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 221L,
+                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 222L,
+                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 223L,
+                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 224L,
+                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 225L,
+                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 226L,
+                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 227L,
+                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 228L,
+                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 229L,
+                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 230L,
+                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 231L,
+                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 232L,
+                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 233L,
+                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 234L,
+                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 235L,
+                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 236L,
+                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 237L,
+                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 238L,
+                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 239L,
+                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
                             Id = 240L,
-                            DateTime = new DateTime(2022, 12, 30, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 760741L
@@ -6412,87 +6682,87 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 241L,
-                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 744276L
                         },
                         new
                         {
                             Id = 242L,
-                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 243L,
-                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 19995L
                         },
                         new
                         {
+                            Id = 243L,
+                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
                             Id = 244L,
-                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 526896L
                         },
                         new
                         {
                             Id = 245L,
-                            DateTime = new DateTime(2022, 12, 31, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 246L,
-                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 247L,
-                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 248L,
-                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 249L,
-                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
+                            Id = 246L,
+                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 247L,
+                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 248L,
+                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 249L,
+                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
                             Id = 250L,
-                            DateTime = new DateTime(2022, 12, 31, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 251L,
-                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 610150L
@@ -6500,79 +6770,79 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 252L,
-                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 253L,
-                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 254L,
-                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 255L,
-                            DateTime = new DateTime(2022, 12, 31, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 634649L
                         },
                         new
                         {
                             Id = 256L,
-                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 19995L
                         },
                         new
                         {
                             Id = 257L,
-                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 19995L
                         },
                         new
                         {
                             Id = 258L,
-                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 259L,
-                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 260L,
-                            DateTime = new DateTime(2022, 12, 31, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 261L,
-                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 877957L
@@ -6580,39 +6850,39 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 262L,
-                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 263L,
-                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 744276L
                         },
                         new
                         {
                             Id = 264L,
-                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 265L,
-                            DateTime = new DateTime(2022, 12, 31, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 19995L
                         },
                         new
                         {
                             Id = 266L,
-                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 762504L
@@ -6620,55 +6890,55 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 267L,
-                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 268L,
-                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 269L,
-                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 270L,
-                            DateTime = new DateTime(2022, 12, 31, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 271L,
-                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 921360L
                         },
                         new
                         {
+                            Id = 270L,
+                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 271L,
+                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
                             Id = 272L,
-                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 718930L
                         },
                         new
                         {
                             Id = 273L,
-                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 634649L
@@ -6676,159 +6946,159 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 274L,
-                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 275L,
-                            DateTime = new DateTime(2022, 12, 31, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 276L,
-                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 277L,
-                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 278L,
-                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 760161L
                         },
                         new
                         {
-                            Id = 279L,
-                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 280L,
-                            DateTime = new DateTime(2022, 12, 31, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 275L,
+                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 756999L
                         },
                         new
                         {
-                            Id = 281L,
-                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 282L,
-                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 283L,
-                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 284L,
-                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 285L,
-                            DateTime = new DateTime(2023, 1, 1, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 286L,
-                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 276L,
+                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 639933L
                         },
                         new
                         {
-                            Id = 287L,
-                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 277L,
+                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 278L,
+                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 279L,
+                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 280L,
+                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 281L,
+                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 282L,
+                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 283L,
+                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 288L,
-                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 289L,
-                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 284L,
+                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 290L,
-                            DateTime = new DateTime(2023, 1, 1, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 285L,
+                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 286L,
+                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 287L,
+                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 288L,
+                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 289L,
+                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 290L,
+                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 291L,
-                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 744276L
                         },
                         new
                         {
                             Id = 292L,
-                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 293L,
-                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 760161L
@@ -6836,23 +7106,23 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 294L,
-                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 295L,
-                            DateTime = new DateTime(2023, 1, 1, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 296L,
-                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 756999L
@@ -6860,55 +7130,55 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 297L,
-                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 298L,
-                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 299L,
-                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 300L,
-                            DateTime = new DateTime(2023, 1, 1, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 301L,
-                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 762504L
                         },
                         new
                         {
+                            Id = 298L,
+                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 299L,
+                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 300L,
+                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 301L,
+                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
                             Id = 302L,
-                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 19995L
                         },
                         new
                         {
                             Id = 303L,
-                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 877957L
@@ -6916,87 +7186,87 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 304L,
-                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 305L,
-                            DateTime = new DateTime(2023, 1, 1, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 306L,
+                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 307L,
+                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 744276L
                         },
                         new
                         {
-                            Id = 306L,
-                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 308L,
+                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 309L,
+                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 310L,
+                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 311L,
+                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
-                            Id = 307L,
-                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 308L,
-                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 309L,
-                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 310L,
-                            DateTime = new DateTime(2023, 1, 1, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 311L,
-                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
                             Id = 312L,
-                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 526896L
                         },
                         new
                         {
                             Id = 313L,
-                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 314L,
-                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 762504L
@@ -7004,127 +7274,127 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 315L,
-                            DateTime = new DateTime(2023, 1, 1, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 316L,
-                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 317L,
-                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 318L,
-                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 961484L
                         },
                         new
                         {
-                            Id = 319L,
-                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 320L,
-                            DateTime = new DateTime(2023, 1, 1, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 321L,
-                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 322L,
-                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 323L,
-                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 324L,
-                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 325L,
-                            DateTime = new DateTime(2023, 1, 2, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 326L,
-                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 316L,
+                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 327L,
-                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 317L,
+                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 916605L
                         },
                         new
                         {
-                            Id = 328L,
-                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 318L,
+                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 576925L
                         },
                         new
                         {
-                            Id = 329L,
-                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 319L,
+                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 320L,
+                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 321L,
+                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 322L,
+                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 323L,
+                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
+                            Id = 324L,
+                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 325L,
+                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 326L,
+                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 327L,
+                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 328L,
+                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 329L,
+                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
                             Id = 330L,
-                            DateTime = new DateTime(2023, 1, 2, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 999205L
@@ -7132,111 +7402,111 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 331L,
-                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 332L,
-                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 333L,
-                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 334L,
-                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 335L,
-                            DateTime = new DateTime(2023, 1, 2, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 336L,
-                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 337L,
-                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 338L,
-                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 339L,
-                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 340L,
-                            DateTime = new DateTime(2023, 1, 2, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 882598L
                         },
                         new
                         {
-                            Id = 341L,
-                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 342L,
-                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 332L,
+                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 762504L
                         },
                         new
                         {
-                            Id = 343L,
-                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 333L,
+                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
+                            Id = 334L,
+                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 335L,
+                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 336L,
+                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 337L,
+                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 338L,
+                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 339L,
+                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 340L,
+                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 341L,
+                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 342L,
+                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 343L,
+                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
                             Id = 344L,
-                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 19995L
@@ -7244,39 +7514,39 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 345L,
-                            DateTime = new DateTime(2023, 1, 2, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 346L,
-                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 718930L
                         },
                         new
                         {
                             Id = 347L,
-                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 348L,
-                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 349L,
-                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 877957L
@@ -7284,199 +7554,199 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 350L,
-                            DateTime = new DateTime(2023, 1, 2, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 762504L
                         },
                         new
                         {
                             Id = 351L,
-                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 352L,
-                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 744276L
                         },
                         new
                         {
                             Id = 353L,
-                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 354L,
-                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 355L,
-                            DateTime = new DateTime(2023, 1, 2, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 356L,
-                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 357L,
-                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 358L,
-                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 359L,
-                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 360L,
-                            DateTime = new DateTime(2023, 1, 2, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 361L,
-                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 362L,
-                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 363L,
-                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 364L,
-                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 365L,
-                            DateTime = new DateTime(2023, 1, 3, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 366L,
-                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 916605L
                         },
                         new
                         {
-                            Id = 367L,
-                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 368L,
-                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 369L,
-                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 354L,
+                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 370L,
-                            DateTime = new DateTime(2023, 1, 3, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 371L,
-                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 372L,
-                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 373L,
-                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 355L,
+                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 356L,
+                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 357L,
+                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 358L,
+                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 359L,
+                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 360L,
+                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 361L,
+                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 362L,
+                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 363L,
+                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 364L,
+                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 365L,
+                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 366L,
+                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 367L,
+                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 368L,
+                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 369L,
+                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 370L,
+                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 371L,
+                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 372L,
+                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 373L,
+                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 374L,
-                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 19995L
@@ -7484,63 +7754,63 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 375L,
-                            DateTime = new DateTime(2023, 1, 3, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 376L,
+                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 377L,
+                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 378L,
+                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
-                            Id = 376L,
-                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 377L,
-                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 378L,
-                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
                             Id = 379L,
-                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 718930L
                         },
                         new
                         {
                             Id = 380L,
-                            DateTime = new DateTime(2023, 1, 3, 14, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 381L,
-                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 19995L
                         },
                         new
                         {
                             Id = 382L,
-                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 985939L
@@ -7548,71 +7818,71 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 383L,
-                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 384L,
-                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 385L,
-                            DateTime = new DateTime(2023, 1, 3, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 386L,
-                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 526896L
                         },
                         new
                         {
+                            Id = 384L,
+                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 385L,
+                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 386L,
+                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
                             Id = 387L,
-                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 388L,
-                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 389L,
-                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 390L,
-                            DateTime = new DateTime(2023, 1, 3, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 391L,
-                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 762504L
@@ -7620,31 +7890,31 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 392L,
-                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 393L,
-                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 394L,
-                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 744276L
                         },
                         new
                         {
                             Id = 395L,
-                            DateTime = new DateTime(2023, 1, 3, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 762504L
@@ -7652,95 +7922,95 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 396L,
-                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 19995L
                         },
                         new
                         {
                             Id = 397L,
-                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 526896L
                         },
                         new
                         {
                             Id = 398L,
-                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 639933L
                         },
                         new
                         {
                             Id = 399L,
-                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 400L,
+                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 401L,
+                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 402L,
+                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 403L,
+                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 404L,
+                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 760161L
                         },
                         new
                         {
-                            Id = 400L,
-                            DateTime = new DateTime(2023, 1, 3, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 401L,
-                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 402L,
-                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 403L,
-                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 404L,
-                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
                             Id = 405L,
-                            DateTime = new DateTime(2023, 1, 4, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 406L,
-                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 407L,
-                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 610150L
@@ -7748,175 +8018,175 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 408L,
-                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 409L,
-                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 410L,
-                            DateTime = new DateTime(2023, 1, 4, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 411L,
-                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 412L,
-                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 413L,
-                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 414L,
-                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 415L,
-                            DateTime = new DateTime(2023, 1, 4, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 416L,
-                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 417L,
-                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 418L,
-                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 419L,
-                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 420L,
-                            DateTime = new DateTime(2023, 1, 4, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 421L,
-                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 539681L
                         },
                         new
                         {
-                            Id = 422L,
-                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 410L,
+                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 411L,
+                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 412L,
+                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 423L,
-                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 413L,
+                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 762504L
                         },
                         new
                         {
-                            Id = 424L,
-                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 414L,
+                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 961484L
                         },
                         new
                         {
-                            Id = 425L,
-                            DateTime = new DateTime(2023, 1, 4, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 415L,
+                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760741L
                         },
                         new
                         {
-                            Id = 426L,
-                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 416L,
+                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 417L,
+                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 418L,
+                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 419L,
+                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 420L,
+                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 999205L
                         },
                         new
                         {
-                            Id = 427L,
-                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 421L,
+                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 422L,
+                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 423L,
+                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 424L,
+                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 425L,
+                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 426L,
+                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 427L,
+                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 428L,
-                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 429L,
-                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 744276L
@@ -7924,175 +8194,175 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 430L,
-                            DateTime = new DateTime(2023, 1, 4, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 431L,
+                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 432L,
+                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 639933L
                         },
                         new
                         {
-                            Id = 431L,
-                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 432L,
-                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
                             Id = 433L,
-                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 434L,
-                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 435L,
-                            DateTime = new DateTime(2023, 1, 4, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 436L,
-                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 437L,
-                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 438L,
-                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 576925L
                         },
                         new
                         {
-                            Id = 439L,
-                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 434L,
+                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
+                            Id = 435L,
+                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 436L,
+                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 437L,
+                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 438L,
+                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 439L,
+                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
                             Id = 440L,
-                            DateTime = new DateTime(2023, 1, 4, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 441L,
+                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 442L,
+                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 443L,
+                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 444L,
+                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
+                            Id = 445L,
+                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 446L,
+                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 447L,
+                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 448L,
+                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 449L,
+                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 450L,
+                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 760161L
                         },
                         new
                         {
-                            Id = 441L,
-                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 442L,
-                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 443L,
-                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 444L,
-                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 445L,
-                            DateTime = new DateTime(2023, 1, 5, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 446L,
-                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 447L,
-                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 448L,
-                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 449L,
-                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 450L,
-                            DateTime = new DateTime(2023, 1, 5, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
                             Id = 451L,
-                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 718930L
@@ -8100,167 +8370,167 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 452L,
-                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 453L,
-                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 454L,
-                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 455L,
-                            DateTime = new DateTime(2023, 1, 5, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 456L,
-                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 457L,
-                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 458L,
-                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 459L,
-                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 460L,
-                            DateTime = new DateTime(2023, 1, 5, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 461L,
-                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 462L,
-                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 463L,
-                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 744276L
                         },
                         new
                         {
-                            Id = 464L,
-                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
+                            Id = 453L,
+                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 526896L
                         },
                         new
                         {
-                            Id = 465L,
-                            DateTime = new DateTime(2023, 1, 5, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 454L,
+                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 455L,
+                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 756999L
                         },
                         new
                         {
-                            Id = 466L,
-                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 456L,
+                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 882598L
                         },
                         new
                         {
-                            Id = 467L,
-                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 457L,
+                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 458L,
+                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 459L,
+                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 460L,
+                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 461L,
+                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 462L,
+                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 463L,
+                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 718930L
                         },
                         new
                         {
-                            Id = 468L,
-                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 469L,
-                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 464L,
+                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 999205L
                         },
                         new
                         {
-                            Id = 470L,
-                            DateTime = new DateTime(2023, 1, 5, 18, 0, 0, 0, DateTimeKind.Local),
+                            Id = 465L,
+                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 471L,
-                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
+                            Id = 466L,
+                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 467L,
+                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 468L,
+                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 576925L
+                        },
+                        new
+                        {
+                            Id = 469L,
+                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 470L,
+                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 985939L
+                        },
+                        new
+                        {
+                            Id = 471L,
+                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
                             Id = 472L,
-                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 19995L
@@ -8268,31 +8538,31 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 473L,
-                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 474L,
-                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
                             Id = 475L,
-                            DateTime = new DateTime(2023, 1, 5, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 476L,
-                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 718930L
@@ -8300,23 +8570,23 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 477L,
-                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 478L,
-                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 479L,
-                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 576925L
@@ -8324,215 +8594,215 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 480L,
-                            DateTime = new DateTime(2023, 1, 5, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 526896L
                         },
                         new
                         {
                             Id = 481L,
-                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 762504L
                         },
                         new
                         {
                             Id = 482L,
-                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 483L,
-                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 484L,
-                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 485L,
-                            DateTime = new DateTime(2023, 1, 6, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 486L,
-                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 487L,
-                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 488L,
-                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 489L,
-                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 490L,
-                            DateTime = new DateTime(2023, 1, 6, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 491L,
-                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 492L,
-                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 493L,
-                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 961484L
                         },
                         new
                         {
-                            Id = 494L,
-                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 495L,
-                            DateTime = new DateTime(2023, 1, 6, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 485L,
+                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 496L,
-                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 882598L
                         },
                         new
                         {
-                            Id = 497L,
-                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 486L,
+                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 487L,
+                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 498L,
-                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 488L,
+                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 718930L
                         },
                         new
                         {
-                            Id = 499L,
-                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 489L,
+                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 999205L
                         },
                         new
                         {
-                            Id = 500L,
-                            DateTime = new DateTime(2023, 1, 6, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 490L,
+                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 501L,
-                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 491L,
+                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 492L,
+                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 493L,
+                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 494L,
+                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 495L,
+                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 882598L
                         },
                         new
                         {
-                            Id = 502L,
-                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 496L,
+                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 497L,
+                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 498L,
+                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 499L,
+                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 500L,
+                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
                             MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 501L,
+                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 502L,
+                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 503L,
-                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 504L,
-                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 505L,
-                            DateTime = new DateTime(2023, 1, 6, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 985939L
                         },
                         new
                         {
                             Id = 506L,
-                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 718930L
@@ -8540,55 +8810,55 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 507L,
-                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 508L,
-                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 760741L
                         },
                         new
                         {
-                            Id = 509L,
-                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
+                            Id = 508L,
+                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 760161L
                         },
                         new
                         {
+                            Id = 509L,
+                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
                             Id = 510L,
-                            DateTime = new DateTime(2023, 1, 6, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 539681L
                         },
                         new
                         {
                             Id = 511L,
-                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 512L,
-                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 513L,
-                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 718930L
@@ -8596,103 +8866,103 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 514L,
-                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 999205L
                         },
                         new
                         {
                             Id = 515L,
-                            DateTime = new DateTime(2023, 1, 6, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 916605L
                         },
                         new
                         {
                             Id = 516L,
-                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 517L,
-                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 518L,
-                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 519L,
-                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
                             IsPublic = true,
                             MovieId = 576925L
                         },
                         new
                         {
-                            Id = 520L,
-                            DateTime = new DateTime(2023, 1, 6, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
+                            Id = 517L,
+                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 518L,
+                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 519L,
+                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
                             IsPublic = true,
                             MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 520L,
+                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 521L,
-                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 522L,
-                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 523L,
-                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 524L,
-                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
                             IsPublic = true,
                             MovieId = 634649L
                         },
                         new
                         {
+                            Id = 522L,
+                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 523L,
+                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 524L,
+                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 762504L
+                        },
+                        new
+                        {
                             Id = 525L,
-                            DateTime = new DateTime(2023, 1, 7, 8, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 576925L
                         },
                         new
                         {
                             Id = 526L,
-                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
                             MovieId = 882598L
@@ -8700,151 +8970,151 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 527L,
-                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 760161L
                         },
                         new
                         {
                             Id = 528L,
-                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 639933L
-                        },
-                        new
-                        {
-                            Id = 529L,
-                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 530L,
-                            DateTime = new DateTime(2023, 1, 7, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 531L,
-                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 532L,
-                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 756999L
                         },
                         new
                         {
+                            Id = 529L,
+                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 530L,
+                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 531L,
+                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 532L,
+                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
                             Id = 533L,
-                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 744276L
+                            MovieId = 756999L
                         },
                         new
                         {
                             Id = 534L,
-                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 535L,
+                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 536L,
+                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 537L,
+                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 538L,
+                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 539L,
+                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 985939L
                         },
                         new
                         {
-                            Id = 535L,
-                            DateTime = new DateTime(2023, 1, 7, 12, 0, 0, 0, DateTimeKind.Local),
+                            Id = 540L,
+                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 760741L
+                            MovieId = 718930L
                         },
                         new
                         {
-                            Id = 536L,
-                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 541L,
+                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 961484L
                         },
                         new
                         {
-                            Id = 537L,
-                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 542L,
+                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 882598L
                         },
                         new
                         {
-                            Id = 538L,
-                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 543L,
+                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 756999L
                         },
                         new
                         {
-                            Id = 539L,
-                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
+                            Id = 544L,
+                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
                             MovieId = 921360L
                         },
                         new
                         {
-                            Id = 540L,
-                            DateTime = new DateTime(2023, 1, 7, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 541L,
-                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 542L,
-                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 634649L
-                        },
-                        new
-                        {
-                            Id = 543L,
-                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 544L,
-                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
                             Id = 545L,
-                            DateTime = new DateTime(2023, 1, 7, 16, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 756999L
@@ -8852,598 +9122,278 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 546L,
-                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 547L,
-                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 760161L
                         },
                         new
                         {
                             Id = 548L,
-                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 549L,
-                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 762504L
                         },
                         new
                         {
                             Id = 550L,
-                            DateTime = new DateTime(2023, 1, 7, 18, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 760741L
                         },
                         new
                         {
                             Id = 551L,
-                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 526896L
                         },
                         new
                         {
                             Id = 552L,
-                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 553L,
-                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 639933L
                         },
                         new
                         {
                             Id = 554L,
-                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 882598L
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 555L,
-                            DateTime = new DateTime(2023, 1, 7, 20, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 526896L
+                            MovieId = 921360L
                         },
                         new
                         {
                             Id = 556L,
-                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 756999L
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 557L,
-                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 634649L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 558L,
-                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 961484L
+                            MovieId = 610150L
                         },
                         new
                         {
                             Id = 559L,
-                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 882598L
                         },
                         new
                         {
                             Id = 560L,
-                            DateTime = new DateTime(2023, 1, 7, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 561L,
-                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 576925L
-                        },
-                        new
-                        {
-                            Id = 562L,
-                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 610150L
                         },
                         new
                         {
-                            Id = 563L,
-                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 564L,
-                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 565L,
-                            DateTime = new DateTime(2023, 1, 8, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 566L,
-                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
+                            Id = 561L,
+                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 567L,
-                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 568L,
-                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 756999L
-                        },
-                        new
-                        {
-                            Id = 569L,
-                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 570L,
-                            DateTime = new DateTime(2023, 1, 8, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 571L,
-                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 572L,
-                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 573L,
-                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 760161L
-                        },
-                        new
-                        {
-                            Id = 574L,
-                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 575L,
-                            DateTime = new DateTime(2023, 1, 8, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 576L,
-                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 961484L
-                        },
-                        new
-                        {
-                            Id = 577L,
-                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 760741L
-                        },
-                        new
-                        {
-                            Id = 578L,
-                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 579L,
-                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
                             IsPublic = true,
                             MovieId = 921360L
                         },
                         new
                         {
-                            Id = 580L,
-                            DateTime = new DateTime(2023, 1, 8, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
+                            Id = 562L,
+                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 539681L
                         },
                         new
                         {
-                            Id = 581L,
-                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 563L,
+                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 564L,
+                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 565L,
+                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 566L,
+                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 744276L
                         },
                         new
                         {
-                            Id = 582L,
-                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 567L,
+                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 718930L
+                            MovieId = 760161L
                         },
                         new
                         {
-                            Id = 583L,
-                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 568L,
+                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
                             MovieId = 639933L
                         },
                         new
                         {
-                            Id = 584L,
-                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
+                            Id = 569L,
+                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 585L,
-                            DateTime = new DateTime(2023, 1, 8, 16, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 586L,
-                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 526896L
-                        },
-                        new
-                        {
-                            Id = 587L,
-                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 588L,
-                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 877957L
-                        },
-                        new
-                        {
-                            Id = 589L,
-                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 590L,
-                            DateTime = new DateTime(2023, 1, 8, 18, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 591L,
-                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 592L,
-                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 593L,
-                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 594L,
-                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 595L,
-                            DateTime = new DateTime(2023, 1, 8, 20, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 744276L
-                        },
-                        new
-                        {
-                            Id = 596L,
-                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
                             IsPublic = true,
                             MovieId = 634649L
                         },
                         new
                         {
-                            Id = 597L,
-                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 598L,
-                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 599L,
-                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 882598L
-                        },
-                        new
-                        {
-                            Id = 600L,
-                            DateTime = new DateTime(2023, 1, 8, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 570L,
+                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 526896L
                         },
                         new
                         {
-                            Id = 601L,
-                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
+                            Id = 571L,
+                            DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 539681L
                         },
                         new
                         {
-                            Id = 602L,
-                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
+                            Id = 572L,
+                            DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 603L,
-                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
                             IsPublic = true,
                             MovieId = 744276L
                         },
                         new
                         {
-                            Id = 604L,
-                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 605L,
-                            DateTime = new DateTime(2023, 1, 9, 8, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 606L,
-                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 607L,
-                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 718930L
-                        },
-                        new
-                        {
-                            Id = 608L,
-                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 3L,
-                            IsPublic = true,
-                            MovieId = 19995L
-                        },
-                        new
-                        {
-                            Id = 609L,
-                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 999205L
-                        },
-                        new
-                        {
-                            Id = 610L,
-                            DateTime = new DateTime(2023, 1, 9, 10, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 610150L
-                        },
-                        new
-                        {
-                            Id = 611L,
-                            DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 985939L
-                        },
-                        new
-                        {
-                            Id = 612L,
-                            DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
-                            IsPublic = true,
-                            MovieId = 762504L
-                        },
-                        new
-                        {
-                            Id = 613L,
+                            Id = 573L,
                             DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760741L
                         },
                         new
                         {
-                            Id = 614L,
+                            Id = 574L,
                             DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
-                            IsPublic = true,
-                            MovieId = 539681L
-                        },
-                        new
-                        {
-                            Id = 615L,
-                            DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 5L,
-                            IsPublic = true,
-                            MovieId = 916605L
-                        },
-                        new
-                        {
-                            Id = 616L,
-                            DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 1L,
-                            IsPublic = true,
-                            MovieId = 921360L
-                        },
-                        new
-                        {
-                            Id = 617L,
-                            DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
-                            HallId = 2L,
                             IsPublic = true,
                             MovieId = 961484L
                         },
                         new
                         {
-                            Id = 618L,
+                            Id = 575L,
+                            DateTime = new DateTime(2023, 1, 9, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 576L,
+                            DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760741L
+                        },
+                        new
+                        {
+                            Id = 577L,
+                            DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 578L,
                             DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 760161L
+                            MovieId = 718930L
                         },
                         new
                         {
-                            Id = 619L,
+                            Id = 579L,
                             DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 539681L
                         },
                         new
                         {
-                            Id = 620L,
+                            Id = 580L,
                             DateTime = new DateTime(2023, 1, 9, 14, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
@@ -9451,47 +9401,47 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         },
                         new
                         {
-                            Id = 621L,
+                            Id = 581L,
                             DateTime = new DateTime(2023, 1, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 762504L
+                            MovieId = 610150L
                         },
                         new
                         {
-                            Id = 622L,
+                            Id = 582L,
                             DateTime = new DateTime(2023, 1, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 985939L
                         },
                         new
                         {
-                            Id = 623L,
+                            Id = 583L,
                             DateTime = new DateTime(2023, 1, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 877957L
+                            MovieId = 921360L
                         },
                         new
                         {
-                            Id = 624L,
+                            Id = 584L,
                             DateTime = new DateTime(2023, 1, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 639933L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 625L,
+                            Id = 585L,
                             DateTime = new DateTime(2023, 1, 9, 16, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 999205L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 626L,
+                            Id = 586L,
                             DateTime = new DateTime(2023, 1, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
@@ -9499,115 +9449,435 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         },
                         new
                         {
-                            Id = 627L,
+                            Id = 587L,
                             DateTime = new DateTime(2023, 1, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 19995L
                         },
                         new
                         {
-                            Id = 628L,
+                            Id = 588L,
                             DateTime = new DateTime(2023, 1, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 539681L
+                            MovieId = 916605L
                         },
                         new
                         {
-                            Id = 629L,
+                            Id = 589L,
                             DateTime = new DateTime(2023, 1, 9, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 610150L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 630L,
+                            Id = 590L,
                             DateTime = new DateTime(2023, 1, 9, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 591L,
+                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 592L,
+                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 916605L
+                        },
+                        new
+                        {
+                            Id = 593L,
+                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 594L,
+                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 595L,
+                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
                             MovieId = 760161L
                         },
                         new
                         {
-                            Id = 631L,
-                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 596L,
+                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 916605L
                         },
                         new
                         {
-                            Id = 632L,
-                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 597L,
+                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 598L,
+                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 599L,
+                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 600L,
+                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 601L,
+                            DateTime = new DateTime(2023, 1, 10, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 602L,
+                            DateTime = new DateTime(2023, 1, 10, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 610150L
+                        },
+                        new
+                        {
+                            Id = 603L,
+                            DateTime = new DateTime(2023, 1, 10, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 604L,
+                            DateTime = new DateTime(2023, 1, 10, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 605L,
+                            DateTime = new DateTime(2023, 1, 10, 8, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 606L,
+                            DateTime = new DateTime(2023, 1, 10, 10, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 877957L
+                        },
+                        new
+                        {
+                            Id = 607L,
+                            DateTime = new DateTime(2023, 1, 10, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
                             MovieId = 877957L
                         },
                         new
                         {
-                            Id = 633L,
-                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 608L,
+                            DateTime = new DateTime(2023, 1, 10, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 756999L
                         },
                         new
                         {
-                            Id = 634L,
-                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 609L,
+                            DateTime = new DateTime(2023, 1, 10, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 921360L
+                            MovieId = 961484L
                         },
                         new
                         {
-                            Id = 635L,
-                            DateTime = new DateTime(2023, 1, 9, 20, 0, 0, 0, DateTimeKind.Local),
+                            Id = 610L,
+                            DateTime = new DateTime(2023, 1, 10, 10, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 634649L
                         },
                         new
                         {
-                            Id = 636L,
-                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 611L,
+                            DateTime = new DateTime(2023, 1, 10, 12, 0, 0, 0, DateTimeKind.Local),
                             HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 744276L
+                        },
+                        new
+                        {
+                            Id = 612L,
+                            DateTime = new DateTime(2023, 1, 10, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 613L,
+                            DateTime = new DateTime(2023, 1, 10, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 539681L
+                        },
+                        new
+                        {
+                            Id = 614L,
+                            DateTime = new DateTime(2023, 1, 10, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 615L,
+                            DateTime = new DateTime(2023, 1, 10, 12, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 616L,
+                            DateTime = new DateTime(2023, 1, 10, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 961484L
+                        },
+                        new
+                        {
+                            Id = 617L,
+                            DateTime = new DateTime(2023, 1, 10, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 618L,
+                            DateTime = new DateTime(2023, 1, 10, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 756999L
+                        },
+                        new
+                        {
+                            Id = 619L,
+                            DateTime = new DateTime(2023, 1, 10, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 620L,
+                            DateTime = new DateTime(2023, 1, 10, 14, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 621L,
+                            DateTime = new DateTime(2023, 1, 10, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 622L,
+                            DateTime = new DateTime(2023, 1, 10, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 882598L
+                        },
+                        new
+                        {
+                            Id = 623L,
+                            DateTime = new DateTime(2023, 1, 10, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 624L,
+                            DateTime = new DateTime(2023, 1, 10, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 625L,
+                            DateTime = new DateTime(2023, 1, 10, 16, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
                             IsPublic = true,
                             MovieId = 526896L
                         },
                         new
                         {
-                            Id = 637L,
-                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            Id = 626L,
+                            DateTime = new DateTime(2023, 1, 10, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 718930L
+                        },
+                        new
+                        {
+                            Id = 627L,
+                            DateTime = new DateTime(2023, 1, 10, 18, 0, 0, 0, DateTimeKind.Local),
                             HallId = 2L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 628L,
+                            DateTime = new DateTime(2023, 1, 10, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 921360L
+                        },
+                        new
+                        {
+                            Id = 629L,
+                            DateTime = new DateTime(2023, 1, 10, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 639933L
+                        },
+                        new
+                        {
+                            Id = 630L,
+                            DateTime = new DateTime(2023, 1, 10, 18, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 631L,
+                            DateTime = new DateTime(2023, 1, 10, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 760161L
+                        },
+                        new
+                        {
+                            Id = 632L,
+                            DateTime = new DateTime(2023, 1, 10, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 634649L
+                        },
+                        new
+                        {
+                            Id = 633L,
+                            DateTime = new DateTime(2023, 1, 10, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 3L,
+                            IsPublic = true,
+                            MovieId = 999205L
+                        },
+                        new
+                        {
+                            Id = 634L,
+                            DateTime = new DateTime(2023, 1, 10, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 4L,
+                            IsPublic = true,
+                            MovieId = 526896L
+                        },
+                        new
+                        {
+                            Id = 635L,
+                            DateTime = new DateTime(2023, 1, 10, 20, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 5L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 636L,
+                            DateTime = new DateTime(2023, 1, 10, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 1L,
+                            IsPublic = true,
+                            MovieId = 19995L
+                        },
+                        new
+                        {
+                            Id = 637L,
+                            DateTime = new DateTime(2023, 1, 10, 22, 0, 0, 0, DateTimeKind.Local),
+                            HallId = 2L,
+                            IsPublic = true,
+                            MovieId = 877957L
                         },
                         new
                         {
                             Id = 638L,
-                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 10, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 3L,
                             IsPublic = true,
-                            MovieId = 576925L
+                            MovieId = 639933L
                         },
                         new
                         {
                             Id = 639L,
-                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 10, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 4L,
                             IsPublic = true,
-                            MovieId = 985939L
+                            MovieId = 961484L
                         },
                         new
                         {
                             Id = 640L,
-                            DateTime = new DateTime(2023, 1, 9, 22, 0, 0, 0, DateTimeKind.Local),
+                            DateTime = new DateTime(2023, 1, 10, 22, 0, 0, 0, DateTimeKind.Local),
                             HallId = 5L,
                             IsPublic = true,
-                            MovieId = 19995L
+                            MovieId = 760741L
                         });
                 });
 
@@ -9642,4202 +9912,4216 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         new
                         {
                             Id = 1L,
-                            ProfileId = 1L,
-                            SeatId = 36L,
-                            SessionId = 1L
+                            ProfileId = 3L,
+                            SeatId = 415L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 2L,
-                            ProfileId = 2L,
-                            SeatId = 37L,
-                            SessionId = 1L
+                            ProfileId = 3L,
+                            SeatId = 416L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 3L,
-                            ProfileId = 3L,
-                            SeatId = 38L,
-                            SessionId = 1L
+                            ProfileId = 1L,
+                            SeatId = 417L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 4L,
-                            ProfileId = 1L,
-                            SeatId = 39L,
-                            SessionId = 1L
+                            ProfileId = 2L,
+                            SeatId = 165L,
+                            SessionId = 64L
                         },
                         new
                         {
                             Id = 5L,
                             ProfileId = 1L,
-                            SeatId = 54L,
-                            SessionId = 17L
+                            SeatId = 166L,
+                            SessionId = 64L
                         },
                         new
                         {
                             Id = 6L,
-                            ProfileId = 3L,
-                            SeatId = 55L,
-                            SessionId = 17L
+                            ProfileId = 2L,
+                            SeatId = 450L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 7L,
-                            ProfileId = 1L,
-                            SeatId = 56L,
-                            SessionId = 17L
+                            ProfileId = 3L,
+                            SeatId = 451L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 8L,
-                            ProfileId = 3L,
-                            SeatId = 183L,
-                            SessionId = 74L
+                            ProfileId = 2L,
+                            SeatId = 452L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 9L,
                             ProfileId = 2L,
-                            SeatId = 184L,
-                            SessionId = 74L
+                            SeatId = 426L,
+                            SessionId = 40L
                         },
                         new
                         {
                             Id = 10L,
                             ProfileId = 3L,
-                            SeatId = 367L,
-                            SessionId = 85L
+                            SeatId = 427L,
+                            SessionId = 40L
                         },
                         new
                         {
                             Id = 11L,
-                            ProfileId = 3L,
-                            SeatId = 368L,
-                            SessionId = 85L
+                            ProfileId = 1L,
+                            SeatId = 47L,
+                            SessionId = 67L
                         },
                         new
                         {
                             Id = 12L,
-                            ProfileId = 2L,
-                            SeatId = 59L,
-                            SessionId = 37L
+                            ProfileId = 1L,
+                            SeatId = 48L,
+                            SessionId = 67L
                         },
                         new
                         {
                             Id = 13L,
                             ProfileId = 1L,
-                            SeatId = 23L,
-                            SessionId = 11L
+                            SeatId = 39L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 14L,
-                            ProfileId = 1L,
-                            SeatId = 24L,
-                            SessionId = 11L
+                            ProfileId = 3L,
+                            SeatId = 40L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 15L,
-                            ProfileId = 2L,
-                            SeatId = 415L,
-                            SessionId = 95L
+                            ProfileId = 3L,
+                            SeatId = 413L,
+                            SessionId = 30L
                         },
                         new
                         {
                             Id = 16L,
                             ProfileId = 2L,
-                            SeatId = 416L,
-                            SessionId = 95L
+                            SeatId = 414L,
+                            SessionId = 30L
                         },
                         new
                         {
                             Id = 17L,
                             ProfileId = 3L,
-                            SeatId = 417L,
-                            SessionId = 95L
+                            SeatId = 15L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 18L,
                             ProfileId = 3L,
-                            SeatId = 39L,
-                            SessionId = 71L
+                            SeatId = 16L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 19L,
-                            ProfileId = 2L,
-                            SeatId = 204L,
-                            SessionId = 54L
+                            ProfileId = 3L,
+                            SeatId = 17L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 20L,
-                            ProfileId = 1L,
-                            SeatId = 205L,
-                            SessionId = 54L
+                            ProfileId = 3L,
+                            SeatId = 328L,
+                            SessionId = 79L
                         },
                         new
                         {
                             Id = 21L,
-                            ProfileId = 1L,
-                            SeatId = 14L,
-                            SessionId = 46L
+                            ProfileId = 2L,
+                            SeatId = 329L,
+                            SessionId = 79L
                         },
                         new
                         {
                             Id = 22L,
-                            ProfileId = 2L,
-                            SeatId = 15L,
-                            SessionId = 46L
+                            ProfileId = 3L,
+                            SeatId = 22L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 23L,
-                            ProfileId = 3L,
-                            SeatId = 16L,
-                            SessionId = 46L
+                            ProfileId = 1L,
+                            SeatId = 23L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 24L,
-                            ProfileId = 2L,
-                            SeatId = 65L,
-                            SessionId = 17L
+                            ProfileId = 3L,
+                            SeatId = 24L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 25L,
                             ProfileId = 1L,
-                            SeatId = 66L,
-                            SessionId = 17L
+                            SeatId = 331L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 26L,
                             ProfileId = 3L,
-                            SeatId = 67L,
-                            SessionId = 17L
+                            SeatId = 332L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 27L,
-                            ProfileId = 2L,
-                            SeatId = 360L,
-                            SessionId = 60L
+                            ProfileId = 3L,
+                            SeatId = 333L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 28L,
-                            ProfileId = 1L,
-                            SeatId = 361L,
-                            SessionId = 60L
+                            ProfileId = 3L,
+                            SeatId = 250L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 29L,
                             ProfileId = 2L,
-                            SeatId = 228L,
-                            SessionId = 59L
+                            SeatId = 363L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 30L,
                             ProfileId = 2L,
-                            SeatId = 229L,
-                            SessionId = 59L
+                            SeatId = 364L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 31L,
                             ProfileId = 1L,
-                            SeatId = 23L,
-                            SessionId = 76L
+                            SeatId = 365L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 32L,
                             ProfileId = 2L,
-                            SeatId = 4L,
-                            SessionId = 61L
+                            SeatId = 21L,
+                            SessionId = 96L
                         },
                         new
                         {
                             Id = 33L,
-                            ProfileId = 3L,
-                            SeatId = 5L,
-                            SessionId = 61L
+                            ProfileId = 2L,
+                            SeatId = 240L,
+                            SessionId = 34L
                         },
                         new
                         {
                             Id = 34L,
-                            ProfileId = 2L,
-                            SeatId = 82L,
-                            SessionId = 63L
+                            ProfileId = 3L,
+                            SeatId = 241L,
+                            SessionId = 34L
                         },
                         new
                         {
                             Id = 35L,
-                            ProfileId = 1L,
-                            SeatId = 47L,
-                            SessionId = 77L
+                            ProfileId = 2L,
+                            SeatId = 234L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 36L,
-                            ProfileId = 1L,
-                            SeatId = 48L,
-                            SessionId = 77L
+                            ProfileId = 3L,
+                            SeatId = 235L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 37L,
-                            ProfileId = 2L,
-                            SeatId = 73L,
-                            SessionId = 28L
+                            ProfileId = 3L,
+                            SeatId = 415L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 38L,
-                            ProfileId = 2L,
-                            SeatId = 74L,
-                            SessionId = 28L
+                            ProfileId = 3L,
+                            SeatId = 416L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 39L,
                             ProfileId = 2L,
-                            SeatId = 46L,
-                            SessionId = 17L
+                            SeatId = 417L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 40L,
-                            ProfileId = 3L,
-                            SeatId = 47L,
-                            SessionId = 17L
+                            ProfileId = 1L,
+                            SeatId = 61L,
+                            SessionId = 12L
                         },
                         new
                         {
                             Id = 41L,
-                            ProfileId = 1L,
-                            SeatId = 64L,
-                            SessionId = 72L
+                            ProfileId = 3L,
+                            SeatId = 62L,
+                            SessionId = 12L
                         },
                         new
                         {
                             Id = 42L,
                             ProfileId = 1L,
-                            SeatId = 65L,
-                            SessionId = 72L
+                            SeatId = 259L,
+                            SessionId = 69L
                         },
                         new
                         {
                             Id = 43L,
-                            ProfileId = 1L,
-                            SeatId = 53L,
-                            SessionId = 97L
+                            ProfileId = 2L,
+                            SeatId = 260L,
+                            SessionId = 69L
                         },
                         new
                         {
                             Id = 44L,
-                            ProfileId = 3L,
-                            SeatId = 54L,
-                            SessionId = 97L
+                            ProfileId = 1L,
+                            SeatId = 261L,
+                            SessionId = 69L
                         },
                         new
                         {
                             Id = 45L,
-                            ProfileId = 1L,
-                            SeatId = 55L,
-                            SessionId = 97L
+                            ProfileId = 3L,
+                            SeatId = 164L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 46L,
-                            ProfileId = 1L,
-                            SeatId = 51L,
-                            SessionId = 52L
+                            ProfileId = 3L,
+                            SeatId = 165L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 47L,
                             ProfileId = 1L,
-                            SeatId = 72L,
-                            SessionId = 53L
+                            SeatId = 30L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 48L,
-                            ProfileId = 3L,
-                            SeatId = 73L,
-                            SessionId = 53L
+                            ProfileId = 1L,
+                            SeatId = 31L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 49L,
-                            ProfileId = 2L,
-                            SeatId = 26L,
-                            SessionId = 26L
+                            ProfileId = 1L,
+                            SeatId = 1L,
+                            SessionId = 61L
                         },
                         new
                         {
                             Id = 50L,
                             ProfileId = 1L,
-                            SeatId = 27L,
-                            SessionId = 26L
+                            SeatId = 2L,
+                            SessionId = 61L
                         },
                         new
                         {
                             Id = 51L,
-                            ProfileId = 3L,
-                            SeatId = 55L,
-                            SessionId = 2L
+                            ProfileId = 1L,
+                            SeatId = 3L,
+                            SessionId = 61L
                         },
                         new
                         {
                             Id = 52L,
-                            ProfileId = 3L,
-                            SeatId = 56L,
-                            SessionId = 2L
+                            ProfileId = 2L,
+                            SeatId = 199L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 53L,
-                            ProfileId = 2L,
-                            SeatId = 57L,
-                            SessionId = 2L
+                            ProfileId = 3L,
+                            SeatId = 200L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 54L,
-                            ProfileId = 2L,
-                            SeatId = 316L,
-                            SessionId = 44L
+                            ProfileId = 3L,
+                            SeatId = 201L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 55L,
-                            ProfileId = 2L,
-                            SeatId = 317L,
-                            SessionId = 44L
+                            ProfileId = 1L,
+                            SeatId = 78L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 56L,
-                            ProfileId = 2L,
-                            SeatId = 11L,
-                            SessionId = 6L
+                            ProfileId = 1L,
+                            SeatId = 79L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 57L,
-                            ProfileId = 3L,
-                            SeatId = 12L,
-                            SessionId = 6L
+                            ProfileId = 2L,
+                            SeatId = 63L,
+                            SessionId = 7L
                         },
                         new
                         {
                             Id = 58L,
                             ProfileId = 3L,
-                            SeatId = 13L,
-                            SessionId = 6L
+                            SeatId = 64L,
+                            SessionId = 7L
                         },
                         new
                         {
                             Id = 59L,
                             ProfileId = 2L,
-                            SeatId = 102L,
-                            SessionId = 83L
+                            SeatId = 65L,
+                            SessionId = 7L
                         },
                         new
                         {
                             Id = 60L,
-                            ProfileId = 3L,
-                            SeatId = 103L,
-                            SessionId = 83L
+                            ProfileId = 2L,
+                            SeatId = 34L,
+                            SessionId = 36L
                         },
                         new
                         {
                             Id = 61L,
-                            ProfileId = 2L,
-                            SeatId = 104L,
-                            SessionId = 83L
+                            ProfileId = 3L,
+                            SeatId = 13L,
+                            SessionId = 36L
                         },
                         new
                         {
                             Id = 62L,
-                            ProfileId = 2L,
-                            SeatId = 397L,
-                            SessionId = 40L
+                            ProfileId = 1L,
+                            SeatId = 14L,
+                            SessionId = 36L
                         },
                         new
                         {
                             Id = 63L,
-                            ProfileId = 1L,
-                            SeatId = 398L,
-                            SessionId = 40L
+                            ProfileId = 3L,
+                            SeatId = 242L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 64L,
                             ProfileId = 1L,
-                            SeatId = 452L,
-                            SessionId = 25L
+                            SeatId = 243L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 65L,
-                            ProfileId = 2L,
-                            SeatId = 453L,
-                            SessionId = 25L
+                            ProfileId = 3L,
+                            SeatId = 61L,
+                            SessionId = 7L
                         },
                         new
                         {
                             Id = 66L,
-                            ProfileId = 1L,
-                            SeatId = 454L,
-                            SessionId = 25L
+                            ProfileId = 2L,
+                            SeatId = 62L,
+                            SessionId = 7L
                         },
                         new
                         {
                             Id = 67L,
-                            ProfileId = 1L,
-                            SeatId = 23L,
-                            SessionId = 96L
+                            ProfileId = 2L,
+                            SeatId = 61L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 68L,
-                            ProfileId = 2L,
-                            SeatId = 24L,
-                            SessionId = 96L
+                            ProfileId = 1L,
+                            SeatId = 62L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 69L,
-                            ProfileId = 2L,
-                            SeatId = 25L,
-                            SessionId = 96L
+                            ProfileId = 3L,
+                            SeatId = 63L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 70L,
-                            ProfileId = 1L,
-                            SeatId = 142L,
-                            SessionId = 38L
+                            ProfileId = 2L,
+                            SeatId = 64L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 71L,
                             ProfileId = 1L,
-                            SeatId = 143L,
-                            SessionId = 38L
+                            SeatId = 98L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 72L,
-                            ProfileId = 2L,
-                            SeatId = 423L,
-                            SessionId = 15L
+                            ProfileId = 3L,
+                            SeatId = 99L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 73L,
                             ProfileId = 2L,
-                            SeatId = 424L,
-                            SessionId = 15L
+                            SeatId = 100L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 74L,
-                            ProfileId = 1L,
-                            SeatId = 6L,
-                            SessionId = 71L
+                            ProfileId = 2L,
+                            SeatId = 75L,
+                            SessionId = 53L
                         },
                         new
                         {
                             Id = 75L,
                             ProfileId = 1L,
-                            SeatId = 7L,
-                            SessionId = 71L
+                            SeatId = 76L,
+                            SessionId = 53L
                         },
                         new
                         {
                             Id = 76L,
-                            ProfileId = 3L,
-                            SeatId = 51L,
-                            SessionId = 92L
+                            ProfileId = 2L,
+                            SeatId = 367L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 77L,
                             ProfileId = 1L,
-                            SeatId = 52L,
-                            SessionId = 92L
+                            SeatId = 368L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 78L,
-                            ProfileId = 2L,
-                            SeatId = 53L,
-                            SessionId = 92L
+                            ProfileId = 1L,
+                            SeatId = 362L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 79L,
-                            ProfileId = 1L,
-                            SeatId = 380L,
-                            SessionId = 35L
+                            ProfileId = 2L,
+                            SeatId = 363L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 80L,
-                            ProfileId = 2L,
-                            SeatId = 33L,
-                            SessionId = 21L
+                            ProfileId = 3L,
+                            SeatId = 364L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 81L,
                             ProfileId = 1L,
-                            SeatId = 34L,
-                            SessionId = 21L
+                            SeatId = 357L,
+                            SessionId = 55L
                         },
                         new
                         {
                             Id = 82L,
-                            ProfileId = 2L,
-                            SeatId = 5L,
-                            SessionId = 51L
+                            ProfileId = 3L,
+                            SeatId = 358L,
+                            SessionId = 55L
                         },
                         new
                         {
                             Id = 83L,
-                            ProfileId = 3L,
-                            SeatId = 6L,
-                            SessionId = 51L
+                            ProfileId = 2L,
+                            SeatId = 359L,
+                            SessionId = 55L
                         },
                         new
                         {
                             Id = 84L,
-                            ProfileId = 1L,
-                            SeatId = 395L,
-                            SessionId = 65L
+                            ProfileId = 3L,
+                            SeatId = 33L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 85L,
-                            ProfileId = 3L,
-                            SeatId = 396L,
-                            SessionId = 65L
+                            ProfileId = 1L,
+                            SeatId = 34L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 86L,
-                            ProfileId = 3L,
-                            SeatId = 397L,
-                            SessionId = 65L
+                            ProfileId = 2L,
+                            SeatId = 35L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 87L,
-                            ProfileId = 3L,
-                            SeatId = 52L,
-                            SessionId = 82L
+                            ProfileId = 1L,
+                            SeatId = 386L,
+                            SessionId = 25L
                         },
                         new
                         {
                             Id = 88L,
                             ProfileId = 2L,
-                            SeatId = 218L,
-                            SessionId = 59L
+                            SeatId = 387L,
+                            SessionId = 25L
                         },
                         new
                         {
                             Id = 89L,
-                            ProfileId = 1L,
-                            SeatId = 219L,
-                            SessionId = 59L
+                            ProfileId = 2L,
+                            SeatId = 314L,
+                            SessionId = 94L
                         },
                         new
                         {
                             Id = 90L,
-                            ProfileId = 1L,
-                            SeatId = 220L,
-                            SessionId = 59L
+                            ProfileId = 2L,
+                            SeatId = 315L,
+                            SessionId = 94L
                         },
                         new
                         {
                             Id = 91L,
-                            ProfileId = 3L,
-                            SeatId = 221L,
-                            SessionId = 59L
+                            ProfileId = 2L,
+                            SeatId = 316L,
+                            SessionId = 94L
                         },
                         new
                         {
                             Id = 92L,
                             ProfileId = 1L,
-                            SeatId = 368L,
-                            SessionId = 75L
+                            SeatId = 127L,
+                            SessionId = 63L
                         },
                         new
                         {
                             Id = 93L,
                             ProfileId = 3L,
-                            SeatId = 369L,
-                            SessionId = 75L
+                            SeatId = 288L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 94L,
-                            ProfileId = 3L,
-                            SeatId = 370L,
-                            SessionId = 75L
+                            ProfileId = 2L,
+                            SeatId = 289L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 95L,
-                            ProfileId = 1L,
-                            SeatId = 464L,
-                            SessionId = 75L
+                            ProfileId = 2L,
+                            SeatId = 290L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 96L,
-                            ProfileId = 2L,
-                            SeatId = 465L,
-                            SessionId = 75L
+                            ProfileId = 3L,
+                            SeatId = 17L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 97L,
                             ProfileId = 1L,
-                            SeatId = 466L,
-                            SessionId = 75L
+                            SeatId = 18L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 98L,
                             ProfileId = 3L,
-                            SeatId = 467L,
-                            SessionId = 75L
+                            SeatId = 409L,
+                            SessionId = 65L
                         },
                         new
                         {
                             Id = 99L,
                             ProfileId = 2L,
-                            SeatId = 52L,
-                            SessionId = 47L
+                            SeatId = 410L,
+                            SessionId = 65L
                         },
                         new
                         {
                             Id = 100L,
                             ProfileId = 1L,
-                            SeatId = 53L,
-                            SessionId = 47L
+                            SeatId = 411L,
+                            SessionId = 65L
                         },
                         new
                         {
                             Id = 101L,
                             ProfileId = 3L,
-                            SeatId = 54L,
-                            SessionId = 47L
+                            SeatId = 23L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 102L,
-                            ProfileId = 1L,
-                            SeatId = 336L,
-                            SessionId = 50L
+                            ProfileId = 3L,
+                            SeatId = 24L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 103L,
-                            ProfileId = 3L,
-                            SeatId = 337L,
-                            SessionId = 50L
+                            ProfileId = 1L,
+                            SeatId = 25L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 104L,
-                            ProfileId = 3L,
-                            SeatId = 338L,
-                            SessionId = 50L
+                            ProfileId = 2L,
+                            SeatId = 91L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 105L,
-                            ProfileId = 1L,
-                            SeatId = 5L,
-                            SessionId = 26L
+                            ProfileId = 3L,
+                            SeatId = 92L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 106L,
-                            ProfileId = 2L,
-                            SeatId = 6L,
-                            SessionId = 26L
+                            ProfileId = 3L,
+                            SeatId = 93L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 107L,
-                            ProfileId = 1L,
-                            SeatId = 7L,
-                            SessionId = 26L
+                            ProfileId = 2L,
+                            SeatId = 368L,
+                            SessionId = 60L
                         },
                         new
                         {
                             Id = 108L,
-                            ProfileId = 2L,
-                            SeatId = 32L,
-                            SessionId = 96L
+                            ProfileId = 3L,
+                            SeatId = 369L,
+                            SessionId = 60L
                         },
                         new
                         {
                             Id = 109L,
                             ProfileId = 1L,
-                            SeatId = 33L,
-                            SessionId = 96L
+                            SeatId = 1L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 110L,
-                            ProfileId = 3L,
-                            SeatId = 34L,
-                            SessionId = 96L
+                            ProfileId = 1L,
+                            SeatId = 88L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 111L,
                             ProfileId = 1L,
-                            SeatId = 1L,
-                            SessionId = 11L
+                            SeatId = 89L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 112L,
-                            ProfileId = 1L,
-                            SeatId = 2L,
-                            SessionId = 11L
+                            ProfileId = 3L,
+                            SeatId = 90L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 113L,
                             ProfileId = 2L,
-                            SeatId = 81L,
-                            SessionId = 33L
+                            SeatId = 13L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 114L,
                             ProfileId = 1L,
-                            SeatId = 82L,
-                            SessionId = 33L
+                            SeatId = 14L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 115L,
-                            ProfileId = 2L,
-                            SeatId = 83L,
-                            SessionId = 33L
+                            ProfileId = 1L,
+                            SeatId = 15L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 116L,
-                            ProfileId = 1L,
-                            SeatId = 411L,
-                            SessionId = 85L
+                            ProfileId = 2L,
+                            SeatId = 16L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 117L,
                             ProfileId = 3L,
-                            SeatId = 412L,
-                            SessionId = 85L
+                            SeatId = 56L,
+                            SessionId = 37L
                         },
                         new
                         {
                             Id = 118L,
-                            ProfileId = 2L,
-                            SeatId = 49L,
-                            SessionId = 82L
+                            ProfileId = 1L,
+                            SeatId = 57L,
+                            SessionId = 37L
                         },
                         new
                         {
                             Id = 119L,
-                            ProfileId = 3L,
-                            SeatId = 50L,
-                            SessionId = 82L
+                            ProfileId = 2L,
+                            SeatId = 58L,
+                            SessionId = 37L
                         },
                         new
                         {
                             Id = 120L,
                             ProfileId = 3L,
-                            SeatId = 419L,
-                            SessionId = 60L
+                            SeatId = 122L,
+                            SessionId = 8L
                         },
                         new
                         {
                             Id = 121L,
-                            ProfileId = 1L,
-                            SeatId = 420L,
-                            SessionId = 60L
+                            ProfileId = 3L,
+                            SeatId = 123L,
+                            SessionId = 8L
                         },
                         new
                         {
                             Id = 122L,
-                            ProfileId = 1L,
-                            SeatId = 13L,
-                            SessionId = 1L
+                            ProfileId = 2L,
+                            SeatId = 138L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 123L,
-                            ProfileId = 2L,
-                            SeatId = 14L,
-                            SessionId = 1L
+                            ProfileId = 3L,
+                            SeatId = 139L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 124L,
                             ProfileId = 3L,
-                            SeatId = 300L,
-                            SessionId = 49L
+                            SeatId = 140L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 125L,
-                            ProfileId = 1L,
-                            SeatId = 301L,
-                            SessionId = 49L
+                            ProfileId = 3L,
+                            SeatId = 349L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 126L,
-                            ProfileId = 2L,
-                            SeatId = 302L,
-                            SessionId = 49L
+                            ProfileId = 1L,
+                            SeatId = 350L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 127L,
                             ProfileId = 3L,
-                            SeatId = 87L,
-                            SessionId = 8L
+                            SeatId = 351L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 128L,
-                            ProfileId = 2L,
-                            SeatId = 88L,
-                            SessionId = 8L
+                            ProfileId = 1L,
+                            SeatId = 8L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 129L,
-                            ProfileId = 3L,
-                            SeatId = 111L,
-                            SessionId = 8L
+                            ProfileId = 2L,
+                            SeatId = 9L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 130L,
-                            ProfileId = 3L,
-                            SeatId = 112L,
-                            SessionId = 8L
+                            ProfileId = 1L,
+                            SeatId = 108L,
+                            SessionId = 18L
                         },
                         new
                         {
                             Id = 131L,
                             ProfileId = 3L,
-                            SeatId = 113L,
-                            SessionId = 8L
+                            SeatId = 109L,
+                            SessionId = 18L
                         },
                         new
                         {
                             Id = 132L,
-                            ProfileId = 3L,
-                            SeatId = 24L,
-                            SessionId = 86L
+                            ProfileId = 2L,
+                            SeatId = 3L,
+                            SessionId = 6L
                         },
                         new
                         {
                             Id = 133L,
                             ProfileId = 1L,
-                            SeatId = 25L,
-                            SessionId = 86L
+                            SeatId = 4L,
+                            SessionId = 6L
                         },
                         new
                         {
                             Id = 134L,
-                            ProfileId = 2L,
-                            SeatId = 200L,
-                            SessionId = 14L
+                            ProfileId = 1L,
+                            SeatId = 5L,
+                            SessionId = 6L
                         },
                         new
                         {
                             Id = 135L,
                             ProfileId = 1L,
-                            SeatId = 201L,
-                            SessionId = 14L
+                            SeatId = 67L,
+                            SessionId = 22L
                         },
                         new
                         {
                             Id = 136L,
-                            ProfileId = 1L,
-                            SeatId = 179L,
-                            SessionId = 64L
+                            ProfileId = 2L,
+                            SeatId = 68L,
+                            SessionId = 22L
                         },
                         new
                         {
                             Id = 137L,
                             ProfileId = 3L,
-                            SeatId = 217L,
-                            SessionId = 94L
+                            SeatId = 382L,
+                            SessionId = 90L
                         },
                         new
                         {
                             Id = 138L,
-                            ProfileId = 1L,
-                            SeatId = 218L,
-                            SessionId = 94L
+                            ProfileId = 2L,
+                            SeatId = 383L,
+                            SessionId = 90L
                         },
                         new
                         {
                             Id = 139L,
-                            ProfileId = 2L,
-                            SeatId = 193L,
-                            SessionId = 69L
+                            ProfileId = 1L,
+                            SeatId = 290L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 140L,
                             ProfileId = 1L,
-                            SeatId = 194L,
-                            SessionId = 69L
+                            SeatId = 291L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 141L,
-                            ProfileId = 2L,
-                            SeatId = 333L,
-                            SessionId = 30L
+                            ProfileId = 1L,
+                            SeatId = 28L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 142L,
-                            ProfileId = 3L,
-                            SeatId = 334L,
-                            SessionId = 30L
+                            ProfileId = 2L,
+                            SeatId = 29L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 143L,
-                            ProfileId = 1L,
-                            SeatId = 160L,
-                            SessionId = 69L
+                            ProfileId = 3L,
+                            SeatId = 30L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 144L,
-                            ProfileId = 2L,
-                            SeatId = 161L,
-                            SessionId = 69L
+                            ProfileId = 1L,
+                            SeatId = 103L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 145L,
                             ProfileId = 2L,
-                            SeatId = 32L,
-                            SessionId = 1L
+                            SeatId = 104L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 146L,
-                            ProfileId = 1L,
-                            SeatId = 33L,
-                            SessionId = 1L
+                            ProfileId = 2L,
+                            SeatId = 183L,
+                            SessionId = 54L
                         },
                         new
                         {
                             Id = 147L,
-                            ProfileId = 2L,
-                            SeatId = 34L,
-                            SessionId = 1L
+                            ProfileId = 1L,
+                            SeatId = 184L,
+                            SessionId = 54L
                         },
                         new
                         {
                             Id = 148L,
-                            ProfileId = 2L,
-                            SeatId = 140L,
-                            SessionId = 78L
+                            ProfileId = 1L,
+                            SeatId = 31L,
+                            SessionId = 71L
                         },
                         new
                         {
                             Id = 149L,
-                            ProfileId = 2L,
-                            SeatId = 141L,
-                            SessionId = 78L
+                            ProfileId = 3L,
+                            SeatId = 257L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 150L,
-                            ProfileId = 2L,
-                            SeatId = 142L,
-                            SessionId = 78L
+                            ProfileId = 1L,
+                            SeatId = 258L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 151L,
-                            ProfileId = 3L,
-                            SeatId = 99L,
-                            SessionId = 78L
+                            ProfileId = 1L,
+                            SeatId = 427L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 152L,
-                            ProfileId = 2L,
-                            SeatId = 100L,
-                            SessionId = 78L
+                            ProfileId = 1L,
+                            SeatId = 428L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 153L,
                             ProfileId = 2L,
-                            SeatId = 8L,
-                            SessionId = 26L
+                            SeatId = 429L,
+                            SessionId = 75L
                         },
                         new
                         {
                             Id = 154L,
-                            ProfileId = 3L,
+                            ProfileId = 2L,
                             SeatId = 9L,
-                            SessionId = 26L
+                            SessionId = 36L
                         },
                         new
                         {
                             Id = 155L,
                             ProfileId = 2L,
-                            SeatId = 275L,
-                            SessionId = 54L
+                            SeatId = 378L,
+                            SessionId = 50L
                         },
                         new
                         {
                             Id = 156L,
-                            ProfileId = 3L,
-                            SeatId = 276L,
-                            SessionId = 54L
+                            ProfileId = 2L,
+                            SeatId = 379L,
+                            SessionId = 50L
                         },
                         new
                         {
                             Id = 157L,
                             ProfileId = 3L,
-                            SeatId = 277L,
-                            SessionId = 54L
+                            SeatId = 380L,
+                            SessionId = 50L
                         },
                         new
                         {
                             Id = 158L,
                             ProfileId = 3L,
-                            SeatId = 70L,
-                            SessionId = 82L
+                            SeatId = 27L,
+                            SessionId = 31L
                         },
                         new
                         {
                             Id = 159L,
-                            ProfileId = 2L,
-                            SeatId = 146L,
-                            SessionId = 53L
+                            ProfileId = 1L,
+                            SeatId = 58L,
+                            SessionId = 27L
                         },
                         new
                         {
                             Id = 160L,
                             ProfileId = 3L,
-                            SeatId = 147L,
-                            SessionId = 53L
+                            SeatId = 59L,
+                            SessionId = 27L
                         },
                         new
                         {
                             Id = 161L,
-                            ProfileId = 1L,
-                            SeatId = 87L,
-                            SessionId = 18L
+                            ProfileId = 3L,
+                            SeatId = 161L,
+                            SessionId = 19L
                         },
                         new
                         {
                             Id = 162L,
                             ProfileId = 3L,
-                            SeatId = 88L,
-                            SessionId = 18L
+                            SeatId = 162L,
+                            SessionId = 19L
                         },
                         new
                         {
                             Id = 163L,
-                            ProfileId = 1L,
-                            SeatId = 105L,
-                            SessionId = 48L
+                            ProfileId = 2L,
+                            SeatId = 139L,
+                            SessionId = 68L
                         },
                         new
                         {
                             Id = 164L,
-                            ProfileId = 3L,
-                            SeatId = 106L,
-                            SessionId = 48L
+                            ProfileId = 2L,
+                            SeatId = 416L,
+                            SessionId = 20L
                         },
                         new
                         {
                             Id = 165L,
-                            ProfileId = 2L,
-                            SeatId = 84L,
-                            SessionId = 53L
+                            ProfileId = 1L,
+                            SeatId = 417L,
+                            SessionId = 20L
                         },
                         new
                         {
                             Id = 166L,
                             ProfileId = 1L,
-                            SeatId = 85L,
-                            SessionId = 53L
+                            SeatId = 321L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 167L,
                             ProfileId = 2L,
-                            SeatId = 49L,
-                            SessionId = 67L
+                            SeatId = 322L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 168L,
                             ProfileId = 3L,
-                            SeatId = 201L,
-                            SessionId = 19L
+                            SeatId = 52L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 169L,
                             ProfileId = 3L,
-                            SeatId = 202L,
-                            SessionId = 19L
+                            SeatId = 53L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 170L,
-                            ProfileId = 3L,
-                            SeatId = 10L,
-                            SessionId = 16L
+                            ProfileId = 2L,
+                            SeatId = 54L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 171L,
-                            ProfileId = 2L,
-                            SeatId = 11L,
+                            ProfileId = 3L,
+                            SeatId = 36L,
                             SessionId = 16L
                         },
                         new
                         {
                             Id = 172L,
                             ProfileId = 1L,
-                            SeatId = 165L,
-                            SessionId = 34L
+                            SeatId = 37L,
+                            SessionId = 16L
                         },
                         new
                         {
                             Id = 173L,
-                            ProfileId = 1L,
-                            SeatId = 112L,
-                            SessionId = 3L
+                            ProfileId = 3L,
+                            SeatId = 38L,
+                            SessionId = 16L
                         },
                         new
                         {
                             Id = 174L,
                             ProfileId = 3L,
-                            SeatId = 48L,
-                            SessionId = 82L
+                            SeatId = 60L,
+                            SessionId = 77L
                         },
                         new
                         {
                             Id = 175L,
-                            ProfileId = 1L,
-                            SeatId = 125L,
-                            SessionId = 88L
+                            ProfileId = 3L,
+                            SeatId = 39L,
+                            SessionId = 6L
                         },
                         new
                         {
                             Id = 176L,
-                            ProfileId = 2L,
-                            SeatId = 126L,
-                            SessionId = 88L
+                            ProfileId = 1L,
+                            SeatId = 238L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 177L,
-                            ProfileId = 1L,
-                            SeatId = 127L,
-                            SessionId = 88L
+                            ProfileId = 3L,
+                            SeatId = 28L,
+                            SessionId = 91L
                         },
                         new
                         {
                             Id = 178L,
                             ProfileId = 3L,
-                            SeatId = 35L,
-                            SessionId = 21L
+                            SeatId = 52L,
+                            SessionId = 62L
                         },
                         new
                         {
                             Id = 179L,
                             ProfileId = 3L,
-                            SeatId = 36L,
-                            SessionId = 21L
+                            SeatId = 53L,
+                            SessionId = 62L
                         },
                         new
                         {
                             Id = 180L,
-                            ProfileId = 2L,
-                            SeatId = 105L,
-                            SessionId = 73L
+                            ProfileId = 1L,
+                            SeatId = 54L,
+                            SessionId = 62L
                         },
                         new
                         {
                             Id = 181L,
+                            ProfileId = 1L,
+                            SeatId = 1L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 182L,
+                            ProfileId = 1L,
+                            SeatId = 2L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 183L,
+                            ProfileId = 3L,
+                            SeatId = 407L,
+                            SessionId = 45L
+                        },
+                        new
+                        {
+                            Id = 184L,
+                            ProfileId = 3L,
+                            SeatId = 408L,
+                            SessionId = 45L
+                        },
+                        new
+                        {
+                            Id = 185L,
+                            ProfileId = 3L,
+                            SeatId = 372L,
+                            SessionId = 40L
+                        },
+                        new
+                        {
+                            Id = 186L,
+                            ProfileId = 2L,
+                            SeatId = 373L,
+                            SessionId = 40L
+                        },
+                        new
+                        {
+                            Id = 187L,
+                            ProfileId = 2L,
+                            SeatId = 50L,
+                            SessionId = 52L
+                        },
+                        new
+                        {
+                            Id = 188L,
+                            ProfileId = 2L,
+                            SeatId = 51L,
+                            SessionId = 52L
+                        },
+                        new
+                        {
+                            Id = 189L,
+                            ProfileId = 3L,
+                            SeatId = 52L,
+                            SessionId = 52L
+                        },
+                        new
+                        {
+                            Id = 190L,
+                            ProfileId = 2L,
+                            SeatId = 362L,
+                            SessionId = 90L
+                        },
+                        new
+                        {
+                            Id = 191L,
+                            ProfileId = 2L,
+                            SeatId = 264L,
+                            SessionId = 14L
+                        },
+                        new
+                        {
+                            Id = 192L,
+                            ProfileId = 3L,
+                            SeatId = 265L,
+                            SessionId = 14L
+                        },
+                        new
+                        {
+                            Id = 193L,
+                            ProfileId = 1L,
+                            SeatId = 133L,
+                            SessionId = 98L
+                        },
+                        new
+                        {
+                            Id = 194L,
+                            ProfileId = 3L,
+                            SeatId = 134L,
+                            SessionId = 98L
+                        },
+                        new
+                        {
+                            Id = 195L,
+                            ProfileId = 2L,
+                            SeatId = 129L,
+                            SessionId = 88L
+                        },
+                        new
+                        {
+                            Id = 196L,
+                            ProfileId = 1L,
+                            SeatId = 130L,
+                            SessionId = 88L
+                        },
+                        new
+                        {
+                            Id = 197L,
+                            ProfileId = 3L,
+                            SeatId = 44L,
+                            SessionId = 62L
+                        },
+                        new
+                        {
+                            Id = 198L,
+                            ProfileId = 3L,
+                            SeatId = 45L,
+                            SessionId = 62L
+                        },
+                        new
+                        {
+                            Id = 199L,
+                            ProfileId = 1L,
+                            SeatId = 46L,
+                            SessionId = 62L
+                        },
+                        new
+                        {
+                            Id = 200L,
+                            ProfileId = 3L,
+                            SeatId = 47L,
+                            SessionId = 62L
+                        },
+                        new
+                        {
+                            Id = 201L,
+                            ProfileId = 3L,
+                            SeatId = 44L,
+                            SessionId = 32L
+                        },
+                        new
+                        {
+                            Id = 202L,
+                            ProfileId = 1L,
+                            SeatId = 45L,
+                            SessionId = 32L
+                        },
+                        new
+                        {
+                            Id = 203L,
+                            ProfileId = 2L,
+                            SeatId = 46L,
+                            SessionId = 32L
+                        },
+                        new
+                        {
+                            Id = 204L,
+                            ProfileId = 3L,
+                            SeatId = 425L,
+                            SessionId = 65L
+                        },
+                        new
+                        {
+                            Id = 205L,
+                            ProfileId = 2L,
+                            SeatId = 426L,
+                            SessionId = 65L
+                        },
+                        new
+                        {
+                            Id = 206L,
+                            ProfileId = 1L,
+                            SeatId = 13L,
+                            SessionId = 61L
+                        },
+                        new
+                        {
+                            Id = 207L,
+                            ProfileId = 3L,
+                            SeatId = 14L,
+                            SessionId = 61L
+                        },
+                        new
+                        {
+                            Id = 208L,
+                            ProfileId = 2L,
+                            SeatId = 15L,
+                            SessionId = 61L
+                        },
+                        new
+                        {
+                            Id = 209L,
+                            ProfileId = 2L,
+                            SeatId = 93L,
+                            SessionId = 88L
+                        },
+                        new
+                        {
+                            Id = 210L,
+                            ProfileId = 2L,
+                            SeatId = 164L,
+                            SessionId = 34L
+                        },
+                        new
+                        {
+                            Id = 211L,
+                            ProfileId = 3L,
+                            SeatId = 184L,
+                            SessionId = 29L
+                        },
+                        new
+                        {
+                            Id = 212L,
+                            ProfileId = 2L,
+                            SeatId = 185L,
+                            SessionId = 29L
+                        },
+                        new
+                        {
+                            Id = 213L,
+                            ProfileId = 3L,
+                            SeatId = 186L,
+                            SessionId = 29L
+                        },
+                        new
+                        {
+                            Id = 214L,
+                            ProfileId = 2L,
+                            SeatId = 36L,
+                            SessionId = 81L
+                        },
+                        new
+                        {
+                            Id = 215L,
+                            ProfileId = 2L,
+                            SeatId = 37L,
+                            SessionId = 81L
+                        },
+                        new
+                        {
+                            Id = 216L,
+                            ProfileId = 3L,
+                            SeatId = 38L,
+                            SessionId = 81L
+                        },
+                        new
+                        {
+                            Id = 217L,
+                            ProfileId = 2L,
+                            SeatId = 134L,
+                            SessionId = 63L
+                        },
+                        new
+                        {
+                            Id = 218L,
+                            ProfileId = 1L,
+                            SeatId = 135L,
+                            SessionId = 63L
+                        },
+                        new
+                        {
+                            Id = 219L,
+                            ProfileId = 3L,
+                            SeatId = 136L,
+                            SessionId = 63L
+                        },
+                        new
+                        {
+                            Id = 220L,
+                            ProfileId = 3L,
+                            SeatId = 163L,
+                            SessionId = 89L
+                        },
+                        new
+                        {
+                            Id = 221L,
+                            ProfileId = 1L,
+                            SeatId = 164L,
+                            SessionId = 89L
+                        },
+                        new
+                        {
+                            Id = 222L,
+                            ProfileId = 1L,
+                            SeatId = 165L,
+                            SessionId = 89L
+                        },
+                        new
+                        {
+                            Id = 223L,
+                            ProfileId = 2L,
+                            SeatId = 120L,
+                            SessionId = 18L
+                        },
+                        new
+                        {
+                            Id = 224L,
+                            ProfileId = 2L,
+                            SeatId = 121L,
+                            SessionId = 18L
+                        },
+                        new
+                        {
+                            Id = 225L,
+                            ProfileId = 2L,
+                            SeatId = 4L,
+                            SessionId = 81L
+                        },
+                        new
+                        {
+                            Id = 226L,
+                            ProfileId = 1L,
+                            SeatId = 5L,
+                            SessionId = 81L
+                        },
+                        new
+                        {
+                            Id = 227L,
+                            ProfileId = 1L,
+                            SeatId = 6L,
+                            SessionId = 81L
+                        },
+                        new
+                        {
+                            Id = 228L,
+                            ProfileId = 2L,
+                            SeatId = 10L,
+                            SessionId = 66L
+                        },
+                        new
+                        {
+                            Id = 229L,
+                            ProfileId = 3L,
+                            SeatId = 426L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 230L,
+                            ProfileId = 2L,
+                            SeatId = 427L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 231L,
+                            ProfileId = 3L,
+                            SeatId = 459L,
+                            SessionId = 30L
+                        },
+                        new
+                        {
+                            Id = 232L,
+                            ProfileId = 3L,
+                            SeatId = 460L,
+                            SessionId = 30L
+                        },
+                        new
+                        {
+                            Id = 233L,
+                            ProfileId = 1L,
+                            SeatId = 362L,
+                            SessionId = 10L
+                        },
+                        new
+                        {
+                            Id = 234L,
+                            ProfileId = 2L,
+                            SeatId = 363L,
+                            SessionId = 10L
+                        },
+                        new
+                        {
+                            Id = 235L,
+                            ProfileId = 3L,
+                            SeatId = 5L,
+                            SessionId = 66L
+                        },
+                        new
+                        {
+                            Id = 236L,
+                            ProfileId = 2L,
+                            SeatId = 6L,
+                            SessionId = 66L
+                        },
+                        new
+                        {
+                            Id = 237L,
+                            ProfileId = 2L,
+                            SeatId = 7L,
+                            SessionId = 66L
+                        },
+                        new
+                        {
+                            Id = 238L,
+                            ProfileId = 2L,
+                            SeatId = 86L,
+                            SessionId = 98L
+                        },
+                        new
+                        {
+                            Id = 239L,
+                            ProfileId = 1L,
+                            SeatId = 87L,
+                            SessionId = 98L
+                        },
+                        new
+                        {
+                            Id = 240L,
+                            ProfileId = 1L,
+                            SeatId = 88L,
+                            SessionId = 98L
+                        },
+                        new
+                        {
+                            Id = 241L,
+                            ProfileId = 3L,
+                            SeatId = 60L,
+                            SessionId = 47L
+                        },
+                        new
+                        {
+                            Id = 242L,
+                            ProfileId = 2L,
+                            SeatId = 61L,
+                            SessionId = 47L
+                        },
+                        new
+                        {
+                            Id = 243L,
+                            ProfileId = 3L,
+                            SeatId = 62L,
+                            SessionId = 47L
+                        },
+                        new
+                        {
+                            Id = 244L,
+                            ProfileId = 2L,
+                            SeatId = 96L,
+                            SessionId = 63L
+                        },
+                        new
+                        {
+                            Id = 245L,
+                            ProfileId = 1L,
+                            SeatId = 97L,
+                            SessionId = 63L
+                        },
+                        new
+                        {
+                            Id = 246L,
+                            ProfileId = 3L,
+                            SeatId = 106L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
+                            Id = 247L,
+                            ProfileId = 1L,
+                            SeatId = 107L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
+                            Id = 248L,
+                            ProfileId = 1L,
+                            SeatId = 373L,
+                            SessionId = 90L
+                        },
+                        new
+                        {
+                            Id = 249L,
+                            ProfileId = 2L,
+                            SeatId = 374L,
+                            SessionId = 90L
+                        },
+                        new
+                        {
+                            Id = 250L,
+                            ProfileId = 1L,
+                            SeatId = 144L,
+                            SessionId = 18L
+                        },
+                        new
+                        {
+                            Id = 251L,
+                            ProfileId = 2L,
+                            SeatId = 465L,
+                            SessionId = 90L
+                        },
+                        new
+                        {
+                            Id = 252L,
+                            ProfileId = 3L,
+                            SeatId = 466L,
+                            SessionId = 90L
+                        },
+                        new
+                        {
+                            Id = 253L,
+                            ProfileId = 3L,
+                            SeatId = 467L,
+                            SessionId = 90L
+                        },
+                        new
+                        {
+                            Id = 254L,
+                            ProfileId = 1L,
+                            SeatId = 356L,
+                            SessionId = 70L
+                        },
+                        new
+                        {
+                            Id = 255L,
+                            ProfileId = 2L,
+                            SeatId = 48L,
+                            SessionId = 82L
+                        },
+                        new
+                        {
+                            Id = 256L,
+                            ProfileId = 2L,
+                            SeatId = 49L,
+                            SessionId = 82L
+                        },
+                        new
+                        {
+                            Id = 257L,
+                            ProfileId = 2L,
+                            SeatId = 50L,
+                            SessionId = 82L
+                        },
+                        new
+                        {
+                            Id = 258L,
+                            ProfileId = 1L,
+                            SeatId = 86L,
+                            SessionId = 73L
+                        },
+                        new
+                        {
+                            Id = 259L,
+                            ProfileId = 3L,
+                            SeatId = 87L,
+                            SessionId = 73L
+                        },
+                        new
+                        {
+                            Id = 260L,
+                            ProfileId = 3L,
+                            SeatId = 88L,
+                            SessionId = 73L
+                        },
+                        new
+                        {
+                            Id = 261L,
+                            ProfileId = 2L,
+                            SeatId = 93L,
+                            SessionId = 8L
+                        },
+                        new
+                        {
+                            Id = 262L,
+                            ProfileId = 2L,
+                            SeatId = 94L,
+                            SessionId = 8L
+                        },
+                        new
+                        {
+                            Id = 263L,
+                            ProfileId = 1L,
+                            SeatId = 95L,
+                            SessionId = 8L
+                        },
+                        new
+                        {
+                            Id = 264L,
+                            ProfileId = 3L,
+                            SeatId = 8L,
+                            SessionId = 56L
+                        },
+                        new
+                        {
+                            Id = 265L,
+                            ProfileId = 1L,
+                            SeatId = 9L,
+                            SessionId = 56L
+                        },
+                        new
+                        {
+                            Id = 266L,
+                            ProfileId = 1L,
+                            SeatId = 5L,
+                            SessionId = 96L
+                        },
+                        new
+                        {
+                            Id = 267L,
+                            ProfileId = 2L,
+                            SeatId = 6L,
+                            SessionId = 96L
+                        },
+                        new
+                        {
+                            Id = 268L,
+                            ProfileId = 1L,
+                            SeatId = 120L,
+                            SessionId = 3L
+                        },
+                        new
+                        {
+                            Id = 269L,
+                            ProfileId = 1L,
+                            SeatId = 121L,
+                            SessionId = 3L
+                        },
+                        new
+                        {
+                            Id = 270L,
+                            ProfileId = 1L,
+                            SeatId = 49L,
+                            SessionId = 52L
+                        },
+                        new
+                        {
+                            Id = 271L,
+                            ProfileId = 2L,
+                            SeatId = 5L,
+                            SessionId = 41L
+                        },
+                        new
+                        {
+                            Id = 272L,
+                            ProfileId = 1L,
+                            SeatId = 6L,
+                            SessionId = 41L
+                        },
+                        new
+                        {
+                            Id = 273L,
+                            ProfileId = 3L,
+                            SeatId = 7L,
+                            SessionId = 41L
+                        },
+                        new
+                        {
+                            Id = 274L,
+                            ProfileId = 3L,
+                            SeatId = 9L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 275L,
+                            ProfileId = 2L,
+                            SeatId = 10L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 276L,
+                            ProfileId = 1L,
+                            SeatId = 11L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 277L,
+                            ProfileId = 2L,
+                            SeatId = 6L,
+                            SessionId = 71L
+                        },
+                        new
+                        {
+                            Id = 278L,
+                            ProfileId = 2L,
+                            SeatId = 7L,
+                            SessionId = 71L
+                        },
+                        new
+                        {
+                            Id = 279L,
+                            ProfileId = 1L,
+                            SeatId = 8L,
+                            SessionId = 71L
+                        },
+                        new
+                        {
+                            Id = 280L,
+                            ProfileId = 2L,
+                            SeatId = 280L,
+                            SessionId = 64L
+                        },
+                        new
+                        {
+                            Id = 281L,
+                            ProfileId = 3L,
+                            SeatId = 281L,
+                            SessionId = 64L
+                        },
+                        new
+                        {
+                            Id = 282L,
+                            ProfileId = 1L,
+                            SeatId = 411L,
+                            SessionId = 80L
+                        },
+                        new
+                        {
+                            Id = 283L,
+                            ProfileId = 3L,
+                            SeatId = 359L,
+                            SessionId = 60L
+                        },
+                        new
+                        {
+                            Id = 284L,
+                            ProfileId = 2L,
+                            SeatId = 360L,
+                            SessionId = 60L
+                        },
+                        new
+                        {
+                            Id = 285L,
+                            ProfileId = 1L,
+                            SeatId = 105L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 286L,
+                            ProfileId = 2L,
+                            SeatId = 106L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 287L,
+                            ProfileId = 2L,
+                            SeatId = 107L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 288L,
+                            ProfileId = 3L,
+                            SeatId = 67L,
+                            SessionId = 67L
+                        },
+                        new
+                        {
+                            Id = 289L,
+                            ProfileId = 2L,
+                            SeatId = 68L,
+                            SessionId = 67L
+                        },
+                        new
+                        {
+                            Id = 290L,
+                            ProfileId = 1L,
+                            SeatId = 301L,
+                            SessionId = 94L
+                        },
+                        new
+                        {
+                            Id = 291L,
+                            ProfileId = 3L,
+                            SeatId = 302L,
+                            SessionId = 94L
+                        },
+                        new
+                        {
+                            Id = 292L,
+                            ProfileId = 2L,
+                            SeatId = 212L,
+                            SessionId = 14L
+                        },
+                        new
+                        {
+                            Id = 293L,
+                            ProfileId = 1L,
+                            SeatId = 213L,
+                            SessionId = 14L
+                        },
+                        new
+                        {
+                            Id = 294L,
+                            ProfileId = 3L,
+                            SeatId = 214L,
+                            SessionId = 14L
+                        },
+                        new
+                        {
+                            Id = 295L,
+                            ProfileId = 3L,
+                            SeatId = 39L,
+                            SessionId = 26L
+                        },
+                        new
+                        {
+                            Id = 296L,
+                            ProfileId = 3L,
+                            SeatId = 40L,
+                            SessionId = 26L
+                        },
+                        new
+                        {
+                            Id = 297L,
+                            ProfileId = 1L,
+                            SeatId = 40L,
+                            SessionId = 91L
+                        },
+                        new
+                        {
+                            Id = 298L,
+                            ProfileId = 2L,
+                            SeatId = 421L,
+                            SessionId = 75L
+                        },
+                        new
+                        {
+                            Id = 299L,
+                            ProfileId = 2L,
+                            SeatId = 422L,
+                            SessionId = 75L
+                        },
+                        new
+                        {
+                            Id = 300L,
+                            ProfileId = 1L,
+                            SeatId = 242L,
+                            SessionId = 19L
+                        },
+                        new
+                        {
+                            Id = 301L,
+                            ProfileId = 1L,
+                            SeatId = 243L,
+                            SessionId = 19L
+                        },
+                        new
+                        {
+                            Id = 302L,
+                            ProfileId = 3L,
+                            SeatId = 341L,
+                            SessionId = 20L
+                        },
+                        new
+                        {
+                            Id = 303L,
+                            ProfileId = 3L,
+                            SeatId = 342L,
+                            SessionId = 20L
+                        },
+                        new
+                        {
+                            Id = 304L,
+                            ProfileId = 1L,
+                            SeatId = 28L,
+                            SessionId = 16L
+                        },
+                        new
+                        {
+                            Id = 305L,
+                            ProfileId = 1L,
+                            SeatId = 29L,
+                            SessionId = 16L
+                        },
+                        new
+                        {
+                            Id = 306L,
+                            ProfileId = 2L,
+                            SeatId = 33L,
+                            SessionId = 16L
+                        },
+                        new
+                        {
+                            Id = 307L,
+                            ProfileId = 2L,
+                            SeatId = 34L,
+                            SessionId = 16L
+                        },
+                        new
+                        {
+                            Id = 308L,
                             ProfileId = 1L,
                             SeatId = 106L,
                             SessionId = 73L
                         },
                         new
                         {
-                            Id = 182L,
-                            ProfileId = 2L,
-                            SeatId = 337L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 183L,
-                            ProfileId = 2L,
-                            SeatId = 338L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 184L,
-                            ProfileId = 3L,
-                            SeatId = 339L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 185L,
+                            Id = 309L,
                             ProfileId = 1L,
-                            SeatId = 23L,
-                            SessionId = 51L
-                        },
-                        new
-                        {
-                            Id = 186L,
-                            ProfileId = 2L,
-                            SeatId = 24L,
-                            SessionId = 51L
-                        },
-                        new
-                        {
-                            Id = 187L,
-                            ProfileId = 3L,
                             SeatId = 107L,
-                            SessionId = 48L
+                            SessionId = 73L
                         },
                         new
                         {
-                            Id = 188L,
+                            Id = 310L,
                             ProfileId = 3L,
                             SeatId = 108L,
-                            SessionId = 48L
+                            SessionId = 73L
                         },
                         new
                         {
-                            Id = 189L,
+                            Id = 311L,
                             ProfileId = 2L,
-                            SeatId = 109L,
-                            SessionId = 48L
+                            SeatId = 150L,
+                            SessionId = 94L
                         },
                         new
                         {
-                            Id = 190L,
-                            ProfileId = 3L,
-                            SeatId = 17L,
-                            SessionId = 21L
-                        },
-                        new
-                        {
-                            Id = 191L,
-                            ProfileId = 3L,
-                            SeatId = 62L,
-                            SessionId = 57L
-                        },
-                        new
-                        {
-                            Id = 192L,
-                            ProfileId = 2L,
-                            SeatId = 63L,
-                            SessionId = 57L
-                        },
-                        new
-                        {
-                            Id = 193L,
-                            ProfileId = 2L,
-                            SeatId = 64L,
-                            SessionId = 57L
-                        },
-                        new
-                        {
-                            Id = 194L,
-                            ProfileId = 3L,
-                            SeatId = 334L,
-                            SessionId = 95L
-                        },
-                        new
-                        {
-                            Id = 195L,
-                            ProfileId = 3L,
-                            SeatId = 335L,
-                            SessionId = 95L
-                        },
-                        new
-                        {
-                            Id = 196L,
+                            Id = 312L,
                             ProfileId = 1L,
-                            SeatId = 336L,
-                            SessionId = 95L
+                            SeatId = 151L,
+                            SessionId = 94L
                         },
                         new
                         {
-                            Id = 197L,
+                            Id = 313L,
                             ProfileId = 1L,
-                            SeatId = 465L,
-                            SessionId = 10L
+                            SeatId = 1L,
+                            SessionId = 51L
                         },
                         new
                         {
-                            Id = 198L,
-                            ProfileId = 2L,
-                            SeatId = 466L,
-                            SessionId = 10L
+                            Id = 314L,
+                            ProfileId = 3L,
+                            SeatId = 2L,
+                            SessionId = 51L
                         },
                         new
                         {
-                            Id = 199L,
+                            Id = 315L,
                             ProfileId = 1L,
-                            SeatId = 45L,
-                            SessionId = 27L
+                            SeatId = 3L,
+                            SessionId = 51L
                         },
                         new
                         {
-                            Id = 200L,
-                            ProfileId = 3L,
-                            SeatId = 46L,
-                            SessionId = 27L
+                            Id = 316L,
+                            ProfileId = 2L,
+                            SeatId = 50L,
+                            SessionId = 42L
                         },
                         new
                         {
-                            Id = 201L,
+                            Id = 317L,
+                            ProfileId = 2L,
+                            SeatId = 51L,
+                            SessionId = 42L
+                        },
+                        new
+                        {
+                            Id = 318L,
+                            ProfileId = 2L,
+                            SeatId = 327L,
+                            SessionId = 59L
+                        },
+                        new
+                        {
+                            Id = 319L,
                             ProfileId = 1L,
-                            SeatId = 56L,
-                            SessionId = 22L
+                            SeatId = 328L,
+                            SessionId = 59L
                         },
                         new
                         {
-                            Id = 202L,
-                            ProfileId = 3L,
-                            SeatId = 95L,
-                            SessionId = 53L
-                        },
-                        new
-                        {
-                            Id = 203L,
-                            ProfileId = 3L,
-                            SeatId = 96L,
-                            SessionId = 53L
-                        },
-                        new
-                        {
-                            Id = 204L,
-                            ProfileId = 2L,
-                            SeatId = 97L,
-                            SessionId = 53L
-                        },
-                        new
-                        {
-                            Id = 205L,
-                            ProfileId = 3L,
-                            SeatId = 64L,
-                            SessionId = 22L
-                        },
-                        new
-                        {
-                            Id = 206L,
-                            ProfileId = 2L,
-                            SeatId = 65L,
-                            SessionId = 22L
-                        },
-                        new
-                        {
-                            Id = 207L,
-                            ProfileId = 2L,
-                            SeatId = 60L,
-                            SessionId = 62L
-                        },
-                        new
-                        {
-                            Id = 208L,
-                            ProfileId = 1L,
-                            SeatId = 61L,
-                            SessionId = 62L
-                        },
-                        new
-                        {
-                            Id = 209L,
-                            ProfileId = 2L,
-                            SeatId = 63L,
-                            SessionId = 17L
-                        },
-                        new
-                        {
-                            Id = 210L,
-                            ProfileId = 2L,
-                            SeatId = 64L,
-                            SessionId = 17L
-                        },
-                        new
-                        {
-                            Id = 211L,
-                            ProfileId = 2L,
-                            SeatId = 43L,
-                            SessionId = 87L
-                        },
-                        new
-                        {
-                            Id = 212L,
-                            ProfileId = 2L,
-                            SeatId = 44L,
-                            SessionId = 87L
-                        },
-                        new
-                        {
-                            Id = 213L,
-                            ProfileId = 2L,
-                            SeatId = 391L,
-                            SessionId = 85L
-                        },
-                        new
-                        {
-                            Id = 214L,
-                            ProfileId = 3L,
-                            SeatId = 348L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 215L,
-                            ProfileId = 1L,
-                            SeatId = 349L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 216L,
+                            Id = 320L,
                             ProfileId = 3L,
                             SeatId = 25L,
                             SessionId = 56L
                         },
                         new
                         {
-                            Id = 217L,
-                            ProfileId = 3L,
-                            SeatId = 26L,
-                            SessionId = 56L
-                        },
-                        new
-                        {
-                            Id = 218L,
-                            ProfileId = 1L,
-                            SeatId = 385L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 219L,
-                            ProfileId = 3L,
-                            SeatId = 386L,
-                            SessionId = 5L
-                        },
-                        new
-                        {
-                            Id = 220L,
-                            ProfileId = 1L,
-                            SeatId = 283L,
-                            SessionId = 84L
-                        },
-                        new
-                        {
-                            Id = 221L,
-                            ProfileId = 2L,
-                            SeatId = 52L,
-                            SessionId = 2L
-                        },
-                        new
-                        {
-                            Id = 222L,
-                            ProfileId = 2L,
-                            SeatId = 53L,
-                            SessionId = 2L
-                        },
-                        new
-                        {
-                            Id = 223L,
-                            ProfileId = 2L,
-                            SeatId = 54L,
-                            SessionId = 2L
-                        },
-                        new
-                        {
-                            Id = 224L,
-                            ProfileId = 2L,
-                            SeatId = 14L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 225L,
-                            ProfileId = 3L,
-                            SeatId = 15L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 226L,
-                            ProfileId = 2L,
-                            SeatId = 16L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 227L,
-                            ProfileId = 3L,
-                            SeatId = 17L,
-                            SessionId = 11L
-                        },
-                        new
-                        {
-                            Id = 228L,
-                            ProfileId = 3L,
-                            SeatId = 161L,
-                            SessionId = 14L
-                        },
-                        new
-                        {
-                            Id = 229L,
-                            ProfileId = 2L,
-                            SeatId = 162L,
-                            SessionId = 14L
-                        },
-                        new
-                        {
-                            Id = 230L,
-                            ProfileId = 3L,
-                            SeatId = 163L,
-                            SessionId = 14L
-                        },
-                        new
-                        {
-                            Id = 231L,
-                            ProfileId = 1L,
-                            SeatId = 164L,
-                            SessionId = 14L
-                        },
-                        new
-                        {
-                            Id = 232L,
-                            ProfileId = 1L,
-                            SeatId = 17L,
-                            SessionId = 46L
-                        },
-                        new
-                        {
-                            Id = 233L,
-                            ProfileId = 2L,
-                            SeatId = 18L,
-                            SessionId = 46L
-                        },
-                        new
-                        {
-                            Id = 234L,
-                            ProfileId = 3L,
-                            SeatId = 38L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 235L,
-                            ProfileId = 3L,
-                            SeatId = 39L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 236L,
-                            ProfileId = 1L,
-                            SeatId = 114L,
-                            SessionId = 53L
-                        },
-                        new
-                        {
-                            Id = 237L,
-                            ProfileId = 2L,
-                            SeatId = 115L,
-                            SessionId = 53L
-                        },
-                        new
-                        {
-                            Id = 238L,
-                            ProfileId = 1L,
-                            SeatId = 66L,
-                            SessionId = 22L
-                        },
-                        new
-                        {
-                            Id = 239L,
-                            ProfileId = 2L,
-                            SeatId = 188L,
-                            SessionId = 34L
-                        },
-                        new
-                        {
-                            Id = 240L,
-                            ProfileId = 2L,
-                            SeatId = 189L,
-                            SessionId = 34L
-                        },
-                        new
-                        {
-                            Id = 241L,
-                            ProfileId = 3L,
-                            SeatId = 2L,
-                            SessionId = 96L
-                        },
-                        new
-                        {
-                            Id = 242L,
-                            ProfileId = 1L,
-                            SeatId = 3L,
-                            SessionId = 96L
-                        },
-                        new
-                        {
-                            Id = 243L,
-                            ProfileId = 2L,
-                            SeatId = 4L,
-                            SessionId = 96L
-                        },
-                        new
-                        {
-                            Id = 244L,
-                            ProfileId = 1L,
-                            SeatId = 36L,
-                            SessionId = 66L
-                        },
-                        new
-                        {
-                            Id = 245L,
-                            ProfileId = 3L,
-                            SeatId = 37L,
-                            SessionId = 66L
-                        },
-                        new
-                        {
-                            Id = 246L,
-                            ProfileId = 3L,
-                            SeatId = 38L,
-                            SessionId = 66L
-                        },
-                        new
-                        {
-                            Id = 247L,
-                            ProfileId = 2L,
-                            SeatId = 461L,
-                            SessionId = 80L
-                        },
-                        new
-                        {
-                            Id = 248L,
-                            ProfileId = 2L,
-                            SeatId = 462L,
-                            SessionId = 80L
-                        },
-                        new
-                        {
-                            Id = 249L,
-                            ProfileId = 1L,
-                            SeatId = 463L,
-                            SessionId = 80L
-                        },
-                        new
-                        {
-                            Id = 250L,
-                            ProfileId = 2L,
-                            SeatId = 55L,
-                            SessionId = 37L
-                        },
-                        new
-                        {
-                            Id = 251L,
-                            ProfileId = 2L,
-                            SeatId = 56L,
-                            SessionId = 37L
-                        },
-                        new
-                        {
-                            Id = 252L,
-                            ProfileId = 3L,
-                            SeatId = 57L,
-                            SessionId = 37L
-                        },
-                        new
-                        {
-                            Id = 253L,
-                            ProfileId = 3L,
-                            SeatId = 251L,
-                            SessionId = 44L
-                        },
-                        new
-                        {
-                            Id = 254L,
-                            ProfileId = 1L,
-                            SeatId = 23L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 255L,
-                            ProfileId = 1L,
-                            SeatId = 24L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 256L,
-                            ProfileId = 3L,
-                            SeatId = 425L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 257L,
-                            ProfileId = 3L,
-                            SeatId = 426L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 258L,
-                            ProfileId = 1L,
-                            SeatId = 185L,
-                            SessionId = 84L
-                        },
-                        new
-                        {
-                            Id = 259L,
-                            ProfileId = 3L,
-                            SeatId = 352L,
-                            SessionId = 90L
-                        },
-                        new
-                        {
-                            Id = 260L,
-                            ProfileId = 2L,
-                            SeatId = 353L,
-                            SessionId = 90L
-                        },
-                        new
-                        {
-                            Id = 261L,
-                            ProfileId = 2L,
-                            SeatId = 354L,
-                            SessionId = 90L
-                        },
-                        new
-                        {
-                            Id = 262L,
-                            ProfileId = 3L,
-                            SeatId = 17L,
-                            SessionId = 91L
-                        },
-                        new
-                        {
-                            Id = 263L,
-                            ProfileId = 1L,
-                            SeatId = 18L,
-                            SessionId = 91L
-                        },
-                        new
-                        {
-                            Id = 264L,
-                            ProfileId = 2L,
-                            SeatId = 30L,
-                            SessionId = 81L
-                        },
-                        new
-                        {
-                            Id = 265L,
-                            ProfileId = 3L,
-                            SeatId = 31L,
-                            SessionId = 81L
-                        },
-                        new
-                        {
-                            Id = 266L,
-                            ProfileId = 2L,
-                            SeatId = 356L,
-                            SessionId = 85L
-                        },
-                        new
-                        {
-                            Id = 267L,
-                            ProfileId = 2L,
-                            SeatId = 357L,
-                            SessionId = 85L
-                        },
-                        new
-                        {
-                            Id = 268L,
-                            ProfileId = 3L,
-                            SeatId = 115L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 269L,
-                            ProfileId = 1L,
-                            SeatId = 116L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 270L,
-                            ProfileId = 2L,
-                            SeatId = 117L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 271L,
-                            ProfileId = 1L,
-                            SeatId = 118L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 272L,
-                            ProfileId = 2L,
-                            SeatId = 396L,
-                            SessionId = 70L
-                        },
-                        new
-                        {
-                            Id = 273L,
-                            ProfileId = 2L,
-                            SeatId = 397L,
-                            SessionId = 70L
-                        },
-                        new
-                        {
-                            Id = 274L,
-                            ProfileId = 2L,
-                            SeatId = 398L,
-                            SessionId = 70L
-                        },
-                        new
-                        {
-                            Id = 275L,
-                            ProfileId = 2L,
-                            SeatId = 399L,
-                            SessionId = 70L
-                        },
-                        new
-                        {
-                            Id = 276L,
-                            ProfileId = 3L,
-                            SeatId = 75L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 277L,
-                            ProfileId = 3L,
-                            SeatId = 76L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 278L,
-                            ProfileId = 1L,
-                            SeatId = 77L,
-                            SessionId = 83L
-                        },
-                        new
-                        {
-                            Id = 279L,
-                            ProfileId = 2L,
-                            SeatId = 140L,
-                            SessionId = 58L
-                        },
-                        new
-                        {
-                            Id = 280L,
-                            ProfileId = 1L,
-                            SeatId = 141L,
-                            SessionId = 58L
-                        },
-                        new
-                        {
-                            Id = 281L,
-                            ProfileId = 1L,
-                            SeatId = 281L,
-                            SessionId = 89L
-                        },
-                        new
-                        {
-                            Id = 282L,
-                            ProfileId = 2L,
-                            SeatId = 282L,
-                            SessionId = 89L
-                        },
-                        new
-                        {
-                            Id = 283L,
-                            ProfileId = 2L,
-                            SeatId = 283L,
-                            SessionId = 89L
-                        },
-                        new
-                        {
-                            Id = 284L,
-                            ProfileId = 3L,
-                            SeatId = 92L,
-                            SessionId = 93L
-                        },
-                        new
-                        {
-                            Id = 285L,
-                            ProfileId = 1L,
-                            SeatId = 13L,
-                            SessionId = 46L
-                        },
-                        new
-                        {
-                            Id = 286L,
-                            ProfileId = 3L,
-                            SeatId = 100L,
-                            SessionId = 23L
-                        },
-                        new
-                        {
-                            Id = 287L,
-                            ProfileId = 1L,
-                            SeatId = 104L,
-                            SessionId = 28L
-                        },
-                        new
-                        {
-                            Id = 288L,
-                            ProfileId = 2L,
-                            SeatId = 105L,
-                            SessionId = 28L
-                        },
-                        new
-                        {
-                            Id = 289L,
-                            ProfileId = 3L,
-                            SeatId = 2L,
-                            SessionId = 86L
-                        },
-                        new
-                        {
-                            Id = 290L,
-                            ProfileId = 1L,
-                            SeatId = 3L,
-                            SessionId = 86L
-                        },
-                        new
-                        {
-                            Id = 291L,
-                            ProfileId = 2L,
-                            SeatId = 4L,
-                            SessionId = 86L
-                        },
-                        new
-                        {
-                            Id = 292L,
-                            ProfileId = 1L,
-                            SeatId = 14L,
-                            SessionId = 96L
-                        },
-                        new
-                        {
-                            Id = 293L,
-                            ProfileId = 3L,
-                            SeatId = 439L,
-                            SessionId = 75L
-                        },
-                        new
-                        {
-                            Id = 294L,
-                            ProfileId = 2L,
-                            SeatId = 440L,
-                            SessionId = 75L
-                        },
-                        new
-                        {
-                            Id = 295L,
-                            ProfileId = 3L,
-                            SeatId = 49L,
-                            SessionId = 27L
-                        },
-                        new
-                        {
-                            Id = 296L,
-                            ProfileId = 3L,
-                            SeatId = 464L,
-                            SessionId = 45L
-                        },
-                        new
-                        {
-                            Id = 297L,
-                            ProfileId = 3L,
-                            SeatId = 102L,
-                            SessionId = 48L
-                        },
-                        new
-                        {
-                            Id = 298L,
-                            ProfileId = 2L,
-                            SeatId = 103L,
-                            SessionId = 48L
-                        },
-                        new
-                        {
-                            Id = 299L,
-                            ProfileId = 3L,
-                            SeatId = 113L,
-                            SessionId = 43L
-                        },
-                        new
-                        {
-                            Id = 300L,
-                            ProfileId = 1L,
-                            SeatId = 179L,
-                            SessionId = 19L
-                        },
-                        new
-                        {
-                            Id = 301L,
-                            ProfileId = 2L,
-                            SeatId = 180L,
-                            SessionId = 19L
-                        },
-                        new
-                        {
-                            Id = 302L,
-                            ProfileId = 1L,
-                            SeatId = 181L,
-                            SessionId = 19L
-                        },
-                        new
-                        {
-                            Id = 303L,
-                            ProfileId = 1L,
-                            SeatId = 50L,
-                            SessionId = 67L
-                        },
-                        new
-                        {
-                            Id = 304L,
-                            ProfileId = 1L,
-                            SeatId = 51L,
-                            SessionId = 67L
-                        },
-                        new
-                        {
-                            Id = 305L,
-                            ProfileId = 1L,
-                            SeatId = 58L,
-                            SessionId = 2L
-                        },
-                        new
-                        {
-                            Id = 306L,
-                            ProfileId = 3L,
-                            SeatId = 59L,
-                            SessionId = 2L
-                        },
-                        new
-                        {
-                            Id = 307L,
-                            ProfileId = 1L,
-                            SeatId = 13L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 308L,
-                            ProfileId = 1L,
-                            SeatId = 14L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 309L,
-                            ProfileId = 1L,
-                            SeatId = 15L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 310L,
-                            ProfileId = 3L,
-                            SeatId = 1L,
-                            SessionId = 51L
-                        },
-                        new
-                        {
-                            Id = 311L,
-                            ProfileId = 2L,
-                            SeatId = 325L,
-                            SessionId = 4L
-                        },
-                        new
-                        {
-                            Id = 312L,
-                            ProfileId = 3L,
-                            SeatId = 326L,
-                            SessionId = 4L
-                        },
-                        new
-                        {
-                            Id = 313L,
-                            ProfileId = 3L,
-                            SeatId = 18L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 314L,
-                            ProfileId = 3L,
-                            SeatId = 19L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 315L,
-                            ProfileId = 2L,
-                            SeatId = 20L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 316L,
-                            ProfileId = 2L,
-                            SeatId = 21L,
-                            SessionId = 1L
-                        },
-                        new
-                        {
-                            Id = 317L,
-                            ProfileId = 1L,
-                            SeatId = 380L,
-                            SessionId = 60L
-                        },
-                        new
-                        {
-                            Id = 318L,
-                            ProfileId = 2L,
-                            SeatId = 64L,
-                            SessionId = 12L
-                        },
-                        new
-                        {
-                            Id = 319L,
-                            ProfileId = 1L,
-                            SeatId = 65L,
-                            SessionId = 12L
-                        },
-                        new
-                        {
-                            Id = 320L,
-                            ProfileId = 1L,
-                            SeatId = 55L,
-                            SessionId = 62L
-                        },
-                        new
-                        {
                             Id = 321L,
-                            ProfileId = 1L,
-                            SeatId = 56L,
-                            SessionId = 62L
+                            ProfileId = 3L,
+                            SeatId = 9L,
+                            SessionId = 16L
                         },
                         new
                         {
                             Id = 322L,
-                            ProfileId = 1L,
-                            SeatId = 90L,
-                            SessionId = 23L
+                            ProfileId = 2L,
+                            SeatId = 10L,
+                            SessionId = 16L
                         },
                         new
                         {
                             Id = 323L,
-                            ProfileId = 2L,
-                            SeatId = 91L,
-                            SessionId = 23L
+                            ProfileId = 1L,
+                            SeatId = 31L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 324L,
                             ProfileId = 3L,
-                            SeatId = 43L,
-                            SessionId = 17L
+                            SeatId = 32L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 325L,
                             ProfileId = 1L,
-                            SeatId = 44L,
-                            SessionId = 17L
+                            SeatId = 33L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 326L,
                             ProfileId = 1L,
-                            SeatId = 22L,
-                            SessionId = 91L
+                            SeatId = 71L,
+                            SessionId = 88L
                         },
                         new
                         {
                             Id = 327L,
                             ProfileId = 1L,
-                            SeatId = 23L,
-                            SessionId = 91L
+                            SeatId = 72L,
+                            SessionId = 88L
                         },
                         new
                         {
                             Id = 328L,
                             ProfileId = 1L,
-                            SeatId = 24L,
-                            SessionId = 91L
+                            SeatId = 201L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 329L,
                             ProfileId = 1L,
-                            SeatId = 408L,
-                            SessionId = 80L
+                            SeatId = 70L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 330L,
-                            ProfileId = 1L,
-                            SeatId = 409L,
-                            SessionId = 80L
+                            ProfileId = 3L,
+                            SeatId = 2L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 331L,
-                            ProfileId = 2L,
-                            SeatId = 410L,
-                            SessionId = 80L
+                            ProfileId = 1L,
+                            SeatId = 3L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 332L,
-                            ProfileId = 2L,
-                            SeatId = 248L,
-                            SessionId = 34L
+                            ProfileId = 1L,
+                            SeatId = 62L,
+                            SessionId = 72L
                         },
                         new
                         {
                             Id = 333L,
-                            ProfileId = 3L,
-                            SeatId = 249L,
-                            SessionId = 34L
+                            ProfileId = 2L,
+                            SeatId = 63L,
+                            SessionId = 72L
                         },
                         new
                         {
                             Id = 334L,
                             ProfileId = 1L,
-                            SeatId = 243L,
-                            SessionId = 84L
+                            SeatId = 64L,
+                            SessionId = 72L
                         },
                         new
                         {
                             Id = 335L,
                             ProfileId = 2L,
-                            SeatId = 244L,
-                            SessionId = 84L
+                            SeatId = 166L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 336L,
-                            ProfileId = 1L,
-                            SeatId = 245L,
-                            SessionId = 84L
+                            ProfileId = 3L,
+                            SeatId = 167L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 337L,
                             ProfileId = 2L,
-                            SeatId = 22L,
-                            SessionId = 41L
+                            SeatId = 200L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 338L,
                             ProfileId = 3L,
-                            SeatId = 106L,
-                            SessionId = 38L
+                            SeatId = 201L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 339L,
                             ProfileId = 3L,
-                            SeatId = 107L,
-                            SessionId = 38L
+                            SeatId = 202L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 340L,
-                            ProfileId = 3L,
-                            SeatId = 123L,
-                            SessionId = 18L
+                            ProfileId = 1L,
+                            SeatId = 269L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 341L,
-                            ProfileId = 3L,
-                            SeatId = 124L,
-                            SessionId = 18L
+                            ProfileId = 1L,
+                            SeatId = 1L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 342L,
                             ProfileId = 3L,
-                            SeatId = 125L,
-                            SessionId = 18L
+                            SeatId = 2L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 343L,
-                            ProfileId = 2L,
-                            SeatId = 133L,
-                            SessionId = 63L
+                            ProfileId = 1L,
+                            SeatId = 3L,
+                            SessionId = 41L
                         },
                         new
                         {
                             Id = 344L,
-                            ProfileId = 3L,
-                            SeatId = 134L,
-                            SessionId = 63L
+                            ProfileId = 1L,
+                            SeatId = 332L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 345L,
                             ProfileId = 1L,
-                            SeatId = 177L,
-                            SessionId = 79L
+                            SeatId = 333L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 346L,
                             ProfileId = 1L,
-                            SeatId = 13L,
-                            SessionId = 61L
+                            SeatId = 39L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 347L,
-                            ProfileId = 2L,
-                            SeatId = 14L,
-                            SessionId = 61L
+                            ProfileId = 1L,
+                            SeatId = 36L,
+                            SessionId = 21L
                         },
                         new
                         {
                             Id = 348L,
-                            ProfileId = 1L,
-                            SeatId = 371L,
-                            SessionId = 85L
+                            ProfileId = 3L,
+                            SeatId = 37L,
+                            SessionId = 21L
                         },
                         new
                         {
                             Id = 349L,
-                            ProfileId = 2L,
-                            SeatId = 372L,
-                            SessionId = 85L
+                            ProfileId = 1L,
+                            SeatId = 38L,
+                            SessionId = 21L
                         },
                         new
                         {
                             Id = 350L,
-                            ProfileId = 2L,
-                            SeatId = 196L,
-                            SessionId = 79L
+                            ProfileId = 1L,
+                            SeatId = 379L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 351L,
-                            ProfileId = 3L,
-                            SeatId = 197L,
-                            SessionId = 79L
+                            ProfileId = 1L,
+                            SeatId = 380L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 352L,
-                            ProfileId = 3L,
-                            SeatId = 61L,
-                            SessionId = 42L
+                            ProfileId = 1L,
+                            SeatId = 28L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 353L,
-                            ProfileId = 2L,
-                            SeatId = 62L,
-                            SessionId = 42L
+                            ProfileId = 1L,
+                            SeatId = 29L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 354L,
                             ProfileId = 2L,
-                            SeatId = 63L,
-                            SessionId = 42L
+                            SeatId = 30L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 355L,
                             ProfileId = 2L,
-                            SeatId = 179L,
-                            SessionId = 49L
+                            SeatId = 49L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 356L,
                             ProfileId = 2L,
-                            SeatId = 240L,
-                            SessionId = 29L
+                            SeatId = 50L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 357L,
                             ProfileId = 3L,
-                            SeatId = 241L,
-                            SessionId = 29L
+                            SeatId = 51L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 358L,
-                            ProfileId = 2L,
-                            SeatId = 12L,
-                            SessionId = 31L
+                            ProfileId = 3L,
+                            SeatId = 184L,
+                            SessionId = 74L
                         },
                         new
                         {
                             Id = 359L,
-                            ProfileId = 1L,
-                            SeatId = 285L,
-                            SessionId = 69L
+                            ProfileId = 2L,
+                            SeatId = 48L,
+                            SessionId = 42L
                         },
                         new
                         {
                             Id = 360L,
                             ProfileId = 1L,
-                            SeatId = 286L,
-                            SessionId = 69L
+                            SeatId = 49L,
+                            SessionId = 42L
                         },
                         new
                         {
                             Id = 361L,
-                            ProfileId = 1L,
+                            ProfileId = 3L,
                             SeatId = 287L,
-                            SessionId = 69L
+                            SessionId = 89L
                         },
                         new
                         {
                             Id = 362L,
-                            ProfileId = 3L,
-                            SeatId = 1L,
-                            SessionId = 36L
+                            ProfileId = 2L,
+                            SeatId = 288L,
+                            SessionId = 89L
                         },
                         new
                         {
                             Id = 363L,
-                            ProfileId = 1L,
-                            SeatId = 46L,
-                            SessionId = 87L
+                            ProfileId = 2L,
+                            SeatId = 289L,
+                            SessionId = 89L
                         },
                         new
                         {
                             Id = 364L,
-                            ProfileId = 2L,
-                            SeatId = 47L,
-                            SessionId = 87L
-                        },
-                        new
-                        {
-                            Id = 365L,
                             ProfileId = 1L,
-                            SeatId = 206L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 366L,
-                            ProfileId = 3L,
-                            SeatId = 207L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 367L,
-                            ProfileId = 3L,
-                            SeatId = 208L,
-                            SessionId = 9L
-                        },
-                        new
-                        {
-                            Id = 368L,
-                            ProfileId = 3L,
-                            SeatId = 344L,
-                            SessionId = 50L
-                        },
-                        new
-                        {
-                            Id = 369L,
-                            ProfileId = 1L,
-                            SeatId = 32L,
-                            SessionId = 46L
-                        },
-                        new
-                        {
-                            Id = 370L,
-                            ProfileId = 2L,
-                            SeatId = 33L,
-                            SessionId = 46L
-                        },
-                        new
-                        {
-                            Id = 371L,
-                            ProfileId = 2L,
-                            SeatId = 34L,
-                            SessionId = 46L
-                        },
-                        new
-                        {
-                            Id = 372L,
-                            ProfileId = 3L,
-                            SeatId = 44L,
-                            SessionId = 77L
-                        },
-                        new
-                        {
-                            Id = 373L,
-                            ProfileId = 2L,
                             SeatId = 45L,
                             SessionId = 77L
                         },
                         new
                         {
-                            Id = 374L,
-                            ProfileId = 3L,
-                            SeatId = 114L,
-                            SessionId = 23L
-                        },
-                        new
-                        {
-                            Id = 375L,
+                            Id = 365L,
                             ProfileId = 2L,
-                            SeatId = 115L,
-                            SessionId = 23L
+                            SeatId = 46L,
+                            SessionId = 77L
                         },
                         new
                         {
-                            Id = 376L,
-                            ProfileId = 3L,
-                            SeatId = 29L,
-                            SessionId = 86L
-                        },
-                        new
-                        {
-                            Id = 377L,
+                            Id = 366L,
                             ProfileId = 2L,
-                            SeatId = 14L,
-                            SessionId = 36L
-                        },
-                        new
-                        {
-                            Id = 378L,
-                            ProfileId = 1L,
-                            SeatId = 72L,
-                            SessionId = 78L
-                        },
-                        new
-                        {
-                            Id = 379L,
-                            ProfileId = 2L,
-                            SeatId = 73L,
-                            SessionId = 78L
-                        },
-                        new
-                        {
-                            Id = 380L,
-                            ProfileId = 3L,
-                            SeatId = 74L,
-                            SessionId = 78L
-                        },
-                        new
-                        {
-                            Id = 381L,
-                            ProfileId = 1L,
-                            SeatId = 92L,
-                            SessionId = 8L
-                        },
-                        new
-                        {
-                            Id = 382L,
-                            ProfileId = 2L,
-                            SeatId = 29L,
-                            SessionId = 61L
-                        },
-                        new
-                        {
-                            Id = 383L,
-                            ProfileId = 1L,
-                            SeatId = 30L,
-                            SessionId = 61L
-                        },
-                        new
-                        {
-                            Id = 384L,
-                            ProfileId = 3L,
-                            SeatId = 106L,
-                            SessionId = 78L
-                        },
-                        new
-                        {
-                            Id = 385L,
-                            ProfileId = 1L,
-                            SeatId = 107L,
-                            SessionId = 78L
-                        },
-                        new
-                        {
-                            Id = 386L,
-                            ProfileId = 2L,
-                            SeatId = 343L,
-                            SessionId = 30L
-                        },
-                        new
-                        {
-                            Id = 387L,
-                            ProfileId = 3L,
-                            SeatId = 344L,
-                            SessionId = 30L
-                        },
-                        new
-                        {
-                            Id = 388L,
-                            ProfileId = 1L,
-                            SeatId = 345L,
-                            SessionId = 30L
-                        },
-                        new
-                        {
-                            Id = 389L,
-                            ProfileId = 3L,
                             SeatId = 9L,
-                            SessionId = 76L
+                            SessionId = 41L
                         },
                         new
                         {
-                            Id = 390L,
+                            Id = 367L,
                             ProfileId = 3L,
                             SeatId = 10L,
-                            SessionId = 76L
+                            SessionId = 41L
                         },
                         new
                         {
-                            Id = 391L,
-                            ProfileId = 3L,
-                            SeatId = 99L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 392L,
-                            ProfileId = 2L,
-                            SeatId = 100L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 393L,
-                            ProfileId = 1L,
-                            SeatId = 101L,
-                            SessionId = 98L
-                        },
-                        new
-                        {
-                            Id = 394L,
-                            ProfileId = 3L,
-                            SeatId = 141L,
-                            SessionId = 93L
-                        },
-                        new
-                        {
-                            Id = 395L,
-                            ProfileId = 1L,
-                            SeatId = 142L,
-                            SessionId = 93L
-                        },
-                        new
-                        {
-                            Id = 396L,
-                            ProfileId = 1L,
-                            SeatId = 29L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 397L,
-                            ProfileId = 1L,
-                            SeatId = 30L,
-                            SessionId = 31L
-                        },
-                        new
-                        {
-                            Id = 398L,
-                            ProfileId = 1L,
-                            SeatId = 410L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 399L,
-                            ProfileId = 3L,
-                            SeatId = 411L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 400L,
-                            ProfileId = 2L,
-                            SeatId = 412L,
-                            SessionId = 25L
-                        },
-                        new
-                        {
-                            Id = 401L,
-                            ProfileId = 1L,
-                            SeatId = 438L,
-                            SessionId = 95L
-                        },
-                        new
-                        {
-                            Id = 402L,
-                            ProfileId = 3L,
-                            SeatId = 439L,
-                            SessionId = 95L
-                        },
-                        new
-                        {
-                            Id = 403L,
-                            ProfileId = 2L,
-                            SeatId = 19L,
-                            SessionId = 26L
-                        },
-                        new
-                        {
-                            Id = 404L,
-                            ProfileId = 2L,
-                            SeatId = 20L,
-                            SessionId = 26L
-                        },
-                        new
-                        {
-                            Id = 405L,
+                            Id = 368L,
                             ProfileId = 2L,
                             SeatId = 69L,
                             SessionId = 87L
                         },
                         new
                         {
-                            Id = 406L,
-                            ProfileId = 1L,
+                            Id = 369L,
+                            ProfileId = 3L,
                             SeatId = 70L,
                             SessionId = 87L
                         },
                         new
                         {
+                            Id = 370L,
+                            ProfileId = 1L,
+                            SeatId = 374L,
+                            SessionId = 30L
+                        },
+                        new
+                        {
+                            Id = 371L,
+                            ProfileId = 2L,
+                            SeatId = 375L,
+                            SessionId = 30L
+                        },
+                        new
+                        {
+                            Id = 372L,
+                            ProfileId = 3L,
+                            SeatId = 376L,
+                            SessionId = 30L
+                        },
+                        new
+                        {
+                            Id = 373L,
+                            ProfileId = 3L,
+                            SeatId = 440L,
+                            SessionId = 50L
+                        },
+                        new
+                        {
+                            Id = 374L,
+                            ProfileId = 1L,
+                            SeatId = 441L,
+                            SessionId = 50L
+                        },
+                        new
+                        {
+                            Id = 375L,
+                            ProfileId = 2L,
+                            SeatId = 14L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 376L,
+                            ProfileId = 3L,
+                            SeatId = 15L,
+                            SessionId = 11L
+                        },
+                        new
+                        {
+                            Id = 377L,
+                            ProfileId = 1L,
+                            SeatId = 331L,
+                            SessionId = 45L
+                        },
+                        new
+                        {
+                            Id = 378L,
+                            ProfileId = 2L,
+                            SeatId = 332L,
+                            SessionId = 45L
+                        },
+                        new
+                        {
+                            Id = 379L,
+                            ProfileId = 1L,
+                            SeatId = 333L,
+                            SessionId = 45L
+                        },
+                        new
+                        {
+                            Id = 380L,
+                            ProfileId = 3L,
+                            SeatId = 241L,
+                            SessionId = 59L
+                        },
+                        new
+                        {
+                            Id = 381L,
+                            ProfileId = 3L,
+                            SeatId = 242L,
+                            SessionId = 59L
+                        },
+                        new
+                        {
+                            Id = 382L,
+                            ProfileId = 2L,
+                            SeatId = 73L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 383L,
+                            ProfileId = 1L,
+                            SeatId = 74L,
+                            SessionId = 83L
+                        },
+                        new
+                        {
+                            Id = 384L,
+                            ProfileId = 1L,
+                            SeatId = 135L,
+                            SessionId = 8L
+                        },
+                        new
+                        {
+                            Id = 385L,
+                            ProfileId = 3L,
+                            SeatId = 136L,
+                            SessionId = 8L
+                        },
+                        new
+                        {
+                            Id = 386L,
+                            ProfileId = 3L,
+                            SeatId = 137L,
+                            SessionId = 8L
+                        },
+                        new
+                        {
+                            Id = 387L,
+                            ProfileId = 3L,
+                            SeatId = 80L,
+                            SessionId = 93L
+                        },
+                        new
+                        {
+                            Id = 388L,
+                            ProfileId = 1L,
+                            SeatId = 81L,
+                            SessionId = 93L
+                        },
+                        new
+                        {
+                            Id = 389L,
+                            ProfileId = 1L,
+                            SeatId = 352L,
+                            SessionId = 50L
+                        },
+                        new
+                        {
+                            Id = 390L,
+                            ProfileId = 1L,
+                            SeatId = 353L,
+                            SessionId = 50L
+                        },
+                        new
+                        {
+                            Id = 391L,
+                            ProfileId = 3L,
+                            SeatId = 65L,
+                            SessionId = 12L
+                        },
+                        new
+                        {
+                            Id = 392L,
+                            ProfileId = 3L,
+                            SeatId = 66L,
+                            SessionId = 12L
+                        },
+                        new
+                        {
+                            Id = 393L,
+                            ProfileId = 1L,
+                            SeatId = 67L,
+                            SessionId = 12L
+                        },
+                        new
+                        {
+                            Id = 394L,
+                            ProfileId = 2L,
+                            SeatId = 320L,
+                            SessionId = 19L
+                        },
+                        new
+                        {
+                            Id = 395L,
+                            ProfileId = 1L,
+                            SeatId = 321L,
+                            SessionId = 19L
+                        },
+                        new
+                        {
+                            Id = 396L,
+                            ProfileId = 2L,
+                            SeatId = 135L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
+                            Id = 397L,
+                            ProfileId = 2L,
+                            SeatId = 136L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
+                            Id = 398L,
+                            ProfileId = 2L,
+                            SeatId = 132L,
+                            SessionId = 33L
+                        },
+                        new
+                        {
+                            Id = 399L,
+                            ProfileId = 2L,
+                            SeatId = 133L,
+                            SessionId = 33L
+                        },
+                        new
+                        {
+                            Id = 400L,
+                            ProfileId = 3L,
+                            SeatId = 134L,
+                            SessionId = 33L
+                        },
+                        new
+                        {
+                            Id = 401L,
+                            ProfileId = 3L,
+                            SeatId = 391L,
+                            SessionId = 65L
+                        },
+                        new
+                        {
+                            Id = 402L,
+                            ProfileId = 3L,
+                            SeatId = 392L,
+                            SessionId = 65L
+                        },
+                        new
+                        {
+                            Id = 403L,
+                            ProfileId = 2L,
+                            SeatId = 393L,
+                            SessionId = 65L
+                        },
+                        new
+                        {
+                            Id = 404L,
+                            ProfileId = 2L,
+                            SeatId = 53L,
+                            SessionId = 42L
+                        },
+                        new
+                        {
+                            Id = 405L,
+                            ProfileId = 3L,
+                            SeatId = 54L,
+                            SessionId = 42L
+                        },
+                        new
+                        {
+                            Id = 406L,
+                            ProfileId = 3L,
+                            SeatId = 56L,
+                            SessionId = 22L
+                        },
+                        new
+                        {
                             Id = 407L,
                             ProfileId = 2L,
-                            SeatId = 65L,
-                            SessionId = 2L
+                            SeatId = 57L,
+                            SessionId = 22L
                         },
                         new
                         {
                             Id = 408L,
                             ProfileId = 3L,
-                            SeatId = 66L,
-                            SessionId = 2L
+                            SeatId = 58L,
+                            SessionId = 22L
                         },
                         new
                         {
                             Id = 409L,
-                            ProfileId = 3L,
-                            SeatId = 67L,
-                            SessionId = 2L
+                            ProfileId = 1L,
+                            SeatId = 124L,
+                            SessionId = 48L
                         },
                         new
                         {
                             Id = 410L,
                             ProfileId = 3L,
-                            SeatId = 385L,
-                            SessionId = 70L
+                            SeatId = 125L,
+                            SessionId = 48L
                         },
                         new
                         {
                             Id = 411L,
                             ProfileId = 2L,
-                            SeatId = 386L,
-                            SessionId = 70L
+                            SeatId = 126L,
+                            SessionId = 48L
                         },
                         new
                         {
                             Id = 412L,
-                            ProfileId = 3L,
-                            SeatId = 387L,
-                            SessionId = 70L
+                            ProfileId = 2L,
+                            SeatId = 261L,
+                            SessionId = 84L
                         },
                         new
                         {
                             Id = 413L,
-                            ProfileId = 3L,
-                            SeatId = 392L,
-                            SessionId = 70L
+                            ProfileId = 1L,
+                            SeatId = 262L,
+                            SessionId = 84L
                         },
                         new
                         {
                             Id = 414L,
-                            ProfileId = 1L,
-                            SeatId = 393L,
-                            SessionId = 70L
+                            ProfileId = 2L,
+                            SeatId = 187L,
+                            SessionId = 14L
                         },
                         new
                         {
                             Id = 415L,
                             ProfileId = 1L,
-                            SeatId = 394L,
-                            SessionId = 70L
+                            SeatId = 188L,
+                            SessionId = 14L
                         },
                         new
                         {
                             Id = 416L,
-                            ProfileId = 3L,
-                            SeatId = 79L,
-                            SessionId = 98L
+                            ProfileId = 2L,
+                            SeatId = 376L,
+                            SessionId = 60L
                         },
                         new
                         {
                             Id = 417L,
                             ProfileId = 3L,
-                            SeatId = 80L,
-                            SessionId = 98L
+                            SeatId = 377L,
+                            SessionId = 60L
                         },
                         new
                         {
                             Id = 418L,
-                            ProfileId = 1L,
-                            SeatId = 22L,
-                            SessionId = 51L
+                            ProfileId = 3L,
+                            SeatId = 378L,
+                            SessionId = 60L
                         },
                         new
                         {
                             Id = 419L,
-                            ProfileId = 3L,
-                            SeatId = 157L,
-                            SessionId = 24L
+                            ProfileId = 2L,
+                            SeatId = 305L,
+                            SessionId = 44L
                         },
                         new
                         {
                             Id = 420L,
-                            ProfileId = 1L,
-                            SeatId = 158L,
-                            SessionId = 24L
+                            ProfileId = 3L,
+                            SeatId = 306L,
+                            SessionId = 44L
                         },
                         new
                         {
                             Id = 421L,
-                            ProfileId = 3L,
-                            SeatId = 18L,
-                            SessionId = 11L
+                            ProfileId = 2L,
+                            SeatId = 2L,
+                            SessionId = 86L
                         },
                         new
                         {
                             Id = 422L,
                             ProfileId = 3L,
-                            SeatId = 19L,
-                            SessionId = 11L
+                            SeatId = 3L,
+                            SessionId = 86L
                         },
                         new
                         {
                             Id = 423L,
-                            ProfileId = 1L,
-                            SeatId = 20L,
-                            SessionId = 11L
+                            ProfileId = 2L,
+                            SeatId = 59L,
+                            SessionId = 77L
                         },
                         new
                         {
                             Id = 424L,
                             ProfileId = 3L,
-                            SeatId = 193L,
-                            SessionId = 94L
+                            SeatId = 61L,
+                            SessionId = 77L
                         },
                         new
                         {
                             Id = 425L,
-                            ProfileId = 1L,
-                            SeatId = 194L,
-                            SessionId = 94L
+                            ProfileId = 3L,
+                            SeatId = 142L,
+                            SessionId = 18L
                         },
                         new
                         {
                             Id = 426L,
                             ProfileId = 2L,
-                            SeatId = 317L,
-                            SessionId = 89L
+                            SeatId = 143L,
+                            SessionId = 18L
                         },
                         new
                         {
                             Id = 427L,
                             ProfileId = 3L,
-                            SeatId = 35L,
-                            SessionId = 31L
+                            SeatId = 145L,
+                            SessionId = 18L
                         },
                         new
                         {
                             Id = 428L,
-                            ProfileId = 1L,
-                            SeatId = 42L,
-                            SessionId = 2L
+                            ProfileId = 2L,
+                            SeatId = 380L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 429L,
                             ProfileId = 1L,
-                            SeatId = 43L,
-                            SessionId = 2L
+                            SeatId = 381L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 430L,
-                            ProfileId = 1L,
-                            SeatId = 43L,
-                            SessionId = 57L
+                            ProfileId = 3L,
+                            SeatId = 382L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 431L,
-                            ProfileId = 1L,
-                            SeatId = 414L,
-                            SessionId = 20L
+                            ProfileId = 2L,
+                            SeatId = 150L,
+                            SessionId = 54L
                         },
                         new
                         {
                             Id = 432L,
-                            ProfileId = 1L,
-                            SeatId = 415L,
-                            SessionId = 20L
+                            ProfileId = 3L,
+                            SeatId = 421L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 433L,
-                            ProfileId = 2L,
-                            SeatId = 41L,
-                            SessionId = 12L
+                            ProfileId = 1L,
+                            SeatId = 422L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 434L,
                             ProfileId = 3L,
-                            SeatId = 42L,
-                            SessionId = 12L
+                            SeatId = 423L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 435L,
-                            ProfileId = 1L,
-                            SeatId = 50L,
-                            SessionId = 57L
+                            ProfileId = 2L,
+                            SeatId = 93L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 436L,
                             ProfileId = 3L,
-                            SeatId = 51L,
-                            SessionId = 57L
+                            SeatId = 94L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 437L,
-                            ProfileId = 3L,
-                            SeatId = 467L,
-                            SessionId = 60L
+                            ProfileId = 1L,
+                            SeatId = 28L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 438L,
                             ProfileId = 3L,
-                            SeatId = 468L,
-                            SessionId = 60L
+                            SeatId = 29L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 439L,
-                            ProfileId = 3L,
-                            SeatId = 469L,
-                            SessionId = 60L
+                            ProfileId = 2L,
+                            SeatId = 1L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 440L,
-                            ProfileId = 2L,
-                            SeatId = 137L,
-                            SessionId = 73L
+                            ProfileId = 3L,
+                            SeatId = 2L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 441L,
                             ProfileId = 1L,
-                            SeatId = 138L,
-                            SessionId = 73L
+                            SeatId = 3L,
+                            SessionId = 81L
                         },
                         new
                         {
                             Id = 442L,
-                            ProfileId = 3L,
-                            SeatId = 56L,
-                            SessionId = 72L
+                            ProfileId = 1L,
+                            SeatId = 43L,
+                            SessionId = 2L
                         },
                         new
                         {
                             Id = 443L,
-                            ProfileId = 2L,
-                            SeatId = 57L,
-                            SessionId = 72L
+                            ProfileId = 3L,
+                            SeatId = 44L,
+                            SessionId = 2L
                         },
                         new
                         {
                             Id = 444L,
-                            ProfileId = 2L,
-                            SeatId = 58L,
-                            SessionId = 72L
+                            ProfileId = 3L,
+                            SeatId = 265L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 445L,
                             ProfileId = 3L,
-                            SeatId = 154L,
-                            SessionId = 24L
+                            SeatId = 266L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 446L,
-                            ProfileId = 3L,
-                            SeatId = 175L,
-                            SessionId = 19L
+                            ProfileId = 1L,
+                            SeatId = 267L,
+                            SessionId = 29L
                         },
                         new
                         {
                             Id = 447L,
-                            ProfileId = 1L,
-                            SeatId = 176L,
-                            SessionId = 19L
+                            ProfileId = 3L,
+                            SeatId = 16L,
+                            SessionId = 21L
                         },
                         new
                         {
                             Id = 448L,
-                            ProfileId = 1L,
-                            SeatId = 107L,
-                            SessionId = 18L
+                            ProfileId = 2L,
+                            SeatId = 17L,
+                            SessionId = 21L
                         },
                         new
                         {
                             Id = 449L,
-                            ProfileId = 3L,
-                            SeatId = 108L,
-                            SessionId = 18L
+                            ProfileId = 1L,
+                            SeatId = 18L,
+                            SessionId = 21L
                         },
                         new
                         {
                             Id = 450L,
                             ProfileId = 1L,
-                            SeatId = 109L,
-                            SessionId = 18L
+                            SeatId = 199L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 451L,
-                            ProfileId = 1L,
-                            SeatId = 114L,
-                            SessionId = 33L
+                            ProfileId = 2L,
+                            SeatId = 200L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 452L,
-                            ProfileId = 2L,
-                            SeatId = 115L,
-                            SessionId = 33L
+                            ProfileId = 3L,
+                            SeatId = 61L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 453L,
                             ProfileId = 2L,
-                            SeatId = 116L,
-                            SessionId = 33L
+                            SeatId = 62L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 454L,
-                            ProfileId = 3L,
-                            SeatId = 365L,
-                            SessionId = 60L
+                            ProfileId = 1L,
+                            SeatId = 63L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 455L,
                             ProfileId = 2L,
-                            SeatId = 98L,
-                            SessionId = 8L
+                            SeatId = 20L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 456L,
-                            ProfileId = 2L,
-                            SeatId = 219L,
-                            SessionId = 29L
+                            ProfileId = 1L,
+                            SeatId = 21L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 457L,
                             ProfileId = 1L,
-                            SeatId = 220L,
-                            SessionId = 29L
+                            SeatId = 22L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 458L,
-                            ProfileId = 2L,
-                            SeatId = 111L,
-                            SessionId = 83L
+                            ProfileId = 1L,
+                            SeatId = 23L,
+                            SessionId = 46L
                         },
                         new
                         {
                             Id = 459L,
-                            ProfileId = 2L,
-                            SeatId = 112L,
-                            SessionId = 83L
+                            ProfileId = 1L,
+                            SeatId = 98L,
+                            SessionId = 28L
                         },
                         new
                         {
                             Id = 460L,
                             ProfileId = 1L,
-                            SeatId = 102L,
-                            SessionId = 13L
+                            SeatId = 99L,
+                            SessionId = 28L
                         },
                         new
                         {
                             Id = 461L,
-                            ProfileId = 1L,
-                            SeatId = 113L,
-                            SessionId = 48L
+                            ProfileId = 3L,
+                            SeatId = 100L,
+                            SessionId = 28L
                         },
                         new
                         {
                             Id = 462L,
-                            ProfileId = 3L,
-                            SeatId = 114L,
-                            SessionId = 48L
+                            ProfileId = 1L,
+                            SeatId = 69L,
+                            SessionId = 52L
                         },
                         new
                         {
                             Id = 463L,
                             ProfileId = 3L,
-                            SeatId = 27L,
-                            SessionId = 56L
+                            SeatId = 70L,
+                            SessionId = 52L
                         },
                         new
                         {
                             Id = 464L,
-                            ProfileId = 3L,
-                            SeatId = 28L,
-                            SessionId = 56L
+                            ProfileId = 1L,
+                            SeatId = 374L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 465L,
-                            ProfileId = 3L,
-                            SeatId = 123L,
-                            SessionId = 23L
+                            ProfileId = 1L,
+                            SeatId = 375L,
+                            SessionId = 35L
                         },
                         new
                         {
                             Id = 466L,
                             ProfileId = 3L,
-                            SeatId = 124L,
-                            SessionId = 23L
+                            SeatId = 76L,
+                            SessionId = 78L
                         },
                         new
                         {
                             Id = 467L,
-                            ProfileId = 1L,
-                            SeatId = 12L,
-                            SessionId = 41L
+                            ProfileId = 3L,
+                            SeatId = 77L,
+                            SessionId = 78L
                         },
                         new
                         {
                             Id = 468L,
-                            ProfileId = 2L,
-                            SeatId = 13L,
-                            SessionId = 41L
+                            ProfileId = 3L,
+                            SeatId = 99L,
+                            SessionId = 88L
                         },
                         new
                         {
                             Id = 469L,
                             ProfileId = 2L,
-                            SeatId = 14L,
-                            SessionId = 41L
+                            SeatId = 100L,
+                            SessionId = 88L
                         },
                         new
                         {
                             Id = 470L,
                             ProfileId = 3L,
-                            SeatId = 30L,
-                            SessionId = 91L
+                            SeatId = 101L,
+                            SessionId = 88L
                         },
                         new
                         {
                             Id = 471L,
-                            ProfileId = 2L,
-                            SeatId = 31L,
-                            SessionId = 91L
+                            ProfileId = 1L,
+                            SeatId = 33L,
+                            SessionId = 61L
                         },
                         new
                         {
                             Id = 472L,
-                            ProfileId = 3L,
-                            SeatId = 111L,
-                            SessionId = 88L
+                            ProfileId = 1L,
+                            SeatId = 34L,
+                            SessionId = 61L
                         },
                         new
                         {
                             Id = 473L,
-                            ProfileId = 3L,
-                            SeatId = 112L,
-                            SessionId = 88L
+                            ProfileId = 2L,
+                            SeatId = 35L,
+                            SessionId = 61L
                         },
                         new
                         {
                             Id = 474L,
-                            ProfileId = 3L,
-                            SeatId = 113L,
-                            SessionId = 88L
+                            ProfileId = 2L,
+                            SeatId = 63L,
+                            SessionId = 77L
                         },
                         new
                         {
                             Id = 475L,
-                            ProfileId = 2L,
-                            SeatId = 52L,
-                            SessionId = 72L
+                            ProfileId = 3L,
+                            SeatId = 64L,
+                            SessionId = 77L
                         },
                         new
                         {
                             Id = 476L,
                             ProfileId = 3L,
-                            SeatId = 53L,
-                            SessionId = 72L
+                            SeatId = 122L,
+                            SessionId = 53L
                         },
                         new
                         {
                             Id = 477L,
-                            ProfileId = 2L,
-                            SeatId = 54L,
-                            SessionId = 72L
+                            ProfileId = 3L,
+                            SeatId = 123L,
+                            SessionId = 53L
                         },
                         new
                         {
                             Id = 478L,
-                            ProfileId = 1L,
-                            SeatId = 447L,
-                            SessionId = 70L
+                            ProfileId = 2L,
+                            SeatId = 379L,
+                            SessionId = 85L
                         },
                         new
                         {
                             Id = 479L,
-                            ProfileId = 1L,
-                            SeatId = 448L,
-                            SessionId = 70L
+                            ProfileId = 3L,
+                            SeatId = 380L,
+                            SessionId = 85L
                         },
                         new
                         {
                             Id = 480L,
-                            ProfileId = 2L,
-                            SeatId = 93L,
-                            SessionId = 78L
+                            ProfileId = 3L,
+                            SeatId = 381L,
+                            SessionId = 85L
                         },
                         new
                         {
                             Id = 481L,
-                            ProfileId = 1L,
-                            SeatId = 94L,
-                            SessionId = 78L
+                            ProfileId = 2L,
+                            SeatId = 382L,
+                            SessionId = 85L
                         },
                         new
                         {
                             Id = 482L,
                             ProfileId = 1L,
                             SeatId = 86L,
-                            SessionId = 63L
+                            SessionId = 8L
                         },
                         new
                         {
                             Id = 483L,
                             ProfileId = 1L,
                             SeatId = 87L,
-                            SessionId = 63L
+                            SessionId = 8L
                         },
                         new
                         {
                             Id = 484L,
-                            ProfileId = 2L,
-                            SeatId = 100L,
-                            SessionId = 83L
+                            ProfileId = 3L,
+                            SeatId = 468L,
+                            SessionId = 40L
                         },
                         new
                         {
                             Id = 485L,
-                            ProfileId = 3L,
-                            SeatId = 101L,
-                            SessionId = 83L
+                            ProfileId = 1L,
+                            SeatId = 469L,
+                            SessionId = 40L
                         },
                         new
                         {
                             Id = 486L,
-                            ProfileId = 1L,
-                            SeatId = 446L,
-                            SessionId = 95L
+                            ProfileId = 2L,
+                            SeatId = 246L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 487L,
-                            ProfileId = 1L,
-                            SeatId = 447L,
-                            SessionId = 95L
+                            ProfileId = 3L,
+                            SeatId = 247L,
+                            SessionId = 49L
                         },
                         new
                         {
                             Id = 488L,
-                            ProfileId = 3L,
-                            SeatId = 53L,
-                            SessionId = 57L
+                            ProfileId = 2L,
+                            SeatId = 56L,
+                            SessionId = 47L
                         },
                         new
                         {
                             Id = 489L,
-                            ProfileId = 2L,
-                            SeatId = 54L,
-                            SessionId = 57L
+                            ProfileId = 1L,
+                            SeatId = 47L,
+                            SessionId = 72L
                         },
                         new
                         {
                             Id = 490L,
-                            ProfileId = 2L,
-                            SeatId = 151L,
-                            SessionId = 59L
+                            ProfileId = 3L,
+                            SeatId = 48L,
+                            SessionId = 72L
                         },
                         new
                         {
                             Id = 491L,
-                            ProfileId = 1L,
-                            SeatId = 152L,
-                            SessionId = 59L
+                            ProfileId = 2L,
+                            SeatId = 352L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 492L,
                             ProfileId = 2L,
-                            SeatId = 36L,
-                            SessionId = 76L
+                            SeatId = 353L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 493L,
-                            ProfileId = 1L,
-                            SeatId = 37L,
-                            SessionId = 76L
+                            ProfileId = 2L,
+                            SeatId = 32L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 494L,
-                            ProfileId = 2L,
-                            SeatId = 38L,
-                            SessionId = 76L
+                            ProfileId = 1L,
+                            SeatId = 33L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 495L,
-                            ProfileId = 1L,
-                            SeatId = 360L,
-                            SessionId = 15L
+                            ProfileId = 3L,
+                            SeatId = 34L,
+                            SessionId = 51L
                         },
                         new
                         {
                             Id = 496L,
-                            ProfileId = 1L,
-                            SeatId = 361L,
-                            SessionId = 15L
+                            ProfileId = 2L,
+                            SeatId = 59L,
+                            SessionId = 22L
                         },
                         new
                         {
                             Id = 497L,
                             ProfileId = 1L,
-                            SeatId = 48L,
+                            SeatId = 60L,
                             SessionId = 22L
                         },
                         new
                         {
                             Id = 498L,
-                            ProfileId = 3L,
-                            SeatId = 49L,
-                            SessionId = 22L
+                            ProfileId = 2L,
+                            SeatId = 42L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 499L,
-                            ProfileId = 3L,
-                            SeatId = 50L,
-                            SessionId = 22L
+                            ProfileId = 2L,
+                            SeatId = 43L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 500L,
-                            ProfileId = 1L,
-                            SeatId = 399L,
-                            SessionId = 10L
+                            ProfileId = 3L,
+                            SeatId = 57L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 501L,
-                            ProfileId = 3L,
-                            SeatId = 400L,
-                            SessionId = 10L
+                            ProfileId = 1L,
+                            SeatId = 58L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 502L,
                             ProfileId = 2L,
-                            SeatId = 96L,
-                            SessionId = 68L
+                            SeatId = 59L,
+                            SessionId = 57L
                         },
                         new
                         {
                             Id = 503L,
-                            ProfileId = 2L,
-                            SeatId = 438L,
-                            SessionId = 85L
+                            ProfileId = 3L,
+                            SeatId = 10L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 504L,
-                            ProfileId = 2L,
-                            SeatId = 439L,
-                            SessionId = 85L
+                            ProfileId = 1L,
+                            SeatId = 11L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 505L,
-                            ProfileId = 3L,
-                            SeatId = 440L,
-                            SessionId = 85L
+                            ProfileId = 1L,
+                            SeatId = 182L,
+                            SessionId = 79L
                         },
                         new
                         {
                             Id = 506L,
-                            ProfileId = 3L,
-                            SeatId = 441L,
-                            SessionId = 85L
+                            ProfileId = 1L,
+                            SeatId = 45L,
+                            SessionId = 42L
                         },
                         new
                         {
                             Id = 507L,
-                            ProfileId = 3L,
-                            SeatId = 55L,
-                            SessionId = 57L
+                            ProfileId = 2L,
+                            SeatId = 46L,
+                            SessionId = 42L
                         },
                         new
                         {
                             Id = 508L,
                             ProfileId = 1L,
-                            SeatId = 18L,
-                            SessionId = 66L
+                            SeatId = 47L,
+                            SessionId = 42L
                         },
                         new
                         {
                             Id = 509L,
-                            ProfileId = 3L,
-                            SeatId = 19L,
-                            SessionId = 66L
+                            ProfileId = 2L,
+                            SeatId = 239L,
+                            SessionId = 69L
                         },
                         new
                         {
                             Id = 510L,
                             ProfileId = 3L,
-                            SeatId = 20L,
-                            SessionId = 66L
+                            SeatId = 240L,
+                            SessionId = 69L
                         },
                         new
                         {
                             Id = 511L,
-                            ProfileId = 1L,
-                            SeatId = 21L,
-                            SessionId = 66L
+                            ProfileId = 3L,
+                            SeatId = 55L,
+                            SessionId = 52L
                         },
                         new
                         {
                             Id = 512L,
-                            ProfileId = 1L,
-                            SeatId = 124L,
-                            SessionId = 78L
+                            ProfileId = 3L,
+                            SeatId = 38L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 513L,
                             ProfileId = 3L,
-                            SeatId = 285L,
-                            SessionId = 29L
+                            SeatId = 39L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 514L,
-                            ProfileId = 2L,
-                            SeatId = 286L,
-                            SessionId = 29L
+                            ProfileId = 1L,
+                            SeatId = 40L,
+                            SessionId = 66L
                         },
                         new
                         {
                             Id = 515L,
-                            ProfileId = 3L,
-                            SeatId = 93L,
-                            SessionId = 88L
+                            ProfileId = 2L,
+                            SeatId = 352L,
+                            SessionId = 45L
                         },
                         new
                         {
                             Id = 516L,
                             ProfileId = 1L,
-                            SeatId = 94L,
-                            SessionId = 88L
+                            SeatId = 353L,
+                            SessionId = 45L
                         },
                         new
                         {
                             Id = 517L,
                             ProfileId = 3L,
-                            SeatId = 246L,
-                            SessionId = 24L
+                            SeatId = 354L,
+                            SessionId = 45L
                         },
                         new
                         {
                             Id = 518L,
                             ProfileId = 1L,
-                            SeatId = 247L,
-                            SessionId = 24L
+                            SeatId = 426L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 519L,
-                            ProfileId = 3L,
-                            SeatId = 271L,
-                            SessionId = 29L
+                            ProfileId = 2L,
+                            SeatId = 427L,
+                            SessionId = 15L
                         },
                         new
                         {
                             Id = 520L,
                             ProfileId = 1L,
-                            SeatId = 272L,
-                            SessionId = 29L
+                            SeatId = 255L,
+                            SessionId = 44L
                         },
                         new
                         {
                             Id = 521L,
-                            ProfileId = 3L,
-                            SeatId = 273L,
-                            SessionId = 29L
+                            ProfileId = 2L,
+                            SeatId = 256L,
+                            SessionId = 44L
                         },
                         new
                         {
                             Id = 522L,
                             ProfileId = 1L,
-                            SeatId = 120L,
-                            SessionId = 48L
+                            SeatId = 257L,
+                            SessionId = 44L
                         },
                         new
                         {
                             Id = 523L,
-                            ProfileId = 2L,
-                            SeatId = 155L,
-                            SessionId = 89L
+                            ProfileId = 1L,
+                            SeatId = 53L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 524L,
-                            ProfileId = 3L,
-                            SeatId = 156L,
-                            SessionId = 89L
+                            ProfileId = 2L,
+                            SeatId = 54L,
+                            SessionId = 97L
                         },
                         new
                         {
                             Id = 525L,
-                            ProfileId = 2L,
-                            SeatId = 20L,
-                            SessionId = 46L
+                            ProfileId = 3L,
+                            SeatId = 241L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 526L,
-                            ProfileId = 2L,
-                            SeatId = 21L,
-                            SessionId = 46L
+                            ProfileId = 1L,
+                            SeatId = 242L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 527L,
                             ProfileId = 3L,
-                            SeatId = 423L,
-                            SessionId = 35L
+                            SeatId = 243L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 528L,
-                            ProfileId = 3L,
-                            SeatId = 424L,
-                            SessionId = 35L
+                            ProfileId = 2L,
+                            SeatId = 244L,
+                            SessionId = 9L
                         },
                         new
                         {
                             Id = 529L,
                             ProfileId = 1L,
-                            SeatId = 83L,
-                            SessionId = 98L
+                            SeatId = 63L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 530L,
                             ProfileId = 1L,
-                            SeatId = 84L,
-                            SessionId = 98L
+                            SeatId = 64L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 531L,
-                            ProfileId = 1L,
-                            SeatId = 85L,
-                            SessionId = 98L
+                            ProfileId = 3L,
+                            SeatId = 65L,
+                            SessionId = 82L
                         },
                         new
                         {
                             Id = 532L,
                             ProfileId = 2L,
-                            SeatId = 62L,
-                            SessionId = 97L
+                            SeatId = 125L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 533L,
-                            ProfileId = 1L,
-                            SeatId = 63L,
-                            SessionId = 97L
+                            ProfileId = 2L,
+                            SeatId = 126L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 534L,
-                            ProfileId = 1L,
-                            SeatId = 64L,
-                            SessionId = 97L
+                            ProfileId = 3L,
+                            SeatId = 127L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 535L,
-                            ProfileId = 2L,
-                            SeatId = 335L,
-                            SessionId = 85L
+                            ProfileId = 3L,
+                            SeatId = 420L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 536L,
-                            ProfileId = 2L,
-                            SeatId = 336L,
-                            SessionId = 85L
+                            ProfileId = 3L,
+                            SeatId = 107L,
+                            SessionId = 13L
                         },
                         new
                         {
                             Id = 537L,
                             ProfileId = 2L,
-                            SeatId = 63L,
-                            SessionId = 37L
+                            SeatId = 108L,
+                            SessionId = 13L
                         },
                         new
                         {
                             Id = 538L,
-                            ProfileId = 2L,
-                            SeatId = 64L,
-                            SessionId = 37L
+                            ProfileId = 1L,
+                            SeatId = 104L,
+                            SessionId = 28L
                         },
                         new
                         {
                             Id = 539L,
-                            ProfileId = 1L,
-                            SeatId = 130L,
-                            SessionId = 3L
+                            ProfileId = 3L,
+                            SeatId = 105L,
+                            SessionId = 28L
                         },
                         new
                         {
                             Id = 540L,
-                            ProfileId = 2L,
-                            SeatId = 131L,
-                            SessionId = 3L
+                            ProfileId = 1L,
+                            SeatId = 98L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 541L,
-                            ProfileId = 1L,
-                            SeatId = 132L,
-                            SessionId = 3L
+                            ProfileId = 2L,
+                            SeatId = 99L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 542L,
-                            ProfileId = 1L,
-                            SeatId = 351L,
-                            SessionId = 25L
+                            ProfileId = 2L,
+                            SeatId = 100L,
+                            SessionId = 38L
                         },
                         new
                         {
                             Id = 543L,
-                            ProfileId = 1L,
-                            SeatId = 352L,
-                            SessionId = 25L
+                            ProfileId = 3L,
+                            SeatId = 112L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 544L,
-                            ProfileId = 1L,
-                            SeatId = 448L,
-                            SessionId = 40L
+                            ProfileId = 2L,
+                            SeatId = 113L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 545L,
-                            ProfileId = 3L,
-                            SeatId = 449L,
-                            SessionId = 40L
+                            ProfileId = 1L,
+                            SeatId = 217L,
+                            SessionId = 24L
                         },
                         new
                         {
                             Id = 546L,
-                            ProfileId = 3L,
-                            SeatId = 60L,
-                            SessionId = 57L
+                            ProfileId = 1L,
+                            SeatId = 89L,
+                            SessionId = 88L
                         },
                         new
                         {
                             Id = 547L,
                             ProfileId = 1L,
-                            SeatId = 61L,
-                            SessionId = 57L
+                            SeatId = 415L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 548L,
-                            ProfileId = 3L,
-                            SeatId = 256L,
-                            SessionId = 14L
+                            ProfileId = 1L,
+                            SeatId = 416L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 549L,
-                            ProfileId = 1L,
-                            SeatId = 257L,
-                            SessionId = 14L
+                            ProfileId = 3L,
+                            SeatId = 417L,
+                            SessionId = 10L
                         },
                         new
                         {
                             Id = 550L,
-                            ProfileId = 3L,
-                            SeatId = 258L,
-                            SessionId = 14L
+                            ProfileId = 2L,
+                            SeatId = 137L,
+                            SessionId = 3L
                         },
                         new
                         {
                             Id = 551L,
                             ProfileId = 3L,
-                            SeatId = 259L,
-                            SessionId = 14L
+                            SeatId = 97L,
+                            SessionId = 43L
                         },
                         new
                         {
                             Id = 552L,
-                            ProfileId = 3L,
-                            SeatId = 69L,
-                            SessionId = 22L
+                            ProfileId = 1L,
+                            SeatId = 465L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 553L,
                             ProfileId = 1L,
-                            SeatId = 70L,
-                            SessionId = 22L
+                            SeatId = 466L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 554L,
-                            ProfileId = 1L,
-                            SeatId = 4L,
-                            SessionId = 56L
+                            ProfileId = 2L,
+                            SeatId = 467L,
+                            SessionId = 95L
                         },
                         new
                         {
                             Id = 555L,
-                            ProfileId = 1L,
-                            SeatId = 5L,
-                            SessionId = 56L
+                            ProfileId = 2L,
+                            SeatId = 262L,
+                            SessionId = 64L
                         },
                         new
                         {
                             Id = 556L,
-                            ProfileId = 3L,
-                            SeatId = 6L,
-                            SessionId = 56L
+                            ProfileId = 2L,
+                            SeatId = 263L,
+                            SessionId = 64L
                         },
                         new
                         {
                             Id = 557L,
                             ProfileId = 2L,
-                            SeatId = 436L,
-                            SessionId = 25L
+                            SeatId = 264L,
+                            SessionId = 64L
                         },
                         new
                         {
                             Id = 558L,
-                            ProfileId = 1L,
-                            SeatId = 437L,
-                            SessionId = 25L
+                            ProfileId = 2L,
+                            SeatId = 23L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 559L,
                             ProfileId = 3L,
-                            SeatId = 438L,
-                            SessionId = 25L
+                            SeatId = 24L,
+                            SessionId = 76L
                         },
                         new
                         {
                             Id = 560L,
-                            ProfileId = 3L,
-                            SeatId = 37L,
-                            SessionId = 51L
+                            ProfileId = 1L,
+                            SeatId = 122L,
+                            SessionId = 18L
                         },
                         new
                         {
                             Id = 561L,
-                            ProfileId = 3L,
-                            SeatId = 38L,
-                            SessionId = 51L
+                            ProfileId = 2L,
+                            SeatId = 18L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 562L,
-                            ProfileId = 1L,
-                            SeatId = 139L,
-                            SessionId = 98L
+                            ProfileId = 3L,
+                            SeatId = 19L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 563L,
-                            ProfileId = 2L,
-                            SeatId = 140L,
-                            SessionId = 98L
+                            ProfileId = 3L,
+                            SeatId = 20L,
+                            SessionId = 56L
                         },
                         new
                         {
                             Id = 564L,
-                            ProfileId = 1L,
-                            SeatId = 159L,
-                            SessionId = 19L
+                            ProfileId = 3L,
+                            SeatId = 67L,
+                            SessionId = 27L
                         },
                         new
                         {
                             Id = 565L,
-                            ProfileId = 2L,
-                            SeatId = 160L,
-                            SessionId = 19L
+                            ProfileId = 1L,
+                            SeatId = 68L,
+                            SessionId = 27L
                         },
                         new
                         {
                             Id = 566L,
                             ProfileId = 3L,
-                            SeatId = 161L,
-                            SessionId = 19L
-                        },
-                        new
-                        {
-                            Id = 567L,
-                            ProfileId = 1L,
-                            SeatId = 162L,
-                            SessionId = 19L
-                        },
-                        new
-                        {
-                            Id = 568L,
-                            ProfileId = 2L,
-                            SeatId = 178L,
+                            SeatId = 241L,
                             SessionId = 24L
                         },
                         new
                         {
+                            Id = 567L,
+                            ProfileId = 2L,
+                            SeatId = 242L,
+                            SessionId = 24L
+                        },
+                        new
+                        {
+                            Id = 568L,
+                            ProfileId = 1L,
+                            SeatId = 137L,
+                            SessionId = 68L
+                        },
+                        new
+                        {
                             Id = 569L,
-                            ProfileId = 3L,
-                            SeatId = 187L,
-                            SessionId = 49L
+                            ProfileId = 2L,
+                            SeatId = 418L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 570L,
                             ProfileId = 3L,
-                            SeatId = 188L,
-                            SessionId = 49L
+                            SeatId = 419L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 571L,
-                            ProfileId = 3L,
-                            SeatId = 254L,
-                            SessionId = 9L
+                            ProfileId = 1L,
+                            SeatId = 420L,
+                            SessionId = 70L
                         },
                         new
                         {
                             Id = 572L,
-                            ProfileId = 1L,
-                            SeatId = 255L,
-                            SessionId = 9L
+                            ProfileId = 2L,
+                            SeatId = 62L,
+                            SessionId = 62L
                         },
                         new
                         {
                             Id = 573L,
                             ProfileId = 3L,
-                            SeatId = 44L,
+                            SeatId = 64L,
                             SessionId = 27L
                         },
                         new
                         {
                             Id = 574L,
-                            ProfileId = 2L,
-                            SeatId = 39L,
-                            SessionId = 21L
+                            ProfileId = 1L,
+                            SeatId = 65L,
+                            SessionId = 27L
                         },
                         new
                         {
                             Id = 575L,
-                            ProfileId = 1L,
-                            SeatId = 65L,
-                            SessionId = 7L
+                            ProfileId = 2L,
+                            SeatId = 262L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 576L,
-                            ProfileId = 3L,
-                            SeatId = 66L,
-                            SessionId = 7L
+                            ProfileId = 2L,
+                            SeatId = 263L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 577L,
-                            ProfileId = 3L,
-                            SeatId = 67L,
-                            SessionId = 7L
+                            ProfileId = 2L,
+                            SeatId = 264L,
+                            SessionId = 4L
                         },
                         new
                         {
                             Id = 578L,
-                            ProfileId = 2L,
-                            SeatId = 144L,
-                            SessionId = 13L
+                            ProfileId = 3L,
+                            SeatId = 78L,
+                            SessionId = 83L
                         },
                         new
                         {
                             Id = 579L,
                             ProfileId = 3L,
-                            SeatId = 130L,
-                            SessionId = 63L
+                            SeatId = 79L,
+                            SessionId = 83L
                         },
                         new
                         {
                             Id = 580L,
                             ProfileId = 3L,
-                            SeatId = 131L,
-                            SessionId = 63L
+                            SeatId = 340L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 581L,
                             ProfileId = 1L,
-                            SeatId = 132L,
-                            SessionId = 63L
+                            SeatId = 341L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 582L,
-                            ProfileId = 3L,
-                            SeatId = 68L,
-                            SessionId = 32L
+                            ProfileId = 1L,
+                            SeatId = 342L,
+                            SessionId = 80L
                         },
                         new
                         {
                             Id = 583L,
-                            ProfileId = 2L,
-                            SeatId = 69L,
-                            SessionId = 32L
+                            ProfileId = 1L,
+                            SeatId = 103L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 584L,
-                            ProfileId = 2L,
-                            SeatId = 11L,
-                            SessionId = 66L
+                            ProfileId = 3L,
+                            SeatId = 104L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 585L,
-                            ProfileId = 1L,
-                            SeatId = 12L,
-                            SessionId = 66L
+                            ProfileId = 3L,
+                            SeatId = 105L,
+                            SessionId = 58L
                         },
                         new
                         {
                             Id = 586L,
-                            ProfileId = 3L,
-                            SeatId = 13L,
-                            SessionId = 66L
+                            ProfileId = 2L,
+                            SeatId = 38L,
+                            SessionId = 71L
                         },
                         new
                         {
                             Id = 587L,
                             ProfileId = 3L,
-                            SeatId = 113L,
-                            SessionId = 98L
+                            SeatId = 39L,
+                            SessionId = 71L
                         },
                         new
                         {
                             Id = 588L,
                             ProfileId = 3L,
-                            SeatId = 77L,
-                            SessionId = 38L
+                            SeatId = 117L,
+                            SessionId = 23L
                         },
                         new
                         {
                             Id = 589L,
-                            ProfileId = 1L,
-                            SeatId = 78L,
-                            SessionId = 38L
+                            ProfileId = 3L,
+                            SeatId = 118L,
+                            SessionId = 23L
                         },
                         new
                         {
                             Id = 590L,
-                            ProfileId = 2L,
-                            SeatId = 79L,
-                            SessionId = 38L
+                            ProfileId = 3L,
+                            SeatId = 126L,
+                            SessionId = 93L
                         },
                         new
                         {
                             Id = 591L,
-                            ProfileId = 1L,
-                            SeatId = 66L,
-                            SessionId = 37L
+                            ProfileId = 2L,
+                            SeatId = 127L,
+                            SessionId = 93L
                         },
                         new
                         {
                             Id = 592L,
-                            ProfileId = 3L,
-                            SeatId = 67L,
-                            SessionId = 37L
+                            ProfileId = 2L,
+                            SeatId = 20L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 593L,
                             ProfileId = 3L,
-                            SeatId = 68L,
-                            SessionId = 37L
+                            SeatId = 21L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 594L,
                             ProfileId = 2L,
-                            SeatId = 1L,
-                            SessionId = 31L
+                            SeatId = 22L,
+                            SessionId = 11L
                         },
                         new
                         {
                             Id = 595L,
-                            ProfileId = 3L,
-                            SeatId = 2L,
-                            SessionId = 31L
+                            ProfileId = 2L,
+                            SeatId = 320L,
+                            SessionId = 89L
                         },
                         new
                         {
                             Id = 596L,
-                            ProfileId = 2L,
-                            SeatId = 11L,
-                            SessionId = 36L
+                            ProfileId = 3L,
+                            SeatId = 321L,
+                            SessionId = 89L
                         },
                         new
                         {
                             Id = 597L,
                             ProfileId = 1L,
-                            SeatId = 12L,
-                            SessionId = 36L
+                            SeatId = 302L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 598L,
-                            ProfileId = 1L,
-                            SeatId = 402L,
-                            SessionId = 75L
+                            ProfileId = 3L,
+                            SeatId = 303L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 599L,
                             ProfileId = 2L,
-                            SeatId = 403L,
-                            SessionId = 75L
+                            SeatId = 304L,
+                            SessionId = 59L
                         },
                         new
                         {
                             Id = 600L,
-                            ProfileId = 2L,
-                            SeatId = 404L,
-                            SessionId = 75L
+                            ProfileId = 1L,
+                            SeatId = 260L,
+                            SessionId = 89L
+                        },
+                        new
+                        {
+                            Id = 601L,
+                            ProfileId = 1L,
+                            SeatId = 261L,
+                            SessionId = 89L
+                        },
+                        new
+                        {
+                            Id = 602L,
+                            ProfileId = 1L,
+                            SeatId = 262L,
+                            SessionId = 89L
                         });
                 });
 
@@ -13918,6 +14202,17 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.FavoriteMovie", b =>
+                {
+                    b.HasOne("CINEMATRIX.Data.Domain.Models.Profile", "Profile")
+                        .WithMany()
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Profile");
+                });
+
             modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.Hall", b =>
                 {
                     b.HasOne("CINEMATRIX.Data.Domain.Models.Cinema", "Cinema")
@@ -13927,6 +14222,23 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                         .IsRequired();
 
                     b.Navigation("Cinema");
+                });
+
+            modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.MovieComment", b =>
+                {
+                    b.HasOne("CINEMATRIX.Data.Domain.Models.MovieComment", "ParentComment")
+                        .WithMany("Replies")
+                        .HasForeignKey("ParentCommentId");
+
+                    b.HasOne("CINEMATRIX.Data.Domain.Models.Profile", "Profile")
+                        .WithMany("MovieComments")
+                        .HasForeignKey("ProfileId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("ParentComment");
+
+                    b.Navigation("Profile");
                 });
 
             modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.Seat", b =>
@@ -14017,8 +14329,15 @@ namespace CINEMATRIX.Data.EF.SQL.Migrations
                     b.Navigation("Sessions");
                 });
 
+            modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.MovieComment", b =>
+                {
+                    b.Navigation("Replies");
+                });
+
             modelBuilder.Entity("CINEMATRIX.Data.Domain.Models.Profile", b =>
                 {
+                    b.Navigation("MovieComments");
+
                     b.Navigation("Tickets");
                 });
 

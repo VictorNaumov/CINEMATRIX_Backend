@@ -20,6 +20,7 @@ namespace CINEMATRIX.Data.EF.SQL
         public DbSet<EmailConfirmationToken> EmailConfirmationTokens { get; set; }
         public DbSet<FAQ> FAQs { get; set; }
         public DbSet<MovieComment> MovieComments { get; set; }
+        public DbSet<FavoriteMovie> FavoriteMovies { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }

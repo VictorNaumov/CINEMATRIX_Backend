@@ -10,4 +10,9 @@ export interface SessionSearchOutgoingDto {
   movieIds: number[],
   seatTypeIds: number[],
   timeSessions: number[],
+  needLoadHall: boolean,
+  needLoadSeats: boolean,
+  needLoadSeatType: boolean,
 }
+
+

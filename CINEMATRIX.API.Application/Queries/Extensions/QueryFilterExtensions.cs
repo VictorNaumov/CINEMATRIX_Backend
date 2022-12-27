@@ -20,7 +20,7 @@ namespace CINEMATRIX.API.Application.Queries.Extensions
             inputPropertyName = inputPropertyName.Trim().ToLowerInvariant();
 
             var result = propertyNames.FirstOrDefault(pn => pn.Trim().ToLowerInvariant().Equals(inputPropertyName)) ??
-                         propertyNames.FirstOrDefault(pn => pn.Trim().ToLowerInvariant().Equals("id")) ?? 
+                         propertyNames.FirstOrDefault(pn => pn.Trim().ToLowerInvariant().Equals("id")) ??
                          propertyNames.FirstOrDefault();
 
             return result;

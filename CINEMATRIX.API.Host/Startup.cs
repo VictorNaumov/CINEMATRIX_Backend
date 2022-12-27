@@ -2,17 +2,19 @@ using CINEMATRIX.API.Application;
 using CINEMATRIX.API.Host.Extensions;
 using CINEMATRIX.API.Host.Swagger;
 using CINEMATRIX.Data.EF.SQL;
-using CINEMATRIX.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Text.Json;
 
 namespace CINEMATRIX
 {
@@ -27,7 +29,11 @@ namespace CINEMATRIX
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                options.SerializerSettings.MaxDepth = 8;
+            });
             services.ConfigureCors();
             services.ConfigureJWT(Configuration);
             services.AddDbContext<ApplicationDbContext>(options =>

@@ -1,7 +1,7 @@
 ﻿using CINEMATRIX.API.Application.Queries.GenreQueries;
 using CINEMATRIX.API.Contracts.Incoming.SearchConditions;
-using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.API.Contracts.Outgoing;
+using CINEMATRIX.API.Contracts.Outgoing.Abstractions;
 using CINEMATRIX.API.Host.Controllers.Abstractions;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;

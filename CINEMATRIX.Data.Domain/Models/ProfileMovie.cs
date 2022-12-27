@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace CINEMATRIX.Data.Domain.Models
+﻿namespace CINEMATRIX.Data.Domain.Models
 {
     public class ProfileMovie : KeyedEntityBase
     {

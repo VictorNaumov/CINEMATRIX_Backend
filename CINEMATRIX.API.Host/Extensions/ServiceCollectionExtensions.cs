@@ -1,6 +1,5 @@
 ﻿using CINEMATRIX.API.Host.Swagger;
 using CINEMATRIX.Data.Domain.Models;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -10,9 +9,9 @@ using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net.Mail;
 using System.Reflection;
 using System.Text;
-using System.Net.Mail;
 
 namespace CINEMATRIX.API.Host.Extensions
 {

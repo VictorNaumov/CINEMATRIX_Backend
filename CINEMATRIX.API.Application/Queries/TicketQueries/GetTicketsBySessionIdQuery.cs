@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using CINEMATRIX.API.Contracts.IncomingOutgoing;
 using CINEMATRIX.API.Contracts.Outgoing;
 using CINEMATRIX.Data.Services;
 using MediatR;
