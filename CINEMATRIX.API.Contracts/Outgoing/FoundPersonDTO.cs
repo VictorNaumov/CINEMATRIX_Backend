@@ -14,8 +14,6 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         public string Biography { get; set; }
         public decimal Popularity { get; set; }
         public bool Adult { get; set; }
-
-        [JsonProperty("place_of_birth")]
         public string PlaceOfBirth { get; set; }
         public List<FoundImageDTO> Images { get; set; }
         public List<FoundPersonCreditDTO> Credits { get; set; }

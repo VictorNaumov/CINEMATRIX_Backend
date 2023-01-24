@@ -19,10 +19,10 @@ namespace CINEMATRIX.Data.Services
         Task<PagedMoviesResponse> GetNowPlayingMoviesAsync(MovieSearchCondition searchCondition,
             CancellationToken cancellationToken = default);
         Task<PagedMoviesResponse> FindMoviesAsync(MovieSearchCondition searchCondition, CancellationToken cancellationToken = default);
-        Task<List<MovieByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default);
-        Task<MovieByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken);
-        Task<List<MovieByIdResponse>> GetByIdsAsync(long[] id, CancellationToken cancellationToken);
-        Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken);
+        Task<List<MovieDetailByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default);
+        Task<MovieDetailByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken);
+        Task<List<MovieDetailByIdResponse>> GetByIdsAsync(long[] id, CancellationToken cancellationToken);
+        Task<MovieDetailByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken);
     }
 
     public class MovieService : HttpBaseService, IMovieService
@@ -64,32 +64,32 @@ namespace CINEMATRIX.Data.Services
             return apiResponse;
         }
 
-        public async Task<List<MovieByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default)
+        public async Task<List<MovieDetailByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{string.Join(",", ids)}?api_key={ApiKey}&append_to_response=images,videos,credits";
 
-            return await GetByUrlAsync<List<MovieByIdResponse>>(url);
+            return await GetByUrlAsync<List<MovieDetailByIdResponse>>(url);
         }
 
-        public async Task<MovieByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken = default)
+        public async Task<MovieDetailByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{id}?api_key={ApiKey}&append_to_response=images,videos,credits";
 
-            return await GetByUrlAsync<MovieByIdResponse>(url);
+            return await GetByUrlAsync<MovieDetailByIdResponse>(url);
         }
 
-        public async Task<List<MovieByIdResponse>> GetByIdsAsync(long[] ids, CancellationToken cancellationToken = default)
+        public async Task<List<MovieDetailByIdResponse>> GetByIdsAsync(long[] ids, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{string.Join(",", ids)}?api_key={ApiKey}";
 
-            return await GetByUrlAsync<List<MovieByIdResponse>>(url);
+            return await GetByUrlAsync<List<MovieDetailByIdResponse>>(url);
         }
         
-        public async Task<MovieByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
+        public async Task<MovieDetailByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
             var url = _baseUrl + $"movie/{id}?api_key={ApiKey}";
 
-            return await GetByUrlAsync<MovieByIdResponse>(url);
+            return await GetByUrlAsync<MovieDetailByIdResponse>(url);
         }
 
         public async Task<PagedMoviesResponse> FindMoviesAsync(MovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
@@ -102,7 +102,7 @@ namespace CINEMATRIX.Data.Services
             return apiResponse;
         }
 
-        private List<FoundMovieDTO> SortResultApiResponse(PagedMoviesResponse apiResponse, MovieSearchCondition searchCondition) =>
+        private List<MovieResponse> SortResultApiResponse(PagedMoviesResponse apiResponse, MovieSearchCondition searchCondition) =>
             searchCondition.SortDirection != "desc"
                 ? apiResponse.Results.OrderBy(searchCondition.SortProperty)
                 : apiResponse.Results.OrderByDescending(searchCondition.SortProperty);

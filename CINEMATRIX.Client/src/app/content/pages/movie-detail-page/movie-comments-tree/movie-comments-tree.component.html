@@ -1,0 +1,14 @@
+<div class="comment-container" *ngIf="comment">
+  <div class="comment-header">
+    <div class="comment-author">
+      <img class="profile-icon" [src]="comment.profile.imageUrl" (click)="redirectToProfile(comment.profile.id)"
+        alt="Profile picture" />
+      <p class="profile-name"> {{ comment.profile.name }} {{ comment.profile.secondName }} </p>
+    </div>
+    <div class="comment-date">{{ comment.dateTime | date }}</div>
+  </div>
+  <div class="comment-text">{{ comment.text }}</div>
+  <div class="comment-replies" *ngFor="let reply of comment.Replies">
+    <app-movie-comments-tree [comment]="reply"></app-movie-comments-tree>
+  </div>
+</div>

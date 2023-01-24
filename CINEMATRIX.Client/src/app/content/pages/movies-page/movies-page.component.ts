@@ -54,6 +54,9 @@ export class MoviesPageComponent implements OnInit {
     }
 
     this.movies$ = this.movieService.GetNowPlayingMovies(movieParam);
+
+    this.movies$.subscribe(m => console.log('m', m))
+
     this.checkError(this.movies$);
 
     this.genres$ = this.genreService.SearchGenre(genreParam);
@@ -92,7 +95,7 @@ export class MoviesPageComponent implements OnInit {
       })
   }
 
-  toggleSidePanel(){
+  toggleSidePanel() {
     this.sidePanelOpen = !this.sidePanelOpen;
     this.drawer.toggle();
   }

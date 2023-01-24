@@ -1,74 +1,16 @@
-<div class="profile-wrapper" *ngIf="user$ | async as user; else loading">
+<div class="profile-wrapper" *ngIf="profile$ | async as profile; else loading">
 
-  <img class="profile-image" mat-card-image [src]="user.profile.imageUrl" alt="Film poster" />
-
+  <img class="profile-image" mat-card-image [src]="profile.imageUrl" alt="Film poster" />
 
   <div class="profile-info">
-    <p class="username"> {{ user.userName }} </p>
-    <p class="info"> {{ user.profile.name }} {{ user.profile.secondName }}</p>
-    <p class="info"> {{ user.profile.phoneNumber }} </p>
-    <p class="info"> {{ user.profile.dateOfBirth | date: 'mediumDate' }} </p>
-    <p class="info"> {{ user.email }} </p>
+    <p class="username" *ngIf="user$ | async as user"> {{ user.userName }} </p>
+    <p class="info"> {{ profile.name }} {{ profile.secondName }}</p>
+    <p class="info"> {{ profile.phoneNumber }} </p>
+    <p class="info"> {{ profile.dateOfBirth | date: 'mediumDate' }} </p>
+    <p class="info" *ngIf="user$ | async as user"> {{ user.email }} </p>
   </div>
 
-
-  <div class="mat-elevation-z8">
-    <table mat-table [dataSource]="dataSource">
-
-      <ng-container matColumnDef="id">
-        <th mat-header-cell *matHeaderCellDef> <b> № </b> </th>
-        <td mat-cell *matCellDef="let element; let i = index"> <b>{{ i + 1}} </b></td>
-      </ng-container>
-
-      <ng-container matColumnDef="ticketId">
-        <th mat-header-cell *matHeaderCellDef> <b> Ticket Number </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.id}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="seatType">
-        <th mat-header-cell *matHeaderCellDef> <b> SeatType </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.seat.seatType.name}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="seat">
-        <th mat-header-cell *matHeaderCellDef> <b> Seat Number </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.seat.row}} - {{element.seat.number}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="sessionId">
-        <th mat-header-cell *matHeaderCellDef> <b> SessionId </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.sessionId}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="date">
-        <th mat-header-cell *matHeaderCellDef> <b> Date </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.session.dateTime | date: 'short'}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="hall">
-        <th mat-header-cell *matHeaderCellDef> <b> Hall Name </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.session.hall.name}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="movieId">
-        <th mat-header-cell *matHeaderCellDef> <b> MovieId </b></th>
-        <td mat-cell *matCellDef="let element"> {{element.session.movieId}} </td>
-      </ng-container>
-
-      <ng-container matColumnDef="goToMovie">
-        <th mat-header-cell *matHeaderCellDef></th>
-        <td mat-cell *matCellDef="let element">
-          <button mat-button routerLink="/details/{{element.session.movieId}}"> Go To Movie</button>
-        </td>
-      </ng-container>
-
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-    </table>
-
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" aria-label="Select page of seats list">
-    </mat-paginator>
-  </div>
+  <app-profile-tickets-table *ngIf="tickets && tickets.length" [tickets]="tickets"></app-profile-tickets-table>
 </div>
 
 <ng-template #loading>

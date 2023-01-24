@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class MovieByIdResponse
+    public class MovieDetailByIdResponse
     {
         public long Id { get; set; }
         public string Title { get; set; }

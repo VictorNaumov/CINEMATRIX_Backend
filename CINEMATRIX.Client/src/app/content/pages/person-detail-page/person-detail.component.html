@@ -1,0 +1,30 @@
+<div class="person-details-container" *ngIf="person$ | async as person; else loading">
+  <div class="person-photo-container">
+    <img [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2/' + person.images[0].filePath" alt="person photo" class="person-photo">
+  </div>
+  <div class="person-info-container">
+    <h2 class="person-name">{{ person.name }}</h2>
+    <mat-divider class="info-divider"></mat-divider>
+    <p class="person-info"><span class="info-label">Birthday:</span> {{ person.birthDay | date }}</p>
+    <p class="person-info"><span class="info-label">Place of birth:</span> {{ person.placeOfBirth }}</p>
+    <p class="person-info"><span class="info-label">Biography:</span> {{ person.biography }}</p>
+    <p class="person-info"><span class="info-label">Popularity:</span> {{ person.popularity }}</p>
+  </div>
+  <div class="person-photos-container">
+    <mat-card class="person-photo-card" *ngFor="let image of person.images">
+      <img [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2/' + image.filePath" alt="person photo" class="person-photo">
+    </mat-card>
+  </div>
+</div>
+
+<ng-template #loading>
+  <ng-container *ngIf="!isError; else error">
+    <app-loading></app-loading>
+  </ng-container>
+</ng-template>
+
+<ng-template #error>
+  <ng-container>
+    <app-error></app-error>
+  </ng-container>
+</ng-template>

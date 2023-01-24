@@ -10,6 +10,6 @@ namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
         public int TotalPages { get; set; }
         [JsonProperty("total_results")]
         public int TotalResults { get; set; }
-        public List<FoundMovieDTO> Results { get; set; }
+        public List<MovieResponse> Results { get; set; }
     }
 }

@@ -15,7 +15,9 @@
     <div class="movie-cast">
       <img *ngFor="let cast of mainCasts" class="movie-cast-image" #tooltip="matTooltip" [matTooltip]="cast.name"
         [matTooltipPosition]="'below'" [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2/' + cast.profilePath"
-        mat-ra alt="Film poster" />
+        mat-ra alt="Film poster"
+        (click)="redirectToPerson(cast.id)"
+        />
     </div>
 
     <p class="subtitle"> SYNOPSIS</p>
@@ -28,6 +30,23 @@
       <app-movie-detail-slider [movie]="movie"></app-movie-detail-slider>
     </div>
   </div>
+</div>
+
+<div class="movie-comments-wrapper" *ngIf="movie$ | async as movie">
+  <div class="comments-tree" *ngIf="movieComments$ | async as movieComments; else loading">
+    <div class="comment" *ngFor="let comment of movieComments">
+      <app-movie-comments-tree [comment]="comment"></app-movie-comments-tree>
+    </div>
+  </div>
+
+  <form [formGroup]="commentForm" (ngSubmit)="addComment()" *ngIf="authService.isAuthenticated()">
+    <mat-form-field appearance="outline">
+      <mat-label>Write a comment</mat-label>
+      <textarea matInput formControlName="text" rows="5"></textarea>
+      <mat-error *ngIf="commentForm.get('text').invalid">Please enter a comment</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid || isCommentControlLoading">Send</button>
+  </form>
 </div>
 
 <ng-template #loading>

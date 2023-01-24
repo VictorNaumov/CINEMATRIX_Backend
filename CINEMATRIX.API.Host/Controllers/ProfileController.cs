@@ -50,7 +50,7 @@ namespace CINEMATRIX.API.Host.Controllers
         [SwaggerOperation(Summary = "Get the details of a profile", OperationId = "GetProfile")]
         public async Task<IActionResult> GetProfile([FromRoute] long id, CancellationToken cancellationToken = default)
         {
-            return await ExecuteQueryAsync(new GetProfileQuery(id), cancellationToken: cancellationToken);
+            return await ExecuteQueryAsync(new GetProfileQuery(id, User.Identity.Name), cancellationToken: cancellationToken);
         }
     }
 }

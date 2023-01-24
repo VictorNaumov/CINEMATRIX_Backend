@@ -11,18 +11,19 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace CINEMATRIX.Data.Services
 {
     public interface IUserService : IBaseService<User>
     {
-        Task<bool> ExistAsync(UserDTO userDTO);
-        Task<User> LoginAsync(LoginDTO loginDTO);
-        Task<User> GetByUserNameAsync(string userName);
-        Task<bool> TrySendEmailAsync(User user, string subject, string message);
-        Task<bool> ConfirmEmailAsync(ConfirmEmailDTO confirmEmailDTO);
-        Task<bool> IsValidEmailConfirmationToken(ConfirmEmailDTO confirmEmailDTO);
+        Task<bool> ExistAsync(UserDTO userDTO, CancellationToken cancellationToken = default);
+        Task<User> LoginAsync(LoginDTO loginDTO, CancellationToken cancellationToken = default);
+        Task<User> GetByUserNameAsync(string userName, CancellationToken cancellationToken = default);
+        Task<bool> TrySendEmailAsync(User user, string subject, string message, CancellationToken cancellationToken = default);
+        Task<bool> ConfirmEmailAsync(ConfirmEmailDTO confirmEmailDTO, CancellationToken cancellationToken = default);
+        Task<bool> IsValidEmailConfirmationToken(ConfirmEmailDTO confirmEmailDTO, CancellationToken cancellationToken = default);
         string CreateToken(User user, string role);
     }
 
@@ -37,12 +38,12 @@ namespace CINEMATRIX.Data.Services
             _mailService = mailService;
         }
 
-        public async Task<bool> ExistAsync(UserDTO user)
+        public async Task<bool> ExistAsync(UserDTO user, CancellationToken cancellationToken = default)
         {
             return await _dbContext.Users.AnyAsync(entity => entity.Email == user.Email);
         }
 
-        public async Task<User> LoginAsync(LoginDTO loginDTO)
+        public async Task<User> LoginAsync(LoginDTO loginDTO, CancellationToken cancellationToken = default)
         {
             if (!await _dbContext.Users.AnyAsync(entity => entity.Email == loginDTO.Email))
             {
@@ -59,7 +60,7 @@ namespace CINEMATRIX.Data.Services
             return user;
         }
 
-        public async Task<bool> TrySendEmailAsync(User user, string subject, string message)
+        public async Task<bool> TrySendEmailAsync(User user, string subject, string message, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -83,7 +84,7 @@ namespace CINEMATRIX.Data.Services
             }
         }
 
-        public async Task<bool> ConfirmEmailAsync(ConfirmEmailDTO confirmEmailDTO)
+        public async Task<bool> ConfirmEmailAsync(ConfirmEmailDTO confirmEmailDTO, CancellationToken cancellationToken = default)
         {
             var isValidToken = await IsValidEmailConfirmationToken(confirmEmailDTO);
             if (isValidToken)
@@ -102,13 +103,13 @@ namespace CINEMATRIX.Data.Services
             return false;
         }
 
-        public async Task<bool> IsValidEmailConfirmationToken(ConfirmEmailDTO confirmEmailDTO)
+        public async Task<bool> IsValidEmailConfirmationToken(ConfirmEmailDTO confirmEmailDTO, CancellationToken cancellationToken = default)
             => await _dbContext.EmailConfirmationTokens.AnyAsync(ect =>
                         ect.Token == confirmEmailDTO.Token
                         && ect.UserId == confirmEmailDTO.UserId
                         && ect.ExpiresAt >= DateTime.Now);
 
-        public async Task<User> GetByUserNameAsync(string userName)
+        public async Task<User> GetByUserNameAsync(string userName, CancellationToken cancellationToken = default)
             => await _dbContext.Users
                 .Include(x => x.Profile)
                 .FirstOrDefaultAsync(entity => entity.UserName == userName);

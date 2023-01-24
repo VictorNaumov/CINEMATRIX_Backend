@@ -12,6 +12,7 @@ import { AboutPageComponent } from "./about-page/about-page.component";
 import { SessionsPageComponent } from "./sessions-page/sessions-page.component";
 import { ProfilePageComponent } from "./profile-page/profile-page.component";
 import { FAQPageComponent } from "./faq-page/faq-page.component";
+import { PersonDetailPageComponent } from "./person-detail-page/person-detail.component";
 
 const routes: Routes = [
   {
@@ -25,8 +26,9 @@ const routes: Routes = [
       { path: "movies", component: MoviesPageComponent },
       { path: "about", component: AboutPageComponent },
       { path: "sessions", component: SessionsPageComponent },
-      { path: "profile", component: ProfilePageComponent },
-      { path: "details/:movieId", component: MovieDetailPageComponent },
+      { path: "profile/:profileId", component: ProfilePageComponent },
+      { path: "movieDetails/:movieId", component: MovieDetailPageComponent },
+      { path: "personDetails/:personId", component: PersonDetailPageComponent },
     ]
   },
   { path: "**", redirectTo: "", pathMatch: "full" }

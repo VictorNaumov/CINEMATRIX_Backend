@@ -20,6 +20,10 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { SessionsPageComponent } from './sessions-page/sessions-page.component';
 import { ErrorModule } from '../layout/error/error.module';
 import { FAQPageComponent } from './faq-page/faq-page.component';
+import { MovieCommentTreeComponent } from './movie-detail-page/movie-comments-tree/movie-comments-tree.component';
+import { ProfileTicketsComponent } from './profile-page/profile-tickets-table/profile-tickets-table.component';
+import { PersonDetailPageComponent } from './person-detail-page/person-detail.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
 
 @NgModule({
   declarations: [
@@ -30,10 +34,13 @@ import { FAQPageComponent } from './faq-page/faq-page.component';
     MoviesPageComponent,
     MovieDetailPageComponent,
     MovieDetailSliderComponent,
+    MovieCommentTreeComponent,
+    ProfileTicketsComponent,
     AboutPageComponent,
     SessionsPageComponent,
     ProfilePageComponent,
     FAQPageComponent,
+    PersonDetailPageComponent,
     GenresPipe,
     RuntimePipe,
   ],
@@ -46,7 +53,8 @@ import { FAQPageComponent } from './faq-page/faq-page.component';
     RouterModule,
     MaterialModule,
     ErrorModule,
-    StarRatingModule.forRoot()
+    StarRatingModule.forRoot(),
+
   ],
   exports: [
     PagesComponent

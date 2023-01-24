@@ -34,8 +34,8 @@ namespace CINEMATRIX.Data.Services
 
         public async Task<IReadOnlyCollection<MovieComment>> GetByMovieIdAsync(long movieId, CancellationToken cancellationToken)
         {
-            return await _dbSet.Where(c => c.MovieId == movieId)
-                .Include(q => q.ParentComment)
+            return await _dbSet.Where(c => c.MovieId == movieId && c.ParentCommentId == null)
+                .Include(q => q.Profile)
                 .Include(q => q.Replies)
                 .ToListAsync();
         }
@@ -43,7 +43,7 @@ namespace CINEMATRIX.Data.Services
         public async Task<IReadOnlyCollection<MovieComment>> GetByProfileIdAsync(long profileId, CancellationToken cancellationToken)
         {
             return await _dbSet.Where(c => c.ProfileId == profileId)
-                .Include(q => q.ParentComment)
+                .Include(q => q.Profile)
                 .Include(q => q.Replies)
                 .ToListAsync();
         }
@@ -90,7 +90,8 @@ namespace CINEMATRIX.Data.Services
 
             if (searchCondition.NeedLoadDependencies)
             {
-                query.Include(q => q.ParentComment)
+                query
+                    .Include(q => q.Profile)
                     .Include(q => q.Replies);
             }
 

@@ -42,7 +42,7 @@ namespace CINEMATRIX.API.Application.Queries.AuthQueries
 
             var token = userService.CreateToken(user, role.Name);
 
-            return new LoginUserDTO { Role = role.Name, Token = token };
+            return new LoginUserDTO { Role = role.Name, Token = token, ProfileId = user.ProfileId };
         }
 
     }

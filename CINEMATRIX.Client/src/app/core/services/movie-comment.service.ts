@@ -5,6 +5,7 @@ import { connectionString } from "src/app/shared/constants/connection.constants"
 import { MovieCommentSearchOutgoingDto } from "../models/movie-comment/movie-comment-search-outgoing-dto";
 import { MovieCommentSearchIncomingDto } from "../models/movie-comment/movie-comment-search-incoming-dto";
 import { MovieCommentDto } from "../models/movie-comment/movie-comment-dto";
+import { MovieCommentFoundIncomingDto } from "../models/movie-comment/movie-comment-found-incoming-dto";
 
 @Injectable({ providedIn: 'root' })
 export class MovieCommentService {
@@ -31,5 +32,13 @@ export class MovieCommentService {
 
   public GetMovieCommentById(id: number): Observable<MovieCommentDto> {
     return this.http.get<MovieCommentDto>(`${this.pathBase}/${id}`);
+  }
+
+  public GetMovieCommentsByMovieId(movieId: number): Observable<MovieCommentFoundIncomingDto[]> {
+    return this.http.get<MovieCommentFoundIncomingDto[]>(`${this.pathBase}/byMovieId/${movieId}`);
+  }
+
+  public GetMovieCommentsByProfileId(profileId: number): Observable<MovieCommentFoundIncomingDto[]> {
+    return this.http.get<MovieCommentFoundIncomingDto[]>(`${this.pathBase}/byProfileId/${profileId}`);
   }
 }

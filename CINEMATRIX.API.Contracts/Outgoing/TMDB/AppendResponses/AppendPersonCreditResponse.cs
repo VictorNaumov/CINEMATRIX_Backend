@@ -4,7 +4,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
     public class AppendPersonCreditResponse
     {
-        public List<FoundPersonCreditDTO> Cast { get; set; }
-        public List<FoundPersonCreditDTO> Crew { get; set; }
+        public List<PersonCreditResponse> Cast { get; set; }
+        public List<PersonCreditResponse> Crew { get; set; }
     }
 }

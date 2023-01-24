@@ -28,10 +28,19 @@ export class AuthService {
     return localStorage.getItem('token');
   }
 
+  get profileId(): string | null {
+    const expiresDate = new Date(String(localStorage.getItem('token-exp')));
+    if (new Date() > expiresDate) {
+      this.logout();
+      return null;
+    }
+    return localStorage.getItem('profile-id');
+  }
+
   public login(user: AdminValidationDto): Observable<any> {
     return this.http.post<ValidationResponseDto>(`${this.pathBase}login`, user)
       .pipe(
-        tap((result: ValidationResponseDto) => this.setTokenAndRole(result)),
+        tap((result: ValidationResponseDto) => this.setAccountData(result)),
         catchError(this.handleError.bind(this)
         )
       );
@@ -44,14 +53,14 @@ export class AuthService {
   public signup(user: RegistrationDto): Observable<any> {
     return this.http.post<ValidationResponseDto>(`${this.pathBase}register`, user)
       .pipe(
-        tap((result: ValidationResponseDto) => this.setTokenAndRole(result)),
+        tap((result: ValidationResponseDto) => this.setAccountData(result)),
         catchError(this.handleError.bind(this)
         )
       );
   }
 
   logout() {
-    this.setTokenAndRole(null);
+    this.setAccountData(null);
     this.router.navigate(['']);
   }
 
@@ -59,11 +68,12 @@ export class AuthService {
     return !!this.token;
   }
 
-  private setTokenAndRole(data: ValidationResponseDto) {
-    if (data) {
+  private setAccountData(response: ValidationResponseDto) {
+    if (response) {
       const expiresDate = new Date(new Date().getTime() + 60 * 60 * 1000);
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('role', data.role);
+      localStorage.setItem('token', response.token);
+      localStorage.setItem('role', response.role);
+      localStorage.setItem('profile-id', response.profileId.toString());
       localStorage.setItem('token-exp', expiresDate.toString());
     } else {
       localStorage.clear();

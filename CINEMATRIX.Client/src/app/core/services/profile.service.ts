@@ -3,6 +3,7 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { connectionString } from "src/app/shared/constants/connection.constants";
 import { ProfileDto } from "../models/profile/profile-dto";
+import { ProfileFoundIncomingDto } from "../models/profile/profile-found-incoming-dto";
 
 @Injectable({ providedIn: 'root' })
 export class ProfileService {
@@ -22,7 +23,7 @@ export class ProfileService {
     return this.http.put<ProfileDto>(`${this.pathBase}/${profileId}`, profile);
   }
 
-  public GetProfileById(profileId: number): Observable<ProfileDto> {
-    return this.http.get<ProfileDto>(`${this.pathBase}/${profileId}`);
+  public GetProfileById(profileId: number): Observable<ProfileFoundIncomingDto> {
+    return this.http.get<ProfileFoundIncomingDto>(`${this.pathBase}/${profileId}`);
   }
 }

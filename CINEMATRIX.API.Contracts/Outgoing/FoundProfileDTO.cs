@@ -12,5 +12,6 @@ namespace CINEMATRIX.API.Contracts.Outgoing
         public string PhoneNumber { get; set; }
         public string ImageUrl { get; set; }
         public List<FoundTicketDTO> Tickets { get; set; }
+        public List<FoundMovieCommentDTO> MovieComments { get; set; }
     }
 }

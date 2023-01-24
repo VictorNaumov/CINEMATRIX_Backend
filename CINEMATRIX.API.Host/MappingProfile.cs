@@ -11,6 +11,8 @@ namespace CINEMATRIX.API.Host
     {
         public MappingProfile()
         {
+
+            #region DatabaseMapping
             CreateMap<Cinema, CinemaDTO>().ReverseMap();
             CreateMap<Cinema, FoundCinemaDTO>();
 
@@ -47,13 +49,25 @@ namespace CINEMATRIX.API.Host
 
             CreateMap<MovieComment, MovieCommentDTO>().ReverseMap();
             CreateMap<MovieComment, FoundMovieCommentDTO>();
+            #endregion
 
-            CreateMap<MovieByIdResponse, FoundMovieDTO>()
+            #region TMDBMapping
+
+            //TMDB
+            CreateMap<MovieCreditResponse, FoundMovieCreditDTO>().ReverseMap();
+            CreateMap<MovieDetailByIdResponse, FoundMovieDTO>().ReverseMap();
+            CreateMap<MovieResponse, FoundMovieDTO>().ReverseMap();
+            CreateMap<PersonCreditResponse, FoundPersonCreditDTO>().ReverseMap();
+            CreateMap<PersonDetailByIdResponse, FoundPersonCreditDTO>().ReverseMap();
+            CreateMap<ImageResponse, FoundImageDTO>().ReverseMap();
+            CreateMap<VideoResponse, FoundVideoDTO>().ReverseMap();
+
+            CreateMap<MovieDetailByIdResponse, FoundMovieDTO>()
                 .ForMember(dest => dest.Videos, opts => opts.MapFrom(src => src.Videos.Results))
                 .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Backdrops))
                 .ForMember(dest => dest.Credits, opts => opts.MapFrom(src => src.Credits.Crew.Concat(src.Credits.Cast)));
 
-            CreateMap<PersonByIdResponse, FoundPersonDTO>()
+            CreateMap<PersonDetailByIdResponse, FoundPersonDTO>()
                 .ForMember(dest => dest.Images, opts => opts.MapFrom(src => src.Images.Profiles))
                 .ForMember(dest => dest.Credits, opts => opts.MapFrom(src => src.Credits.Crew.Concat(src.Credits.Cast)));
 
@@ -64,6 +78,8 @@ namespace CINEMATRIX.API.Host
             CreateMap<PagedPeopleResponse, PagedResponse<FoundPersonDTO>>()
                 .ForMember(dest => dest.Items, opts => opts.MapFrom(src => src.Results))
                 .ForMember(dest => dest.TotalCount, opts => opts.MapFrom(src => src.TotalResults));
+
+            #endregion
         }
     }
 }

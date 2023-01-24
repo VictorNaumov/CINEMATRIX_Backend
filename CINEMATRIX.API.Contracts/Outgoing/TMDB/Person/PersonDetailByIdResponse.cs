@@ -3,7 +3,7 @@ using System;
 
 namespace CINEMATRIX.API.Contracts.Outgoing.TMDB
 {
-    public class PersonByIdResponse
+    public class PersonDetailByIdResponse
     {
         public long Id { get; set; }
         public string Name { get; set; }

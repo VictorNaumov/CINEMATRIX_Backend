@@ -12,7 +12,7 @@ namespace CINEMATRIX.Data.Services
     {
 
         Task<PagedPeopleResponse> GetPopularPeopleAsync(PersonSearchCondition searchCondition, CancellationToken cancellationToken = default);
-        Task<PersonByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken);
+        Task<PersonDetailByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken);
     }
 
     public class PersonService : HttpBaseService, IPersonService
@@ -32,11 +32,11 @@ namespace CINEMATRIX.Data.Services
             return apiResponse;
         }
 
-        public async Task<PersonByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
+        public async Task<PersonDetailByIdResponse> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
             string url = $"https://api.themoviedb.org/3/person/{id}?api_key={ApiKey}&language=en-US&append_to_response=images,credits";
 
-            return await GetByUrlAsync<PersonByIdResponse>(url);
+            return await GetByUrlAsync<PersonDetailByIdResponse>(url);
         }
     }
 }

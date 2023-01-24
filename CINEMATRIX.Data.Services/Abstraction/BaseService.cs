@@ -11,8 +11,8 @@ namespace CINEMATRIX.Data.Services.Abstraction
     {
         Task<TEntity> GetByIdAsync(long? id, CancellationToken cancellationToken = default);
         Task<IReadOnlyCollection<TEntity>> GetAsync(CancellationToken cancellationToken = default);
-        Task<TEntity> InsertAsync(TEntity newEntity);
-        Task<TEntity> UpdateAsync(TEntity newEntity);
+        Task<TEntity> InsertAsync(TEntity newEntity, CancellationToken cancellationToken = default);
+        Task<TEntity> UpdateAsync(TEntity newEntity, CancellationToken cancellationToken = default);
         Task DeleteAsync(long? id, CancellationToken cancellationToken = default);
     }
 
@@ -28,25 +28,25 @@ namespace CINEMATRIX.Data.Services.Abstraction
 
         }
 
-        public async Task<TEntity> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
+        public virtual async Task<TEntity> GetByIdAsync(long? id, CancellationToken cancellationToken = default)
         {
             return await _dbSet.FindAsync(new object[] { id }, cancellationToken);
         }
 
-        public async Task<IReadOnlyCollection<TEntity>> GetAsync(CancellationToken cancellationToken = default)
+        public virtual async Task<IReadOnlyCollection<TEntity>> GetAsync(CancellationToken cancellationToken = default)
         {
             return await _dbSet.AsNoTracking().ToListAsync(cancellationToken);
         }
 
-        public async Task<TEntity> InsertAsync(TEntity newEntity)
+        public virtual async Task<TEntity> InsertAsync(TEntity newEntity, CancellationToken cancellationToken = default)
         {
             await _dbSet.AddAsync(newEntity);
-            await _dbContext.SaveChangesAsync(); ;
+            await _dbContext.SaveChangesAsync();
 
             return newEntity;
         }
 
-        public async Task<TEntity> UpdateAsync(TEntity newEntity)
+        public virtual async Task<TEntity> UpdateAsync(TEntity newEntity, CancellationToken cancellationToken = default)
         {
             if (_dbContext.Entry(newEntity).State == EntityState.Detached)
             {
@@ -59,7 +59,7 @@ namespace CINEMATRIX.Data.Services.Abstraction
             return newEntity;
         }
 
-        public async Task DeleteAsync(long? id, CancellationToken cancellationToken = default)
+        public virtual async Task DeleteAsync(long? id, CancellationToken cancellationToken = default)
         {
             var entity = await GetByIdAsync(id, cancellationToken);
             if (entity != null)

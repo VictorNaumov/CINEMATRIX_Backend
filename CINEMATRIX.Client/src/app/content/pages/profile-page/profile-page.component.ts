@@ -1,12 +1,13 @@
 import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSnackBar, MatSnackBarRef, MatTableDataSource } from '@angular/material';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, switchMap } from 'rxjs';
 import { AuthService } from 'src/app/core/account/auth-service';
 import { UserFoundIncomingDto } from 'src/app/core/models/auth/user-found-incoming-dto';
 import { ProfileFoundIncomingDto } from 'src/app/core/models/profile/profile-found-incoming-dto';
 import { TicketFoundIncomingDto } from 'src/app/core/models/ticket/ticket-found-incoming-dto';
-import { MovieService } from 'src/app/core/services/movie.service';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
+import { ProfileService } from 'src/app/core/services/profile.service';
 import { TicketService } from 'src/app/core/services/ticket.service';
 import { errorMessage } from 'src/app/shared/constants/error.message.contants';
 
@@ -17,42 +18,42 @@ import { errorMessage } from 'src/app/shared/constants/error.message.contants';
 })
 export class ProfilePageComponent implements OnInit {
   public user$: Observable<UserFoundIncomingDto>
+  public profile$: Observable<ProfileFoundIncomingDto>
   public tickets: TicketFoundIncomingDto[] = [];
+  public profileId: number;
 
   public isError: boolean = false;
 
-  displayedColumns: string[] = ['id', 'ticketId', 'seatType', 'seat', 'sessionId', 'date', 'hall', 'movieId', 'goToMovie'];
-  dataSource: any;
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  constructor(public notification: NotificationManager,
+  constructor(
+    public route: ActivatedRoute,
+    public notification: NotificationManager,
     public authService: AuthService,
+    public profileService: ProfileService,
     public ticketService: TicketService,
     public snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    this.sendQuery();
+    this.route.paramMap.pipe(switchMap(params => params.getAll('profileId')))
+      .subscribe(data => {
+        this.profileId = +data;
+        this.sendQuery();
+      });
   }
 
   sendQuery() {
-    this.user$ = this.authService.whoami();
-    this.checkError(this.user$);
+    if (+this.authService.profileId == this.profileId) {
+      this.user$ = this.authService.whoami();
+      this.checkError(this.user$);
+    }
 
-    this.user$.subscribe((user: UserFoundIncomingDto) => {
-      let tickets$ = this.ticketService.GetByProfileId(user.profile.id);
+    this.profile$ = this.profileService.GetProfileById(this.profileId);
 
-      tickets$.subscribe((tickets: TicketFoundIncomingDto[]) => {
-        this.tickets = tickets;
-        this.dataSource = new MatTableDataSource<TicketFoundIncomingDto>(this.tickets);
-        this.paginator.pageSize = 10;
-        this.dataSource.paginator = this.paginator;
-      })
-
-      this.checkError(tickets$);
+    this.profile$.subscribe((profile: ProfileFoundIncomingDto) => {
+      this.tickets = profile.tickets;
+      console.log(profile)
     })
 
-    this.user$.subscribe(x => console.log(x))
+    this.checkError(this.profile$);
   }
 
   checkError(sub: Observable<any>): void {

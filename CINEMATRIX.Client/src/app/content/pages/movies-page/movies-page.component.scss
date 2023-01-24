@@ -20,6 +20,7 @@
     .movie-card {
       width: calc(22% - 10px);
       margin: 5px;
+      margin-bottom: 15px;
       align-items: center;
       justify-content: center;
       -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
@@ -41,7 +42,7 @@
   }
 
   .movie-card:hover {
-    transform: scale(1.05, 1.05);
+    transform: scale(1.02, 1.02);
   }
 
   .movie-card:hover::after {

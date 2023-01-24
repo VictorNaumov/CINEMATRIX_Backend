@@ -12,8 +12,8 @@ namespace CINEMATRIX.Data.Services
     public interface ITicketService : IBaseService<Ticket>
     {
         Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
-        Task<IReadOnlyCollection<Ticket>> GetTicketsBySessionId(long sessionId, CancellationToken cancellationToken);
-        Task<IReadOnlyCollection<Ticket>> GetTicketsByProfileId(long profileId, CancellationToken cancellationToken);
+        Task<ICollection<Ticket>> GetTicketsBySessionId(long sessionId, CancellationToken cancellationToken);
+        Task<ICollection<Ticket>> GetTicketsByProfileId(long profileId, CancellationToken cancellationToken);
     }
 
     public class TicketService : BaseService<Ticket>, ITicketService
@@ -25,12 +25,12 @@ namespace CINEMATRIX.Data.Services
             return await _dbContext.Tickets.AnyAsync(entity => entity.Id == id, cancellationToken);
         }
 
-        public async Task<IReadOnlyCollection<Ticket>> GetTicketsBySessionId(long sessionId, CancellationToken cancellationToken)
+        public async Task<ICollection<Ticket>> GetTicketsBySessionId(long sessionId, CancellationToken cancellationToken)
         {
             return await _dbContext.Tickets.Where(entity => entity.SessionId == sessionId).AsNoTracking().ToListAsync();
         }
 
-        public async Task<IReadOnlyCollection<Ticket>> GetTicketsByProfileId(long profileId, CancellationToken cancellationToken)
+        public async Task<ICollection<Ticket>> GetTicketsByProfileId(long profileId, CancellationToken cancellationToken)
         {
             return await _dbContext.Tickets
                 .Include(s => s.Session)
