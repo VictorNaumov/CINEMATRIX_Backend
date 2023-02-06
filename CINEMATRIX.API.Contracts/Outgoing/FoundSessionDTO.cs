@@ -6,6 +6,7 @@ namespace CINEMATRIX.API.Contracts.Outgoing
     public class FoundSessionDTO
     {
         public long Id { get; set; }
+        public string MovieTitle { get; set; }
         public long MovieId { get; set; }
         public long HallId { get; set; }
         public bool IsPublic { get; set; }

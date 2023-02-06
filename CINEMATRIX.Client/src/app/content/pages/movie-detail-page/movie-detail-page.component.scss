@@ -1,12 +1,11 @@
 .details-wrapper {
-  height: 100%;
   margin: 0px 10%;
   display: flex;
 
   .movie-poster {
     box-shadow: 1px 1px 5px -1px black;
     margin: 30px;
-    height: 80%;
+    height: calc(100vh * 0.8);
   }
 
   .movie-info {
@@ -50,8 +49,7 @@
 }
 
 .movie-comments-wrapper {
-  margin: 120px 30px 0 30px;
-
+  margin: 0 30px 0 30px;
 
   form {
     display: flex;

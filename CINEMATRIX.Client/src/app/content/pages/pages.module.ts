@@ -23,7 +23,7 @@ import { FAQPageComponent } from './faq-page/faq-page.component';
 import { MovieCommentTreeComponent } from './movie-detail-page/movie-comments-tree/movie-comments-tree.component';
 import { ProfileTicketsComponent } from './profile-page/profile-tickets-table/profile-tickets-table.component';
 import { PersonDetailPageComponent } from './person-detail-page/person-detail.component';
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { managementPageComponent } from './management-page/management-page.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +32,7 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     SignInPageComponent,
     HomePageComponent,
     MoviesPageComponent,
+    managementPageComponent,
     MovieDetailPageComponent,
     MovieDetailSliderComponent,
     MovieCommentTreeComponent,

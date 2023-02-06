@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MovieCommentFoundIncomingDto } from 'src/app/core/models/movie-comment/movie-comment-found-incoming-dto';
 
@@ -10,13 +10,12 @@ import { MovieCommentFoundIncomingDto } from 'src/app/core/models/movie-comment/
 export class MovieCommentTreeComponent implements OnInit {
   @Input() comment: MovieCommentFoundIncomingDto;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
   redirectToProfile(profileId: number) {
     this.router.navigate(['/profile/' + profileId]);
   }
-
 }
 

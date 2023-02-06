@@ -4,6 +4,6 @@ import { MovieCommentDto } from "./movie-comment-dto";
 export interface MovieCommentFoundIncomingDto extends MovieCommentDto {
   id: number,
   profile: ProfileFoundIncomingDto,
-  ParentComment: MovieCommentFoundIncomingDto,
-  Replies: MovieCommentFoundIncomingDto[]
+  parentComment: MovieCommentFoundIncomingDto,
+  replies: MovieCommentFoundIncomingDto[]
 }

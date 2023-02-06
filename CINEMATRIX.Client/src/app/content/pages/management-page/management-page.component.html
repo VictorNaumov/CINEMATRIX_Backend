@@ -1,0 +1,16 @@
+<div class="description-section">
+  <h1 class="page-title">Frequently Asked Questions</h1>
+  <p class="page-description">
+    This page contains a list of commonly asked questions and their answers. If you can't find an answer to your
+    question, feel free to contact us.
+  </p>
+</div>
+<mat-accordion multi="true" *ngIf="query$ | async as FAQs; else loading">
+
+</mat-accordion>
+
+<ng-template #loading>
+  <ng-container>
+    <app-loading></app-loading>
+  </ng-container>
+</ng-template>

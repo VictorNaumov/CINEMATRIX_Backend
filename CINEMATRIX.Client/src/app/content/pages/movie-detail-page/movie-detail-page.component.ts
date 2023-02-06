@@ -120,8 +120,8 @@ export class MovieDetailPageComponent implements OnInit {
       dateTime: movieComment.dateTime,
       isDeleted: movieComment.isDeleted,
       profile: null,
-      ParentComment: null,
-      Replies: []
+      parentComment: null,
+      replies: []
     };
 
     return resultDto;

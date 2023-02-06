@@ -8,6 +8,7 @@ export interface SessionFoundIncomingDto extends SessionDto {
   isPublic: boolean,
   hallId: number,
   hall: HallFoundIncomingDto,
+  movieTitle: string,
   movieId: number,
   movie: MovieFoundIncomingDto,
   dateTime: Date,
