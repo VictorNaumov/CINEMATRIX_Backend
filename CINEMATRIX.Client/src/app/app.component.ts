@@ -8,12 +8,4 @@ import { NotificationManager } from './core/services/notification-manager';
 })
 export class AppComponent {
   title = 'CINEMATRIX.Client';
-
-  constructor(
-    public notificationService: NotificationManager) { }
-
-  ngOnInit(): void { }
-
-  addNotification() {
-  }
 }

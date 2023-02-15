@@ -4,7 +4,7 @@ import { Observable, Subject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { Router } from "@angular/router";
 import { connectionString } from "src/app/shared/constants/connection.constants";
-import { AdminValidationDto } from "../models/auth/user-validation-dto";
+import { SignInDto } from "../models/auth/user-validation-dto";
 import { RegistrationDto } from "../models/auth/user-registration-dto";
 import { ValidationResponseDto } from "../models/auth/validation-response-dto";
 import { UserFoundIncomingDto } from "../models/auth/user-found-incoming-dto";
@@ -37,7 +37,7 @@ export class AuthService {
     return localStorage.getItem('profile-id');
   }
 
-  public login(user: AdminValidationDto): Observable<any> {
+  public login(user: SignInDto): Observable<any> {
     return this.http.post<ValidationResponseDto>(`${this.pathBase}login`, user)
       .pipe(
         tap((result: ValidationResponseDto) => this.setAccountData(result)),

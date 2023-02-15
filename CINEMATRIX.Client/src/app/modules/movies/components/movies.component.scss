@@ -1,0 +1,51 @@
+.page-drawer {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: calc(100% - 60px);
+
+  .sidepan-toggle{
+    width: 40px;
+    height: 40px;
+  }
+
+  .search-input {
+    margin: 10px;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+
+    .movie-card {
+      width: calc(22% - 10px);
+      margin: 5px;
+      margin-bottom: 15px;
+      align-items: center;
+      justify-content: center;
+      -webkit-transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+      transition: all 0.6s cubic-bezier(0.065, 0.34, 0.14, 1);
+      box-shadow: 1px 1px 5px -1px black;
+
+      .overview {
+        height: 150px;
+        overflow: hidden;
+        padding: 5px;
+        text-overflow: ellipsis;
+      }
+
+      .title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .movie-card:hover {
+    transform: scale(1.02, 1.02);
+  }
+
+  .movie-card:hover::after {
+    opacity: 1;
+  }
+}

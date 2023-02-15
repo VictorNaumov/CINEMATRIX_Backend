@@ -1,28 +1,20 @@
-.error-wrapper {
-  position: fixed;
+.justcenter {
+  color: black;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+  margin: auto;
+  margin-top: 1rem;
+}
+.justcenter p {
+  font-size: 3rem;
+  margin-top: 1rem;
+  text-align: justify;
+}
 
-  .error-image {
-    margin-left: 23vw;
-    width: 50vw;
-  }
-
-  .error-message {
-    margin-left: 36vw;
-    font-size: 35px;
-  }
-
-  @media screen and (max-width: 900px) {
-
-    .error-message {
-      margin-left: 33vw;
-      font-size: 25px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-
-    .error-message {
-      margin-left: 30vw;
-      font-size: 15px;
-    }
-  }
+.justcenter img {
+  width: 100%;
+  height: auto;
 }
