@@ -18,6 +18,7 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             var sessions = new List<Session>();
 
             var playedMovies = Enum.GetValues(typeof(PlayedMoviesEnum));
+            var playedTitleMovies = Enum.GetNames(typeof(PlayedMoviesEnum));
 
             var random = new Random();
 
@@ -25,13 +26,20 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
             {
                 for (int hour = 8; hour <= 22; hour += 2)
                 {
+                    var movie1 = random.Next(playedMovies.Length);
+                    var movie2 = random.Next(playedMovies.Length);
+                    var movie3 = random.Next(playedMovies.Length);
+                    var movie4 = random.Next(playedMovies.Length);
+                    var movie5 = random.Next(playedMovies.Length);
+
                     sessions.AddRange(
                         new List<Session>()
                         {
                             new Session
                             {
                                 Id = id++,
-                                MovieId = (int)playedMovies.GetValue(random.Next(playedMovies.Length)),
+                                MovieTitle = (string)playedTitleMovies.GetValue(movie1),
+                                MovieId = (int)playedMovies.GetValue(movie1),
                                 HallId = (int)HallEnum.LUX,
                                 IsPublic = true,
                                 DateTime = System.DateTime.Today.AddDays(day).AddHours(hour)
@@ -39,7 +47,8 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                             new Session
                             {
                                 Id = id++,
-                                MovieId = (int)playedMovies.GetValue(random.Next(playedMovies.Length)),
+                                MovieTitle = (string)playedTitleMovies.GetValue(movie2),
+                                MovieId = (int)playedMovies.GetValue(movie2),
                                 HallId = (int)HallEnum.SWEETBOX,
                                 IsPublic = true,
                                 DateTime = System.DateTime.Today.AddDays(day).AddHours(hour),
@@ -47,7 +56,8 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                             new Session
                             {
                                 Id = id++,
-                                MovieId = (int)playedMovies.GetValue(random.Next(playedMovies.Length)),
+                                MovieTitle = (string)playedTitleMovies.GetValue(movie3),
+                                MovieId = (int)playedMovies.GetValue(movie3),
                                 HallId = (int)HallEnum.SMALLHALL,
                                 IsPublic = true,
                                 DateTime = System.DateTime.Today.AddDays(day).AddHours(hour),
@@ -55,7 +65,8 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                             new Session
                             {
                                 Id = id++,
-                                MovieId = (int)playedMovies.GetValue(random.Next(playedMovies.Length)),
+                                MovieTitle = (string)playedTitleMovies.GetValue(movie4),
+                                MovieId = (int)playedMovies.GetValue(movie4),
                                 HallId = (int)HallEnum.BIGHALL,
                                 IsPublic = true,
                                 DateTime = System.DateTime.Today.AddDays(day).AddHours(hour),
@@ -63,7 +74,8 @@ namespace CINEMATRIX.Data.EF.SQL.FillingConfiguration
                             new Session
                             {
                                 Id = id++,
-                                MovieId = (int)playedMovies.GetValue(random.Next(playedMovies.Length)),
+                                MovieTitle = (string)playedTitleMovies.GetValue(movie5),
+                                MovieId = (int)playedMovies.GetValue(movie5),
                                 HallId = (int)HallEnum.ATMOS,
                                 IsPublic = true,
                                 DateTime = System.DateTime.Today.AddDays(day).AddHours(hour),
