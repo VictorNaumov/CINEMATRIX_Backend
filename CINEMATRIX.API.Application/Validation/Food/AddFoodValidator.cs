@@ -3,8 +3,8 @@ using CINEMATRIX.API.Application.Validation.Abstractions;
 
 namespace CINEMATRIX.API.Application.Validation.Food
 {
-    public class SendEmailConfirmationValidator : FoodValidatorBase<AddFoodCommand, long>
+    public class AddFavoriteMovieValidator : FoodValidatorBase<AddFoodCommand, long>
     {
-        public SendEmailConfirmationValidator() : base() { }
+        public AddFavoriteMovieValidator() : base() { }
     }
 }

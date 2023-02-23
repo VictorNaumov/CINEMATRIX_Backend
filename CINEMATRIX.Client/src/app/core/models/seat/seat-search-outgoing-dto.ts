@@ -1,8 +1,6 @@
-export interface SeatSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface SeatSearchOutgoingDto extends PageDTOBase {
   row: number[],
   number: number[],
 }

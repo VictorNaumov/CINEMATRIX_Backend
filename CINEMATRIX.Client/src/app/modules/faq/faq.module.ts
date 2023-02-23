@@ -5,11 +5,13 @@ import { LoadingModule } from 'src/app/content/layout/loading/loading.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { MoviesRoutes } from '../movies/movies-routing';
 import { FAQComponent } from './components/faq.component';
+import { FAQRoutes } from './faq-routing';
 
 @NgModule({
   declarations: [FAQComponent],
   imports: [
     CommonModule,
+    FAQRoutes,
     MaterialModule,
     MoviesRoutes,
     LoadingModule,

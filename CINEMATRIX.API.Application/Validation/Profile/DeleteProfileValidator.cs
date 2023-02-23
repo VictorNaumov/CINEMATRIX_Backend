@@ -25,6 +25,6 @@ namespace CINEMATRIX.API.Application.Validation.Profile
         }
 
         private async Task<bool> Exist(long id, CancellationToken cancellationToken)
-            => await _profileService.ExistsAsync(id, cancellationToken);
+            => await _profileService.ExistAsync(id, cancellationToken);
     }
 }

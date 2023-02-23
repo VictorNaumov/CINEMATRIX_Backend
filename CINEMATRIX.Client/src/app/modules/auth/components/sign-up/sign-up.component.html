@@ -1,35 +1,50 @@
-<mat-card>
-  <mat-card-content>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-      <h2>Log In</h2>
-      <mat-error *ngIf="false">
-        The username and password were not recognized
+<div class="justcenter">
+  <h2>Sign Up</h2>
+  <form [formGroup]="signUpForm" novalidate (submit)="submit()" class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Username</mat-label>
+      <input type="text" matInput name="username" formControlName="username" />
+      <!-- <mat-error *ngIf="signUpForm.controls['username'].errors?.['required']">Please, enter the username </mat-error> -->
+      <!-- <mat-error *ngIf="signUpForm.controls['username'].errors?.['pattern']">You've entered an invalid username</mat-error> -->
+      <!-- <mat-error *ngIf="signUpForm.controls['username'].errors?.['invalidUsername']">User with this username already exists</mat-error> -->
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput name="email" formControlName="email" />
+      <mat-error *ngIf="signUpForm.controls['email'].errors?.['required']">Please, enter the email </mat-error>
+      <mat-error *ngIf="signUpForm.controls['email'].errors?.['pattern']">You've entered an invalid email</mat-error>
+      <mat-error *ngIf="signUpForm.controls['email'].errors?.['invalidEmail']">User with this email already exists
       </mat-error>
-      <mat-form-field>
-        <input matInput placeholder="Username" [(ngModel)]="userName" name="userName">
-        <mat-error>
-          Please provide a valid username
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="Email" [(ngModel)]="email" name="email">
-        <mat-error>
-          Please provide a valid email address
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password">
-        <mat-error>
-          Please provide a valid password
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="password" placeholder="Confirm password" [(ngModel)]="confirmPassword" name="confirmPassword">
-        <mat-error>
-          Please provide a valid confirmPassword
-        </mat-error>
-      </mat-form-field>
-      <button mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Login</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput name="password" formControlName="password" [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      <mat-error *ngIf="signUpForm.controls['password'].errors?.['required']">Please, enter the password</mat-error>
+      <mat-error *ngIf="signUpForm.controls['password'].errors?.['maxlength']">Password lenght can be 15 and less char
+      </mat-error>
+      <mat-error *ngIf="signUpForm.controls['password'].errors?.['minlength']">Password lenght can be 6 and more char
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Confirm Password</mat-label>
+      <input type="password" matInput name="confirmpassword" formControlName="confirmPassword"
+        [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide">
+        <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+      <mat-error *ngIf="signUpForm.controls['confirmPassword'].errors?.['required']">Please, reenter the password
+      </mat-error>
+      <mat-error *ngIf="signUpForm.controls['confirmPassword'].errors?.['password']">The passwords you've entered don't
+        coincide</mat-error>
+    </mat-form-field>
+    <div class="form-group">
+      <button mat-raised-button color="primary" [disabled]="signUpForm.invalid">SingUp</button>
+      <a mat-raised-button class="btn btn-default" (click)="authService.openSignInDialog()">SingIn</a>
+    </div>
+  </form>
+</div>

@@ -17,7 +17,8 @@ namespace CINEMATRIX.Data.Services
     {
         Task<IReadOnlyCollection<FavoriteMovie>> FindAsync(FavoriteMovieSearchCondition searchCondition);
         Task<long> CountAsync(FavoriteMovieSearchCondition searchCondition);
-        Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
+        Task<bool> ExistAsync(long id, CancellationToken cancellationToken);
+        Task<bool> ExistAsync(long profileId, long movieId, CancellationToken cancellationToken);
     }
 
     public class FavoriteMovieService : BaseService<FavoriteMovie>, IFavoriteMovieService
@@ -40,28 +41,29 @@ namespace CINEMATRIX.Data.Services
             return (long)Math.Ceiling((double)count / searchCondition.PageSize);
         }
 
-        public async Task<bool> ExistsAsync(long id, CancellationToken cancellationToken)
+        public async Task<bool> ExistAsync(long id, CancellationToken cancellationToken)
         {
             return await _dbContext.FavoriteMovies.AnyAsync(entity => entity.Id == id, cancellationToken);
+        }
+
+        public async Task<bool> ExistAsync(long profileId, long movieId, CancellationToken cancellationToken)
+        {
+            return await _dbContext.FavoriteMovies.AnyAsync(entity => entity.MovieId == movieId && entity.ProfileId == profileId, cancellationToken);
         }
 
         private IQueryable<FavoriteMovie> BuildFindQuery(FavoriteMovieSearchCondition searchCondition)
         {
             IQueryable<FavoriteMovie> query = _dbContext.FavoriteMovies;
+            var quer1y = _dbContext.FavoriteMovies.ToList();
 
             if (searchCondition.ProfileIds.Any())
             {
-                query = query.Where(x => searchCondition.ProfileIds.Contains(x.MovieId));
+                query = query.Where(x => searchCondition.ProfileIds.Contains(x.ProfileId));
             }
 
             if (searchCondition.MovieIds.Any())
             {
                 query = query.Where(x => searchCondition.MovieIds.Contains(x.MovieId));
-            }
-
-            if (searchCondition.Ratings.Any())
-            {
-                query = query.Where(x => searchCondition.Ratings.Contains(x.Rating));
             }
 
             query = searchCondition.SortDirection != "desc"

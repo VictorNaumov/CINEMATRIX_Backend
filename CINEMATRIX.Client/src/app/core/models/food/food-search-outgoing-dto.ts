@@ -1,8 +1,6 @@
-export interface FoodSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface FoodSearchOutgoingDto extends PageDTOBase {
   name: string[],
   description: string[],
   startPrice: number,

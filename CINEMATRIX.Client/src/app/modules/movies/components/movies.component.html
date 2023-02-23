@@ -1,7 +1,9 @@
 <mat-drawer-container class="page-drawer" matAutosize>
-  <button class="sidepan-toggle" mat-icon-button (click)="toggleSidePanel()">
-    <mat-icon>{{ sidePanelOpen ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</mat-icon>
-  </button>
+  <div>
+    <button class="sidepan-toggle" mat-icon-button (click)="toggleSidePanel()">
+      <mat-icon>{{ sidePanelOpen ? 'keyboard_arrow_left' : 'keyboard_arrow_right' }}</mat-icon>
+    </button>
+  </div>
 
   <mat-drawer #drawer class="sidenav" mode="side">
     <mat-form-field class="search-input">
@@ -9,26 +11,34 @@
     </mat-form-field>
 
     <mat-nav-list *ngIf="genres$ | async as genres; else loading">
-      <mat-list-item> All </mat-list-item>
-      <mat-list-item *ngFor="let genre of genres.items"> {{genre.name}} </mat-list-item>
+      <mat-list-item (click)="selectGenre(null)"> All </mat-list-item>
+      <mat-list-item (click)="selectGenre(genre)" *ngFor="let genre of genres.items"> {{genre.name}} </mat-list-item>
     </mat-nav-list>
-
   </mat-drawer>
 
-  <div class="card-container" *ngIf="movies$ | async as movies; else loading">
-    <mat-card class="movie-card" *ngFor="let movie of movies.items">
-      <img mat-card-image [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.posterPath" alt="poster" />
-      <mat-card-content>
-        <p class="title"> {{ movie.title }} </p>
-        <div class="overview">
-          <p> {{ movie.overview }} </p>
-        </div>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button routerLink="/movieDetails/{{movie.id}}">MORE</button>
-        <button mat-button>LIKE</button>
-      </mat-card-actions>
-    </mat-card>
+  <div *ngIf="movies$ | async as movies; else loading">
+    <mat-paginator (page)="pageEventHandler($event)" [pageIndex]="currentPage" [showFirstLastButtons]="true"
+      [pageSize]="20" [length]="movies.totalCount" aria-label="Select page of seats list">
+    </mat-paginator>
+
+    <div class="card-container">
+      <mat-card class="movie-card" *ngFor="let movie of movies.items">
+        <img mat-card-image
+          [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + (movie.posterPath ? movie.posterPath : emptyPoster)"
+          alt="poster" />
+        <mat-card-content>
+          <p class="title"> {{ movie.title }} </p>
+          <div class="overview">
+            <p> {{ movie.overview }} </p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button [routerLink]="'/movieDetail/' + movie.id">MORE</a>
+          <button (click)="toggleFavoriteMovie(movie.id)" *ngIf="authService.isAuthenticated()" mat-button>
+            {{isFavoriteMovie(movie.id) ? 'UNLIKE' : 'LIKE' }} </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </mat-drawer-container>
 

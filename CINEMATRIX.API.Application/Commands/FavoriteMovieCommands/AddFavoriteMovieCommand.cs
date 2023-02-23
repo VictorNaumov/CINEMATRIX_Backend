@@ -16,12 +16,12 @@ namespace CINEMATRIX.API.Application.Commands.FavoriteMovieCommands
 
     public class AddFavoriteMovieCommandHandler : IRequestHandler<AddFavoriteMovieCommand, long>
     {
-        private readonly IFavoriteMovieService _FavoriteMovieService;
+        private readonly IFavoriteMovieService _favoriteMovieService;
         private readonly IMapper _mapper;
 
         public AddFavoriteMovieCommandHandler(IFavoriteMovieService FavoriteMovieService, IMapper mapper)
         {
-            _FavoriteMovieService = FavoriteMovieService;
+            _favoriteMovieService = FavoriteMovieService;
             _mapper = mapper;
         }
 
@@ -29,7 +29,7 @@ namespace CINEMATRIX.API.Application.Commands.FavoriteMovieCommands
         {
             var favoriteMovie = _mapper.Map<FavoriteMovie>(request.Entity);
 
-            var insertedFavoriteMovie = await _FavoriteMovieService.InsertAsync(favoriteMovie);
+            var insertedFavoriteMovie = await _favoriteMovieService.InsertAsync(favoriteMovie);
 
             return insertedFavoriteMovie.Id;
         }

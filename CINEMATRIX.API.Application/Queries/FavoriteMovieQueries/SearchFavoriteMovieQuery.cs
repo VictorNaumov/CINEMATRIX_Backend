@@ -20,12 +20,12 @@ namespace CINEMATRIX.API.Application.Queries.FavoriteMovieQueries
 
     public class SearchFavoriteMovieQueryHandler : IRequestHandler<SearchFavoriteMovieQuery, PagedResponse<FoundFavoriteMovieDTO>>
     {
-        private readonly IFavoriteMovieService _FavoriteMovieService;
+        private readonly IFavoriteMovieService _favoriteMovieService;
         private readonly IMapper _mapper;
 
         public SearchFavoriteMovieQueryHandler(IFavoriteMovieService FavoriteMovieService, IMapper mapper)
         {
-            _FavoriteMovieService = FavoriteMovieService;
+            _favoriteMovieService = FavoriteMovieService;
             _mapper = mapper;
         }
 
@@ -34,10 +34,10 @@ namespace CINEMATRIX.API.Application.Queries.FavoriteMovieQueries
             var searchCondition = request.SearchCondition;
             searchCondition.SortProperty = typeof(FoundFavoriteMovieDTO).GetSortProperty(searchCondition.SortProperty);
 
-            IReadOnlyCollection<FavoriteMovie> foundFavoriteMovies = await _FavoriteMovieService.FindAsync(searchCondition);
+            IReadOnlyCollection<FavoriteMovie> foundFavoriteMovies = await _favoriteMovieService.FindAsync(searchCondition);
 
             var mappedFavoriteMovie = _mapper.Map<IEnumerable<FoundFavoriteMovieDTO>>(foundFavoriteMovies);
-            var totalCount = await _FavoriteMovieService.CountAsync(searchCondition);
+            var totalCount = await _favoriteMovieService.CountAsync(searchCondition);
 
             return new PagedResponse<FoundFavoriteMovieDTO>
             {

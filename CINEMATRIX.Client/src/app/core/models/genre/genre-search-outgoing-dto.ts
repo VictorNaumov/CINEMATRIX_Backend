@@ -1,7 +1,5 @@
-export interface GenreSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface GenreSearchOutgoingDto extends PageDTOBase {
   name: string[],
 }

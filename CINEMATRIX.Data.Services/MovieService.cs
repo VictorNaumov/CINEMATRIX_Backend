@@ -19,6 +19,7 @@ namespace CINEMATRIX.Data.Services
         Task<PagedMoviesResponse> GetNowPlayingMoviesAsync(MovieSearchCondition searchCondition,
             CancellationToken cancellationToken = default);
         Task<PagedMoviesResponse> FindMoviesAsync(MovieSearchCondition searchCondition, CancellationToken cancellationToken = default);
+        Task<PagedMoviesResponse> DiscoverMoviesAsync(DiscoverMovieSearchCondition searchCondition, CancellationToken cancellationToken = default);
         Task<List<MovieDetailByIdResponse>> GetByIdsWithRelationsAsync(long[] ids, CancellationToken cancellationToken = default);
         Task<MovieDetailByIdResponse> GetByIdWithRelationsAsync(long? id, CancellationToken cancellationToken);
         Task<List<MovieDetailByIdResponse>> GetByIdsAsync(long[] id, CancellationToken cancellationToken);
@@ -102,9 +103,36 @@ namespace CINEMATRIX.Data.Services
             return apiResponse;
         }
 
+        public async Task<PagedMoviesResponse> DiscoverMoviesAsync(DiscoverMovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            var url = _baseUrl + $"discover/movie?api_key={ApiKey}&page={searchCondition.Page + 1}";
+            url = ApplyDiscoverFiltersForUrl(url, searchCondition);
+
+            var apiResponse = await GetByUrlAsync<PagedMoviesResponse>(url);
+
+            return apiResponse;
+        }
+
         private List<MovieResponse> SortResultApiResponse(PagedMoviesResponse apiResponse, MovieSearchCondition searchCondition) =>
             searchCondition.SortDirection != "desc"
                 ? apiResponse.Results.OrderBy(searchCondition.SortProperty)
                 : apiResponse.Results.OrderByDescending(searchCondition.SortProperty);
+
+        private string ApplyDiscoverFiltersForUrl(string url, DiscoverMovieSearchCondition searchCondition)
+        {
+            if (searchCondition is null)
+                return url;
+
+            if (searchCondition.Genres.Any())
+                url += $"&with_genres={string.Join("", searchCondition.Genres)}";
+
+            if (searchCondition.People.Any())
+                url += $"&with_people={string.Join("", searchCondition.People)}";
+
+            if (searchCondition.SortProperty.Length > 0)
+                url += $"&sort_by={searchCondition.SortProperty}";
+
+            return url;
+        }
     }
 }

@@ -44,6 +44,10 @@ namespace CINEMATRIX.API.Host
             CreateMap<Profile, FoundProfileDTO>();
             CreateMap<ProfileDTO, Profile>();
 
+            CreateMap<FavoriteMovie, FavoriteMovieDTO>();
+            CreateMap<FavoriteMovie, FoundFavoriteMovieDTO>();
+            CreateMap<FavoriteMovieDTO, FavoriteMovie>();
+
             CreateMap<User, UserDTO>().ReverseMap();
             CreateMap<User, FoundUserDTO>();
 

@@ -9,14 +9,14 @@ namespace CINEMATRIX.Data.Services
 {
     public interface IProfileService : IBaseService<Profile>
     {
-        Task<bool> ExistsAsync(long id, CancellationToken cancellationToken);
+        Task<bool> ExistAsync(long id, CancellationToken cancellationToken);
     }
 
     public class ProfileService : BaseService<Profile>, IProfileService
     {
         public ProfileService(ApplicationDbContext dbContext) : base(dbContext) { }
 
-        public async Task<bool> ExistsAsync(long id, CancellationToken cancellationToken)
+        public async Task<bool> ExistAsync(long id, CancellationToken cancellationToken)
         {
             return await _dbContext.Profile.AnyAsync(entity => entity.Id == id, cancellationToken);
         }

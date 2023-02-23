@@ -7,6 +7,7 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
 import { PipesModule } from 'src/app/shared/pipes/pipes.module';
 import { MoviesRoutes } from '../movies/movies-routing';
 import { SessionsComponent } from './components/sessions.component';
+import { SessionsRoutes } from './sessions-routing';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { SessionsComponent } from './components/sessions.component';
   ],
   imports: [
     CommonModule,
+    SessionsRoutes,
     MaterialModule,
     MoviesRoutes,
     LoadingModule,

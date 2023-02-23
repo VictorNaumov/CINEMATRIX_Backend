@@ -9,6 +9,7 @@ import { MoviesRoutes } from '../movies/movies-routing';
 import { MovieCommentTreeComponent } from './components/comments-tree/movie-comments-tree.component';
 import { MovieDetailSliderComponent } from './components/detail-slider/movie-detail-slider.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
+import { MovieDetailRoutes } from './movie-detail-routing';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { MovieDetailComponent } from './components/movie-detail/movie-detail.com
   ],
   imports: [
     CommonModule,
+    MovieDetailRoutes,
     MaterialModule,
     MoviesRoutes,
     LoadingModule,

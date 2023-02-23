@@ -70,6 +70,15 @@ namespace CINEMATRIX.API.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The favorite movie with id &apos;{0}&apos; was not found..
+        /// </summary>
+        public static string FavoriteMovieNotFound {
+            get {
+                return ResourceManager.GetString("FavoriteMovieNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A food description required..
         /// </summary>
         public static string FoodDescriptionRequired {

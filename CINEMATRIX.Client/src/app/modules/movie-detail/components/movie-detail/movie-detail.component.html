@@ -1,7 +1,7 @@
 <div class="details-wrapper" *ngIf="movie$ | async as movie; else loading">
-
   <div>
-    <img class="movie-poster" [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + movie.backdropPath"
+    <img class="movie-poster"
+      [src]="'https://image.tmdb.org/t/p/w600_and_h900_bestv2/' + (movie.backdropPath ? movie.backdropPath : emptyPoster)"
       alt="Film poster" />
   </div>
 
@@ -15,14 +15,12 @@
     <div class="movie-cast">
       <img *ngFor="let cast of mainCasts" class="movie-cast-image" #tooltip="matTooltip" [matTooltip]="cast.name"
         [matTooltipPosition]="'below'" [src]="'https://image.tmdb.org/t/p/w600_and_h600_bestv2/' + cast.profilePath"
-        mat-ra alt="Film poster"
-        (click)="redirectToPerson(cast.id)"
-        />
+        mat-ra alt="Film poster" (click)="redirectToPerson(cast.id)" />
     </div>
 
     <p class="subtitle"> SYNOPSIS</p>
     <p class="movie-overview"> {{movie.overview}}</p>
-    <p class="movie-budget"> Budget: {{movie.budget == 0 ? "Unknown" : movie.budget}} $</p>
+    <p class="movie-budget"> Budget: {{movie.budget == 0 ? "Unknown" : movie.budget + '$'}}</p>
     <p class="movie-voteaverage"> Rate: {{movie.voteAverage}}</p>
 
     <p class="subtitle"> VIDEO & PICTURE</p>
@@ -43,9 +41,9 @@
     <mat-form-field appearance="outline">
       <mat-label>Write a comment</mat-label>
       <textarea matInput formControlName="text" rows="5"></textarea>
-      <mat-error *ngIf="commentForm.get('text').invalid">Please enter a comment</mat-error>
     </mat-form-field>
-    <button mat-raised-button color="primary" type="submit" [disabled]="commentForm.invalid || isCommentControlLoading">Send</button>
+    <button mat-raised-button color="primary" type="submit"
+      [disabled]="commentForm.invalid || isCommentControlLoading">Send</button>
   </form>
 </div>
 

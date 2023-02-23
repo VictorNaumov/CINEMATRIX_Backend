@@ -18,7 +18,6 @@ import { SignUpComponent } from './components/sign-up/sign-up.component';
     LoadingModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule,
     ErrorModule,
   ]
 })

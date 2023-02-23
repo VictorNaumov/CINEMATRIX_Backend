@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FAQComponent } from './components/faq.component';
 
 const routes: Routes = [
-  { path: 'faq', component: FAQComponent },
-  { path: '**', redirectTo: 'faq' }
+  { path: '', component: FAQComponent },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

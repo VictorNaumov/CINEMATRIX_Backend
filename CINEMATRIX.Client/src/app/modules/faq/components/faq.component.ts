@@ -6,6 +6,7 @@ import { FAQSearchIncomingDto } from 'src/app/core/models/faq/faq-search-incomin
 import { FAQSearchOutgoingDto } from 'src/app/core/models/faq/faq-search-outgoing-dto';
 import { FAQService } from 'src/app/core/services/faq.service';
 import { errorMessage } from 'src/app/shared/constants/error.message.contants';
+import { setBasicPageParams } from 'src/app/shared/functions/setBasicPageParams';
 
 @Component({
   selector: 'app-faq',
@@ -32,17 +33,14 @@ export class FAQComponent implements OnInit {
     let endDateTime: Date = new Date();
     endDateTime.setFullYear(2025, 12, 10);
 
-    var FAQsParam: FAQSearchOutgoingDto = {
+    let FAQsParam: FAQSearchOutgoingDto = {
       "pageSize": 20,
-      "page": 0,
-      "sortDirection": "asc",
-      "sortProperty": "id",
       "question": [],
       "answer": [],
       "category": []
     }
 
-    this.query$ = this.faqService.SearchFAQ(FAQsParam)
+    this.query$ = this.faqService.SearchFAQ(FAQsParam);
 
     this.query$.subscribe((faqSearchIncomingDto: FAQSearchIncomingDto) => {
       this.faqs = faqSearchIncomingDto.items;

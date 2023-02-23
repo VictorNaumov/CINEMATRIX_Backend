@@ -1,15 +1,16 @@
 <mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-between center">
   <a [routerLink]="['home']" mat-button>{{ title }}</a>
   <a [routerLink]="['home']" mat-button><mat-icon>home</mat-icon></a>
-  <a [routerLink]="['movies']" mat-button ><mat-icon> local_movies</mat-icon></a>
+  <a [routerLink]="['movies']" mat-button ><mat-icon>local_movies</mat-icon></a>
   <div style="margin: 10px"></div>
-  <a [routerLink]="'/profile/'+ authService.profileId" *ngIf="authService.isAuthenticated()"><mat-icon>account_circle</mat-icon>Profile</a>
+  <a [routerLink]="'/profile/'+ authService.profileId" *ngIf="authService.isAuthenticated()" mat-button><mat-icon>account_circle</mat-icon>Profile</a>
   <a [routerLink]="['about']" mat-button ><mat-icon>search</mat-icon>About us</a>
   <a [routerLink]="['faq']" mat-button ><mat-icon>search</mat-icon>FAQ</a>
-  <a *ngIf="authService.isAuthenticated()" (click)="logout()"><mat-icon>exit_to_app</mat-icon>Logout</a>
-  <a [routerLink]="['signin']" *ngIf="!authService.isAuthenticated()" mat-button ><mat-icon>face icon</mat-icon>Sign in</a>
-  <a [routerLink]="['signup']" *ngIf="!authService.isAuthenticated()" mat-button ><mat-icon>create</mat-icon>Sign up</a>
   <a [routerLink]="['sessions']" mat-button ><mat-icon>create</mat-icon>Sessions</a>
+  <div style="margin: auto"></div>
+  <a (click)="authService.openSignInDialog()" *ngIf="!authService.isAuthenticated()" mat-button ><mat-icon>face icon</mat-icon>Sign in</a>
+  <a (click)="authService.openSignUpDialog()" *ngIf="!authService.isAuthenticated()" mat-button ><mat-icon>create</mat-icon>Sign up</a>
+  <a (click)="logout()" *ngIf="authService.isAuthenticated()" mat-button><mat-icon>exit_to_app</mat-icon>Logout</a>
   <a [mat-menu-trigger-for]="menu" fxHide="false" fxHide.gt-sm mat-button> <mat-icon>menu</mat-icon> </a>
 </mat-toolbar>
 

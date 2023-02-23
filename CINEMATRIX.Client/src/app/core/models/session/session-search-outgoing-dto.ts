@@ -1,8 +1,6 @@
-export interface SessionSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface SessionSearchOutgoingDto extends PageDTOBase {
   isPublic: boolean,
   startDateTime: Date,
   endDateTime: Date

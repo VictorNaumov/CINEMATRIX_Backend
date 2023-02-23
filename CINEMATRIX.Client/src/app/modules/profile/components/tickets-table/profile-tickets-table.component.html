@@ -18,7 +18,10 @@
 
     <ng-container matColumnDef="seat">
       <th mat-header-cell *matHeaderCellDef> <b> Seat Number </b></th>
-      <td mat-cell *matCellDef="let element"> {{element.seat.row}} - {{element.seat.number}} </td>
+      <td mat-cell *matCellDef="let element"
+        #tooltip="matTooltip" [matTooltip]="'Row: ' + element.seat.row + '\n Seat: ' + element.seat.number" [matTooltipPosition]="'above'">
+          {{element.seat.row}} - {{element.seat.number}}
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="sessionId">
@@ -36,15 +39,15 @@
       <td mat-cell *matCellDef="let element"> {{element.session.hall.name}} </td>
     </ng-container>
 
-    <ng-container matColumnDef="movieId">
+    <ng-container matColumnDef="movieTitle">
       <th mat-header-cell *matHeaderCellDef> <b> MovieId </b></th>
-      <td mat-cell *matCellDef="let element"> {{element.session.movieId}} </td>
+      <td mat-cell *matCellDef="let element"> {{element.session.movieTitle}} </td>
     </ng-container>
 
     <ng-container matColumnDef="goToMovie">
       <th mat-header-cell *matHeaderCellDef></th>
       <td mat-cell *matCellDef="let element">
-        <button mat-button routerLink="/movieDetails/{{element.session.movieId}}"> Go To Movie</button>
+        <a mat-button [routerLink]="'/movieDetail/' + element.session.movieId"> Go To Movie</a>
       </td>
     </ng-container>
 

@@ -14,14 +14,12 @@ export class ProfileTicketsComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
-  displayedColumns: string[] = ['id', 'ticketId', 'seatType', 'seat', 'sessionId', 'date', 'hall', 'movieId', 'goToMovie'];
+  displayedColumns: string[] = ['id', 'ticketId', 'seatType', 'seat', 'sessionId', 'date', 'hall', 'movieTitle', 'goToMovie'];
   dataSource: any;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-
-    console.log(this.tickets)
     this.dataSource = new MatTableDataSource<TicketFoundIncomingDto>(this.tickets);
     this.paginator.pageSize = 10;
     this.dataSource.paginator = this.paginator;

@@ -13,6 +13,7 @@ namespace CINEMATRIX.API.Contracts.Incoming.Abstractions
         /// <summary>
         ///     Gets the page that should be retrieved and thus how many items will be skipped.
         /// </summary>
+        [DefaultValue(0)]
         public int Page { get; set; }
     }
 }

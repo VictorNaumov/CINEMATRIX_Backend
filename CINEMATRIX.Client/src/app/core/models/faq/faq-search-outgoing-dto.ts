@@ -1,8 +1,6 @@
-export interface FAQSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface FAQSearchOutgoingDto extends PageDTOBase {
   question: string[];
   answer: string[];
   category: string[];

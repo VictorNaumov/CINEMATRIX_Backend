@@ -11,6 +11,7 @@ import { MoviesRoutes } from './movies-routing';
   declarations: [MoviesComponent],
   imports: [
     CommonModule,
+    MoviesRoutes,
     MaterialModule,
     MoviesRoutes,
     LoadingModule,

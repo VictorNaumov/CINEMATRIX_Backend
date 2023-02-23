@@ -59,11 +59,8 @@ export class SessionsComponent implements OnInit {
 
     this.sendSessionQuery();
 
-    var hallsParam: HallSearchOutgoingDto = {
+    let hallsParam: HallSearchOutgoingDto = {
       "pageSize": 20,
-      "page": 0,
-      "sortDirection": "asc",
-      "sortProperty": "id",
       "name": [],
       "description": [],
       "soundSystem": [],
@@ -75,11 +72,8 @@ export class SessionsComponent implements OnInit {
     this.halls$ = this.hallService.SearchHall(hallsParam);
     this.checkError(this.halls$);
 
-    var seatTypesParam: SeatTypeSearchOutgoingDto = {
+    let seatTypesParam: SeatTypeSearchOutgoingDto = {
       "pageSize": 20,
-      "page": 0,
-      "sortDirection": "asc",
-      "sortProperty": "id",
       "name": [],
       "startPrice": 0,
       "finishPrice": 100,
@@ -96,11 +90,8 @@ export class SessionsComponent implements OnInit {
     let endDateTime: Date = new Date();
     endDateTime.setFullYear(2025, 12, 10);
 
-    var sessionsParam: SessionSearchOutgoingDto = {
+    let sessionsParam: SessionSearchOutgoingDto = {
       "pageSize": 20,
-      "page": 0,
-      "sortDirection": "asc",
-      "sortProperty": "id",
       "isPublic": true,
       "startDateTime": this.selectedDate ? this.selectedDate : startDateTime,
       "endDateTime": this.selectedDate ? this.selectedDate : endDateTime,

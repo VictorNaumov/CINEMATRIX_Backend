@@ -10,8 +10,6 @@ import { HeaderModule } from './content/layout/header/header.module';
 import { AuthInterseptor } from './core/account/auth-interseptor';
 import { AuthService } from './core/account/auth-service';
 import { AuthGuard } from './core/guards/auth.guard';
-import { HomeModule } from './modules/home/home.module';
-import { MoviesModule } from './modules/movies/movies.module';
 import { MaterialModule } from './shared/material/material.module';
 import { NotificationComponent } from './shared/notification/notification.component';
 

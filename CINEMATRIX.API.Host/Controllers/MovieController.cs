@@ -64,6 +64,15 @@ namespace CINEMATRIX.API.Host.Controllers
         {
             return await ExecuteQueryAsync(new SearchMoviesQuery(searchCondition), cancellationToken: cancellationToken);
         }
+
+        [HttpPost("discover")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(FoundMovieDTO))]
+        [SwaggerOperation(Summary = "Discover movies", OperationId = "DiscoverMovies")]
+        public async Task<IActionResult> DiscoverMovies([FromBody] DiscoverMovieSearchCondition searchCondition, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new DiscoverMoviesQuery(searchCondition), cancellationToken: cancellationToken);
+        }
     }
 }
 

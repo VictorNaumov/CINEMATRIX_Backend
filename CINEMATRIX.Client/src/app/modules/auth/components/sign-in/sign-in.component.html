@@ -1,36 +1,11 @@
-<!-- <mat-card>
-  <mat-card-content>
-    <form #loginForm="ngForm" (ngSubmit)="onSubmit()">
-      <h2>Log In</h2>
-      <mat-error *ngIf="!emailValid">
-        The username and password were not recognized
-      </mat-error>
-      <mat-form-field>
-        <input matInput placeholder="Email" [(ngModel)]="email" name="email">
-        <mat-error>
-          Please provide a valid email address
-        </mat-error>
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput type="password" placeholder="Password" [(ngModel)]="password" name="password">
-        <mat-error>
-          Please provide a valid password
-        </mat-error>
-      </mat-form-field>
-      <button [disabled]="submitted" mat-raised-button color="primary" [disabled]="!loginForm.form.valid">Login</button>
-    </form>
-  </mat-card-content>
-</mat-card> -->
-
-
 <div class="justcenter">
   <h2>Sign In</h2>
-  <form [formGroup]="authForm" novalidate (submit)="submit()" class="example-form">
+  <form [formGroup]="signInForm" novalidate (submit)="submit()" class="example-form">
     <mat-form-field class="example-full-width">
       <mat-label>Email</mat-label>
       <input type="email" matInput name="email" formControlName="email" />
-      <mat-error *ngIf="authForm.controls['email'].errors?.['required']">Please, enter the email </mat-error>
-      <mat-error *ngIf="authForm.controls['email'].errors?.['pattern']">You've entered an invalid email</mat-error>
+      <mat-error *ngIf="signInForm.controls['email'].errors?.['required']">Please, enter the email </mat-error>
+      <mat-error *ngIf="signInForm.controls['email'].errors?.['pattern']">You've entered an invalid email</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Password</mat-label>
@@ -44,17 +19,17 @@
       >
         <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
       </button>
-      <mat-error *ngIf="authForm.controls['password'].errors?.['required']">Please, enter the password</mat-error>
-      <mat-error *ngIf="authForm.controls['password'].errors?.['maxlength']"
+      <mat-error *ngIf="signInForm.controls['password'].errors?.['required']">Please, enter the password</mat-error>
+      <mat-error *ngIf="signInForm.controls['password'].errors?.['maxlength']"
         >Password lenght can be 15 and less char</mat-error
       >
-      <mat-error *ngIf="authForm.controls['password'].errors?.['minlength']"
+      <mat-error *ngIf="signInForm.controls['password'].errors?.['minlength']"
         >Password lenght can be 6 and more char</mat-error
       >
     </mat-form-field>
     <div class="form-group">
-      <button mat-raised-button color="primary" [disabled]="authForm.invalid">SingIn</button>
-      <!-- <a mat-raised-button class="btn btn-default" (click)="authServer.openSignUpDialog()">SingUp</a> -->
+      <button mat-raised-button color="primary"  (click)="submit()" [disabled]="signInForm.invalid">Sign In</button>
+      <a mat-raised-button class="btn btn-default" (click)="authService.openSignUpDialog()">SingUp</a>
     </div>
   </form>
 </div>

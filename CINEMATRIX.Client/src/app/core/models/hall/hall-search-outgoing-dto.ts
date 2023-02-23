@@ -1,8 +1,6 @@
-export interface HallSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface HallSearchOutgoingDto extends PageDTOBase {
   name: string[],
   description: string[],
   soundSystem: string[],

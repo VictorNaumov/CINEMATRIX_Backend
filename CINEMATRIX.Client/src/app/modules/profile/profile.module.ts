@@ -7,6 +7,7 @@ import { MaterialModule } from 'src/app/shared/material/material.module';
 import { MoviesRoutes } from '../movies/movies-routing';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileTicketsComponent } from './components/tickets-table/profile-tickets-table.component';
+import { ProfileRoutes } from './profile-routing';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { ProfileTicketsComponent } from './components/tickets-table/profile-tick
   ],
   imports: [
     CommonModule,
+    ProfileRoutes,
     MaterialModule,
     MoviesRoutes,
     LoadingModule,

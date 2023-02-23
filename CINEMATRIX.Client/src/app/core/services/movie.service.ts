@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { connectionString } from "src/app/shared/constants/connection.constants";
+import { DiscoverMovieOutgoingDto } from "../models/movie/discover-movie-outgoing-dto";
 import { MovieFoundIncomingDto } from "../models/movie/movie-found-incoming-dto";
 import { MovieSearchIncomingDto } from "../models/movie/movie-search-incoming-dto";
 import { MovieSearchOutgoingDto } from "../models/movie/movie-search-outgoing-dto";
@@ -30,5 +31,9 @@ export class MovieService {
 
   public SearchMovies(searchParameters: MovieSearchOutgoingDto): Observable<MovieSearchIncomingDto> {
     return this.http.post<MovieSearchIncomingDto>(`${this.pathBase}/search`, searchParameters);
+  }
+
+  public DiscoverMovies(searchParameters: DiscoverMovieOutgoingDto): Observable<MovieSearchIncomingDto> {
+    return this.http.post<MovieSearchIncomingDto>(`${this.pathBase}/discover`, searchParameters);
   }
 }

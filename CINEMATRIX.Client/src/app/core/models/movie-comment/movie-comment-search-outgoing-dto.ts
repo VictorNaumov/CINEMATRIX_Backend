@@ -1,8 +1,6 @@
-export interface MovieCommentSearchOutgoingDto {
-  pageSize: number,
-  page: number,
-  sortDirection: string,
-  sortProperty: string,
+import { PageDTOBase } from "../page-abstractions/paged-dto-base";
+
+export interface MovieCommentSearchOutgoingDto extends PageDTOBase {
   parentCommentIds: number[],
   movieIds: number[],
   profileIds: number[],

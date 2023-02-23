@@ -9,12 +9,12 @@ namespace CINEMATRIX.API.Contracts.Incoming.Abstractions
         ///     type-safety.
         /// </summary>
         [DefaultValue("asc")]
-        public string SortDirection { get; set; }
+        public string SortDirection { get; set; } = "asc";
 
         /// <summary>
         ///     Gets the property on which the result should be sorted.
         /// </summary>
         [DefaultValue("id")]
-        public string SortProperty { get; set; }
+        public string SortProperty { get; set; } = "id";
     }
 }

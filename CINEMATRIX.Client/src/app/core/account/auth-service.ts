@@ -4,10 +4,13 @@ import { Observable, Subject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { Router } from "@angular/router";
 import { connectionString } from "src/app/shared/constants/connection.constants";
-import { SignInDto } from "../models/auth/user-validation-dto";
-import { RegistrationDto } from "../models/auth/user-registration-dto";
+import { SignInDto } from "../models/auth/sign-in-dto";
+import { SignUpDto } from "../models/auth/sign-up-dto";
 import { ValidationResponseDto } from "../models/auth/validation-response-dto";
 import { UserFoundIncomingDto } from "../models/auth/user-found-incoming-dto";
+import { MatDialog } from "@angular/material";
+import { SignInComponent } from "src/app/modules/auth/components/sign-in/sign-in.component";
+import { SignUpComponent } from "src/app/modules/auth/components/sign-up/sign-up.component";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -16,6 +19,7 @@ export class AuthService {
   public pathBase: string = `${connectionString}/auth/`;
 
   constructor(
+    private dialog: MatDialog,
     private http: HttpClient,
     private router: Router) { }
 
@@ -50,13 +54,23 @@ export class AuthService {
     return this.http.get<UserFoundIncomingDto>(`${this.pathBase}whoami`)
   }
 
-  public signup(user: RegistrationDto): Observable<any> {
+  public signUp(user: SignUpDto): Observable<any> {
     return this.http.post<ValidationResponseDto>(`${this.pathBase}register`, user)
       .pipe(
         tap((result: ValidationResponseDto) => this.setAccountData(result)),
         catchError(this.handleError.bind(this)
         )
       );
+  }
+
+  public openSignInDialog(){
+    this.dialog.closeAll();
+    this.dialog.open(SignInComponent);
+  }
+
+  public openSignUpDialog(){
+    this.dialog.closeAll();
+    this.dialog.open(SignUpComponent);
   }
 
   logout() {

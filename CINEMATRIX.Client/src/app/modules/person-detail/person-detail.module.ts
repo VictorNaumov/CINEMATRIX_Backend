@@ -6,11 +6,13 @@ import { LoadingModule } from 'src/app/content/layout/loading/loading.module';
 import { MaterialModule } from 'src/app/shared/material/material.module';
 import { MoviesRoutes } from '../movies/movies-routing';
 import { PersonDetailComponent } from './components/person-detail.component';
+import { PersonDetailRoutes } from './person-detail-routing';
 
 @NgModule({
   declarations: [PersonDetailComponent],
   imports: [
     CommonModule,
+    PersonDetailRoutes,
     MaterialModule,
     MoviesRoutes,
     LoadingModule,

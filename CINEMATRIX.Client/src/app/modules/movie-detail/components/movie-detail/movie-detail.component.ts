@@ -12,6 +12,7 @@ import { MovieCommentService } from 'src/app/core/services/movie-comment.service
 import { MovieService } from 'src/app/core/services/movie.service';
 import { NotificationManager } from 'src/app/core/services/notification-manager';
 import { errorMessage } from 'src/app/shared/constants/error.message.contants';
+import { EMPTY_POSTER } from 'src/app/shared/constants/poster.constants';
 import { MovieDetailSliderComponent } from '../detail-slider/movie-detail-slider.component';
 
 @Component({
@@ -23,6 +24,7 @@ export class MovieDetailComponent implements OnInit {
   public movie$: Observable<MovieFoundIncomingDto> | undefined;
   public movie: MovieFoundIncomingDto;
   public mainCasts: MovieCreditsDto[];
+  public emptyPoster = EMPTY_POSTER;
 
   public movieComments$: Observable<MovieCommentFoundIncomingDto[]> | undefined;
   public movieComments: MovieCommentFoundIncomingDto[];
@@ -128,7 +130,7 @@ export class MovieDetailComponent implements OnInit {
   }
 
   redirectToPerson(personId: number) {
-    this.router.navigate(['/personDetails/' + personId]);
+    this.router.navigate(['/personDetail/' + personId]);
   }
 
   checkError(sub: Observable<any>): void {

@@ -19,6 +19,7 @@
 
     .movie-card {
       width: calc(22% - 10px);
+      height: auto;
       margin: 5px;
       margin-bottom: 15px;
       align-items: center;
@@ -28,7 +29,7 @@
       box-shadow: 1px 1px 5px -1px black;
 
       .overview {
-        height: 150px;
+        height: 160px;
         overflow: hidden;
         padding: 5px;
         text-overflow: ellipsis;
