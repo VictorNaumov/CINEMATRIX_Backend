@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Folder Include="MappingConfiguration\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
   <ItemGroup>

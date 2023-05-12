@@ -40,7 +40,7 @@ namespace CINEMATRIX.API.Application.Queries.ProfileQueries
             var user = await _userService.GetByUserNameAsync(request.UserName, cancellationToken);
             var profile = await _profileService.GetByIdAsync(request.Id, cancellationToken);
 
-            if (profile == null)
+            if (profile is null || user is null)
             {
                 return null;
             }

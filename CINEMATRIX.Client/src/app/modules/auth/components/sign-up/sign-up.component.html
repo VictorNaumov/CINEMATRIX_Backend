@@ -4,6 +4,9 @@
     <mat-form-field class="example-full-width">
       <mat-label>Username</mat-label>
       <input type="text" matInput name="username" formControlName="username" />
+      <mat-error *ngIf="signUpForm.controls['username'].errors?.['required']">Please, enter the username </mat-error>
+      <mat-error *ngIf="signUpForm.controls['username'].errors?.['pattern']">You've entered an invalid username</mat-error>
+      <mat-error *ngIf="signUpForm.controls['username'].errors?.['invalidEmail']">User with this username already exists</mat-error>
       <!-- <mat-error *ngIf="signUpForm.controls['username'].errors?.['required']">Please, enter the username </mat-error> -->
       <!-- <mat-error *ngIf="signUpForm.controls['username'].errors?.['pattern']">You've entered an invalid username</mat-error> -->
       <!-- <mat-error *ngIf="signUpForm.controls['username'].errors?.['invalidUsername']">User with this username already exists</mat-error> -->
@@ -13,8 +16,7 @@
       <input type="email" matInput name="email" formControlName="email" />
       <mat-error *ngIf="signUpForm.controls['email'].errors?.['required']">Please, enter the email </mat-error>
       <mat-error *ngIf="signUpForm.controls['email'].errors?.['pattern']">You've entered an invalid email</mat-error>
-      <mat-error *ngIf="signUpForm.controls['email'].errors?.['invalidEmail']">User with this email already exists
-      </mat-error>
+      <mat-error *ngIf="signUpForm.controls['email'].errors?.['invalidEmail']">User with this email already exists</mat-error>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Password</mat-label>

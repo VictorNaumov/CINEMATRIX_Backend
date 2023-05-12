@@ -6,6 +6,7 @@ import { AuthService } from "src/app/core/account/auth-service";
 import { RoleEnum } from "src/app/core/enums/enums";
 import { SignInDto } from "src/app/core/models/auth/sign-in-dto";
 import { SignUpDto } from "src/app/core/models/auth/sign-up-dto";
+import { checkEmailInSystemValidator } from "src/app/shared/asyncvalidators/async-validators";
 
 @Component({
   selector: 'app-sign-up',
@@ -18,13 +19,16 @@ export class SignUpComponent implements OnInit {
   public message: string = '';
 
   public signUpForm: FormGroup = new FormGroup({
-    userName: new FormControl(
+    username: new FormControl(
       '',
       Validators.compose([Validators.required, Validators.minLength(2), Validators.maxLength(20)])
     ),
     email: new FormControl(
       '',
-      Validators.compose([Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')])
+      {
+        validators: [Validators.required, Validators.pattern('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')],
+        asyncValidators: [checkEmailInSystemValidator(this.authService)]
+      }
     ),
     password: new FormControl(
       '',
@@ -53,7 +57,7 @@ export class SignUpComponent implements OnInit {
 
     const signUpDto: SignUpDto = {
       email: this.signUpForm.value['email'],
-      userName: this.signUpForm.value['userName'],
+      username: this.signUpForm.value['username'],
       password: this.signUpForm.value['password'],
       roleId: RoleEnum.User
     }

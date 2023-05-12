@@ -10,7 +10,9 @@
     <p class="info" *ngIf="user$ | async as user"> {{ user.email }} </p>
   </div>
 
-  <app-profile-tickets-table *ngIf="tickets && tickets.length" [tickets]="tickets"></app-profile-tickets-table>
+  <div class="profile-info">
+    <app-profile-tickets-table *ngIf="tickets && tickets.length" [tickets]="tickets"></app-profile-tickets-table>
+  </div>
 </div>
 
 <ng-template #loading>

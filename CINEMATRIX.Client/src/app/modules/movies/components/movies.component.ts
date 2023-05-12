@@ -1,11 +1,8 @@
-import { TOUCH_BUFFER_MS } from '@angular/cdk/a11y';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSnackBar, throwToolbarMixedModesError } from '@angular/material';
 import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/core/account/auth-service';
-import { FavoriteMovieFoundIncomingDto } from 'src/app/core/models/favorite-movie/favorite-movie';
-import { FavoriteMovieSearchIncomingDto } from 'src/app/core/models/favorite-movie/favorite-movie-search-incoming-dto';
-import { FavoriteMovieSearchOutgoingDto } from 'src/app/core/models/favorite-movie/favorite-movie-search-outgoing-dto';
+import { FavoriteMovieContainer } from 'src/app/core/containers/favorite-movie.container';
 import { GenreFoundIncomingDto } from 'src/app/core/models/genre/genre-found-incoming-dto';
 import { GenreSearchIncomingDto } from 'src/app/core/models/genre/genre-search-incoming-dto';
 import { GenreSearchOutgoingDto } from 'src/app/core/models/genre/genre-search-outgoing-dto';
@@ -27,7 +24,6 @@ import { EMPTY_POSTER } from 'src/app/shared/constants/poster.constants';
 export class MoviesComponent implements OnInit {
   public movies$: Observable<MovieSearchIncomingDto> | undefined;
   public genres$: Observable<GenreSearchIncomingDto> | undefined;
-  public favoriteMovie: FavoriteMovieSearchIncomingDto;
   public emptyPoster = EMPTY_POSTER;
 
   public selectedGenre: GenreFoundIncomingDto;
@@ -45,15 +41,12 @@ export class MoviesComponent implements OnInit {
     public authService: AuthService,
     public movieService: MovieService,
     public genreService: GenreService,
-    public snackBar: MatSnackBar) { }
+    public snackBar: MatSnackBar,
+    public favoriteMovieContainer: FavoriteMovieContainer) { }
 
   ngOnInit(): void {
     this.sendSearchQuery();
     this.sendGenresQuery();
-
-    if (this.authService.isAuthenticated()) {
-      this.sendFavoriteMoviesQuery();
-    }
   }
 
   public selectGenre(genre: GenreFoundIncomingDto): void {
@@ -67,28 +60,12 @@ export class MoviesComponent implements OnInit {
     }
 
     this.genres$ = this.genreService.SearchGenre(genreParam);
-    this.checkError(this.genres$);
+    // this.checkError(this.genres$);
   }
 
   pageEventHandler(event: any) {
     this.currentPage = event.pageIndex;
     this.sendSearchQuery();
-  }
-
-  sendFavoriteMoviesQuery() {
-    let favoriteMoviesParam: FavoriteMovieSearchOutgoingDto = {
-      "pageSize": 2000,
-      "page": 0,
-      "profileIds": [+this.authService.profileId],
-      "movieIds": [],
-      "ratings": []
-    }
-
-    const favoriteMovie$ = this.favoriteMoviesService.SearchFavoriteMovie(favoriteMoviesParam)
-
-    favoriteMovie$.subscribe(fm => {this.favoriteMovie = fm; console.log(fm)});
-
-    this.checkError(favoriteMovie$);
   }
 
   sendSearchQuery() {
@@ -112,29 +89,11 @@ export class MoviesComponent implements OnInit {
         : this.movieService.GetNowPlayingMovies(movieParam);
     }
 
-    this.checkError(this.movies$);
+    // this.checkError(this.movies$);
   }
 
   writeNotification(text: string) {
     this.notification.textNotice(text);
-  }
-  toggleFavoriteMovie(movieId: number) {
-    if (!this.authService.isAuthenticated()) return;
-
-    const existedFavoriteMovie = this.favoriteMovie.items.find(fm => fm.movieId == movieId && fm.profileId == +this.authService.profileId);
-    if(existedFavoriteMovie){
-      this.favoriteMoviesService.DeleteFavoriteMovie(existedFavoriteMovie.id).subscribe(any => this.sendFavoriteMoviesQuery());
-    } else {
-      this.favoriteMoviesService.CreateFavoriteMovie(movieId).subscribe(newId => {
-        if(newId){
-          this.sendFavoriteMoviesQuery();
-        }
-      });
-    }
-  }
-
-  isFavoriteMovie(movieId: number) {
-    return this.favoriteMovie?.items.some(fm => fm.movieId == movieId && fm.profileId == +this.authService.profileId);
   }
 
   toggleSidePanel() {
@@ -142,14 +101,13 @@ export class MoviesComponent implements OnInit {
     this.drawer.toggle();
   }
 
-  checkError(sub: Observable<any>) {
-    sub.subscribe(
-      (_) => { },
-      error => {
-        this.isError = true;
-        console.log(error);
-        this.snackBar.open(errorMessage, "Close")
-      })
-  }
-
+  // checkError(sub: Observable<any>) {
+  //   sub.subscribe(
+  //     (_) => { },
+  //     error => {
+  //       this.isError = true;
+  //       console.log(error);
+  //       this.snackBar.open(errorMessage, "Close")
+  //     })
+  // }
 }

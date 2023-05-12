@@ -81,8 +81,8 @@ export class MovieDetailComponent implements OnInit {
           .slice(0, 14);
       });
 
-    this.checkError(this.movie$);
-    this.checkError(this.movieComments$);
+    // this.checkError(this.movie$);
+    // this.checkError(this.movieComments$);
   }
 
 
@@ -133,13 +133,13 @@ export class MovieDetailComponent implements OnInit {
     this.router.navigate(['/personDetail/' + personId]);
   }
 
-  checkError(sub: Observable<any>): void {
-    sub.subscribe(
-      (_) => { },
-      error => {
-        this.isError = true;
-        console.log(error);
-        this.snackBar.open(errorMessage, "Close")
-      })
-  }
+  // checkError(sub: Observable<any>): void {
+  //   sub.subscribe(
+  //     (_) => { },
+  //     error => {
+  //       this.isError = true;
+  //       console.log(error);
+  //       this.snackBar.open(errorMessage, "Close")
+  //     })
+  // }
 }

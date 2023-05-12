@@ -9,6 +9,7 @@ import { HallSeatsComponent } from './content/dialogs/buy-ticket-dialog/hall-sea
 import { HeaderModule } from './content/layout/header/header.module';
 import { AuthInterseptor } from './core/account/auth-interseptor';
 import { AuthService } from './core/account/auth-service';
+import { FavoriteMovieContainer } from './core/containers/favorite-movie.container';
 import { AuthGuard } from './core/guards/auth.guard';
 import { MaterialModule } from './shared/material/material.module';
 import { NotificationComponent } from './shared/notification/notification.component';
@@ -18,7 +19,7 @@ import { NotificationComponent } from './shared/notification/notification.compon
     AppComponent,
     NotificationComponent,
     BuyTicketDialog,
-    HallSeatsComponent
+    HallSeatsComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,10 +27,11 @@ import { NotificationComponent } from './shared/notification/notification.compon
     BrowserAnimationsModule,
     MaterialModule,
     HeaderModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [
     AuthGuard,
+    FavoriteMovieContainer,
     AuthService,
     {
       provide: HTTP_INTERCEPTORS,

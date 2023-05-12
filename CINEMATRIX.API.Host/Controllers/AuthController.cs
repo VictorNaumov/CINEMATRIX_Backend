@@ -39,6 +39,24 @@ namespace CINEMATRIX.API.Host.Controllers
             return await ExecuteQueryAsync(new GetCurrentUserQuery(User.Identity.Name), cancellationToken: cancellationToken);
         }
 
+        [HttpGet("checkExistEmail")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(bool))]
+        [SwaggerOperation(Summary = "CheckExistEmail", OperationId = "CheckExistEmail")]
+        public async Task<IActionResult> CheckExistEmail([FromQuery] string email, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new CheckExistEmailQuery(email), cancellationToken: cancellationToken);
+        }
+
+        [HttpGet("checkExistUsername")]
+        [AllowAnonymous]
+        [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(bool))]
+        [SwaggerOperation(Summary = "CheckExistUsername", OperationId = "CheckExistUsername")]
+        public async Task<IActionResult> CheckExistUsername([FromQuery] string username, CancellationToken cancellationToken = default)
+        {
+            return await ExecuteQueryAsync(new CheckExistUsernameQuery(username), cancellationToken: cancellationToken);
+        }
+
         [HttpPost("register")]
         [AllowAnonymous]
         [SwaggerResponse(StatusCodes.Status200OK, Type = typeof(LoginUserDTO))]

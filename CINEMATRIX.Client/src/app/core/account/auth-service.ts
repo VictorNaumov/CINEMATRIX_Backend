@@ -1,5 +1,5 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { Injectable, Injector } from "@angular/core";
 import { Observable, Subject, throwError } from "rxjs";
 import { catchError, tap } from "rxjs/operators";
 import { Router } from "@angular/router";
@@ -11,6 +11,7 @@ import { UserFoundIncomingDto } from "../models/auth/user-found-incoming-dto";
 import { MatDialog } from "@angular/material";
 import { SignInComponent } from "src/app/modules/auth/components/sign-in/sign-in.component";
 import { SignUpComponent } from "src/app/modules/auth/components/sign-up/sign-up.component";
+import { FavoriteMovieContainer } from "../containers/favorite-movie.container";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -19,6 +20,7 @@ export class AuthService {
   public pathBase: string = `${connectionString}/auth/`;
 
   constructor(
+    private injector: Injector,
     private dialog: MatDialog,
     private http: HttpClient,
     private router: Router) { }
@@ -52,6 +54,14 @@ export class AuthService {
 
   public whoami(): Observable<any> {
     return this.http.get<UserFoundIncomingDto>(`${this.pathBase}whoami`)
+  }
+
+  checkExistEmail(email: string) {
+    return this.http.get(this.pathBase + 'checkExistEmail?email=' + email);
+  }
+
+  checkExistUsername(username: string) {
+    return this.http.get(this.pathBase + 'checkExistUsername?username=' + username);
   }
 
   public signUp(user: SignUpDto): Observable<any> {
@@ -92,6 +102,9 @@ export class AuthService {
     } else {
       localStorage.clear();
     }
+
+    const favoriteMovieContainer = this.injector.get<FavoriteMovieContainer>(FavoriteMovieContainer);
+    favoriteMovieContainer.updateFavoriteMovies();
   }
 
   private handleError(error: HttpErrorResponse): Observable<never> {

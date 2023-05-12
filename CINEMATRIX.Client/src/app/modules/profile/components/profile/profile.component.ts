@@ -43,7 +43,7 @@ export class ProfileComponent implements OnInit {
   sendQuery() {
     if (+this.authService.profileId == this.profileId) {
       this.user$ = this.authService.whoami();
-      this.checkError(this.user$);
+      // this.checkError(this.user$);
     }
 
     this.profile$ = this.profileService.GetProfileById(this.profileId);
@@ -53,16 +53,16 @@ export class ProfileComponent implements OnInit {
       console.log(profile)
     })
 
-    this.checkError(this.profile$);
+    // this.checkError(this.profile$);
   }
 
-  checkError(sub: Observable<any>): void {
-    sub.subscribe(
-      (_) => { },
-      error => {
-        this.isError = true;
-        console.log(error);
-        this.snackBar.open(errorMessage, "Close")
-      })
-  }
+  // checkError(sub: Observable<any>): void {
+  //   sub.subscribe(
+  //     (_) => { },
+  //     error => {
+  //       this.isError = true;
+  //       console.log(error);
+  //       this.snackBar.open(errorMessage, "Close")
+  //     })
+  // }
 }

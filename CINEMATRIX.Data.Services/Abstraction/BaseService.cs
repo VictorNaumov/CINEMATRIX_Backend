@@ -35,6 +35,8 @@ namespace CINEMATRIX.Data.Services.Abstraction
 
         public virtual async Task<IReadOnlyCollection<TEntity>> GetAsync(CancellationToken cancellationToken = default)
         {
+            var halls = await _dbContext.Halls.ToListAsync();
+
             return await _dbSet.AsNoTracking().ToListAsync(cancellationToken);
         }
 

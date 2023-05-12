@@ -19,6 +19,8 @@ namespace CINEMATRIX.Data.Services
     public interface IUserService : IBaseService<User>
     {
         Task<bool> ExistAsync(UserDTO userDTO, CancellationToken cancellationToken = default);
+        Task<bool> ExistEmailAsync(string email, CancellationToken cancellationToken = default);
+        Task<bool> ExistUsernameAsync(string username, CancellationToken cancellationToken = default);
         Task<User> LoginAsync(LoginDTO loginDTO, CancellationToken cancellationToken = default);
         Task<User> GetByUserNameAsync(string userName, CancellationToken cancellationToken = default);
         Task<bool> TrySendEmailAsync(User user, string subject, string message, CancellationToken cancellationToken = default);
@@ -41,6 +43,16 @@ namespace CINEMATRIX.Data.Services
         public async Task<bool> ExistAsync(UserDTO user, CancellationToken cancellationToken = default)
         {
             return await _dbContext.Users.AnyAsync(entity => entity.Email == user.Email);
+        }
+
+        public async Task<bool> ExistEmailAsync(string email, CancellationToken cancellationToken = default)
+        {
+            return await _dbContext.Users.AnyAsync(entity => entity.Email == email);
+        }
+
+        public async Task<bool> ExistUsernameAsync(string username, CancellationToken cancellationToken = default)
+        {
+            return await _dbContext.Users.AnyAsync(entity => entity.UserName == username);
         }
 
         public async Task<User> LoginAsync(LoginDTO loginDTO, CancellationToken cancellationToken = default)
@@ -181,5 +193,6 @@ namespace CINEMATRIX.Data.Services
 
             return token;
         }
+
     }
 }

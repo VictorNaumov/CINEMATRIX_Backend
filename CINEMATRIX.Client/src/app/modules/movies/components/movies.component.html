@@ -34,8 +34,8 @@
         </mat-card-content>
         <mat-card-actions>
           <a mat-button [routerLink]="'/movieDetail/' + movie.id">MORE</a>
-          <button (click)="toggleFavoriteMovie(movie.id)" *ngIf="authService.isAuthenticated()" mat-button>
-            {{isFavoriteMovie(movie.id) ? 'UNLIKE' : 'LIKE' }} </button>
+          <button (click)="favoriteMovieContainer.toggleFavoriteMovie(movie.id)" *ngIf="authService.isAuthenticated()" mat-button>
+            {{favoriteMovieContainer.isFavoriteMovie(movie.id) ? 'UNLIKE' : 'LIKE' }} </button>
         </mat-card-actions>
       </mat-card>
     </div>
