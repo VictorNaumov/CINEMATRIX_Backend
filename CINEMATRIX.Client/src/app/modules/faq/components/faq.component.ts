@@ -46,8 +46,6 @@ export class FAQComponent implements OnInit {
       this.faqs = faqSearchIncomingDto.items;
       this.groupedFAQs = this.groupFaqsByCategory();
     });
-
-    // this.checkError(this.query$);
   }
 
   groupFaqsByCategory(): { category: string, faqs: FAQFoundIncomingDto[] }[] {
@@ -59,13 +57,4 @@ export class FAQComponent implements OnInit {
       };
     });
   }
-
-  // checkError(sub: Observable<any>): void {
-  //   sub.subscribe(
-  //     (_) => { console.log(_) },
-  //     error => {
-  //       this.isError = true;
-  //       this.snackBar.open(errorMessage, "Close")
-  //     })
-  // }
 }

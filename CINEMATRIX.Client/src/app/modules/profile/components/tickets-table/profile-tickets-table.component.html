@@ -1,4 +1,4 @@
-<div class="mat-elevation-z6">
+<div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource">
 
     <ng-container matColumnDef="id">
@@ -54,7 +54,6 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]" aria-label="Select page of seats list"> </mat-paginator>
 
-  <mat-paginator [pageSizeOptions]="[5, 10, 20]" aria-label="Select page of seats list">
-  </mat-paginator>
 </div>

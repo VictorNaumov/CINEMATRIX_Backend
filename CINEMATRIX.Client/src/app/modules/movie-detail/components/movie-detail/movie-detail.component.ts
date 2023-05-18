@@ -80,9 +80,6 @@ export class MovieDetailComponent implements OnInit {
           .sort((a: MovieCreditsDto, b: MovieCreditsDto) => +a.order - +b.order)
           .slice(0, 14);
       });
-
-    // this.checkError(this.movie$);
-    // this.checkError(this.movieComments$);
   }
 
 

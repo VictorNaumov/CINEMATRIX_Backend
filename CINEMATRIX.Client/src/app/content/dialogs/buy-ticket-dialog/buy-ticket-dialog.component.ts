@@ -3,7 +3,6 @@ import { MatDialogRef, MatSnackBar, MAT_DIALOG_DATA } from '@angular/material';
 import { AuthService } from 'src/app/core/account/auth-service';
 import { SeatFoundIncomingDto } from 'src/app/core/models/seat/seat-found-incoming-dto';
 import { SessionFoundIncomingDto } from 'src/app/core/models/session/session-found-incoming-dto';
-import { TicketFoundIncomingDto } from 'src/app/core/models/ticket/ticket-found-incoming-dto';
 import { TicketService } from 'src/app/core/services/ticket.service';
 
 export interface BuyTicketDialogData {

@@ -36,18 +36,5 @@ export class PersonDetailComponent implements OnInit {
     this.person$ = this.personService.GetPersonById(this.personId);
 
     this.person$.subscribe(a => console.log(a))
-
-    // this.checkError(this.person$);
   }
-
-
-  // checkError(sub: Observable<any>): void {
-  //   sub.subscribe(
-  //     (_) => { },
-  //     error => {
-  //       this.isError = true;
-  //       console.log(error);
-  //       this.snackBar.open(errorMessage, "Close")
-  //     })
-  // }
 }

@@ -70,7 +70,6 @@ export class SessionsComponent implements OnInit {
     }
 
     this.halls$ = this.hallService.SearchHall(hallsParam);
-    // this.checkError(this.halls$);
 
     let seatTypesParam: SeatTypeSearchOutgoingDto = {
       "pageSize": 20,
@@ -80,7 +79,6 @@ export class SessionsComponent implements OnInit {
     }
 
     this.seatTypes$ = this.seatTypeService.SearchSeatType(seatTypesParam);
-    // this.checkError(this.seatTypes$);
   }
 
   sendSessionQuery() {
@@ -107,7 +105,6 @@ export class SessionsComponent implements OnInit {
     this.sessions$ = this.sessionService.SearchSession(sessionsParam);
     this.sessions$.subscribe(x => this.promoSession = x.items[5]);
 
-    // this.checkError(this.sessions$);
   }
 
   initWeekDates() {
@@ -165,13 +162,4 @@ export class SessionsComponent implements OnInit {
         });
       });
   }
-
-  // checkError(sub: Observable<any>): void {
-  //   sub.subscribe(
-  //     (_) => { console.log(_) },
-  //     error => {
-  //       this.isError = true;
-  //       this.snackBar.open(errorMessage, "Close")
-  //     })
-  // }
 }

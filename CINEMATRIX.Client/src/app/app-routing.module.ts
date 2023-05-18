@@ -10,6 +10,7 @@ const routes: Routes = [
   { path: "profile", loadChildren: () => import('./modules/profile/profile.module').then(p => p.ProfileModule) },
   { path: "movieDetail", loadChildren: () => import('./modules/movie-detail/movie-detail.module').then(p => p.MovieDetailModule) },
   { path: "personDetail", loadChildren: () => import('./modules/person-detail/person-detail.module').then(p => p.PersonDetailModule) },
+  { path: "aboutUs", loadChildren: () => import('./modules/about-us/about-us.module').then(p => p.AboutUsModule) },
   { path: "management", loadChildren: () => import('./modules/management/management.module').then(p => p.ManagementModule) },
   { path: "**", redirectTo: 'home' },
 ];

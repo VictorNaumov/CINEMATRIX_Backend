@@ -39,6 +39,10 @@ export class AuthInterseptor implements HttpInterceptor {
             });
           } break;
           case 404: {
+            this.snackBar.open("Incorrect Entity!", "Close")
+          } break;
+          case 500: {
+            this.snackBar.open("Something went wrong, try again!", "Close")
           } break;
         }
 

@@ -1,0 +1,31 @@
+table {
+    width: 100%;
+    font-size: 12px;
+
+  td.mat-cell:first-of-type,
+  td.mat-footer-cell:first-of-type,
+  th.mat-header-cell:first-of-type {
+    padding-left: 10px !important;
+  }
+
+
+  th.mat-header-cell {
+    text-align: center !important;
+    color: black;
+    font-weight: 100;
+    justify-content: center;
+  }
+
+  td.mat-cell:first-of-type {
+    padding-left: 10px !important;
+  }
+
+  .mat-cell {
+    font-size: 11px !important;
+    padding: 3px 10px;
+  }
+
+  .mat-button {
+    font-size: 11px !important;
+  }
+}

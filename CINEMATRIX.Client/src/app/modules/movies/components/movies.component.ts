@@ -60,7 +60,6 @@ export class MoviesComponent implements OnInit {
     }
 
     this.genres$ = this.genreService.SearchGenre(genreParam);
-    // this.checkError(this.genres$);
   }
 
   pageEventHandler(event: any) {
@@ -88,8 +87,6 @@ export class MoviesComponent implements OnInit {
         ? this.movieService.SearchMovies(movieParam)
         : this.movieService.GetNowPlayingMovies(movieParam);
     }
-
-    // this.checkError(this.movies$);
   }
 
   writeNotification(text: string) {
@@ -100,14 +97,4 @@ export class MoviesComponent implements OnInit {
     this.sidePanelOpen = !this.sidePanelOpen;
     this.drawer.toggle();
   }
-
-  // checkError(sub: Observable<any>) {
-  //   sub.subscribe(
-  //     (_) => { },
-  //     error => {
-  //       this.isError = true;
-  //       console.log(error);
-  //       this.snackBar.open(errorMessage, "Close")
-  //     })
-  // }
 }

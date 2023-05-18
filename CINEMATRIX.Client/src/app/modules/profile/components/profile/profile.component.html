@@ -9,8 +9,9 @@
     <p class="info"> {{ profile.dateOfBirth | date: 'mediumDate' }} </p>
     <p class="info" *ngIf="user$ | async as user"> {{ user.email }} </p>
   </div>
+  <button style="height: 40px;" (click)="toggleFavoriteMovie()" mat-button> Update Image </button>
 
-  <div class="profile-info">
+  <div class="profile-tickets">
     <app-profile-tickets-table *ngIf="tickets && tickets.length" [tickets]="tickets"></app-profile-tickets-table>
   </div>
 </div>
