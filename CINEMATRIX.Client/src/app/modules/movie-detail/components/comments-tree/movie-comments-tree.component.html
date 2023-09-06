@@ -9,14 +9,14 @@
   </div>
   <div class="comment-text">{{ comment.text }}</div>
 
-  <button mat-button routerLink="/faq">
+  <!-- <button mat-button routerLink="/faq">
     <mat-icon>add_circle_outline</mat-icon>
     <mat-icon>add_circle</mat-icon>
   </button>
   <button mat-button routerLink="/faq">
     <mat-icon [ngStyle]="{'color':'red'}">remove_circle_outline</mat-icon>
     <mat-icon>remove_circle</mat-icon>
-  </button>
+  </button> -->
 
   <div class="comment-replies" *ngFor="let reply of comment.replies">
     <app-movie-comments-tree [comment]="reply"></app-movie-comments-tree>

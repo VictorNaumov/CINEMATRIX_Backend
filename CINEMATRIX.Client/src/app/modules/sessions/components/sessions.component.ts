@@ -103,7 +103,7 @@ export class SessionsComponent implements OnInit {
     }
 
     this.sessions$ = this.sessionService.SearchSession(sessionsParam);
-    this.sessions$.subscribe(x => this.promoSession = x.items[5]);
+    this.sessions$.subscribe(x => this.promoSession = x.items[11]);
 
   }
 

@@ -1,6 +1,9 @@
 <div class="profile-wrapper" *ngIf="profile$ | async as profile; else loading">
 
-  <img class="profile-image" mat-card-image [src]="profile.imageUrl" alt="Film poster" />
+  <div>
+    <img class="profile-image" mat-card-image [src]="profile.imageUrl" alt="Film poster" />
+    <button style="height: 40px; margin-left: 100px; margin-top: -80px;display: block;" (click)="toggleFavoriteMovie()" mat-raised-button color="primary"> Update Image </button>
+  </div>
 
   <div class="profile-info">
     <p class="username" *ngIf="user$ | async as user"> {{ user.userName }} </p>
@@ -9,7 +12,6 @@
     <p class="info"> {{ profile.dateOfBirth | date: 'mediumDate' }} </p>
     <p class="info" *ngIf="user$ | async as user"> {{ user.email }} </p>
   </div>
-  <button style="height: 40px;" (click)="toggleFavoriteMovie()" mat-button> Update Image </button>
 
   <div class="profile-tickets">
     <app-profile-tickets-table *ngIf="tickets && tickets.length" [tickets]="tickets"></app-profile-tickets-table>
